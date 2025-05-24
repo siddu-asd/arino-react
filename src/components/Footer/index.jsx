@@ -45,7 +45,7 @@ export default function Footer({ copyrightText, logoSrc, logoAlt, text }) {
             <Div className="col-lg-3 col-sm-6">
               <Div className="cs-footer_item">
                 <TextWidget
-                  logoSrc="/images/footer_logo.svg"
+                  logoSrc="/images/LOGO.png"
                   logoAlt="Logo"
                   text="Welcome to arino sed ut perspiciae omunde omnis iste natus error sitort voluptatem accusantium."
                 />

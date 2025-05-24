@@ -15,62 +15,24 @@ import TeamSlider from '../Slider/TeamSlider';
 import VideoModal from '../VideoModal';
 import TimelineSlider from '../Slider/TimelineSlider';
 import { pageTitle } from '../../helper';
-// Hero Social Links
+
 const heroSocialLinks = [
-  {
-    name: 'Behance',
-    links: '/',
-  },
-  {
-    name: 'Twitter',
-    links: '/',
-  },
+  { name: 'Behance', links: '/' },
+  { name: 'Twitter', links: '/' },
 ];
 
-// FunFact Data
 const funfaceData = [
-  {
-    title: 'Global Happy Clients',
-    factNumber: '40K',
-  },
-  {
-    title: 'Project Completed',
-    factNumber: '50K',
-  },
-  {
-    title: 'Team Members',
-    factNumber: '245',
-  },
-  {
-    title: 'Digital products',
-    factNumber: '550',
-  },
+  { title: 'Global Happy Clients', factNumber: '40K' },
+  { title: 'Project Completed', factNumber: '50K' },
+  { title: 'Team Members', factNumber: '245' },
+  { title: 'Digital products', factNumber: '550' },
 ];
+
 const portfolioData = [
-  {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_1.jpeg',
-  },
-  {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_2.jpeg',
-  },
-  {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_0.jpg',
-  },
-  {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_3.jpeg',
-  },
+  { title: 'Colorful Art Work', subtitle: 'See Details', href: '/portfolio/portfolio-details', src: '/images/portfolio_1.jpeg' },
+  { title: 'Colorful Art Work', subtitle: 'See Details', href: '/portfolio/portfolio-details', src: '/images/portfolio_2.jpeg' },
+  { title: 'Colorful Art Work', subtitle: 'See Details', href: '/portfolio/portfolio-details', src: '/images/portfolio_0.jpg' },
+  { title: 'Colorful Art Work', subtitle: 'See Details', href: '/portfolio/portfolio-details', src: '/images/portfolio_3.jpeg' },
 ];
 
 export default function Home() {
@@ -82,7 +44,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Start Hero Section */}
       <Hero
         title="Creativity In <br/>Our Blood Line"
         subtitle="We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future."
@@ -93,9 +54,7 @@ export default function Home() {
         heroSocialLinks={heroSocialLinks}
         bgImageUrl="/images/hero_bg.jpeg"
       />
-      {/* End Hero Section */}
 
-      {/* Start FunFact Section */}
       <div className="container">
         <FunFact
           variant="cs-type1"
@@ -104,72 +63,89 @@ export default function Home() {
           data={funfaceData}
         />
       </div>
-      {/* End FunFact Section */}
 
-      {/* Start Service Section */}
       <Spacing lg="150" md="80" />
       <Div id="service">
-        <Div className="container">
-          <Div className="row">
-            <Div className="col-xl-4">
-              <SectionHeading
-                title="Services we can help you with"
-                subtitle="What Can We Do"
-                btnText="See All Services"
-                btnLink="/service"
-              />
-              <Spacing lg="90" md="45" />
-            </Div>
-            <Div className="col-xl-8">
-              <Div className="row">
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                <Div className="col-lg-3 col-sm-6">
-                  <Card
-                    title="UI/UX design"
-                    link="/service/service-details"
-                    src="/images/service_1.jpeg"
-                    alt="Service"
-                  />
-                  <Spacing lg="0" md="30" />
-                </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                <Div className="col-lg-3 col-sm-6">
-                  <Card
-                    title="React.js Development"
-                    link="/service/service-details"
-                    src="/images/service_2.jpeg"
-                    alt="Service"
-                  />
-                  <Spacing lg="0" md="30" />
-                </Div>
-                <Div className="col-lg-3 col-sm-6">
-                  <Card
-                    title="Digital Marketing"
-                    link="/service/service-details"
-                    src="/images/service_3.jpeg"
-                    alt="Service"
-                  />
-                  <Spacing lg="0" md="30" />
-                </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                <Div className="col-lg-3 col-sm-6">
-                  <Card
-                    title="Technology"
-                    link="/service/service-details"
-                    src="/images/service_4.jpeg"
-                    alt="Service"
-                  />
-                  <Spacing lg="0" md="30" />
-                </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-              </Div>
-            </Div>
+  <Div className="container">
+    <Div className="row">
+      <Div className="col-xl-4">
+        <SectionHeading
+          title="Services we can help you with"
+          subtitle="What Can We Do"
+          btnText="See All Services"
+          btnLink="/service"
+        />
+        <Spacing lg="90" md="45" />
+      </Div>
+      {/* Updated services layout with spacing columns */}
+      <Div className="col-xl-8">
+        <Div className="row">
+          <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
+          <Div className="col-lg-3 col-sm-6">
+            <Card
+              title="UI/UX design"
+              link="/service/ui-ux-design"
+              src="/images/service_1.jpeg"
+              alt="Service"
+            />
+            <Spacing lg="0" md="30" />
+          </Div>
+          <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
+          <Div className="col-lg-3 col-sm-6">
+            <Card
+              title="React.js Development"
+              link="/service/reactjs-development"
+              src="/images/service_2.jpeg"
+              alt="Service"
+            />
+            <Spacing lg="0" md="30" />
+          </Div>
+          <Div className="col-lg-3 col-sm-6">
+            <Card
+              title="Digital Marketing"
+              link="/service/digital-marketing"
+              src="/images/service_3.jpeg"
+              alt="Service"
+            />
+            <Spacing lg="0" md="30" />
+          </Div>
+          <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
+          <Div className="col-lg-3 col-sm-6">
+            <Card
+              title="Technology"
+              link="/service/technology"
+              src="/images/service_4.jpeg"
+              alt="Service"
+            />
+            <Spacing lg="0" md="30" />
+          </Div>
+          <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
+          <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
+          <Div className="col-lg-3 col-sm-6">
+            <Card
+              title="Consultancy"
+              link="/service/consultancy"
+              src="/images/service_5.jpeg"
+              alt="Service"
+            />
+            <Spacing lg="0" md="30" />
+          </Div>
+          <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
+          <Div className="col-lg-3 col-sm-6">
+            <Card
+              title="Creative Design"
+              link="/service/creative-design"
+              src="/images/service_6.jpeg"
+              alt="Service"
+            />
+            <Spacing lg="0" md="30" />
           </Div>
         </Div>
       </Div>
-      {/* End Service Section */}
+    </Div>
+  </Div>
+</Div>
 
-      {/* Start Portfolio Section */}
       <Spacing lg="150" md="50" />
       <Div>
         <Div className="container">
@@ -182,14 +158,10 @@ export default function Home() {
         </Div>
         <PortfolioSlider data={portfolioData} />
       </Div>
-      {/* End Portfolio Section */}
 
-      {/* Start Awards Section */}
       <Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_2">
-        <Div className="cs-shape_2">
-          <Div />
-        </Div>
+        <Div className="cs-shape_2"><Div /></Div>
         <Div className="container">
           <Div className="row">
             <Div className="col-xl-4">
@@ -206,14 +178,11 @@ export default function Home() {
           </Div>
         </Div>
       </Div>
-      {/* End Awards Section */}
 
-      {/* Start Video Block Section */}
       <Spacing lg="130" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
-          Our agile process is ability to adapt and respond to change. Agile
-          organizations view change as an opportunity, not a threat.
+          Our agile process is ability to adapt and respond to change. Agile organizations view change as an opportunity, not a threat.
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
@@ -221,9 +190,7 @@ export default function Home() {
           bgUrl="/images/video_bg.jpeg"
         />
       </Div>
-      {/* End Video Block Section */}
 
-      {/* Start Team Section */}
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
@@ -235,13 +202,9 @@ export default function Home() {
         <TeamSlider />
       </Div>
       <Spacing lg="150" md="80" />
-      {/* End Team Section */}
 
-      {/* Start Testimonial Section */}
       <TestimonialSlider />
-      {/* End Testimonial Section */}
 
-      {/* Start Blog Section */}
       <Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>
@@ -265,22 +228,16 @@ export default function Home() {
           </Div>
         </Div>
       </Div>
-      {/* End Blog Section */}
 
-      {/* Start MovingText Section */}
       <Spacing lg="125" md="70" />
       <MovingText text="Our reputed world wide partners" />
       <Spacing lg="105" md="70" />
-      {/* End MovingText Section */}
 
-      {/* Start LogoList Section */}
       <Div className="container">
         <LogoList />
       </Div>
       <Spacing lg="150" md="80" />
-      {/* End LogoList Section */}
 
-      {/* Start CTA Section */}
       <Div className="container">
         <Cta
           title="Let’s disscuse make <br />something <i>cool</i> together"
@@ -289,7 +246,6 @@ export default function Home() {
           bgSrc="/images/cta_bg.jpeg"
         />
       </Div>
-      {/* End CTA Section */}
     </>
   );
 }

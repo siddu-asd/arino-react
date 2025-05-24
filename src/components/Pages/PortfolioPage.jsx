@@ -1,108 +1,143 @@
 import { Icon } from '@iconify/react';
-import React, { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { pageTitle } from '../../helper';
 import Cta from '../Cta';
 import PageHeading from '../PageHeading';
-import Portfolio from '../Portfolio';
 import Div from '../Div';
+import Portfolio from '../Portfolio';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
+
 const portfolioData = [
   {
-    title: 'Colorful Art Work',
+    title: 'Colorful Art Work 1',
     subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
     src: '/images/portfolio_4.jpeg',
     category: 'ui_ux_design',
+    
+    location: 'United Kingdom',
+    software: 'Adobe Illustrator',
+    date: '14-Aug-2022',
+    client: 'Andreo Bowla',
   },
   {
-    title: 'Colorful Art Work',
+    title: 'Colorful Art Work 2',
     subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
     src: '/images/portfolio_5.jpeg',
     category: 'logo_design',
+    
+    location: 'United Kingdom',
+    software: 'Adobe Illustrator',
+    date: '14-Aug-2022',
+    client: 'Andreo Bowla',
   },
   {
-    title: 'Colorful Art Work',
+    title: 'Colorful Art Work 3',
     subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
     src: '/images/portfolio_6.jpeg',
     category: 'web_design',
+ 
+    location: 'United Kingdom',
+    software: 'Adobe Illustrator',
+    date: '14-Aug-2022',
+    client: 'Andreo Bowla',
   },
   {
-    title: 'Colorful Art Work',
+    title: 'Colorful Art Work 4',
     subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
     src: '/images/portfolio_7.jpeg',
     category: 'mobile_apps',
+    
+    location: 'United Kingdom',
+    software: 'Adobe Illustrator',
+    date: '14-Aug-2022',
+    client: 'Andreo Bowla',
   },
   {
-    title: 'Colorful Art Work',
+    title: 'Colorful Art Work 5',
     subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
     src: '/images/portfolio_8.jpeg',
     category: 'ui_ux_design',
+    
+    location: 'United Kingdom',
+    software: 'Adobe Illustrator',
+    date: '14-Aug-2022',
+    client: 'Andreo Bowla',
   },
   {
-    title: 'Colorful Art Work',
+    title: 'Colorful Art Work 6',
     subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
     src: '/images/portfolio_9.jpeg',
     category: 'web_design',
+    
+    location: 'United Kingdom',
+    software: 'Adobe Illustrator',
+    date: '14-Aug-2022',
+    client: 'Andreo Bowla',
   },
   {
-    title: 'Colorful Art Work',
+    title: 'Colorful Art Work 7',
     subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
     src: '/images/portfolio_10.jpeg',
     category: 'logo_design',
+  
+    location: 'United Kingdom',
+    software: 'Adobe Illustrator',
+    date: '14-Aug-2022',
+    client: 'Andreo Bowla',
   },
   {
-    title: 'Colorful Art Work',
+    title: 'Colorful Art Work 8',
     subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
     src: '/images/portfolio_4.jpeg',
     category: 'ui_ux_design',
+ 
+         location: 'United Kingdom',
+    software: 'Adobe Illustrator',
+    date: '14-Aug-2022',
+    client: 'Andreo Bowla',
   },
   {
-    title: 'Colorful Art Work',
+    title: 'Colorful Art Work 9',
     subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
     src: '/images/portfolio_5.jpeg',
     category: 'logo_design',
+ 
+    location: 'United Kingdom',
+    software: 'Adobe Illustrator',
+    date: '14-Aug-2022',
+    client: 'Andreo Bowla',
   },
   {
-    title: 'Colorful Art Work',
+    title: 'Colorful Art Work 10',
     subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
     src: '/images/portfolio_6.jpeg',
     category: 'web_design',
+    
+    location: 'United Kingdom',
+    software: 'Adobe Illustrator',
+    date: '14-Aug-2022',
+    client: 'Andreo Bowla',
   },
 ];
+
 const categoryMenu = [
-  {
-    title: 'Web Design',
-    category: 'web_design',
-  },
-  {
-    title: 'UI/UX Design',
-    category: 'ui_ux_design',
-  },
-  {
-    title: 'Mobile Apps',
-    category: 'mobile_apps',
-  },
-  {
-    title: 'Logo Design',
-    category: 'logo_design',
-  },
+  { title: 'Web Design', category: 'web_design' },
+  { title: 'UI/UX Design', category: 'ui_ux_design' },
+  { title: 'Mobile Apps', category: 'mobile_apps' },
+  { title: 'Logo Design', category: 'logo_design' },
 ];
+
+export const portfolioItems = portfolioData;
 
 export default function PortfolioPage() {
   pageTitle('Portfolio');
   const [active, setActive] = useState('all');
   const [itemShow, setItemShow] = useState(7);
+  const navigate = useNavigate();
+
+  const slugify = (text) => text.toLowerCase().replace(/\s+/g, '-');
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -151,11 +186,13 @@ export default function PortfolioPage() {
                   : ''
               }`}
               key={index}
+              onClick={() => navigate(`/portfolio/${slugify(item.title)}`)}
+              style={{ cursor: 'pointer' }}
             >
               <Portfolio
                 title={item.title}
                 subtitle={item.subtitle}
-                href={item.href}
+                href="#"
                 src={item.src}
                 variant="cs-style1 cs-type1"
               />
@@ -163,7 +200,6 @@ export default function PortfolioPage() {
             </Div>
           ))}
         </Div>
-
         <Div className="text-center">
           {portfolioData.length <= itemShow ? (
             ''
