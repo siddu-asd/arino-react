@@ -28,6 +28,54 @@ const servicesData = {
       'UI kit creation'
     ]
   },
+    'Social Ad Campaign': {
+    title: 'social ad campaign',
+    subtitle: 'Designing user-friendly digital interfaces.',
+    image: '/images/service_1.jpeg',
+    process: [
+      { icon: '/images/icons/service_icon_1.svg', title: 'Research', description: 'Understanding user needs.' },
+      { icon: '/images/icons/service_icon_2.svg', title: 'Wireframes', description: 'Creating layout blueprints.' },
+      { icon: '/images/icons/service_icon_3.svg', title: 'Visual Design', description: 'Designing attractive interfaces.' }
+    ],
+    relatedServices: [
+      'Mobile apps design',
+      'User research',
+      'Interaction design',
+      'UI kit creation'
+    ]
+  },
+   'WP Development': {
+    title: 'WP Development',
+    subtitle: 'Designing user-friendly digital interfaces.',
+    image: '/images/service_1.jpeg',
+    process: [
+      { icon: '/images/icons/service_icon_1.svg', title: 'Research', description: 'Understanding user needs.' },
+      { icon: '/images/icons/service_icon_2.svg', title: 'Wireframes', description: 'Creating layout blueprints.' },
+      { icon: '/images/icons/service_icon_3.svg', title: 'Visual Design', description: 'Designing attractive interfaces.' }
+    ],
+    relatedServices: [
+      'Mobile apps design',
+      'User research',
+      'Interaction design',
+      'UI kit creation'
+    ]
+  },
+   'Branding': {
+    title: 'Branding',
+    subtitle: 'Designing user-friendly digital interfaces.',
+    image: '/images/service_1.jpeg',
+    process: [
+      { icon: '/images/icons/service_icon_1.svg', title: 'Research', description: 'Understanding user needs.' },
+      { icon: '/images/icons/service_icon_2.svg', title: 'Wireframes', description: 'Creating layout blueprints.' },
+      { icon: '/images/icons/service_icon_3.svg', title: 'Visual Design', description: 'Designing attractive interfaces.' }
+    ],
+    relatedServices: [
+      'Mobile apps design',
+      'User research',
+      'Interaction design',
+      'UI kit creation'
+    ]
+  },
   'reactjs-development': {
     title: 'React.js Development',
     subtitle: 'Building scalable and performant UIs with React.js.',

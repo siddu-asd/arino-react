@@ -7,6 +7,8 @@ import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import TeamSlider from '../Slider/TeamSlider';
 import Spacing from '../Spacing';
+
+import ServiceList from '../ServiceList';
 const funfaceData = [
   {
     title: 'Global Happy Clients',
@@ -147,6 +149,17 @@ export default function AboutPage() {
         </Div>
       </Div>
       {/* End Why Choose Section */}
+       <Spacing lg="145" md="80" />
+            <Div className="container">
+              <SectionHeading
+                title="Our core services"
+                subtitle="Services"
+                variant="cs-style1 text-center"
+              />
+              <Spacing lg="70" md="45" />
+              <ServiceList variant="cs-style2" />
+            </Div>
+            <Spacing lg="120" md="50" />
 
       {/* Start Team Section */}
       <Spacing lg="145" md="80" />
