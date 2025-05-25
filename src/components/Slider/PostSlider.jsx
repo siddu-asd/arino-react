@@ -29,7 +29,22 @@ const postData = [
     date: '05 Mar 2022',
     title: 'A.I will take over all jobs for humans within next year',
   },
- 
+  {
+    id: 'creative-studio',
+    url: '/blog/creative-studio',
+    src: '/images/post_5.jpeg',
+    alt: 'Post',
+    date: '05 Mar 2022',
+    title: 'Creative studio program coming soon',
+  },
+  {
+    id: 'artistic-mind',
+    url: '/blog/artistic-mind',
+    src: '/images/post_6.jpeg',
+    alt: 'Post',
+    date: '04 Mar 2022',
+    title: 'Artistic mind will be great for creation',
+  },
 ];
 
 export default function PostSlider() {
