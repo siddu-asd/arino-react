@@ -11,7 +11,7 @@ export default function Header({ variant }) {
   const [isSticky, setIsSticky] = useState(false);
   const [sideHeaderToggle, setSideHeaderToggle] = useState(false);
   const [mobileToggle, setMobileToggle] = useState(false);
-  
+
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 0) {
@@ -49,60 +49,71 @@ export default function Header({ variant }) {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="about" onClick={() => setMobileToggle(false)}>
+                      <NavLink to="/about" onClick={() => setMobileToggle(false)}>
                         About
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="service" onClick={() => setMobileToggle(false)}>
+                      <NavLink to="/service" onClick={() => setMobileToggle(false)}>
                         Services
                       </NavLink>
                     </li>
-                    <li>
-                      <NavLink to="portfolio" onClick={() => setMobileToggle(false)}>
+
+                    {/* Updated Portfolio with Dropdown */}
+                    <li className="menu-item-has-children">
+                      <NavLink to="/portfolio" onClick={() => setMobileToggle(false)}>
                         Portfolio
                       </NavLink>
+                      <DropDown>
+                        <ul>
+                          <li>
+                            <Link to="/portfolio" onClick={() => setMobileToggle(false)}>
+                              All Projects
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="/portfolio-showcase" onClick={() => setMobileToggle(false)}>
+                              Showcase
+                            </Link>
+                          </li>
+                        </ul>
+                      </DropDown>
                     </li>
+
                     <li>
-                      <NavLink to="blog" onClick={() => setMobileToggle(false)}>
+                      <NavLink to="/blog" onClick={() => setMobileToggle(false)}>
                         Blog
                       </NavLink>
                     </li>
-                   <li className="menu-item-has-children">
-  <NavLink to="/contact" onClick={() => setMobileToggle(false)}>
-    Contact Us
-  </NavLink>
-  <DropDown>
-    <ul>
-      <li>
-        <Link
-          to="/contact"
-          onClick={() => setMobileToggle(false)}
-        >
-          Contact
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/faq"
-          onClick={() => setMobileToggle(false)}
-        >
-          FAQ
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/team"
-          onClick={() => setMobileToggle(false)}
-        >
-          Team
-        </Link>
-      </li>
-      
-    </ul>
-  </DropDown>
-</li>
+
+                    {/* Contact Dropdown */}
+                    <li className="menu-item-has-children">
+                      <NavLink to="/contact" onClick={() => setMobileToggle(false)}>
+                        Contact Us
+                      </NavLink>
+                      <DropDown>
+                        <ul>
+                          <li>
+                            <Link to="/contact" onClick={() => setMobileToggle(false)}>
+                              Contact
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="/faq" onClick={() => setMobileToggle(false)}>
+                              FAQ
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="/team" onClick={() => setMobileToggle(false)}>
+                              Team
+                            </Link>
+                          </li>
+                        </ul>
+                      </DropDown>
+                    </li>
                   </ul>
+
+                  {/* Mobile Menu Toggle */}
                   <span
                     className={
                       mobileToggle
@@ -115,6 +126,7 @@ export default function Header({ variant }) {
                   </span>
                 </Div>
               </Div>
+
               <Div className="cs-main_header_right">
                 <Div className="cs-toolbox">
                   <span
@@ -135,19 +147,10 @@ export default function Header({ variant }) {
         </Div>
       </header>
 
-      <Div
-        className={
-          sideHeaderToggle ? 'cs-side_header active' : 'cs-side_header'
-        }
-      >
-        <button
-          className="cs-close"
-          onClick={() => setSideHeaderToggle(!sideHeaderToggle)}
-        />
-        <Div
-          className="cs-side_header_overlay"
-          onClick={() => setSideHeaderToggle(!sideHeaderToggle)}
-        />
+      {/* Side Header */}
+      <Div className={sideHeaderToggle ? 'cs-side_header active' : 'cs-side_header'}>
+        <button className="cs-close" onClick={() => setSideHeaderToggle(!sideHeaderToggle)} />
+        <Div className="cs-side_header_overlay" onClick={() => setSideHeaderToggle(!sideHeaderToggle)} />
         <Div className="cs-side_header_in">
           <Div className="cs-side_header_shape" />
           <Link className="cs-site_branding" to="/">

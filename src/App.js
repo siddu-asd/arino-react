@@ -48,6 +48,7 @@ function App() {
             path="personal-portfolio"
             element={<PersonalPortfolioHome />}
           />
+          <Route path="/portfolio-showcase" element={<ShowcasePortfolioHome />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="service" element={<ServicesPage />} />
           <Route
