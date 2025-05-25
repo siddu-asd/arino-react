@@ -29,10 +29,30 @@ const funfaceData = [
 ];
 
 const portfolioData = [
-  { title: 'Colorful Art Work', subtitle: 'See Details', href: '/portfolio/portfolio-details', src: '/images/portfolio_1.jpeg' },
-  { title: 'Colorful Art Work', subtitle: 'See Details', href: '/portfolio/portfolio-details', src: '/images/portfolio_2.jpeg' },
-  { title: 'Colorful Art Work', subtitle: 'See Details', href: '/portfolio/portfolio-details', src: '/images/portfolio_0.jpg' },
-  { title: 'Colorful Art Work', subtitle: 'See Details', href: '/portfolio/portfolio-details', src: '/images/portfolio_3.jpeg' },
+  {
+    title: 'Colorful Art Work 1',
+    subtitle: 'See Details',
+    href: '/portfolio/colorful-art-work-1',
+    src: '/images/portfolio_4.jpeg',
+  },
+  {
+    title: 'Colorful Art Work 2',
+    subtitle: 'See Details',
+    href: '/portfolio/colorful-art-work-2',
+    src: '/images/portfolio_5.jpeg',
+  },
+  {
+    title: 'Colorful Art Work 3',
+    subtitle: 'See Details',
+    href: '/portfolio/colorful-art-work-3',
+    src: '/images/portfolio_6.jpeg',
+  },
+  {
+    title: 'Colorful Art Work 4',
+    subtitle: 'See Details',
+    href: '/portfolio/colorful-art-work-4',
+    src: '/images/portfolio_7.jpeg',
+  },
 ];
 
 export default function Home() {
