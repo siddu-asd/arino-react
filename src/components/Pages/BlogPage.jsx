@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { pageTitle } from '../../helper';
 import Cta from '../Cta';
 import PageHeading from '../PageHeading';
@@ -7,8 +7,9 @@ import PostStyle2 from '../Post/PostStyle2';
 import Div from '../Div';
 import Sidebar from '../Sidebar.jsx';
 import Spacing from '../Spacing';
-const postData = [
+export const postData = [
   {
+    id: 'ai-jobs',
     thumb: '/images/post_4.jpeg',
     title: 'A.I will take all human job within next year',
     subtitle:
@@ -16,9 +17,10 @@ const postData = [
     date: '07 Mar 2022',
     category: 'Tech',
     categoryHref: '/blog',
-    href: '/blog/blog-details',
+    href: '/blog/ai-jobs',
   },
   {
+    id: 'creative-studio',
     thumb: '/images/post_5.jpeg',
     title: 'Creative studio programm coming soon',
     subtitle:
@@ -26,9 +28,10 @@ const postData = [
     date: '05 Mar 2022',
     category: 'Photography',
     categoryHref: '/blog',
-    href: '/blog/blog-details',
+    href: '/blog/creative-studio',
   },
   {
+    id: 'artistic-mind',
     thumb: '/images/post_6.jpeg',
     title: 'Artistic mind will be great for creation',
     subtitle:
@@ -36,9 +39,10 @@ const postData = [
     date: '04 Mar 2022',
     category: 'Tech',
     categoryHref: '/blog',
-    href: '/blog/blog-details',
+    href: '/blog/artistic-mind',
   },
 ];
+
 
 export default function BlogPage() {
   pageTitle('Blog');
