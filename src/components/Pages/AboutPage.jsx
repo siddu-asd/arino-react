@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { pageTitle } from '../../helper';
 import Cta from '../Cta';
-import FunFact from '../FunFact';
 import PageHeading from '../PageHeading';
 import Div from '../Div';
 import SectionHeading from '../SectionHeading';
@@ -95,15 +94,7 @@ export default function AboutPage() {
       <Spacing lg="75" md="55" />
       {/* End About Section */}
 
-      {/* Start Fun Fact Section */}
-      <Div className="container">
-        <FunFact
-          title="Our fun fact"
-          subtitle="Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis."
-          data={funfaceData}
-        />
-      </Div>
-      {/* End Fun Fact Section */}
+   
 
       {/* Start Why Choose Section */}
       <Spacing lg="100" md="80" />
