@@ -65,8 +65,8 @@ export default function Home() {
   return (
     <>
       <Hero
-        title="Creativity In <br/>Our Blood Line"
-        subtitle="We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future."
+        title="We don’t just do wonders for your brand; <br>we make your brand wonderful"
+       
         btnText="Get a Quote"
         btnLink="/contact"
         scrollDownId="#service"
