@@ -19,20 +19,20 @@ const copyrightLinks = [
 
 const serviceMenu = [
   {
-    title: 'UI/UX design',
-    href: '/service/service-details',
+    title: 'Creative Marketing',
+    href: '/service/creative-marketing',
   },
   {
-    title: 'WP development',
-    href: '/service/service-details',
+    title: 'Branding',
+    href: '/service/branding',
   },
   {
-    title: 'Digital marketing',
-    href: '/service/service-details',
+    title: 'AI & Technology',
+    href: '/service/ai-technology',
   },
   {
-    title: 'React development',
-    href: '/service/service-details',
+    title: 'Visual Story-Telling Studio',
+    href: '/service/studio',
   },
 ];
 

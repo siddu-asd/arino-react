@@ -66,7 +66,7 @@ export default function Home() {
     <>
       <Hero
         title="We don’t just work wonders—we make your brand wonderful"
-       
+
         btnText="Get a Quote"
         btnLink="/contact"
         scrollDownId="#service"
@@ -86,68 +86,68 @@ export default function Home() {
 
       <Spacing lg="150" md="80" />
       <Div id="service">
-  <Div className="container">
-    <Div className="row">
-      <Div className="col-xl-4">
-        <SectionHeading
-          title="We Uplift Your Brand By  "
-          subtitle="What Can We Do"
-          btnText="See All Services"
-          btnLink="/service"
-        />
-        <Spacing lg="90" md="45" />
-      </Div>
-      {/* Updated services layout with spacing columns */}
-      <Div className='col-xl-8'>
-                   <Div className='row'>
-                     <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                     <Div className='col-lg-3 col-sm-6'>
-                       <Card
-                         title='Creative Marketing'
-                         link='/service/creative-marketing'
-                         src='/images/service_1.jpeg'
-                         alt='Creative Marketing'
-     
-                       />
-                       <Spacing lg='0' md='30'/>
-                     </Div>
-                     <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                     <Div className='col-lg-3 col-sm-6'>
-                       <Card
-                          title='Branding'
-                         link='/service/branding'
-                         src='/images/service_2.jpeg'
-                         alt='Branding'
-     
-                       />
-                       <Spacing lg='0' md='30'/>
-                     </Div>
-                     <Div className='col-lg-3 col-sm-6'>
-                       <Card
-                        title='AI & Technology'
-                         link='/service/ai-technology'
-                         src='/images/service_6.jpeg'
-                         alt='AI & Technology'
-     
-                       />
-                       <Spacing lg='0' md='30'/>
-                     </Div>
-                     
-                       <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                                    <Div className='col-lg-3 col-sm-6'>
-                                      <Card
-                                        title='Visual Story-Telling Studio'
-                                        link='/service/studio'
-                                        src='/images/service_6.jpeg'
-                                        alt='Studio'
-                                      />
-                                      <Spacing lg='0' md='30'/>
-                                    </Div>
+        <Div className="container">
+          <Div className="row">
+            <Div className="col-xl-4">
+              <SectionHeading
+                title="We Uplift Your Brand By  "
+                subtitle="What Can We Do"
+                btnText="See All Services"
+                btnLink="/service"
+              />
+              <Spacing lg="90" md="45" />
+            </Div>
+            {/* Updated services layout with spacing columns */}
+            <Div className='col-xl-8'>
+              <Div className='row'>
+                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
+                <Div className='col-lg-3 col-sm-6'>
+                  <Card
+                    title='Creative Marketing'
+                    link='/service/creative-marketing'
+                    src='/images/service_1.jpeg'
+                    alt='Creative Marketing'
+
+                  />
+                  <Spacing lg='0' md='30' />
+                </Div>
+                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
+                <Div className='col-lg-3 col-sm-6'>
+                  <Card
+                    title='Branding'
+                    link='/service/branding'
+                    src='/images/service_2.jpeg'
+                    alt='Branding'
+
+                  />
+                  <Spacing lg='0' md='30' />
+                </Div>
+                <Div className='col-lg-3 col-sm-6'>
+                  <Card
+                    title='AI & Technology'
+                    link='/service/ai-technology'
+                    src='/images/service_6.jpeg'
+                    alt='AI & Technology'
+
+                  />
+                  <Spacing lg='0' md='30' />
+                </Div>
+
+                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
+                <Div className='col-lg-3 col-sm-6'>
+                  <Card
+                    title='Visual Story-Telling Studio'
+                    link='/service/studio'
+                    src='/images/service_6.jpeg'
+                    alt='Studio'
+                  />
+                  <Spacing lg='0' md='30' />
+                </Div>
+              </Div>
+            </Div>
+          </Div>
         </Div>
       </Div>
-    </Div>
-  </Div>
-</Div>
 
       <Spacing lg="150" md="50" />
       <Div>
@@ -185,8 +185,8 @@ export default function Home() {
       <Spacing lg="130" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
-         Ideas that refuse to be confined and creativity that spills beyond every boundary  
-VIDEO OF STUDIO
+          Ideas that refuse to be confined and creativity that spills beyond every boundary
+          VIDEO OF STUDIO
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
