@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <>
       <Hero
-        title="We don’t just do wonders for your brand; <br>we make your brand wonderful"
+        title="We don’t just work wonders—we make your brand wonderful"
        
         btnText="Get a Quote"
         btnLink="/contact"
