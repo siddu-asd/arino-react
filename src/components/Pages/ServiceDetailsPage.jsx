@@ -12,152 +12,70 @@ import TestimonialSlider from '../Slider/TestimonialSlider';
 import Spacing from '../Spacing';
 
 const servicesData = {
-  'ui-ux-design': {
-    title: 'UI/UX Design',
-    subtitle: 'Designing user-friendly digital interfaces.',
+  'creative-marketing': {
+    title: 'Creative Marketing',
+    subtitle: 'Engaging campaigns that captivate and convert.',
     image: '/images/service_1.jpeg',
     process: [
-      { icon: '/images/icons/service_icon_1.svg', title: 'Research', description: 'Understanding user needs.' },
-      { icon: '/images/icons/service_icon_2.svg', title: 'Wireframes', description: 'Creating layout blueprints.' },
-      { icon: '/images/icons/service_icon_3.svg', title: 'Visual Design', description: 'Designing attractive interfaces.' }
+      { icon: '/images/icons/service_icon_1.svg', title: 'Campaign Strategy', description: 'Design data-driven marketing strategies.' },
+      { icon: '/images/icons/service_icon_2.svg', title: 'Creative Design', description: 'Develop visual content that connects.' },
+      { icon: '/images/icons/service_icon_3.svg', title: 'Launch & Analyze', description: 'Execute and refine campaigns.' }
     ],
     relatedServices: [
-      'Mobile apps design',
-      'User research',
-      'Interaction design',
-      'UI kit creation'
+      'Social Media Ads',
+      'Influencer Marketing',
+      'Content Creation',
+      'Campaign Analytics'
     ]
   },
-    'Social Ad Campaign': {
-    title: 'social ad campaign',
-    subtitle: 'Designing user-friendly digital interfaces.',
-    image: '/images/service_1.jpeg',
-    process: [
-      { icon: '/images/icons/service_icon_1.svg', title: 'Research', description: 'Understanding user needs.' },
-      { icon: '/images/icons/service_icon_2.svg', title: 'Wireframes', description: 'Creating layout blueprints.' },
-      { icon: '/images/icons/service_icon_3.svg', title: 'Visual Design', description: 'Designing attractive interfaces.' }
-    ],
-    relatedServices: [
-      'Mobile apps design',
-      'User research',
-      'Interaction design',
-      'UI kit creation'
-    ]
-  },
-   'WP Development': {
-    title: 'WP Development',
-    subtitle: 'Designing user-friendly digital interfaces.',
-    image: '/images/service_1.jpeg',
-    process: [
-      { icon: '/images/icons/service_icon_1.svg', title: 'Research', description: 'Understanding user needs.' },
-      { icon: '/images/icons/service_icon_2.svg', title: 'Wireframes', description: 'Creating layout blueprints.' },
-      { icon: '/images/icons/service_icon_3.svg', title: 'Visual Design', description: 'Designing attractive interfaces.' }
-    ],
-    relatedServices: [
-      'Mobile apps design',
-      'User research',
-      'Interaction design',
-      'UI kit creation'
-    ]
-  },
-   'Branding': {
+  'branding': {
     title: 'Branding',
-    subtitle: 'Designing user-friendly digital interfaces.',
-    image: '/images/service_1.jpeg',
-    process: [
-      { icon: '/images/icons/service_icon_1.svg', title: 'Research', description: 'Understanding user needs.' },
-      { icon: '/images/icons/service_icon_2.svg', title: 'Wireframes', description: 'Creating layout blueprints.' },
-      { icon: '/images/icons/service_icon_3.svg', title: 'Visual Design', description: 'Designing attractive interfaces.' }
-    ],
-    relatedServices: [
-      'Mobile apps design',
-      'User research',
-      'Interaction design',
-      'UI kit creation'
-    ]
-  },
-  'reactjs-development': {
-    title: 'React.js Development',
-    subtitle: 'Building scalable and performant UIs with React.js.',
+    subtitle: 'Build a bold and memorable brand identity.',
     image: '/images/service_2.jpeg',
     process: [
-      { icon: '/images/icons/service_icon_1.svg', title: 'Component Architecture', description: 'Structuring reusable components.' },
-      { icon: '/images/icons/service_icon_2.svg', title: 'State Management', description: 'Managing global app state efficiently.' },
-      { icon: '/images/icons/service_icon_3.svg', title: 'API Integration', description: 'Connecting frontend to backend.' }
+      { icon: '/images/icons/service_icon_1.svg', title: 'Brand Research', description: 'Understand market and audience.' },
+      { icon: '/images/icons/service_icon_2.svg', title: 'Identity Design', description: 'Logo, color, and typography.' },
+      { icon: '/images/icons/service_icon_3.svg', title: 'Brand Guidelines', description: 'Consistent application across media.' }
     ],
     relatedServices: [
-      'Next.js development',
-      'Redux setup',
-      'Custom UI components',
-      'SSR & SEO optimization'
+      'Logo Design',
+      'Naming Strategy',
+      'Visual Identity',
+      'Brand Storytelling'
     ]
   },
-  'digital-marketing': {
-    title: 'Digital Marketing',
-    subtitle: 'Grow your brand with effective marketing strategies.',
-    image: '/images/service_3.jpeg',
-    process: [
-      { icon: '/images/icons/service_icon_1.svg', title: 'SEO', description: 'Boost search visibility.' },
-      { icon: '/images/icons/service_icon_2.svg', title: 'Social Media', description: 'Engage users on social platforms.' },
-      { icon: '/images/icons/service_icon_3.svg', title: 'Email Marketing', description: 'Nurture leads via email campaigns.' }
-    ],
-    relatedServices: [
-      'Content marketing',
-      'Lead generation',
-      'Google Ads',
-      'Analytics'
-    ]
-  },
-  'technology': {
-    title: 'Technology Consulting',
-    subtitle: 'Leverage technology for business transformation.',
-    image: '/images/service_4.jpeg',
-    process: [
-      { icon: '/images/icons/service_icon_1.svg', title: 'Assessment', description: 'Evaluate current systems.' },
-      { icon: '/images/icons/service_icon_2.svg', title: 'Strategy', description: 'Define technology roadmap.' },
-      { icon: '/images/icons/service_icon_3.svg', title: 'Implementation', description: 'Integrate and optimize tools.' }
-    ],
-    relatedServices: [
-      'IT modernization',
-      'Cloud adoption',
-      'DevOps consulting',
-      'Cybersecurity'
-    ]
-  },
-
-   'consultancy': {
-    title: 'Consultancy',
-    subtitle: 'Strategic guidance for business and digital growth.',
-    image: '/images/service_5.jpeg',
-    process: [
-      { icon: '/images/icons/service_icon_1.svg', title: 'Business Analysis', description: 'Understanding client business needs.' },
-      { icon: '/images/icons/service_icon_2.svg', title: 'Solution Mapping', description: 'Creating tailored business solutions.' },
-      { icon: '/images/icons/service_icon_3.svg', title: 'Execution Planning', description: 'Roadmaps to achieve goals.' }
-    ],
-    relatedServices: [
-      'Digital transformation',
-      'IT consulting',
-      'Business strategy',
-      'Process improvement'
-    ]
-  },
-  'creative-design': {
-    title: 'Creative Design',
-    subtitle: 'Innovative and visually appealing designs for brands.',
+  'ai-technology': {
+    title: 'AI & Technology',
+    subtitle: 'Empowering businesses with smart tech solutions.',
     image: '/images/service_6.jpeg',
     process: [
-      { icon: '/images/icons/service_icon_1.svg', title: 'Brand Discovery', description: 'Identifying brand identity and voice.' },
-      { icon: '/images/icons/service_icon_2.svg', title: 'Concept Design', description: 'Drafting unique visual ideas.' },
-      { icon: '/images/icons/service_icon_3.svg', title: 'Final Delivery', description: 'Producing complete creative assets.' }
+      { icon: '/images/icons/service_icon_1.svg', title: 'Tech Consulting', description: 'Define AI and tech roadmap.' },
+      { icon: '/images/icons/service_icon_2.svg', title: 'Model Development', description: 'Build AI models tailored to your goals.' },
+      { icon: '/images/icons/service_icon_3.svg', title: 'Integration', description: 'Deploy solutions into your workflow.' }
     ],
     relatedServices: [
-      'Branding',
-      'Print design',
-      'Motion graphics',
-      'Web visuals'
+      'Chatbots',
+      'Recommendation Engines',
+      'Process Automation',
+      'Data Analysis'
+    ]
+  },
+  'studio': {
+    title: 'Studio – Podcast, Ad-Films, Product Shoot',
+    subtitle: 'Professional studio production for audio and visuals.',
+    image: '/images/service_7.jpeg',
+    process: [
+      { icon: '/images/icons/service_icon_1.svg', title: 'Concept Planning', description: 'Develop scripts and storyboards.' },
+      { icon: '/images/icons/service_icon_2.svg', title: 'Production', description: 'Record, shoot, and direct the media.' },
+      { icon: '/images/icons/service_icon_3.svg', title: 'Post Production', description: 'Edit, mix, and finalize deliverables.' }
+    ],
+    relatedServices: [
+      'Podcast Production',
+      'Product Photography',
+      'Ad-Film Shoots',
+      'Studio Rentals'
     ]
   }
-
 };
 
 export default function ServiceDetailsPage() {
@@ -218,7 +136,7 @@ export default function ServiceDetailsPage() {
             <Spacing lg="0" md="40" />
           </Div>
           <Div className="col-lg-6 offset-xl-1">
-            <h2 className="cs-font_50 cs-m0">Below our most {service.title.toLowerCase()} related services</h2>
+            <h2 className="cs-font_50 cs-m0">Below are related services to {service.title.toLowerCase()}</h2>
             <Spacing lg="50" md="30" />
             <Div className="row">
               {service.relatedServices.map((s, idx) => (

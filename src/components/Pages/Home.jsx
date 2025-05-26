@@ -78,8 +78,8 @@ export default function Home() {
       <div className="container">
         <FunFact
           variant="cs-type1"
-          title="Our fun fact"
-          subtitle="Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis."
+          title="Curious How We Keep Things Rolling?"
+          subtitle="Take a Sneak Peek!  ."
           data={funfaceData}
         />
       </div>
@@ -90,7 +90,7 @@ export default function Home() {
     <Div className="row">
       <Div className="col-xl-4">
         <SectionHeading
-          title="Services we can help you with"
+          title="We Uplift Your Brand By  "
           subtitle="What Can We Do"
           btnText="See All Services"
           btnLink="/service"
@@ -98,68 +98,51 @@ export default function Home() {
         <Spacing lg="90" md="45" />
       </Div>
       {/* Updated services layout with spacing columns */}
-      <Div className="col-xl-8">
-        <Div className="row">
-          <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-          <Div className="col-lg-3 col-sm-6">
-            <Card
-              title="UI/UX design"
-              link="/service/ui-ux-design"
-              src="/images/service_1.jpeg"
-              alt="Service"
-            />
-            <Spacing lg="0" md="30" />
-          </Div>
-          <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-          <Div className="col-lg-3 col-sm-6">
-            <Card
-              title="React.js Development"
-              link="/service/reactjs-development"
-              src="/images/service_2.jpeg"
-              alt="Service"
-            />
-            <Spacing lg="0" md="30" />
-          </Div>
-          <Div className="col-lg-3 col-sm-6">
-            <Card
-              title="Digital Marketing"
-              link="/service/digital-marketing"
-              src="/images/service_3.jpeg"
-              alt="Service"
-            />
-            <Spacing lg="0" md="30" />
-          </Div>
-          <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-          <Div className="col-lg-3 col-sm-6">
-            <Card
-              title="Technology"
-              link="/service/technology"
-              src="/images/service_4.jpeg"
-              alt="Service"
-            />
-            <Spacing lg="0" md="30" />
-          </Div>
-          <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-          <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-          <Div className="col-lg-3 col-sm-6">
-            <Card
-              title="Consultancy"
-              link="/service/consultancy"
-              src="/images/service_5.jpeg"
-              alt="Service"
-            />
-            <Spacing lg="0" md="30" />
-          </Div>
-          <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-          <Div className="col-lg-3 col-sm-6">
-            <Card
-              title="Creative Design"
-              link="/service/creative-design"
-              src="/images/service_6.jpeg"
-              alt="Service"
-            />
-            <Spacing lg="0" md="30" />
-          </Div>
+      <Div className='col-xl-8'>
+                   <Div className='row'>
+                     <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
+                     <Div className='col-lg-3 col-sm-6'>
+                       <Card
+                         title='Creative Marketing'
+                         link='/service/creative-marketing'
+                         src='/images/service_1.jpeg'
+                         alt='Creative Marketing'
+     
+                       />
+                       <Spacing lg='0' md='30'/>
+                     </Div>
+                     <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
+                     <Div className='col-lg-3 col-sm-6'>
+                       <Card
+                          title='Branding'
+                         link='/service/branding'
+                         src='/images/service_2.jpeg'
+                         alt='Branding'
+     
+                       />
+                       <Spacing lg='0' md='30'/>
+                     </Div>
+                     <Div className='col-lg-3 col-sm-6'>
+                       <Card
+                        title='AI & Technology'
+                         link='/service/ai-technology'
+                         src='/images/service_6.jpeg'
+                         alt='AI & Technology'
+     
+                       />
+                       <Spacing lg='0' md='30'/>
+                     </Div>
+                     
+                       <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
+                                    <Div className='col-lg-3 col-sm-6'>
+                                      <Card
+                                        title='Visual Story-Telling Studio'
+                                        link='/service/studio'
+                                        src='/images/service_6.jpeg'
+                                        alt='Studio'
+                                      />
+                                      <Spacing lg='0' md='30'/>
+                                    </Div>
         </Div>
       </Div>
     </Div>

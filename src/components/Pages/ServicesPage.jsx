@@ -39,43 +39,47 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='UI/UX design'
-                    link='/service/ui-ux-design'
+                    title='Creative Marketing'
+                    link='/service/creative-marketing'
                     src='/images/service_1.jpeg'
-                    alt='Service'
+                    alt='Creative Marketing'
+
                   />
                   <Spacing lg='0' md='30'/>
                 </Div>
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='React.js Development'
-                    link='/service/reactjs-development'
+                     title='Branding'
+                    link='/service/branding'
                     src='/images/service_2.jpeg'
-                    alt='Service'
+                    alt='Branding'
+
                   />
                   <Spacing lg='0' md='30'/>
                 </Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='Digital Marketing'
-                    link='/service/digital-marketing'
-                    src='/images/service_3.jpeg'
-                    alt='Service'
+                   title='AI & Technology'
+                    link='/service/ai-technology'
+                    src='/images/service_6.jpeg'
+                    alt='AI & Technology'
+
                   />
                   <Spacing lg='0' md='30'/>
                 </Div>
+                
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='Technology'
-                    link='/service/technology'
-                    src='/images/service_4.jpeg'
-                    alt='Service'
+                    title='Visual Story-Telling Studio'
+                    link='/service/studio'
+                    src='/images/service_6.jpeg'
+                    alt='Studio'
                   />
                   <Spacing lg='0' md='30'/>
                 </Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
+                {/* <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
@@ -85,8 +89,8 @@ export default function ServicesPage() {
                     alt='Service'
                   />
                   <Spacing lg='0' md='30'/>
-                </Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
+                </Div> */}
+                {/* <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
                     title='Creative Design'
@@ -95,7 +99,7 @@ export default function ServicesPage() {
                     alt='Service'
                   />
                   <Spacing lg='0' md='30'/>
-                </Div>
+                </Div> */}
               </Div>
             </Div>
           </Div>
