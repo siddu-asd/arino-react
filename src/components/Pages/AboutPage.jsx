@@ -8,24 +8,24 @@ import TeamSlider from '../Slider/TeamSlider';
 import Spacing from '../Spacing';
 
 import ServiceList from '../ServiceList';
-const funfaceData = [
-  {
-    title: 'Global Happy Clients',
-    factNumber: '40K',
-  },
-  {
-    title: 'Project Completed',
-    factNumber: '50K',
-  },
-  {
-    title: 'Team Members',
-    factNumber: '245',
-  },
-  {
-    title: 'Digital products',
-    factNumber: '550',
-  },
-];
+// const funfaceData = [
+//   {
+//     title: 'Global Happy Clients',
+//     factNumber: '40K',
+//   },
+//   {
+//     title: 'Project Completed',
+//     factNumber: '50K',
+//   },
+//   {
+//     title: 'Team Members',
+//     factNumber: '245',
+//   },
+//   {
+//     title: 'Digital products',
+//     factNumber: '550',
+//   },
+// ];
 
 export default function AboutPage() {
   pageTitle('About');
@@ -49,16 +49,15 @@ export default function AboutPage() {
         <Div className="row">
           <Div className="col-xl-5 col-lg-7">
             <SectionHeading
-              title="Your trusted partner for business"
+              title="EXPLORE OUR SPACE  "
               subtitle="About Our Agency"
             >
               <Spacing lg="30" md="20" />
               <p className="cs-m0">
-                This is the main factor that sets us apart from our competition
-                and allows us to deliver a specialist business consultancy
-                service. Our team applies its wide-ranging experience to
-                determining. Through our years of experience, we’ve also learned
-                that while each channel.
+               Our journey began with a simple belief: brands deserve more than ordinary solutions. That’s why we operate like a crew on a space station—always scanning the horizon, ready to respond to the next big signal from Earth. 
+For us, every project is a mission, every brief a new world to explore.  
+Our team is made up of explorers, storytellers, and tech-whisperers who believe that marketing isn’t just about reaching audiences—it’s about making an impact that’s truly out of this world.  
+With Raising 100x, you’re not just launching a campaign; you’re embarking on a journey where imagination has no limits and results are lightyears ahead. 
               </p>
               <Spacing lg="30" md="30" />
               <Div className="cs-separator cs-accent_bg"></Div>
@@ -115,22 +114,40 @@ export default function AboutPage() {
           <Div className="col-xl-5 offset-xl-1 col-lg-6">
             <SectionHeading
               title="Highly experienced pepole with us"
-              subtitle="Why Choose Us"
+              subtitle="What Fuels Us? "
             >
               <Spacing lg="30" md="20" />
               <p className="cs-m0">
-                This is the main factor that sets us apart from our competition
-                and allows us to deliver a specialist business consultancy
-                service. Our team applies its wide-ranging experience to
-                determining. Through our years of experience, we’ve also learned
-                that while each channel.
+               <>
+  <p>
+    We believe brands shouldn’t just grow—they should multiply, surprise, and spark conversations. Our philosophy? Stay endlessly curious, break the “rules” that don't serve you, and never settle for less.
+  </p>
+
+  <p>
+    You are free to choose other marketing agencies, if you are looking for
+  </p>
+
+  <ul>
+    <li>Websites overflowing with forgettable content</li>
+    <li>Videos that look like they were shot in a hurry</li>
+    <li>Cluttered layouts and copy-paste social media posts</li>
+  </ul>
+
+  <p>
+    <strong>What you get with Raising 100x:</strong><br />
+    We’re obsessed with mixing human imagination and AI wizardry to find that spot where ideas go from “nice” to “no one’s ever seen this before.”
+  </p>
+
+  <p>
+    For us, every project is a playground, every brief is an invitation to experiment, and every client is a co-conspirator in making something unforgettable. If you’re ready to ditch the ordinary and chase the 100x, you’re in the right space.
+  </p>
+</>
+
               </p>
               <Spacing lg="15" md="15" />
               <p className="cs-m0">
-                This is the main factor that sets us apart from our competition
-                and allows us to deliver a specialist business consultancy
-                service. Our team applies its wide-ranging experience to
-                determining.
+                <pre></pre>
+               
               </p>
               <Spacing lg="30" md="30" />
               <Div className="cs-separator cs-accent_bg"></Div>
@@ -143,8 +160,8 @@ export default function AboutPage() {
        <Spacing lg="145" md="80" />
             <Div className="container">
               <SectionHeading
-                title="Our core services"
-                subtitle="Services"
+                title="Understand Our Way of Working  "
+                subtitle="From Plan to Launch "
                 variant="cs-style1 text-center"
               />
               <Spacing lg="70" md="45" />
@@ -169,7 +186,8 @@ export default function AboutPage() {
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
+          title="We’ve got you!   <br />We’ve got you!  
+Let’s talk over a cup of coffee... "
           btnText="Apply For Meeting"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"

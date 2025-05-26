@@ -6,34 +6,37 @@ import './servicelist.scss';
 // Added service data here with unique hrefs matching service IDs (slugs)
 const serviceData = [
   {
-    title: 'WP Development',
+    title: "Let’s Set Things in Motion",
     subtitle:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem.',
-    imgUrl: '/images/service_7.jpeg',
-    href: '/service/WP Development',
+      "Once you hop on board, we dive straight into a fun brainstorming session. This is where we get to know you, your business dreams, and what keeps you up at night.",
+    imgUrl: "/images/service_7.jpeg", // optional: add an image or leave it blank
   },
   {
-    title: 'UI/UX Design',
+    title: "The Deep-Dive Discovery",
     subtitle:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem.',
-    imgUrl: '/images/service_8.jpeg',
-    href: '/service/ui-ux-design',
+      "We roll up our sleeves and start digging. What’s your brand missing? Where’s the hidden potential? We jot down every essential detail, big or small, to make sure nothing slips through the cracks.",
+    imgUrl: "/images/service_8.jpeg",
   },
   {
-    title: 'Branding',
+    title: "Brand Explorers at Work",
     subtitle:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem.',
-    imgUrl: '/images/service_9.jpeg',
-    href: '/service/branding',
+      "Now it’s time for us to play detective. We study your brand inside and out, stalk your competitors— in a friendly way of course — and scan the market for opportunities others might miss.",
+    imgUrl: "/images/service_9.jpeg",
   },
   {
-    title: 'Social Ad Campaign',
+    title: "Strategy in Action",
     subtitle:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem.',
-    imgUrl: '/images/service_10.jpeg',
-    href: '/service/social-ad-campaign',
+      "Armed with insights and a clear roadmap, we get to work. Whether it’s crafting killer campaigns, creating scroll-stopping content, or launching your next big thing, we put our strategies into play.",
+    imgUrl: "/images/service_10.jpeg",
+  },
+  {
+    title: "Watch Your Brand Rise",
+    subtitle:
+      "Sit back or join the ride as your brand transforms. We keep you in the loop, celebrate every win, and tweak things as we go to make sure you’re always moving up.",
+    imgUrl: "/images/service_7.jpeg",
   },
 ];
+
 
 export default function ServiceList({ variant }) {
   const [active, setActive] = useState(0);

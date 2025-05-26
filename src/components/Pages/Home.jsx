@@ -153,7 +153,7 @@ export default function Home() {
       <Div>
         <Div className="container">
           <SectionHeading
-            title="Portfolio to explore"
+            title="Behold Our Creation"
             subtitle="Latest Projects"
             variant="cs-style1 text-center"
           />
@@ -185,7 +185,8 @@ export default function Home() {
       <Spacing lg="130" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
-          Our agile process is ability to adapt and respond to change. Agile organizations view change as an opportunity, not a threat.
+         Ideas that refuse to be confined and creativity that spills beyond every boundary  
+VIDEO OF STUDIO
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
@@ -197,7 +198,7 @@ export default function Home() {
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
-          title="Awesome team <br/>members"
+          title="People Who Make It Possible/Happen"
           subtitle="Our Team"
           variant="cs-style1"
         />
@@ -243,7 +244,8 @@ export default function Home() {
 
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
+          title="Have an idea? We’ve got you!  
+Let’s talk over a cup of coffee... "
           btnText="Apply For Meeting"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
