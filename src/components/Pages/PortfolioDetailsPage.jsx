@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { pageTitle } from '../../helper';
-import Button from '../Button';
 import Cta from '../Cta';
 import PageHeading from '../PageHeading';
 import Div from '../Div';
@@ -105,7 +104,7 @@ export default function PortfolioDetailsPage() {
         </Div>
         <Spacing lg="65" md="10" />
         <Div className="cs-page_navigation cs-center">
-          <Div>
+          {/* <Div>
             <Button
               btnLink="/portfolio/previous-slug"
               btnText="Prev Project"
@@ -114,7 +113,7 @@ export default function PortfolioDetailsPage() {
           </Div>
           <Div>
             <Button btnLink="/portfolio/next-slug" btnText="Next Project" />
-          </Div>
+          </Div> */}
         </Div>
       </Div>
       <Spacing lg="145" md="80" />
