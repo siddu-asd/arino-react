@@ -25,9 +25,8 @@ export default function Header({ variant }) {
   return (
     <>
       <header
-        className={`cs-site_header cs-style1 text-uppercase ${
-          variant ? variant : ''
-        } cs-sticky_header ${isSticky ? 'cs-sticky_header_active' : ''}`}
+        className={`cs-site_header cs-style1 text-uppercase ${variant ? variant : ''
+          } cs-sticky_header ${isSticky ? 'cs-sticky_header_active' : ''}`}
       >
         <Div className="cs-main_header">
           <Div className="container">
@@ -55,7 +54,7 @@ export default function Header({ variant }) {
                     </li>
                     <li>
                       <NavLink to="/service" onClick={() => setMobileToggle(false)}>
-                        Services
+                        What We Offer
                       </NavLink>
                     </li>
 
@@ -98,11 +97,11 @@ export default function Header({ variant }) {
                               Contact
                             </Link>
                           </li>
-                          <li>
+                          {/* <li>
                             <Link to="/faq" onClick={() => setMobileToggle(false)}>
                               FAQ
                             </Link>
-                          </li>
+                          </li> */}
                           <li>
                             <Link to="/team" onClick={() => setMobileToggle(false)}>
                               Team

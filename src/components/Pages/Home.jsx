@@ -21,12 +21,6 @@ const heroSocialLinks = [
   { name: 'Twitter', links: '/' },
 ];
 
-const funfaceData = [
-  { title: 'Global Happy Clients', factNumber: '40K' },
-  { title: 'Project Completed', factNumber: '50K' },
-  { title: 'Team Members', factNumber: '245' },
-  { title: 'Digital products', factNumber: '550' },
-];
 
 const portfolioData = [
   {
@@ -67,14 +61,14 @@ export default function Home() {
       <Hero
         title={`We don’t just work<br />
   <span style="font-size: 92px; font-weight: bold; color: transparent; -webkit-text-stroke: 1.5px red;">
-    WONDER
+    WONDERS
   </span><br />
   we make your brand<br />
   <span style="font-size: 92px; font-weight: bold; color: transparent; -webkit-text-stroke: 1.5px red;">
     WONDERFUL
   </span>`
         }
-        btnText="Get a Quote"
+        btnText="LET'S START"
         btnLink="/contact"
         scrollDownId="#service"
         socialLinksHeading="Follow Us"
@@ -94,12 +88,11 @@ export default function Home() {
       /> */}
 
       <div className="container">
-        <FunFact
-          variant="cs-type1"
-          title="Curious How We Keep Things Rolling?"
-          subtitle="Take a Sneak Peek!  ."
-          data={funfaceData}
-        />
+       <FunFact
+  variant="cs-type1"
+  title="Setting the Bar 100 Times Higher"
+ 
+/>
       </div>
 
       <Spacing lg="150" md="80" />
@@ -154,7 +147,12 @@ export default function Home() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='Visual Story-Telling Studio'
+                    title={
+                      <>
+                        Visual<br />
+                        Story-Telling<br />
+                        Studio
+                      </>}
                     link='/service/studio'
                     src='/images/service_6.jpeg'
                     alt='Studio'
@@ -237,7 +235,7 @@ export default function Home() {
               <SectionHeading
                 title="Read Our Insights  "
                 subtitle=""
-                btnText="View More Blog"
+                btnText="View More Blogs"
                 btnLink="/blog"
               />
               <Spacing lg="90" md="45" />

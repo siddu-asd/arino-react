@@ -16,12 +16,12 @@ export default function ServicesPage() {
   }, [])
   return (
     <>
-      <PageHeading 
+      <PageHeading
         title='Services'
         bgSrc='images/service_hero_bg.jpeg'
         pageLinkText='Services'
       />
-      <Spacing lg='150' md='80'/>
+      <Spacing lg='150' md='80' />
       <Div className='cs-shape_wrap_4'>
         <Div className="cs-shape_4"></Div>
         <Div className="cs-shape_4"></Div>
@@ -29,10 +29,10 @@ export default function ServicesPage() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title='Services we can help you with' 
-                subtitle='What Can We Do'
+                title='We Raise The Bar Through'
+                subtitle='Our Capabilities'
               />
-              <Spacing lg='90' md='45'/>
+              <Spacing lg='90' md='45' />
             </Div>
             <Div className='col-xl-8'>
               <Div className='row'>
@@ -45,39 +45,44 @@ export default function ServicesPage() {
                     alt='Creative Marketing'
 
                   />
-                  <Spacing lg='0' md='30'/>
+                  <Spacing lg='0' md='30' />
                 </Div>
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                     title='Branding'
+                    title='Branding'
                     link='/service/branding'
                     src='/images/service_2.jpeg'
                     alt='Branding'
 
                   />
-                  <Spacing lg='0' md='30'/>
+                  <Spacing lg='0' md='30' />
                 </Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                   title='AI & Technology'
+                    title='AI & Technology'
                     link='/service/ai-technology'
                     src='/images/service_6.jpeg'
                     alt='AI & Technology'
 
                   />
-                  <Spacing lg='0' md='30'/>
+                  <Spacing lg='0' md='30' />
                 </Div>
-                
+
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='Visual Story-Telling Studio'
+                    title={
+                      <>
+                        Visual<br />
+                        Story-Telling<br />
+                        Studio
+                      </>}
                     link='/service/studio'
                     src='/images/service_6.jpeg'
                     alt='Studio'
                   />
-                  <Spacing lg='0' md='30'/>
+                  <Spacing lg='0' md='30' />
                 </Div>
                 {/* <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
@@ -105,23 +110,23 @@ export default function ServicesPage() {
           </Div>
         </Div>
       </Div>
-      <Spacing lg='150' md='80'/>
+      <Spacing lg='150' md='80' />
       <Div className="container">
         <SectionHeading
-          title='Providing best <br/>pricing for client' 
+          title='Providing best <br/>pricing for client'
           subtitle='Pricing & Packaging'
         />
-        <Spacing lg='85' md='40'/>
-        <PricingTableList/>
+        <Spacing lg='85' md='40' />
+        <PricingTableList />
       </Div>
-      <Spacing lg='125' md='55'/>
-      <TestimonialSlider/>
-      <Spacing lg='150' md='80'/>
+      <Spacing lg='125' md='55' />
+      <TestimonialSlider />
+      <Spacing lg='150' md='80' />
       <Div className="container">
-        <Cta 
-          title='Let’s disscuse make <br />something <i>cool</i> together' 
-          btnText='Apply For Meeting' 
-          btnLink='/contact' 
+        <Cta
+          title='Let’s disscuse make <br />something <i>cool</i> together'
+          btnText='Apply For Meeting'
+          btnLink='/contact'
           bgSrc='/images/cta_bg.jpeg'
         />
       </Div>

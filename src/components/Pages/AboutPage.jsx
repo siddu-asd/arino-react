@@ -39,7 +39,7 @@ export default function AboutPage() {
               <p className="cs-m0">
                 Our journey began with a simple belief: brands deserve more than ordinary solutions. That’s why we operate like a crew on a space station—always scanning the horizon, ready to respond to the next big signal from Earth. 
                <br /><br /> For us, every project is a mission, every brief a new world to explore. <br /> <br /> 
-                Our team is made up of storytellers, and tech-whisperers who believe that marketing isn’t just about reaching audiences—it’s about making an impact that’s truly out of this world.  
+                Our team is made up of storytellers and tech-whisperers who believe that marketing isn’t just about reaching audiences—it’s about making an impact that’s truly out of this world.  
               <br /> <br />  With Raising 100x, you’re not just launching a campaign; you’re embarking on a journey where imagination has no limits and results are lightyears ahead.
               </p>
               <Spacing lg="30" md="30" />

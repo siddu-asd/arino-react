@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { pageTitle } from '../../helper';
-import Accordion from '../Accordion';
 import Button from '../Button';
 import Cta from '../Cta';
 import IconBox from '../IconBox';
@@ -16,64 +15,71 @@ const servicesData = {
     title: 'Creative Marketing',
     subtitle: 'Engaging campaigns that captivate and convert.',
     image: '/images/service_1.jpeg',
+    description: 'What We Bring Through Creative Marketing ',
     process: [
-      { icon: '/images/icons/service_icon_1.svg', title: 'Campaign Strategy', description: 'Design data-driven marketing strategies.' },
-      { icon: '/images/icons/service_icon_2.svg', title: 'Creative Design', description: 'Develop visual content that connects.' },
-      { icon: '/images/icons/service_icon_3.svg', title: 'Launch & Analyze', description: 'Execute and refine campaigns.' }
+      { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts ' },
+      { icon: '/images/icons/service_icon_2.svg', title: 'PLOT', description: 'We Plot Our Ideas ' },
+      { icon: '/images/icons/service_icon_3.svg', title: 'PRESENT', description: 'We Present Our Creation' }
     ],
     relatedServices: [
-      'Social Media Ads',
-      'Influencer Marketing',
+      'Marketing Strategy & Planning',
+
+      'Digital Marketing & Analysis',
+
       'Content Creation',
-      'Campaign Analytics'
+
+      'Social Media Marketing'
     ]
   },
   'branding': {
     title: 'Branding',
     subtitle: 'Build a bold and memorable brand identity.',
     image: '/images/service_2.jpeg',
+    description: 'What We Bring Through Branding',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'Brand Research', description: 'Understand market and audience.' },
       { icon: '/images/icons/service_icon_2.svg', title: 'Identity Design', description: 'Logo, color, and typography.' },
       { icon: '/images/icons/service_icon_3.svg', title: 'Brand Guidelines', description: 'Consistent application across media.' }
     ],
     relatedServices: [
-      'Logo Design',
-      'Naming Strategy',
-      'Visual Identity',
-      'Brand Storytelling'
+      'Personal Branding  ',
+      'Product & Service Branding ',
+      'Brand Name and Tagline  ',
+      'Brand Identity '
     ]
   },
   'ai-technology': {
     title: 'AI & Technology',
     subtitle: 'Empowering businesses with smart tech solutions.',
     image: '/images/service_6.jpeg',
+    description: 'What We Bring Through AI & Technology ',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'Tech Consulting', description: 'Define AI and tech roadmap.' },
       { icon: '/images/icons/service_icon_2.svg', title: 'Model Development', description: 'Build AI models tailored to your goals.' },
       { icon: '/images/icons/service_icon_3.svg', title: 'Integration', description: 'Deploy solutions into your workflow.' }
     ],
     relatedServices: [
-      'Chatbots',
-      'Recommendation Engines',
-      'Process Automation',
-      'Data Analysis'
+      'Website & App Development',
+      'AI Powered Chatbots  ',
+      ' In Store AR/VR  ',
+      'Workflow Automation '
     ]
   },
   'studio': {
     title: 'Studio – Podcast, Ad-Films, Product Shoot',
     subtitle: 'Professional studio production for audio and visuals.',
     image: '/images/service_7.jpeg',
+    description: 'What We Bring Through Visual Storytelling Studio',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'Concept Planning', description: 'Develop scripts and storyboards.' },
       { icon: '/images/icons/service_icon_2.svg', title: 'Production', description: 'Record, shoot, and direct the media.' },
       { icon: '/images/icons/service_icon_3.svg', title: 'Post Production', description: 'Edit, mix, and finalize deliverables.' }
     ],
     relatedServices: [
-      'Podcast Production',
-      'Product Photography',
-      'Ad-Film Shoots',
-      'Studio Rentals'
+      'Podcast ',
+      'Product Photo Shoot',
+      'Ad-Film ',
+      'Video Shooting'
     ]
   }
 };
@@ -108,7 +114,7 @@ export default function ServiceDetailsPage() {
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
-          title="Design working process"
+          title="Our Design Adventure Begins With"
           subtitle={service.title}
           variant="cs-style1 text-center"
         />
@@ -136,7 +142,7 @@ export default function ServiceDetailsPage() {
             <Spacing lg="0" md="40" />
           </Div>
           <Div className="col-lg-6 offset-xl-1">
-            <h2 className="cs-font_50 cs-m0">Below are related services to {service.title.toLowerCase()}</h2>
+            <h2 className="cs-font_50 cs-m0"> {service.description.toLowerCase()}</h2>
             <Spacing lg="50" md="30" />
             <Div className="row">
               {service.relatedServices.map((s, idx) => (
@@ -159,7 +165,7 @@ export default function ServiceDetailsPage() {
       <Div className="container cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>
         <Div className="cs-shape_4"></Div>
-        <Div className="container">
+        {/* <Div className="container">
           <Div className="row">
             <Div className="col-xl-5 col-lg-6">
               <SectionHeading
@@ -172,7 +178,7 @@ export default function ServiceDetailsPage() {
               <Accordion />
             </Div>
           </Div>
-        </Div>
+        </Div> */}
       </Div>
       <Spacing lg="150" md="80" />
       <Div className="container">

@@ -55,7 +55,7 @@
 }
 .cs-funfact_heading {
   h2 {
-    font-size: 50px;
+    font-size: 98px;
     margin-bottom: 20px;
   }
   p {
@@ -119,6 +119,7 @@
     top: 0;
     height: 100%;
     width: 100%;
+    
     border-radius: inherit;
     background-position: right bottom;
     background-repeat: no-repeat;
@@ -167,12 +168,13 @@
 }
 @media screen and (max-width: 1380px) {
   .cs-funfact_heading h2 {
-    font-size: 42px;
+    font-size: 70px;
     margin-bottom: 10px;
+    align-items: center;
   }
   .cs-funfact.cs-style1 {
     .cs-funfact_number {
-      font-size: 42px;
+      font-size: 60px;
     }
     .cs-funfact_text span {
       font-size: 18px;
@@ -208,7 +210,7 @@
 }
 @media screen and (max-width: 991px) {
   .cs-funfact_wrap .cs-funfact_left {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 }
 @media screen and (max-width: 767px) {
