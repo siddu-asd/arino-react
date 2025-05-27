@@ -20,9 +20,9 @@ export default function AboutPage() {
     <>
       {/* Start Page Heading Section */}
       <PageHeading
-        title="About Us"
+        title="EXPLORE OUR SPACE"
         bgSrc="images/about_hero_bg.jpeg"
-        pageLinkText="About Us"
+        pageLinkText="EXPLORE OUR SPACE "
       />
       {/* End Page Heading Section */}
 
@@ -33,14 +33,14 @@ export default function AboutPage() {
           <Div className="col-xl-5 col-lg-7">
             <SectionHeading
               title="EXPLORE OUR SPACE"
-              subtitle="About Our Agency"
+              subtitle=""
             >
               <Spacing lg="30" md="20" />
               <p className="cs-m0">
                 Our journey began with a simple belief: brands deserve more than ordinary solutions. That’s why we operate like a crew on a space station—always scanning the horizon, ready to respond to the next big signal from Earth. 
-                For us, every project is a mission, every brief a new world to explore.  
-                Our team is made up of explorers, storytellers, and tech-whisperers who believe that marketing isn’t just about reaching audiences—it’s about making an impact that’s truly out of this world.  
-                With Raising 100x, you’re not just launching a campaign; you’re embarking on a journey where imagination has no limits and results are lightyears ahead.
+               <br /><br /> For us, every project is a mission, every brief a new world to explore. <br /> <br /> 
+                Our team is made up of storytellers, and tech-whisperers who believe that marketing isn’t just about reaching audiences—it’s about making an impact that’s truly out of this world.  
+              <br /> <br />  With Raising 100x, you’re not just launching a campaign; you’re embarking on a journey where imagination has no limits and results are lightyears ahead.
               </p>
               <Spacing lg="30" md="30" />
               <Div className="cs-separator cs-accent_bg"></Div>

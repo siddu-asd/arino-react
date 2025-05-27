@@ -154,7 +154,7 @@ export default function Home() {
         <Div className="container">
           <SectionHeading
             title="Behold Our Creation"
-            subtitle="Latest Projects"
+            subtitle=""
             variant="cs-style1 text-center"
           />
           <Spacing lg="90" md="45" />
@@ -185,8 +185,8 @@ export default function Home() {
       <Spacing lg="130" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
-          Ideas that refuse to be confined and creativity that spills beyond every boundary
-          VIDEO OF STUDIO
+          Ideas That Refuse To Be Confined And< br /> Creativity That Spills Beyond Every Boundary
+
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
@@ -198,8 +198,8 @@ export default function Home() {
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
-          title="People Who Make It Possible/Happen"
-          subtitle="Our Team"
+          title="People Who Make It Possible"
+          subtitle=""
           variant="cs-style1"
         />
         <Spacing lg="85" md="45" />
@@ -217,8 +217,8 @@ export default function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="Explore recent publication"
-                subtitle="Our Blog"
+                title="Read Our Insights  "
+                subtitle=""
                 btnText="View More Blog"
                 btnLink="/blog"
               />
@@ -234,19 +234,19 @@ export default function Home() {
       </Div>
 
       <Spacing lg="125" md="70" />
-      <MovingText text="Our reputed world wide partners" />
+      <MovingText text="Brands that reached new heights with us" />
       <Spacing lg="105" md="70" />
 
       <Div className="container">
-        <LogoList />
+        <LogoList />0
       </Div>
       <Spacing lg="150" md="80" />
 
       <Div className="container">
         <Cta
-          title="Have an idea? We’ve got you!  
+          title="Have an idea? <br /> We’ve got you!  
 Let’s talk over a cup of coffee... "
-          btnText="Apply For Meeting"
+          btnText="YES I'M IN!"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
         />
