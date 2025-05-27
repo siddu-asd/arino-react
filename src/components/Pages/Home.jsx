@@ -66,11 +66,11 @@ export default function Home() {
     <>
       <Hero
         title={`We don’t just work<br />
-  <span style="font-size: 68px; font-weight: bold; color: transparent; -webkit-text-stroke: 1.5px red;">
+  <span style="font-size: 92px; font-weight: bold; color: transparent; -webkit-text-stroke: 1.5px red;">
     WONDER
   </span><br />
   we make your brand<br />
-  <span style="font-size: 68px; font-weight: bold; color: transparent; -webkit-text-stroke: 1.5px red;">
+  <span style="font-size: 92px; font-weight: bold; color: transparent; -webkit-text-stroke: 1.5px red;">
     WONDERFUL
   </span>`
         }
