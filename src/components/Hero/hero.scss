@@ -1190,3 +1190,29 @@
 }
 
 
+#wonder-text {
+  font-size: 92px;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 1.5px red;
+  text-shadow: 1.5px red;
+   
+}
+
+@media (max-width: 1200px) {
+  #wonder-text {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  #wonder-text {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  #wonder-text {
+    font-size: 60px;
+  }
+}

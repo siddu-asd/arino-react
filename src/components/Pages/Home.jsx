@@ -60,13 +60,10 @@ export default function Home() {
     <>
       <Hero
         title={`We don’t just work<br />
-  <span style="font-size: 92px; font-weight: bold; color: transparent; -webkit-text-stroke: 1.5px red;">
-    WONDERS
-  </span><br />
+ <span id="wonder-text">WONDERS</span>
+ <br />
   we make your brand<br />
-  <span style="font-size: 92px; font-weight: bold; color: transparent; -webkit-text-stroke: 1.5px red;">
-    WONDERFUL
-  </span>`
+  <span id="wonder-text">WONDERFUL</span>`
         }
         btnText="LET'S START"
         btnLink="/contact"
@@ -88,11 +85,11 @@ export default function Home() {
       /> */}
 
       <div className="container">
-       <FunFact
-  variant="cs-type1"
-  title="Setting the Bar 100 Times Higher"
- 
-/>
+        <FunFact
+          variant="cs-type1"
+          title="Setting the Bar 100 Times Higher"
+
+        />
       </div>
 
       <Spacing lg="150" md="80" />
