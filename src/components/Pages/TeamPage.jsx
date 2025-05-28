@@ -114,8 +114,8 @@ export default function TeamPage() {
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
-          title="Meet our awesome <br/>team members"
-          subtitle="Our Team"
+          title="People Who Make It Possible"
+          subtitle=""
           variant="cs-style1 text-center"
         />
         <Spacing lg="90" md="45" />

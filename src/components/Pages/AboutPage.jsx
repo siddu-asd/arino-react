@@ -112,14 +112,7 @@ export default function AboutPage() {
                 <li>Cluttered layouts and copy-paste social media posts</li>
               </ul>
 
-              <p>
-                <strong>What you get with Raising 100x:</strong><br />
-                We’re obsessed with mixing human imagination and AI wizardry to find that spot where ideas go from “nice” to “no one’s ever seen this before.”
-              </p>
-
-              <p>
-                For us, every project is a playground, every brief is an invitation to experiment, and every client is a co-conspirator in making something unforgettable. If you’re ready to ditch the ordinary and chase the 100x, you’re in the right space.
-              </p>
+             
 
               <Spacing lg="15" md="15" />
               <Spacing lg="30" md="30" />
@@ -130,6 +123,41 @@ export default function AboutPage() {
         </Div>
       </Div>
       {/* End Why Choose Section */}
+       <Spacing lg="150" md="80" />
+      <Div className="container">
+        <Div className="row">
+          <Div className="col-xl-5 col-lg-7">
+            <SectionHeading
+              title="What you get with Raising 100x"
+              subtitle=""
+            >
+              <Spacing lg="30" md="20" />
+             <p>
+                
+                We’re obsessed with mixing human imagination and AI wizardry to find that spot where ideas go from “nice” to “no one’s ever seen this before.”
+              </p>
+
+              <p>
+                For us, every project is a playground, every brief is an invitation to experiment, and every client is a co-conspirator in making something unforgettable. If you’re ready to ditch the ordinary and chase the 100x, you’re in the right space.
+              </p>
+
+              <Spacing lg="30" md="30" />
+              <Div className="cs-separator cs-accent_bg"></Div>
+              <Spacing lg="25" md="40" />
+            </SectionHeading>
+          </Div>
+          <Div className="col-lg-5 offset-xl-2">
+            <img
+              src="/images/about_img_1.jpeg"
+              alt="About"
+              className="w-100 cs-radius_15"
+            />
+        
+          </Div>
+         
+        </Div>
+      </Div>
+      <Spacing lg="15" md="55" />
 
       <Spacing lg="145" md="80" />
       <Div className="container">
@@ -147,8 +175,8 @@ export default function AboutPage() {
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
-          title="Awesome team <br/>members"
-          subtitle="Our Team"
+          title="People Who Make It Possible"
+          subtitle=""
           variant="cs-style1"
         />
         <Spacing lg="85" md="45" />

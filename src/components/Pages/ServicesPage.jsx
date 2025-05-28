@@ -3,7 +3,6 @@ import { pageTitle } from '../../helper'
 import Card from '../Card'
 import Cta from '../Cta'
 import PageHeading from '../PageHeading'
-import PricingTableList from '../PricingTable/PricingTableList'
 import Div from '../Div'
 import SectionHeading from '../SectionHeading'
 import TestimonialSlider from '../Slider/TestimonialSlider'
@@ -111,14 +110,14 @@ export default function ServicesPage() {
         </Div>
       </Div>
       <Spacing lg='150' md='80' />
-      <Div className="container">
+      {/* <Div className="container">
         <SectionHeading
           title='Providing best <br/>pricing for client'
           subtitle='Pricing & Packaging'
         />
         <Spacing lg='85' md='40' />
         <PricingTableList />
-      </Div>
+      </Div> */}
       <Spacing lg='125' md='55' />
       <TestimonialSlider />
       <Spacing lg='150' md='80' />
