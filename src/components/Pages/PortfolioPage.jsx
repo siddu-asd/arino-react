@@ -218,11 +218,16 @@ export default function PortfolioPage() {
         </Div>
       </Div>
       <Spacing lg="145" md="80" />
-      <Cta
-        title="agency@arino.com"
-        bgSrc="/images/cta_bg_2.jpeg"
-        variant="rounded-0"
-      />
+     
+           <Div className="container">
+             <Cta
+               title="Have an idea? <br /> We’ve got you!  
+     Let’s talk over a cup of coffee... "
+               btnText="YES I'M IN!"
+               btnLink="/contact"
+               bgSrc="/images/cta_bg.jpeg"
+             />
+           </Div>
     </>
   );
 }

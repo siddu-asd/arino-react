@@ -61,22 +61,18 @@ export default function Header({ variant }) {
                     {/* Updated Portfolio with Dropdown */}
                     <li className="menu-item-has-children">
                       <NavLink to="/portfolio" onClick={() => setMobileToggle(false)}>
-                        Portfolio
+                        Our Creation
                       </NavLink>
-                      <DropDown>
+                      {/* <DropDown>
                         <ul>
                           <li>
                             <Link to="/portfolio" onClick={() => setMobileToggle(false)}>
                               All Projects
                             </Link>
                           </li>
-                          <li>
-                            <Link to="/portfolio-showcase" onClick={() => setMobileToggle(false)}>
-                              Showcase
-                            </Link>
-                          </li>
+                     
                         </ul>
-                      </DropDown>
+                      </DropDown> */}
                     </li>
 
                     <li>
@@ -88,13 +84,13 @@ export default function Header({ variant }) {
                     {/* Contact Dropdown */}
                     <li className="menu-item-has-children">
                       <NavLink to="/contact" onClick={() => setMobileToggle(false)}>
-                        Contact Us
+                        Let's Connect
                       </NavLink>
                       <DropDown>
                         <ul>
                           <li>
                             <Link to="/contact" onClick={() => setMobileToggle(false)}>
-                              Contact
+                              Reach Us
                             </Link>
                           </li>
                           {/* <li>

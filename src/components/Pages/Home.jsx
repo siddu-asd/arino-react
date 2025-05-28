@@ -13,7 +13,6 @@ import PostSlider from '../Slider/PostSlider';
 import TestimonialSlider from '../Slider/TestimonialSlider';
 import TeamSlider from '../Slider/TeamSlider';
 import VideoModal from '../VideoModal';
-import TimelineSlider from '../Slider/TimelineSlider';
 import { pageTitle } from '../../helper';
 
 const heroSocialLinks = [
@@ -99,8 +98,8 @@ export default function Home() {
             <Div className="col-xl-4">
               <SectionHeading
                 title="We Uplift Your Brand By  "
-                subtitle="What Can We Do"
-                btnText="See All Services"
+                subtitle=""
+                btnText="Our Capabilities"
                 btnLink="/service"
               />
               <Spacing lg="90" md="45" />
@@ -176,7 +175,7 @@ export default function Home() {
       </Div>
 
       <Spacing lg="150" md="80" />
-      <Div className="cs-shape_wrap_2">
+      {/* <Div className="cs-shape_wrap_2">
         <Div className="cs-shape_2"><Div /></Div>
         <Div className="container">
           <Div className="row">
@@ -193,9 +192,9 @@ export default function Home() {
             </Div>
           </Div>
         </Div>
-      </Div>
+      </Div> */}
 
-      <Spacing lg="130" md="70" />
+      <Spacing lg="20" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
           Ideas That Refuse To Be Confined And< br /> Creativity That Spills Beyond Every Boundary

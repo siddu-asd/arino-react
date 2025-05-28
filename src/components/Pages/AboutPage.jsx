@@ -94,8 +94,8 @@ export default function AboutPage() {
           </Div>
           <Div className="col-xl-5 offset-xl-1 col-lg-6">
             <SectionHeading
-              title="Highly experienced people with us"
-              subtitle="What Fuels Us?"
+              title="What Fuels Us?"
+              subtitle=""
             >
               <Spacing lg="30" md="20" />
               <p>
@@ -158,15 +158,16 @@ export default function AboutPage() {
 
       {/* Start CTA Section */}
       <Spacing lg="150" md="80" />
-      <Div className="container">
-        <Cta
-          title={`We’ve got you! <br />We’ve got you!  
-Let’s talk over a cup of coffee... `}
-          btnText="Apply For Meeting"
-          btnLink="/contact"
-          bgSrc="/images/cta_bg.jpeg"
-        />
-      </Div>
+      
+            <Div className="container">
+              <Cta
+                title="Have an idea? <br /> We’ve got you!  
+      Let’s talk over a cup of coffee... "
+                btnText="YES I'M IN!"
+                btnLink="/contact"
+                bgSrc="/images/cta_bg.jpeg"
+              />
+            </Div>
       {/* End CTA Section */}
     </>
   );

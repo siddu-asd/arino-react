@@ -15,17 +15,17 @@ export default function ContactPage() {
   return (
     <>
       <PageHeading
-        title="Contact Us"
+        title="Reach Us"
         bgSrc="/images/contact_hero_bg.jpeg"
-        pageLinkText="Contact"
+        pageLinkText="Reach Us"
       />
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row">
           <Div className="col-lg-6">
             <SectionHeading
-              title="Do you have a project <br/>in your mind?"
-              subtitle="Getting Touch"
+              title="Reach For the Stars<br /> and Us "
+              subtitle=""
             />
             <Spacing lg="55" md="30" />
             <ContactInfoWidget withIcon />
@@ -34,27 +34,27 @@ export default function ContactPage() {
           <Div className="col-lg-6">
             <form action="#" className="row">
               <Div className="col-sm-6">
-                <label className="cs-primary_color">Full Name*</label>
+                <label className="cs-primary_color">What’s the name behind the big idea?  </label>
                 <input type="text" className="cs-form_field" />
                 <Spacing lg="20" md="20" />
               </Div>
               <Div className="col-sm-6">
-                <label className="cs-primary_color">Email*</label>
+                <label className="cs-primary_color">Drop your email coordinates  </label>
                 <input type="text" className="cs-form_field" />
                 <Spacing lg="20" md="20" />
               </Div>
               <Div className="col-sm-6">
-                <label className="cs-primary_color">Project Type*</label>
+                <label className="cs-primary_color">What can we help you with?</label>
                 <input type="text" className="cs-form_field" />
                 <Spacing lg="20" md="20" />
               </Div>
               <Div className="col-sm-6">
-                <label className="cs-primary_color">Mobile*</label>
+                <label className="cs-primary_color">Let’s connect, where should we ring?</label>
                 <input type="text" className="cs-form_field" />
                 <Spacing lg="20" md="20" />
               </Div>
               <Div className="col-sm-12">
-                <label className="cs-primary_color">Mobile*</label>
+                <label className="cs-primary_color">Light up our day, with your words</label>
                 <textarea
                   cols="30"
                   rows="7"
