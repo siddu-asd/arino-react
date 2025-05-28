@@ -240,7 +240,7 @@ export default function BlogDetailsPage() {
     <>
       {/* Start Page Heading Section */}
       <PageHeading
-        title='Blog Single'
+        title={ post.title}
         bgSrc='/images/blog_details_hero_bg.jpeg'
         pageLinkText={params.blogDetailsId}
       />
