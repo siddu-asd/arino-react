@@ -15,7 +15,6 @@
 .cs-site_header {
   position: absolute;
   width: 100%;
-  left: 0;
   top: 10px;
   transition: all 0.4s ease;
 }
@@ -357,6 +356,7 @@
       display: flex !important;
       flex-wrap: wrap;
       height: inherit;
+      margin-left: 108px;
 
       > li {
         margin-right: 50px;
@@ -470,6 +470,7 @@
       display: flex !important;
       position: absolute;
       padding: 0;
+    
 
       > li {
         flex: 1;
@@ -745,7 +746,7 @@
     margin-right: 0;
   }
   .cs-site_branding img {
-    max-height: 32px;
+    max-height: 38px;
   }
   .cs-site_header.cs-style1 .cs-btn {
     span {

@@ -10,13 +10,13 @@ export default function SocialWidget() {
         <Icon icon="fa6-brands:linkedin-in" />
       </Link>
       <Link to='/' className="cs-center">
-        <Icon icon="fa6-brands:twitter" />               
+        <Icon icon="fa6-brands:x-twitter" />               
       </Link>
       <Link to='/' className="cs-center">
         <Icon icon="fa6-brands:youtube" />              
       </Link>
       <Link to='/' className="cs-center">
-        <Icon icon="fa6-brands:slack" />
+        <Icon icon="fa6-brands:instagram" />
       </Link>
     </Div>
   )

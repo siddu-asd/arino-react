@@ -37,9 +37,9 @@ const servicesData = {
     image: '/images/service_2.jpeg',
     description: 'What We Bring Through Branding',
     process: [
-      { icon: '/images/icons/service_icon_1.svg', title: 'Brand Research', description: 'Understand market and audience.' },
-      { icon: '/images/icons/service_icon_2.svg', title: 'Identity Design', description: 'Logo, color, and typography.' },
-      { icon: '/images/icons/service_icon_3.svg', title: 'Brand Guidelines', description: 'Consistent application across media.' }
+      { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts' },
+      { icon: '/images/icons/service_icon_2.svg', title: 'PLOT', description: 'We Plot Our Ideas' },
+      { icon: '/images/icons/service_icon_3.svg', title: 'PRESENT', description: 'We Present Our Creation' }
     ],
     relatedServices: [
       'Personal Branding  ',
@@ -54,9 +54,9 @@ const servicesData = {
     image: '/images/service_6.jpeg',
     description: 'What We Bring Through AI & Technology ',
     process: [
-      { icon: '/images/icons/service_icon_1.svg', title: 'Tech Consulting', description: 'Define AI and tech roadmap.' },
-      { icon: '/images/icons/service_icon_2.svg', title: 'Model Development', description: 'Build AI models tailored to your goals.' },
-      { icon: '/images/icons/service_icon_3.svg', title: 'Integration', description: 'Deploy solutions into your workflow.' }
+      { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts' },
+      { icon: '/images/icons/service_icon_2.svg', title: 'PLOT', description: 'We Plot Our Ideas' },
+      { icon: '/images/icons/service_icon_3.svg', title: 'PRESENT', description: 'We Present Our Creation' }
     ],
     relatedServices: [
       'Website & App Development',
@@ -71,9 +71,9 @@ const servicesData = {
     image: '/images/service_7.jpeg',
     description: 'What We Bring Through Visual Storytelling Studio',
     process: [
-      { icon: '/images/icons/service_icon_1.svg', title: 'Concept Planning', description: 'Develop scripts and storyboards.' },
-      { icon: '/images/icons/service_icon_2.svg', title: 'Production', description: 'Record, shoot, and direct the media.' },
-      { icon: '/images/icons/service_icon_3.svg', title: 'Post Production', description: 'Edit, mix, and finalize deliverables.' }
+      { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts' },
+      { icon: '/images/icons/service_icon_2.svg', title: 'PLOT', description: 'We Plot Our Ideas' },
+      { icon: '/images/icons/service_icon_3.svg', title: 'PRESENT', description: 'We Present Our Creation' }
     ],
     relatedServices: [
       'Podcast ',

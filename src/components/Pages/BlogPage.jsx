@@ -54,9 +54,9 @@ export default function BlogPage() {
   return (
     <>
       <PageHeading
-        title="Our Blog"
+        title="Our Blogs"
         bgSrc="/images/blog_hero_bg.jpeg"
-        pageLinkText="Blog"
+        pageLinkText="Blogs"
       />
       <Spacing lg="150" md="80" />
       <Div className="container">

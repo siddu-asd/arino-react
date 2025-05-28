@@ -250,7 +250,7 @@ export default function Home() {
       <Spacing lg="105" md="70" />
 
       <Div className="container">
-        <LogoList />0
+        <LogoList />
       </Div>
       <Spacing lg="150" md="80" />
 

@@ -17,9 +17,9 @@ export default function ServicesPage() {
   return (
     <>
       <PageHeading
-        title='Services'
+        title='What We Offer'
         bgSrc='images/service_hero_bg.jpeg'
-        pageLinkText='Services'
+        pageLinkText='What We Offer'
       />
       <Spacing lg='150' md='80' />
       <Div className='cs-shape_wrap_4'>

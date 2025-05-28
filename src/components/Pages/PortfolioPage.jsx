@@ -146,9 +146,9 @@ export default function PortfolioPage() {
   return (
     <>
       <PageHeading
-        title="Portfolio"
+        title="Our Creation"
         bgSrc="images/portfolio_hero_bg.jpeg"
-        pageLinkText="Portfolio"
+        pageLinkText="Our Creation"
       />
       <Spacing lg="145" md="80" />
       <Div className="container">
