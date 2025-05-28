@@ -1,4 +1,3 @@
-import React from 'react';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import Div from '../Div';
@@ -6,44 +5,28 @@ import Post from '../Post';
 
 const postData = [
   {
-    id: 'fear-vs-art-business',
-    url: '/blog/fear-vs-art-business',
-    src: '/images/post_1.jpeg',
-    alt: 'Post',
-    date: '07 Mar 2022',
-    title: 'How to keep fear from ruining your art business with confidence',
+    id: 'marketing-trends-2025',
+    url: '/blog/marketing-trends-2025',
+    src: 'images/Marketing-in-2025-The-Trends-Youre-Not-Ready-For.jpg',
+    alt: 'Marketing Trends 2025',
+    date: '28 May 2025',
+    title: 'Marketing Trends 2025: The Trends You’re Not Ready For',
   },
   {
-    id: 'artistic-creation',
-    url: '/blog/artistic-creation',
-    src: '/images/post_2.jpeg',
-    alt: 'Post',
-    date: '10 Feb 2022',
-    title: 'Artistic mind will be great for creation of anything',
+    id: 'adaptive-brand-strategies',
+    url: '/blog/adaptive-brand-strategies',
+    src: 'images/Building-Adaptive-Brand-Strategies.jpg',
+    alt: 'Adaptive Brand Strategies',
+    date: '28 May 2025',
+    title: 'The Death of Traditional Marketing: Building Adaptive Brand Strategies',
   },
   {
-    id: 'ai-takes-over',
-    url: '/blog/ai-takes-over',
-    src: '/images/post_3.jpeg',
-    alt: 'Post',
-    date: '05 Mar 2022',
-    title: 'A.I will take over all jobs for humans within next year',
-  },
-  {
-    id: 'creative-studio',
-    url: '/blog/creative-studio',
-    src: '/images/post_5.jpeg',
-    alt: 'Post',
-    date: '05 Mar 2022',
-    title: 'Creative studio program coming soon',
-  },
-  {
-    id: 'artistic-mind',
-    url: '/blog/artistic-mind',
-    src: '/images/post_6.jpeg',
-    alt: 'Post',
-    date: '04 Mar 2022',
-    title: 'Artistic mind will be great for creation',
+    id: 'ai-transforming-marketing',
+    url: '/blog/ai-transforming-marketing',
+    src: 'images/How-AI-is-Transforming-Marketing-.jpg',
+    alt: 'AI in Marketing',
+    date: '28 May 2025',
+    title: 'How AI is Transforming Marketing: Beyond Buzzwords to Real Growth',
   },
 ];
 

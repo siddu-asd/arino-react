@@ -100,7 +100,7 @@ export default function Header({ variant }) {
                           </li> */}
                           <li>
                             <Link to="/team" onClick={() => setMobileToggle(false)}>
-                              Team
+                              Our People
                             </Link>
                           </li>
                         </ul>

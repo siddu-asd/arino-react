@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { pageTitle } from '../../helper';
 import Cta from '../Cta';
 import PageHeading from '../PageHeading';
@@ -133,14 +133,15 @@ export default function TeamPage() {
           ))}
         </Div>
         <Spacing lg="70" md="50" />
-        <Div className="container">
-          <Cta
-            title="Let’s disscuse make <br />something <i>cool</i> together"
-            btnText="Apply For Meeting"
-            btnLink="/contact"
-            bgSrc="/images/cta_bg.jpeg"
-          />
-        </Div>
+       <Div className="container">
+               <Cta
+                 title="Have an idea? <br /> We’ve got you!  
+       Let’s talk over a cup of coffee... "
+                 btnText="YES I'M IN!"
+                 btnLink="/contact"
+                 bgSrc="/images/cta_bg.jpeg"
+               />
+             </Div>
       </Div>
     </>
   );

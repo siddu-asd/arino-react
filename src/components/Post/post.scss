@@ -12,6 +12,8 @@
     display: block;
     img {
       width: 100%;
+      height: 300px;
+         object-fit: cover;
     }
   }
   .cs-post_overlay {
