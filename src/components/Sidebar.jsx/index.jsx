@@ -82,31 +82,38 @@ export default function Sidebar() {
     }
   ]
   const recentPostData = [
-    {
-      title: 'How to studio setup...',
-      thumb: '/images/recent_post_1.jpeg',
-      href: '/blog/blog-details',
-      date: '15 Aug 2022'
-    },
-    {
-      title: 'Creative people mind...',
-      thumb: '/images/recent_post_2.jpeg',
-      href: '/blog/blog-details',
-      date: '14 Aug 2022'
-    },
-    {
-      title: 'AI take over human...',
-      thumb: '/images/recent_post_3.jpeg',
-      href: '/blog/blog-details',
-      date: '13 Aug 2022'
-    },
-    {
-      title: 'You should now add...',
-      thumb: '/images/recent_post_4.jpeg',
-      href: '/blog/blog-details',
-      date: '12 Aug 2022'
-    },
-  ]
+  {
+    id: "marketing-trends-2025",
+    thumb: "/images/Marketing-in-2025-The-Trends-Youre-Not-Ready-For.jpg",
+    title: "Marketing Trends 2025: The Trends You’re Not Ready For",
+    subtitle: "Imagine a world where your marketing doesn’t just speak—it connects directly with your customers. Explore AI-driven personalization, attention-grabbing videos, and more...",
+    date: "2025-05-28",
+    category: "Marketing Trends",
+    categoryHref: "/blog",
+    href: "/blog/marketing-trends-2025",
+  },
+  {
+    id: "adaptive-brand-strategies",
+    thumb: "/images/Building-Adaptive-Brand-Strategies.jpg",
+    title: "The Death of Traditional Marketing: Building Adaptive Brand Strategies",
+    subtitle: "Traditional marketing is fading as consumer expectations evolve. Embracing AI, personalization, and immersive tech is essential to keep up...",
+    date: "2025-05-28",
+    category: "Digital Marketing",
+    categoryHref: "/blog",
+    href: "/blog/adaptive-brand-strategies",
+  },
+  {
+    id: "ai-transforming-marketing",
+    thumb: "/images/How-AI-is-Transforming-Marketing-.jpg",
+    title: "How AI is Transforming Marketing: Beyond Buzzwords to Real Growth",
+    subtitle: "Artificial intelligence is revolutionizing marketing by shifting from reactive to predictive strategies, enabling personalization and real growth...",
+    date: "2025-05-28",
+    category: "AI Marketing",
+    categoryHref: "/blog",
+    href: "/blog/ai-transforming-marketing",
+  }
+];
+
   return (
     <>
       <Div className="cs-sidebar_item">

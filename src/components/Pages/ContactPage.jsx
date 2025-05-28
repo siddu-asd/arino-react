@@ -74,12 +74,12 @@ export default function ContactPage() {
       </Div>
       <Spacing lg="150" md="80" />
       <Div className="cs-google_map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96652.27317354927!2d-74.33557928194516!3d40.79756494697628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a82f1352d0dd%3A0x81d4f72c4435aab5!2sTroy+Meadows+Wetlands!5e0!3m2!1sen!2sbd!4v1563075599994!5m2!1sen!2sbd"
-          allowFullScreen
-          title="Google Map"
-        />
-      </Div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2137773995424!2d78.45179807504813!3d17.44156148337416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb979f084554ff%3A0x4b9df894038780b3!2sSerene%20Heights%2C%20Masab%20Tank%2C%20Hyderabad%2C%20Telangana%20500028!5e0!3m2!1sen!2sin!4v1716910451650!5m2!1sen!2sin"
+            allowFullScreen
+            title="Google Map"
+          />
+        </Div>
       <Spacing lg="50" md="40" />
     </>
   );

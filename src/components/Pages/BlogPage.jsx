@@ -7,42 +7,39 @@ import PostStyle2 from '../Post/PostStyle2';
 import Div from '../Div';
 import Sidebar from '../Sidebar.jsx';
 import Spacing from '../Spacing';
+
 export const postData = [
   {
-    id: 'ai-jobs',
-    thumb: '/images/post_4.jpeg',
-    title: 'A.I will take all human job within next year',
-    subtitle:
-      'Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.',
-    date: '07 Mar 2022',
-    category: 'Tech',
-    categoryHref: '/blog',
-    href: '/blog/ai-jobs',
+    id: "marketing-trends-2025",
+    thumb: "images/Marketing-in-2025-The-Trends-Youre-Not-Ready-For.jpg",
+    title: "Marketing Trends 2025: The Trends You’re Not Ready For",
+    subtitle: "Imagine a world where your marketing doesn’t just speak—it connects directly with your customers. Explore AI-driven personalization, attention-grabbing videos, and more...",
+    date: "2025-05-28",
+    category: "Marketing Trends",
+    categoryHref: "/blog",
+    href: "/blog/marketing-trends-2025",
   },
   {
-    id: 'creative-studio',
-    thumb: '/images/post_5.jpeg',
-    title: 'Creative studio programm coming soon',
-    subtitle:
-      'Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.',
-    date: '05 Mar 2022',
-    category: 'Photography',
-    categoryHref: '/blog',
-    href: '/blog/creative-studio',
+    id: "adaptive-brand-strategies",
+    thumb: "images/Building-Adaptive-Brand-Strategies.jpg",
+    title: "The Death of Traditional Marketing: Building Adaptive Brand Strategies",
+    subtitle: "Traditional marketing is fading as consumer expectations evolve. Embracing AI, personalization, and immersive tech is essential to keep up...",
+    date: "2025-05-28",
+    category: "Digital Marketing",
+    categoryHref: "/blog",
+    href: "/blog/adaptive-brand-strategies",
   },
   {
-    id: 'artistic-mind',
-    thumb: '/images/post_6.jpeg',
-    title: 'Artistic mind will be great for creation',
-    subtitle:
-      'Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.',
-    date: '04 Mar 2022',
-    category: 'Tech',
-    categoryHref: '/blog',
-    href: '/blog/artistic-mind',
-  },
+    id: "ai-transforming-marketing",
+    thumb: "images/How-AI-is-Transforming-Marketing-.jpg",
+    title: "How AI is Transforming Marketing: Beyond Buzzwords to Real Growth",
+    subtitle: "Artificial intelligence is revolutionizing marketing by shifting from reactive to predictive strategies, enabling personalization and real growth...",
+    date: "2025-05-28",
+    category: "AI Marketing",
+    categoryHref: "/blog",
+    href: "/blog/ai-transforming-marketing",
+  }
 ];
-
 
 export default function BlogPage() {
   pageTitle('Blog');
@@ -63,7 +60,7 @@ export default function BlogPage() {
         <Div className="row">
           <Div className="col-lg-8">
             {postData.map((item, index) => (
-              <Div key={index}>
+              <Div key={item.id}>
                 <PostStyle2
                   thumb={item.thumb}
                   title={item.title}
@@ -86,16 +83,14 @@ export default function BlogPage() {
         </Div>
       </Div>
       <Spacing lg="150" md="80" />
-     
-           <Div className="container">
-             <Cta
-               title="Have an idea? <br /> We’ve got you!  
-     Let’s talk over a cup of coffee... "
-               btnText="YES I'M IN!"
-               btnLink="/contact"
-               bgSrc="/images/cta_bg.jpeg"
-             />
-           </Div>
+      <Div className="container">
+        <Cta
+          title="Have an idea? <br /> We’ve got you! Let’s talk over a cup of coffee..."
+          btnText="YES I'M IN!"
+          btnLink="/contact"
+          bgSrc="/images/cta_bg.jpeg"
+        />
+      </Div>
     </>
   );
 }
