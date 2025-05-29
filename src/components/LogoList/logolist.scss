@@ -16,8 +16,8 @@
   align-items: center;
 
   img {
-    max-width: 120px;   /* increased max width */
-    max-height: 75px;   /* increased max height */
+    max-width: 50px;   /* increased max width */
+    max-height: 20px;   /* increased max height */
     object-fit: contain;
     filter: grayscale(0.8);
     transition: filter 0.3s ease;

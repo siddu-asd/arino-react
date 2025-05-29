@@ -42,7 +42,7 @@ export default function TestSlider() {
   };
 
   return (
-    <div style={{ width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
+    <div style={{ width: '100%', maxWidth: '1300px', margin: '0 auto' }}>
       <Slider {...settings}>
        <div><img src="/images/1.png" alt="Partner 1" /></div>
 <div><img src="/images/2.png" alt="Partner 2" /></div>

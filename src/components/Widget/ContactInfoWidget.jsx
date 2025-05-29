@@ -12,11 +12,11 @@ export default function ContactInfoWidget({ withIcon, title }) {
         </li>
         <li>
           {withIcon ? <span className='cs-accent_color'><Icon icon="mdi:envelope" /></span> : ''}
-          ibrahim@raising100x.com
+          hi@raising100x.com
         </li>
         <li>
           {withIcon ? <span className='cs-accent_color'><Icon icon="mdi:map-marker" /></span> : ''}
-          601-Block A, Serene Heights <br />Masab Tank - Hyderabad. 500008
+     Masab Tank - Hyderabad   <br /> 500008
         </li>
       </ul>
     </>
