@@ -4,7 +4,7 @@
   z-index: 101;
   
   .cs-btn.cs-style6 {
-    font-size: 16px;
+    font-size: 16px;    
   }
 }
 
@@ -32,6 +32,7 @@
     display: flex;
     align-items: center;
     height: 100%;
+    margin-right: -130px;
   }
 }
 
@@ -356,7 +357,7 @@
       display: flex !important;
       flex-wrap: wrap;
       height: inherit;
-      margin-left: 108px;
+      margin-right: -484px;
 
       > li {
         margin-right: 50px;
