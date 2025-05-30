@@ -57,7 +57,7 @@ export default function TestSlider() {
 <div><img src="/images/11.png" alt="Partner 11" /></div>
 <div><img src="/images/12.png" alt="Partner 12" /></div>
 <div><img src="/images/13.png" alt="Partner 13" /></div>
-<div><img src="/images/14.png" alt="Partner 14" /></div>
+<div><img src="/images/22.png" alt="Partner 14" /></div>
 <div><img src="/images/15.png" alt="Partner 15" /></div>
 <div><img src="/images/16.png" alt="Partner 16" /></div>
 <div><img src="/images/17.png" alt="Partner 17" /></div>
