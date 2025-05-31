@@ -135,7 +135,7 @@ const portfolioData = [
     title: 'Social Media NAZARA',
     subtitle: 'See Details',
     src: '/images/SOCIAL MEDIA MOCKUP.jpg',
-    category: 'social_media',
+    category: 'branding_company',
 
     location: 'United Kingdom',
     software: 'Adobe Illustrator',
