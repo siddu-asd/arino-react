@@ -60,47 +60,47 @@ export default function PortfolioDetailsPage() {
             </SectionHeading>
           </Div>
           <Div className="col-lg-5 offset-lg-1">
-  <Spacing lg="60" md="40" />
-  <h2 className="cs-font_30 cs-font_26_sm cs-m0">Project Info -</h2>
-  <Spacing lg="50" md="30" />
-  <Div className="row">
-    <Div className="col-6">
-      <h3 className="cs-accent_color cs-font_22 cs-font_18_sm cs-m0">
-        Category:
-      </h3>
-      <p className="cs-m0">{portfolio.category}</p>
-      <Spacing lg="30" md="30" />
-    </Div>
-    <Div className="col-6">
-      <h3 className="cs-accent_color cs-font_22 cs-font_18_sm cs-m0">
-        Location:
-      </h3>
-      <p className="cs-m0">{portfolio.location}</p>
-      <Spacing lg="30" md="30" />
-    </Div>
-    <Div className="col-6">
-      <h3 className="cs-accent_color cs-font_22 cs-font_18_sm cs-m0">
-        Software:
-      </h3>
-      <p className="cs-m0">{portfolio.software}</p>
-      <Spacing lg="30" md="30" />
-    </Div>
-    <Div className="col-6">
-      <h3 className="cs-accent_color cs-font_22 cs-font_18_sm cs-m0">
-        Dated:
-      </h3>
-      <p className="cs-m0">{portfolio.date}</p>
-      <Spacing lg="30" md="30" />
-    </Div>
-    <Div className="col-6">
-      <h3 className="cs-accent_color cs-font_22 cs-font_18_sm cs-m0">
-        Client:
-      </h3>
-      <p className="cs-m0">{portfolio.client}</p>
-      <Spacing lg="30" md="30" />
-    </Div>
-  </Div>
-</Div>
+            <Spacing lg="60" md="40" />
+            <h2 className="cs-font_30 cs-font_26_sm cs-m0">Project Info -</h2>
+            <Spacing lg="50" md="30" />
+            <Div className="row">
+              <Div className="col-6">
+                <h3 className="cs-accent_color cs-font_22 cs-font_18_sm cs-m0">
+                  Category:
+                </h3>
+                <p className="cs-m0">{portfolio.category}</p>
+                <Spacing lg="30" md="30" />
+              </Div>
+              <Div className="col-6">
+                <h3 className="cs-accent_color cs-font_22 cs-font_18_sm cs-m0">
+                  Location:
+                </h3>
+                <p className="cs-m0">{portfolio.location}</p>
+                <Spacing lg="30" md="30" />
+              </Div>
+              <Div className="col-6">
+                <h3 className="cs-accent_color cs-font_22 cs-font_18_sm cs-m0">
+                  Software:
+                </h3>
+                <p className="cs-m0">{portfolio.software}</p>
+                <Spacing lg="30" md="30" />
+              </Div>
+              <Div className="col-6">
+                <h3 className="cs-accent_color cs-font_22 cs-font_18_sm cs-m0">
+                  Dated:
+                </h3>
+                <p className="cs-m0">{portfolio.date}</p>
+                <Spacing lg="30" md="30" />
+              </Div>
+              <Div className="col-6">
+                <h3 className="cs-accent_color cs-font_22 cs-font_18_sm cs-m0">
+                  Client:
+                </h3>
+                <p className="cs-m0">{portfolio.client}</p>
+                <Spacing lg="30" md="30" />
+              </Div>
+            </Div>
+          </Div>
         </Div>
         <Spacing lg="65" md="10" />
         <Div className="cs-page_navigation cs-center">
@@ -117,16 +117,16 @@ export default function PortfolioDetailsPage() {
         </Div>
       </Div>
       <Spacing lg="145" md="80" />
-     
-           <Div className="container">
-             <Cta
-               title="Have an idea? <br /> We’ve got you!  
+
+      <Div className="container">
+        <Cta
+          title="Have an idea? <br /> We’ve got you!  
      Let’s talk over a cup of coffee... "
-               btnText="YES I'M IN!"
-               btnLink="/contact"
-               bgSrc="/images/cta_bg.jpeg"
-             />
-           </Div>
+          btnText="YES I'M IN!"
+          btnLink="/contact"
+          bgSrc="/images/cta_bg.jpeg"
+        />
+      </Div>
     </>
   );
 }

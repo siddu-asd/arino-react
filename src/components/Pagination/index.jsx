@@ -19,7 +19,7 @@ export default function Pagination() {
       </li> */}
       <li>
         <Link to="#" className="cs-pagination_item cs-center">
-          <Icon icon="akar-icons:chevron-right" />               
+          <Icon icon="akar-icons:chevron-right" />
         </Link>
       </li>
     </ul>
