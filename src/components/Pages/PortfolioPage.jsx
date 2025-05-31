@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { pageTitle } from '../../helper';
 import Cta from '../Cta';
@@ -10,111 +10,133 @@ import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
 
 const portfolioData = [
+  // {
+  //   title: 'Colorful Art Work 1',
+  //   subtitle: 'See Details',
+  //   src: '/images/portfolio_4.jpeg',
+  //   category: 'ui_ux_design',
+
+  //   location: 'United Kingdom',
+  //   software: 'Adobe Illustrator',
+  //   date: '14-Aug-2022',
+  //   client: 'Andreo Bowla',
+  // },
+  // {
+  //   title: 'Colorful Art Work 2',
+  //   subtitle: 'See Details',
+  //   src: '/images/portfolio_5.jpeg',
+  //   category: 'logo_design',
+
+  //   location: 'United Kingdom',
+  //   software: 'Adobe Illustrator',
+  //   date: '14-Aug-2022',
+  //   client: 'Andreo Bowla',
+  // },
+  // {
+  //   title: 'Colorful Art Work 3',
+  //   subtitle: 'See Details',
+  //   src: '/images/portfolio_6.jpeg',
+  //   category: 'web_design',
+
+  //   location: 'United Kingdom',
+  //   software: 'Adobe Illustrator',
+  //   date: '14-Aug-2022',
+  //   client: 'Andreo Bowla',
+  // },
+  // {
+  //   title: 'Colorful Art Work 4',
+  //   subtitle: 'See Details',
+  //   src: '/images/portfolio_7.jpeg',
+  //   category: 'mobile_apps',
+
+  //   location: 'United Kingdom',
+  //   software: 'Adobe Illustrator',
+  //   date: '14-Aug-2022',
+  //   client: 'Andreo Bowla',
+  // },
+  // {
+  //   title: 'Colorful Art Work 5',
+  //   subtitle: 'See Details',
+  //   src: '/images/portfolio_8.jpeg',
+  //   category: 'ui_ux_design',
+
+  //   location: 'United Kingdom',
+  //   software: 'Adobe Illustrator',
+  //   date: '14-Aug-2022',
+  //   client: 'Andreo Bowla',
+  // },
+  // {
+  //   title: 'Colorful Art Work 6',
+  //   subtitle: 'See Details',
+  //   src: '/images/portfolio_9.jpeg',
+  //   category: 'web_design',
+
+  //   location: 'United Kingdom',
+  //   software: 'Adobe Illustrator',
+  //   date: '14-Aug-2022',
+  //   client: 'Andreo Bowla',
+  // },
+  // {
+  //   title: 'Colorful Art Work 7',
+  //   subtitle: 'See Details',
+  //   src: '/images/portfolio_10.jpeg',
+  //   category: 'logo_design',
+
+  //   location: 'United Kingdom',
+  //   software: 'Adobe Illustrator',
+  //   date: '14-Aug-2022',
+  //   client: 'Andreo Bowla',
+  // },
+  // {
+  //   title: 'Colorful Art Work 8',
+  //   subtitle: 'See Details',
+  //   src: '/images/portfolio_4.jpeg',
+  //   category: 'ui_ux_design',
+
+  //        location: 'United Kingdom',
+  //   software: 'Adobe Illustrator',
+  //   date: '14-Aug-2022',
+  //   client: 'Andreo Bowla',
+  // },
+  // {
+  //   title: 'Colorful Art Work 9',
+  //   subtitle: 'See Details',
+  //   src: '/images/portfolio_5.jpeg',
+  //   category: 'logo_design',
+
+  //   location: 'United Kingdom',
+  //   software: 'Adobe Illustrator',
+  //   date: '14-Aug-2022',
+  //   client: 'Andreo Bowla',
+  // },
+  // {
+  //   title: 'Colorful Art Work 10',
+  //   subtitle: 'See Details',
+  //   src: '/images/portfolio_6.jpeg',
+  //   category: 'web_design',
+
+  //   location: 'United Kingdom',
+  //   software: 'Adobe Illustrator',
+  //   date: '14-Aug-2022',
+  //   client: 'Andreo Bowla',
+  // },
   {
-    title: 'Colorful Art Work 1',
+    title: 'Logo Design',
     subtitle: 'See Details',
-    src: '/images/portfolio_4.jpeg',
-    category: 'ui_ux_design',
-    
-    location: 'United Kingdom',
-    software: 'Adobe Illustrator',
-    date: '14-Aug-2022',
-    client: 'Andreo Bowla',
-  },
-  {
-    title: 'Colorful Art Work 2',
-    subtitle: 'See Details',
-    src: '/images/portfolio_5.jpeg',
+    src: '/images/logo mockup jpeg.jpg',
     category: 'logo_design',
-    
+
     location: 'United Kingdom',
     software: 'Adobe Illustrator',
     date: '14-Aug-2022',
     client: 'Andreo Bowla',
   },
   {
-    title: 'Colorful Art Work 3',
+    title: 'Social Media NAZARA',
     subtitle: 'See Details',
-    src: '/images/portfolio_6.jpeg',
-    category: 'web_design',
- 
-    location: 'United Kingdom',
-    software: 'Adobe Illustrator',
-    date: '14-Aug-2022',
-    client: 'Andreo Bowla',
-  },
-  {
-    title: 'Colorful Art Work 4',
-    subtitle: 'See Details',
-    src: '/images/portfolio_7.jpeg',
-    category: 'mobile_apps',
-    
-    location: 'United Kingdom',
-    software: 'Adobe Illustrator',
-    date: '14-Aug-2022',
-    client: 'Andreo Bowla',
-  },
-  {
-    title: 'Colorful Art Work 5',
-    subtitle: 'See Details',
-    src: '/images/portfolio_8.jpeg',
-    category: 'ui_ux_design',
-    
-    location: 'United Kingdom',
-    software: 'Adobe Illustrator',
-    date: '14-Aug-2022',
-    client: 'Andreo Bowla',
-  },
-  {
-    title: 'Colorful Art Work 6',
-    subtitle: 'See Details',
-    src: '/images/portfolio_9.jpeg',
-    category: 'web_design',
-    
-    location: 'United Kingdom',
-    software: 'Adobe Illustrator',
-    date: '14-Aug-2022',
-    client: 'Andreo Bowla',
-  },
-  {
-    title: 'Colorful Art Work 7',
-    subtitle: 'See Details',
-    src: '/images/portfolio_10.jpeg',
-    category: 'logo_design',
-  
-    location: 'United Kingdom',
-    software: 'Adobe Illustrator',
-    date: '14-Aug-2022',
-    client: 'Andreo Bowla',
-  },
-  {
-    title: 'Colorful Art Work 8',
-    subtitle: 'See Details',
-    src: '/images/portfolio_4.jpeg',
-    category: 'ui_ux_design',
- 
-         location: 'United Kingdom',
-    software: 'Adobe Illustrator',
-    date: '14-Aug-2022',
-    client: 'Andreo Bowla',
-  },
-  {
-    title: 'Colorful Art Work 9',
-    subtitle: 'See Details',
-    src: '/images/portfolio_5.jpeg',
-    category: 'logo_design',
- 
-    location: 'United Kingdom',
-    software: 'Adobe Illustrator',
-    date: '14-Aug-2022',
-    client: 'Andreo Bowla',
-  },
-  {
-    title: 'Colorful Art Work 10',
-    subtitle: 'See Details',
-    src: '/images/portfolio_6.jpeg',
-    category: 'web_design',
-    
+    src: '/images/SOCIAL MEDIA MOCKUP.jpg',
+    category: 'social_media',
+
     location: 'United Kingdom',
     software: 'Adobe Illustrator',
     date: '14-Aug-2022',
@@ -123,10 +145,10 @@ const portfolioData = [
 ];
 
 const categoryMenu = [
-  { title: 'Web Design', category: 'web_design' },
-  { title: 'UI/UX Design', category: 'ui_ux_design' },
+  { title: 'Web UI/UX', category: 'web_design' },
+  { title: 'Branding', category: 'branding_company' },
   { title: 'Mobile Apps', category: 'mobile_apps' },
-  { title: 'Logo Design', category: 'logo_design' },
+  { title: 'Logo', category: 'logo_design' },
 ];
 
 export const portfolioItems = portfolioData;
@@ -176,15 +198,13 @@ export default function PortfolioPage() {
         <Div className="row">
           {portfolioData.slice(0, itemShow).map((item, index) => (
             <Div
-              className={`${
-                index === 3 || index === 6 ? 'col-lg-8' : 'col-lg-4'
-              } ${
-                active === 'all'
+              className={`${index === 3 || index === 6 ? 'col-lg-8' : 'col-lg-4'
+                } ${active === 'all'
                   ? ''
                   : !(active === item.category)
-                  ? 'd-none'
-                  : ''
-              }`}
+                    ? 'd-none'
+                    : ''
+                }`}
               key={index}
               onClick={() => navigate(`/portfolio/${slugify(item.title)}`)}
               style={{ cursor: 'pointer' }}
@@ -218,16 +238,16 @@ export default function PortfolioPage() {
         </Div>
       </Div>
       <Spacing lg="145" md="80" />
-     
-           <Div className="container">
-             <Cta
-               title="Have an idea? <br /> We’ve got you!  
+
+      <Div className="container">
+        <Cta
+          title="Have an idea? <br /> We’ve got you!  
      Let’s talk over a cup of coffee... "
-               btnText="YES I'M IN!"
-               btnLink="/contact"
-               bgSrc="/images/cta_bg.jpeg"
-             />
-           </Div>
+          btnText="YES I'M IN!"
+          btnLink="/contact"
+          bgSrc="/images/cta_bg.jpeg"
+        />
+      </Div>
     </>
   );
 }
