@@ -58,7 +58,7 @@ export default function Home() {
   return (
     <>
       <Hero
-        title={`We don’t just work<br />
+        title={`We don’t just do<br />
  <span id="wonder-text">WONDERS</span>
  <br />
   we make your brand<br />
