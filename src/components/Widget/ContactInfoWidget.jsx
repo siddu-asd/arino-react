@@ -1,4 +1,3 @@
-import React from 'react'
 import { Icon } from '@iconify/react';
 
 export default function ContactInfoWidget({ withIcon, title }) {
@@ -16,7 +15,7 @@ export default function ContactInfoWidget({ withIcon, title }) {
         </li>
         <li>
           {withIcon ? <span className='cs-accent_color'><Icon icon="mdi:map-marker" /></span> : ''}
-     Masab Tank - Hyderabad   <br /> 500008
+      Hyderabad   <br /> 500008
         </li>
       </ul>
     </>
