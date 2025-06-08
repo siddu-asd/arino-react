@@ -25,6 +25,7 @@ import ArchitectureAgencyHome from './components/Pages/ArchitectureAgencyHome';
 import CreativeSolutionHome from './components/Pages/CreativeSolutionHome';
 import PersonalPortfolioHome from './components/Pages/PersonalPortfolioHome';
 import VideoShowcaseHome from './components/Pages/VideoShowcaseHome';
+import CareerPage from './components/Pages/CareerPage';
 
 function App() {
   return (
@@ -71,26 +72,34 @@ function App() {
           />
           <Route path="faq" element={<FaqPage />} />
         </Route>
+        <Route path="/" element={<Layout />}>
+  ...
+  <Route path="career" element={<CareerPage />} />
+</Route>
+      
+      
+
+      <Route
+        path="/"
+        element={<Layout headerVariant="cs-site_header_full_width" />}
+      >
         <Route
-          path="/"
-          element={<Layout headerVariant="cs-site_header_full_width" />}
-        >
-          <Route
-            path="creative-portfolio"
-            element={<CreativePortfolioHome />}
-          />
-          <Route
-            path="showcase-portfolio"
-            element={<ShowcasePortfolioHome />}
-          />
-          <Route
-            path="case-study-showcase"
-            element={<CaseStudyShowcaseHome />}
-          />
-          <Route path="video-showcase" element={<VideoShowcaseHome />} />
-        </Route>
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+          path="creative-portfolio"
+          element={<CreativePortfolioHome />}
+        />
+        <Route
+          path="showcase-portfolio"
+          element={<ShowcasePortfolioHome />}
+        />
+        <Route
+          path="case-study-showcase"
+          element={<CaseStudyShowcaseHome />}
+        />
+        <Route path="video-showcase" element={<VideoShowcaseHome />} />
+      </Route>
+      <Route path="*" element={<ErrorPage />} />
+    </Routes >
+
     </>
   );
 }

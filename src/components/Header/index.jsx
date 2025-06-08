@@ -99,8 +99,8 @@ export default function Header({ variant }) {
                             </Link>
                           </li> */}
                           <li>
-                            <Link to="/team" onClick={() => setMobileToggle(false)}>
-                              Our People
+                            <Link to="/career" onClick={() => setMobileToggle(false)}>
+                              Join Us
                             </Link>
                           </li>
                         </ul>
