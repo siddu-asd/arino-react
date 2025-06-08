@@ -11,7 +11,6 @@ import MovingText from '../MovingText';
 import PortfolioSlider from '../Slider/PortfolioSlider';
 import PostSlider from '../Slider/PostSlider';
 import TestimonialSlider from '../Slider/TestimonialSlider';
-import TeamSlider from '../Slider/TeamSlider';
 import VideoModal from '../VideoModal';
 import { pageTitle } from '../../helper';
 
@@ -208,7 +207,7 @@ export default function Home() {
       </Div>
 
       <Spacing lg="145" md="80" />
-      <Div className="container">
+      {/* <Div className="container">
         <SectionHeading
           title="People Who Make It Possible"
           subtitle=""
@@ -216,7 +215,7 @@ export default function Home() {
         />
         <Spacing lg="85" md="45" />
         <TeamSlider />
-      </Div>
+      </Div> */}
       <Spacing lg="150" md="80" />
 
       <TestimonialSlider />

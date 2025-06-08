@@ -122,7 +122,7 @@ export default function Header({ variant }) {
                 </Div>
               </Div>
 
-              <Div className="cs-main_header_right">
+              {/* <Div className="cs-main_header_right">
                 <Div className="cs-toolbox">
                   <span
                     className="cs-icon_btn"
@@ -136,7 +136,7 @@ export default function Header({ variant }) {
                     </span>
                   </span>
                 </Div>
-              </Div>
+              </Div> */}
             </Div>
           </Div>
         </Div>
