@@ -142,7 +142,9 @@ export default function ServiceDetailsPage() {
             <Spacing lg="0" md="40" />
           </Div>
           <Div className="col-lg-6 offset-xl-1">
-            <h2 className="cs-font_50 cs-m0"> {service.description.toLowerCase()}</h2>
+            <h2 className="cs-font_50 cs-m0"> {service.description.replace(/\w\S*/g, (txt) =>
+              txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase()
+            )}</h2>
             <Spacing lg="50" md="30" />
             <Div className="row">
               {service.relatedServices.map((s, idx) => (
