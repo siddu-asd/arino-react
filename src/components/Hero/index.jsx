@@ -3,16 +3,12 @@ import parse from 'html-react-parser';
 import './hero.scss';
 import Button from '../Button';
 import Div from '../Div';
-import VerticalLinks from '../VerticalLinks';
 
 export default function Hero({
   title,
   subtitle,
   btnText,
   btnLink,
-  scrollDownId,
-  socialLinksHeading,
-  heroSocialLinks,
   bgImageUrl,
 }) {
   return (
@@ -36,10 +32,10 @@ export default function Hero({
           </Div>
         </Div>
       </Div>
-      <VerticalLinks data={heroSocialLinks} title={socialLinksHeading} />
+      {/* <VerticalLinks data={heroSocialLinks} title={socialLinksHeading} />
       <a href={scrollDownId} className="cs-down_btn">
         .
-      </a>
+      </a> */}
     </Div>
   );
 }

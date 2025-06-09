@@ -132,6 +132,51 @@ const portfolioData = [
     client: 'Andreo Bowla',
   },
   {
+    title: 'OAK Hospitals',
+    subtitle: 'See Details',
+    src: '/images/banner mock up 1.png',
+    category: 'web_design',
+
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+  {
+    title: '2',
+    subtitle: 'See Details',
+    src: '/images/standee mockup 3 png.png',
+    category: 'web_design',
+
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+   {
+    title: '2',
+    subtitle: 'See Details',
+    src: '/images/flyer mockup 2.png',
+    category: 'web_design',
+
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+   {
+    title: '6',
+    subtitle: 'See Details',
+    src: '/images/logo mockup 2.png',
+    category: 'web_design',
+
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+
+  {
     title: 'Social Media NAZARA',
     subtitle: 'See Details',
     src: '/images/SOCIAL MEDIA MOCKUP.jpg',
@@ -142,6 +187,19 @@ const portfolioData = [
     date: '14-Aug-2022',
     client: 'Andreo Bowla',
   },
+  {
+    title: 'Dr. Nagarjuna website',
+    subtitle: 'See Details',
+    src: '/images/website mockup 1 png.png',
+    category: 'web_design',
+
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+
+
 ];
 
 const categoryMenu = [

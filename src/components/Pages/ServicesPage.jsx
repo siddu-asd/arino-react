@@ -38,9 +38,9 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='Creative Marketing'
+                    // title='Creative Marketing'
                     link='/service/creative-marketing'
-                    src='/images/service_1.jpeg'
+                    src='/images/13m.jpeg'
                     alt='Creative Marketing'
 
                   />
@@ -49,9 +49,9 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='Branding'
+                    // title='Branding'
                     link='/service/branding'
-                    src='/images/service_2.jpeg'
+                    src='/images/14n.jpeg'
                     alt='Branding'
 
                   />
@@ -59,9 +59,9 @@ export default function ServicesPage() {
                 </Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='AI & Technology'
+                    // title='AI & Technology'
                     link='/service/ai-technology'
-                    src='/images/service_6.jpeg'
+                    src='/images/15o.jpeg'
                     alt='AI & Technology'
 
                   />
@@ -71,14 +71,14 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title={
-                      <>
-                        Visual<br />
-                        Story-Telling<br />
-                        Studio
-                      </>}
+                    // title={
+                    //   <>
+                    //     Visual<br />
+                    //     Storytelling<br />
+                    //     Studio
+                    //   </>}
                     link='/service/studio'
-                    src='/images/service_6.jpeg'
+                    src='/images/16p.jpeg'
                     alt='Studio'
                   />
                   <Spacing lg='0' md='30' />

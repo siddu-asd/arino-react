@@ -20,7 +20,7 @@ export default function AboutPage() {
     <>
       {/* Start Page Heading Section */}
       <PageHeading
-        title="EXPLORE OUR SPACE"
+        title="Explore Our Space"
         bgSrc="images/about_hero_bg.jpeg"
         pageLinkText="EXPLORE OUR SPACE "
       />
@@ -49,15 +49,15 @@ export default function AboutPage() {
           </Div>
           <Div className="col-lg-5 offset-xl-2">
             <img
-              src="/images/about_img_1.jpeg"
+              src="/images/3c.png"
               alt="About"
               className="w-100 cs-radius_15"
             />
             <Spacing lg="25" md="25" />
           </Div>
-          <Div className="col-lg-7">
+          {/* <Div className="col-lg-7">
             <img
-              src="/images/about_img_2.jpeg"
+              src="/images/9i.jpeg"
               alt="About"
               className="w-100 cs-radius_15"
             />
@@ -65,12 +65,12 @@ export default function AboutPage() {
           </Div>
           <Div className="col-lg-5">
             <img
-              src="/images/about_img_3.jpeg"
+              src="/images/12l.jpeg"
               alt="About"
               className="w-100 cs-radius_15"
             />
             <Spacing lg="25" md="25" />
-          </Div>
+          </Div> */}
         </Div>
       </Div>
       <Spacing lg="75" md="55" />
@@ -84,7 +84,7 @@ export default function AboutPage() {
             <Div className="cs-image_layer cs-style1">
               <Div className="cs-image_layer_in">
                 <img
-                  src="/images/about_img_4.jpeg"
+                  src="/images/5e.jpeg"
                   alt="About"
                   className="w-100 cs-radius_15"
                 />
@@ -148,7 +148,7 @@ export default function AboutPage() {
           </Div>
           <Div className="col-lg-5 offset-xl-2">
             <img
-              src="/images/about_img_1.jpeg"
+              src="/images/2b.jpeg"
               alt="About"
               className="w-100 cs-radius_15"
             />
@@ -173,7 +173,7 @@ export default function AboutPage() {
 
       {/* Start Team Section */}
       <Spacing lg="145" md="80" />
-      <Div className="container">
+      {/* <Div className="container">
         <SectionHeading
           title="People Who Make It Possible"
           subtitle=""
@@ -181,7 +181,7 @@ export default function AboutPage() {
         />
         <Spacing lg="85" md="45" />
         <TeamSlider />
-      </Div>
+      </Div> */}
       {/* End Team Section */}
 
       {/* Start CTA Section */}

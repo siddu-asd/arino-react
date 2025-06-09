@@ -34,7 +34,7 @@ const servicesData = {
   'branding': {
     title: 'Branding',
     subtitle: 'Build a bold and memorable brand identity.',
-    image: '/images/service_2.jpeg',
+    image: '/images/17q.jpeg',
     description: 'What We Bring Through Branding',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts' },
@@ -42,16 +42,19 @@ const servicesData = {
       { icon: '/images/icons/service_icon_3.svg', title: 'PRESENT', description: 'We Present Our Creation' }
     ],
     relatedServices: [
-      'Personal Branding  ',
-      'Product & Service Branding ',
       'Brand Name and Tagline  ',
-      'Brand Identity '
+      'Brand Identity ',
+      'Product & Service Branding ',
+      'Personal Branding  ',
+
+
+
     ]
   },
   'ai-technology': {
     title: 'AI & Technology',
     subtitle: 'Empowering businesses with smart tech solutions.',
-    image: '/images/service_6.jpeg',
+    image: '/images/18r.jpeg',
     description: 'What We Bring Through AI & Technology ',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts' },
@@ -66,9 +69,9 @@ const servicesData = {
     ]
   },
   'studio': {
-    title: 'Studio – Podcast, Ad-Films, Product Shoot',
+    title: '  Visual Storytelling Studio',
     subtitle: 'Professional studio production for audio and visuals.',
-    image: '/images/service_7.jpeg',
+    image: '/images/19s.jpeg',
     description: 'What We Bring Through Visual Storytelling Studio',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts' },
@@ -185,8 +188,9 @@ export default function ServiceDetailsPage() {
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
+          title="Have an idea? <br /> We’ve got you!  
+     Let’s talk over a cup of coffee... "
+          btnText="YES I'M IN!"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
         />
