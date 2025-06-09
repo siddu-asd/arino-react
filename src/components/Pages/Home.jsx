@@ -21,30 +21,86 @@ const heroSocialLinks = [
 
 
 const portfolioData = [
+  
   {
-    title: 'Colorful Art Work 1',
+    title: 'Logo Design',
     subtitle: 'See Details',
-    href: '/portfolio/colorful-art-work-1',
-    src: '/images/portfolio_4.jpeg',
+    src: '/images/logo mockup jpeg.jpg',
+    category: 'logo_design',
+
+    location: 'United Kingdom',
+    software: 'Adobe Illustrator',
+    date: '14-Aug-2022',
+    client: 'Andreo Bowla',
   },
   {
-    title: 'Colorful Art Work 2',
+    title: 'OAK Hospitals',
     subtitle: 'See Details',
-    href: '/portfolio/colorful-art-work-2',
-    src: '/images/portfolio_5.jpeg',
+    src: '/images/banner mock up 1.png',
+    category: 'web_design',
+
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
   },
   {
-    title: 'Colorful Art Work 3',
+    title: '2',
     subtitle: 'See Details',
-    href: '/portfolio/colorful-art-work-3',
-    src: '/images/portfolio_6.jpeg',
+    src: '/images/standee mockup 3 png.png',
+    category: 'web_design',
+
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+   {
+    title: '2',
+    subtitle: 'See Details',
+    src: '/images/flyer mockup 2.png',
+    category: 'web_design',
+
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+   {
+    title: '6',
+    subtitle: 'See Details',
+    src: '/images/logo mockup 2.png',
+    category: 'web_design',
+
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+
+  {
+    title: 'Social Media NAZARA',
+    subtitle: 'See Details',
+    src: '/images/SOCIAL MEDIA MOCKUP.jpg',
+    category: 'branding_company',
+
+    location: 'United Kingdom',
+    software: 'Adobe Illustrator',
+    date: '14-Aug-2022',
+    client: 'Andreo Bowla',
   },
   {
-    title: 'Colorful Art Work 4',
+    title: 'Dr. Nagarjuna website',
     subtitle: 'See Details',
-    href: '/portfolio/colorful-art-work-4',
-    src: '/images/portfolio_7.jpeg',
+    src: '/images/website mockup 1 png.png',
+    category: 'web_design',
+
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
   },
+
 ];
 
 export default function Home() {
@@ -109,9 +165,9 @@ export default function Home() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='Creative Marketing'
+                    // title='Creative Marketing'
                     link='/service/creative-marketing'
-                    src='/images/service_1.jpeg'
+                    src='/images/21q.jpeg'
                     alt='Creative Marketing'
 
                   />
@@ -120,9 +176,9 @@ export default function Home() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='Branding'
+                    // title='Branding'
                     link='/service/branding'
-                    src='/images/service_2.jpeg'
+                    src='/images/22w.jpeg'
                     alt='Branding'
 
                   />
@@ -130,9 +186,9 @@ export default function Home() {
                 </Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='AI & Technology'
+                    // title='AI & Technology'
                     link='/service/ai-technology'
-                    src='/images/service_6.jpeg'
+                    src='/images/15o.jpeg'
                     alt='AI & Technology'
 
                   />
@@ -142,14 +198,14 @@ export default function Home() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title={
-                      <>
-                        Visual<br />
-                        Story-Telling<br />
-                        Studio
-                      </>}
+                    // title={
+                    //   <>
+                    //     Visual<br />
+                    //     Story-Telling<br />
+                    //     Studio
+                    //   </>}
                     link='/service/studio'
-                    src='/images/service_6.jpeg'
+                    src='/images/23e.jpeg'
                     alt='Studio'
                   />
                   <Spacing lg='0' md='30' />

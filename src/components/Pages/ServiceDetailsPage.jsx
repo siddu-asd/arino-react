@@ -14,7 +14,7 @@ const servicesData = {
   'creative-marketing': {
     title: 'Creative Marketing',
     subtitle: 'Engaging campaigns that captivate and convert.',
-    image: '/images/service_1.jpeg',
+    image: '/images/freepik__the-style-is-candid-image-photography-with-natural__37005.jpeg',
     description: 'What We Bring Through Creative Marketing ',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts ' },

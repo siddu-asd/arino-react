@@ -8,100 +8,33 @@ import Spacing from '../Spacing';
 
 const positionOptions = {
     Development: [
-
-        'Full Stack Developer',
-        'Mobile App Developer',
-        'Web Developer',
-        'Software Engineer',
-        'DevOps Engineer',
-        'QA Engineer',
-        'Site Reliability Engineer (SRE)',
-        'Technical Lead',
+        'Full Stack Developer', 'Mobile App Developer', 'Web Developer', 'Software Engineer', 'DevOps Engineer', 'QA Engineer', 'Site Reliability Engineer (SRE)', 'Technical Lead',
     ],
     Design: [
-        'UI/UX Designer',
-        'Product Designer',
-        'Graphic Designer',
-        'Visual Designer',
-        'Interaction Designer',
-        'Design Lead',
+        'UI/UX Designer', 'Product Designer', 'Graphic Designer', 'Visual Designer', 'Interaction Designer', 'Design Lead',
     ],
     Data: [
-        'Data Scientist',
-        'Data Analyst',
-        'Machine Learning Engineer',
-        'AI Engineer',
-        'Big Data Engineer',
-        'Data Engineer',
-        'Business Intelligence Analyst',
+        'Data Scientist', 'Data Analyst', 'Machine Learning Engineer', 'AI Engineer', 'Big Data Engineer', 'Data Engineer', 'Business Intelligence Analyst',
     ],
     Cloud: [
-        'Cloud Engineer',
-        'Cloud Solutions Architect',
-        'AWS Engineer',
-        'Azure Engineer',
-        'Google Cloud Engineer',
+        'Cloud Engineer', 'Cloud Solutions Architect', 'AWS Engineer', 'Azure Engineer', 'Google Cloud Engineer',
     ],
     Security: [
-        'Cybersecurity Analyst',
-        'Security Engineer',
-        'Penetration Tester',
-        'SOC Analyst',
-        'Cloud Security Specialist',
-        'Information Security Manager',
+        'Cybersecurity Analyst', 'Security Engineer', 'Penetration Tester', 'SOC Analyst', 'Cloud Security Specialist', 'Information Security Manager',
     ],
     Testing: [
-        'Manual Tester',
-        'Automation Tester',
-        'Test Lead',
-        'Performance Tester',
-        'QA Analyst',
+        'Manual Tester', 'Automation Tester', 'Test Lead', 'Performance Tester', 'QA Analyst',
     ],
-
     Infrastructure: [
-        'Network Engineer',
-        'System Engineer',
-        'Database Administrator (DBA)',
-        'Linux Administrator',
-        'IT Infrastructure Manager',
+        'Network Engineer', 'System Engineer', 'Database Administrator (DBA)', 'Linux Administrator', 'IT Infrastructure Manager',
     ],
-
     Marketing: [
-        'Digital Marketing Executive',
-        'SEO Specialist',
-        'Content Marketing Manager',
-        'Social Media Manager',
-        'Marketing Strategist',
-        'Email Marketing Specialist',
-        'Growth Hacker',
-        'Performance Marketing Manager',
-        'Campaign Manager',
-        'Brand Manager',
-        'Creative Director',
-        'Marketing Designer',
-        'Visual Branding Specialist',
+        'Digital Marketing Executive', 'SEO Specialist', 'Content Marketing Manager', 'Social Media Manager', 'Marketing Strategist', 'Email Marketing Specialist',
+        'Growth Hacker', 'Performance Marketing Manager', 'Campaign Manager', 'Brand Manager', 'Creative Director', 'Marketing Designer', 'Visual Branding Specialist',
     ],
     Content: [
-        'Content Writer',
-        'Copywriter',
-        'Technical Writer',
-        'Content Strategist',
-        'Editor',
+        'Content Writer', 'Copywriter', 'Technical Writer', 'Content Strategist', 'Editor',
     ],
-
-    //   Sales: [
-    //     'Sales Executive',
-    //     'Business Development Executive',
-    //     'Account Manager',
-    //     'Inside Sales Representative',
-    //     'Lead Generation Specialist',
-    //   ],
-    //   Analytics: [
-    //     'Marketing Analyst',
-    //     'CRM Analyst',
-    //     'Web Analytics Specialist',
-    //     'Customer Insights Analyst',
-    //   ],
 };
 
 export default function CareerPage() {
@@ -110,6 +43,11 @@ export default function CareerPage() {
     const [selectedCategory, setSelectedCategory] = useState('');
     const [positions, setPositions] = useState([]);
     const [selectedPosition, setSelectedPosition] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [resume, setResume] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState('');
 
     useEffect(() => {
         setPositions(positionOptions[selectedCategory] || []);
@@ -119,6 +57,52 @@ export default function CareerPage() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if (!resume || resume.type !== 'application/pdf') {
+            setMessage('Please upload a valid PDF resume.');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('category', selectedCategory);
+        formData.append('position', selectedPosition);
+        formData.append('email', email);
+        formData.append('phone', phone);
+        formData.append('resume', resume);
+
+        try {
+            setLoading(true);
+            setMessage('');
+
+            const response = await fetch('https://career-formsheet.onrender.com/submit_application', {
+                method: 'POST',
+                body: formData,
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                setMessage('Application submitted successfully!');
+
+                // Reset form
+                setSelectedCategory('');
+                setSelectedPosition('');
+                setEmail('');
+                setPhone('');
+                setResume(null);
+                document.getElementById('resumeInput').value = '';
+            } else {
+                setMessage(result?.error || 'Submission failed.');
+            }
+        } catch (err) {
+            setMessage('An error occurred. Please try again.');
+        } finally {
+            setLoading(false);
+        }
+    };
 
     return (
         <>
@@ -136,7 +120,7 @@ export default function CareerPage() {
                             subtitle="We’re always looking for passionate talent to join us"
                         />
                         <Spacing lg="55" md="30" />
-                        <form action="#" className="row cs-career-form" encType="multipart/form-data">
+                        <form onSubmit={handleSubmit} className="row cs-career-form" encType="multipart/form-data">
                             <Div className="col-sm-6">
                                 <label className="cs-primary_color">
                                     Select Category <span className="required-star">*</span>
@@ -149,13 +133,12 @@ export default function CareerPage() {
                                 >
                                     <option value="">Select Category</option>
                                     {Object.keys(positionOptions).map((category) => (
-                                        <option key={category} value={category}>
-                                            {category}
-                                        </option>
+                                        <option key={category} value={category}>{category}</option>
                                     ))}
                                 </select>
                                 <Spacing lg="20" md="20" />
                             </Div>
+
                             <Div className="col-sm-6">
                                 <label className="cs-primary_color">
                                     Position You're Applying For <span className="required-star">*</span>
@@ -169,47 +152,73 @@ export default function CareerPage() {
                                 >
                                     <option value="">Select Position</option>
                                     {positions.map((pos) => (
-                                        <option key={pos} value={pos}>
-                                            {pos}
-                                        </option>
+                                        <option key={pos} value={pos}>{pos}</option>
                                     ))}
                                 </select>
                                 <Spacing lg="20" md="20" />
                             </Div>
+
                             <Div className="col-sm-6">
                                 <label className="cs-primary_color">
                                     Your Email <span className="required-star">*</span>
                                 </label>
-                                <input type="email" className="cs-form_field" required />
+                                <input
+                                    type="email"
+                                    className="cs-form_field"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                    title="Please enter a valid email address"
+                                    required
+                                />
+
                                 <Spacing lg="20" md="20" />
                             </Div>
+
                             <Div className="col-sm-6">
                                 <label className="cs-primary_color">
                                     Mobile Number <span className="required-star">*</span>
                                 </label>
-                                <input type="tel" className="cs-form_field" required />
+                                <input
+                                    type="tel"
+                                    className="cs-form_field"
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value.replace(/\D/g, ''))} // removes non-digits
+                                    maxLength={10}
+                                    pattern="\d{10}"
+                                    title="Please enter a valid 10-digit mobile number"
+                                    required
+                                />
                                 <Spacing lg="20" md="20" />
                             </Div>
+
                             <Div className="col-sm-12">
                                 <label className="cs-primary_color">
                                     Upload Resume (PDF only) <span className="required-star">*</span>
                                 </label>
                                 <input
+                                    id="resumeInput"
                                     type="file"
                                     className="cs-form_field"
                                     accept="application/pdf"
+                                    onChange={(e) => setResume(e.target.files[0])}
                                     required
                                 />
                                 <Spacing lg="25" md="25" />
                             </Div>
+
                             <Div className="col-sm-12">
-                                <button type="submit" className="cs-btn cs-style1">
-                                    <span>Submit Application</span>
+                                <button type="submit" className="cs-btn cs-style1" disabled={loading}>
+                                    <span>{loading ? 'Submitting...' : 'Submit Application'}</span>
                                     <Icon icon="bi:arrow-right" />
                                 </button>
+                                {message && (
+                                    <p style={{ marginTop: '15px', color: message.includes('success') ? 'green' : 'red' }}>
+                                        {message}
+                                    </p>
+                                )}
                             </Div>
                         </form>
-
                     </Div>
                 </Div>
             </Div>

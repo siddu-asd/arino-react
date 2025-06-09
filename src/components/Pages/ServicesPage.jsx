@@ -40,7 +40,7 @@ export default function ServicesPage() {
                   <Card
                     // title='Creative Marketing'
                     link='/service/creative-marketing'
-                    src='/images/13m.jpeg'
+                    src='/images/21q.jpeg'
                     alt='Creative Marketing'
 
                   />
@@ -51,7 +51,7 @@ export default function ServicesPage() {
                   <Card
                     // title='Branding'
                     link='/service/branding'
-                    src='/images/14n.jpeg'
+                    src='/images/22w.jpeg'
                     alt='Branding'
 
                   />
@@ -74,11 +74,11 @@ export default function ServicesPage() {
                     // title={
                     //   <>
                     //     Visual<br />
-                    //     Storytelling<br />
+                    //     Story-Telling<br />
                     //     Studio
                     //   </>}
                     link='/service/studio'
-                    src='/images/16p.jpeg'
+                    src='/images/23e.jpeg'
                     alt='Studio'
                   />
                   <Spacing lg='0' md='30' />
