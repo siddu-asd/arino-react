@@ -107,7 +107,7 @@ export default function CareerPage() {
     return (
         <>
             <PageHeading
-                title="Join Our Team"
+                title="Get On Board"
                 bgSrc="/images/contact_hero_bg.jpeg"
                 pageLinkText="Careers"
             />
@@ -116,14 +116,15 @@ export default function CareerPage() {
                 <Div className="row">
                     <Div className="col-lg-8 offset-lg-2">
                         <SectionHeading
-                            title="Build Your Future With Us<br />Apply Now"
-                            subtitle="We’re always looking for passionate talent to join us"
+                            title="Let's embark on a journey together.
+Are you in? "
+                            subtitle="Always hunting for creative individuals "
                         />
                         <Spacing lg="55" md="30" />
                         <form onSubmit={handleSubmit} className="row cs-career-form" encType="multipart/form-data">
                             <Div className="col-sm-6">
                                 <label className="cs-primary_color">
-                                    Select Category <span className="required-star">*</span>
+                                    Your skill set falls into which category?<span className="required-star">*</span>
                                 </label>
                                 <select
                                     className="cs-form_field"
@@ -141,7 +142,7 @@ export default function CareerPage() {
 
                             <Div className="col-sm-6">
                                 <label className="cs-primary_color">
-                                    Position You're Applying For <span className="required-star">*</span>
+                                    What role would you play? <span className="required-star">*</span>
                                 </label>
                                 <select
                                     className="cs-form_field"
@@ -160,7 +161,7 @@ export default function CareerPage() {
 
                             <Div className="col-sm-6">
                                 <label className="cs-primary_color">
-                                    Your Email <span className="required-star">*</span>
+                                    Email coordinates <span className="required-star">*</span>
                                 </label>
                                 <input
                                     type="email"
@@ -177,7 +178,7 @@ export default function CareerPage() {
 
                             <Div className="col-sm-6">
                                 <label className="cs-primary_color">
-                                    Mobile Number <span className="required-star">*</span>
+                                    Where can we connect for a call? <span className="required-star">*</span>
                                 </label>
                                 <input
                                     type="tel"
@@ -194,7 +195,7 @@ export default function CareerPage() {
 
                             <Div className="col-sm-12">
                                 <label className="cs-primary_color">
-                                    Upload Resume (PDF only) <span className="required-star">*</span>
+                                   Your resume/profile (PDF only) <span className="required-star">*</span>
                                 </label>
                                 <input
                                     id="resumeInput"
@@ -209,7 +210,7 @@ export default function CareerPage() {
 
                             <Div className="col-sm-12">
                                 <button type="submit" className="cs-btn cs-style1" disabled={loading}>
-                                    <span>{loading ? 'Submitting...' : 'Submit Application'}</span>
+                                    <span>{loading ? 'Submitting...' : 'Join 100x'}</span>
                                     <Icon icon="bi:arrow-right" />
                                 </button>
                                 {message && (

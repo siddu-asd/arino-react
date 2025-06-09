@@ -33,17 +33,17 @@ const portfolioData = [
     date: '14-Aug-2022',
     client: 'Andreo Bowla',
   },
-  {
-    title: 'OAK Hospitals',
-    subtitle: 'See Details',
-    src: '/images/banner mock up 1.png',
-    category: 'web_design',
+  // {
+  //   title: 'OAK Hospitals',
+  //   subtitle: 'See Details',
+  //   src: '/images/banner mock up 1.png',
+  //   category: 'web_design',
 
-    location: 'Hyderabad',
-    software: 'React Project',
-    date: '31-March-2025',
-    client: 'Dr. Nagarjuna',
-  },
+  //   location: 'Hyderabad',
+  //   software: 'React Project',
+  //   date: '31-March-2025',
+  //   client: 'Dr. Nagarjuna',
+  // },
   {
     title: '2',
     subtitle: 'See Details',

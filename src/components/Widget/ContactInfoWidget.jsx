@@ -15,9 +15,10 @@ export default function ContactInfoWidget({ withIcon, title }) {
         </li>
         <li>
           {withIcon ? <span className='cs-accent_color'><Icon icon="mdi:map-marker" /></span> : ''}
-      Hyderabad   <br /> 500008
+      Hyderabad   500008
         </li>
       </ul>
     </>
   )
 }
+  

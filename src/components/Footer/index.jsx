@@ -31,7 +31,7 @@ const serviceMenu = [
     href: '/service/ai-technology',
   },
   {
-    title: 'Visual Story-Telling Studio',
+    title: 'Visual Storytelling Studio',
     href: '/service/studio',
   },
 ];
