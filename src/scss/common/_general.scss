@@ -1660,6 +1660,8 @@ label {
     }
   }
 }
+
+
 .cs-career-form {
   .cs-form_field {
     width: 100%;
@@ -1667,7 +1669,6 @@ label {
     border: 1px solid #ddd;
     border-radius: 6px;
     font-size: 16px;
-
     max-height: 100;
     background-color: transparent;
     color: #fff;
@@ -1695,7 +1696,7 @@ label {
 
   input[type='file'].cs-form_field {
     padding: 8px;
-    font-size: 15px;
+    font-size: 12px;
     border-radius: 6px;
     background-color: transparent;
     color: #fff;
