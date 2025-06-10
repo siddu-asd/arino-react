@@ -42,8 +42,8 @@ export default function ServicesPage() {
                     link='/service/creative-marketing'
                     src='/images/21q.jpeg'
                     alt='Creative Marketing'
-
                   />
+                  
                   <Spacing lg='0' md='30' />
                 </Div>
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>

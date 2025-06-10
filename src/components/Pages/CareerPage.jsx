@@ -98,38 +98,38 @@ export default function CareerPage() {
               </p>
               <Spacing lg="20" md="20" />
              <div style={{ fontSize: '16px' }}>
-  <label >
-    <span style={{ fontWeight: 'bold' ,PaddingBottom: '10px' }}>
-    <input type="radio" name="reason" value="innovation" /> Marketing</span>
-    <p style={{ marginLeft: '25px', marginTop: '4px' }}>
-      Promote brands and reach the right audience creatively.
-    </p>
-  </label><br />
+            < label >
+             <span style={{ fontWeight: 'bold' ,PaddingBottom: '10px' }}>
+             <input type="radio" name="reason" value="innovation" /> Marketing</span>
+             <p style={{ marginLeft: '25px', marginTop: '4px' }}>
+             Promote brands and reach the right audience creatively.
+             </p>
+            </label><br />
 
-  <label>
-     <span style={{ fontWeight: 'bold' ,PaddingBottom: '10px' }}>
-    <input type="radio" name="reason" value="growth" /> Development</span>
-    <p style={{ marginLeft: '25px', marginTop: '4px' }}>
-      Build and maintain websites or applications.
-    </p>
-  </label><br />
+             <label>
+             <span style={{ fontWeight: 'bold' ,PaddingBottom: '10px' }}>
+            <input type="radio" name="reason" value="growth" /> Development</span>
+             <p style={{ marginLeft: '25px', marginTop: '4px' }}>
+             Build and maintain websites or applications.
+             </p>
+             </label><br />
 
-  <label>
-     <span style={{ fontWeight: 'bold' ,PaddingBottom: '10px' }}>
-    <input type="radio" name="reason" value="team" /> Design</span>
-    <p style={{ marginLeft: '25px', marginTop: '4px' }}>
-      Create clean, user-friendly visual designs.
-    </p>
-  </label><br />
+             <label>
+             <span style={{ fontWeight: 'bold' ,PaddingBottom: '10px' }}>
+             <input type="radio" name="reason" value="team" /> Design</span>
+             <p style={{ marginLeft: '25px', marginTop: '4px' }}>
+              Create clean, user-friendly visual designs.
+              </p>
+            </label><br />
 
-  <label>
-     <span style={{ fontWeight: 'bold' ,PaddingBottom: '10px' }}>
-    <input type="radio" name="reason" value="flexibility" /> Content</span>
-    <p style={{ marginLeft: '25px', marginTop: '4px' }}>
-      Write engaging and meaningful text or media.
-    </p>
-  </label>
-</div>
+            <label>
+            <span style={{ fontWeight: 'bold' ,PaddingBottom: '10px' }}>
+            <input type="radio" name="reason" value="flexibility" /> Content</span>
+             <p style={{ marginLeft: '25px', marginTop: '4px' }}>
+             Write engaging and meaningful text or media.
+             </p>
+         </label>
+        </div>
 
             </Div>
           </Div>
@@ -138,9 +138,9 @@ export default function CareerPage() {
           <Div className="col-lg-8" style={{ margin: '0 auto', maxWidth: '700px', padding:'10px' }}>
 
            <SectionHeading
-                            title="Let's embark on a journey together.
-Are you in? "
-                            subtitle="Always hunting for creative individuals "
+                title="Let's embark on a journey together.
+                Are you in? "
+                subtitle="Always hunting for creative individuals "
             />
 
             <Spacing lg="55" md="30" />

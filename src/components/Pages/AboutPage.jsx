@@ -4,7 +4,6 @@ import Cta from '../Cta';
 import PageHeading from '../PageHeading';
 import Div from '../Div';
 import SectionHeading from '../SectionHeading';
-import TeamSlider from '../Slider/TeamSlider';
 import Spacing from '../Spacing';
 
 import ServiceList from '../ServiceList';
