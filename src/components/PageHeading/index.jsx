@@ -5,7 +5,7 @@ import Div from '../Div';
 export default function PageHeading({ title, bgSrc, pageLinkText }) {
   return (
     <Div
-      className="cs-page_heading cs-style1 cs-center text-center cs-bg"
+      className="cs-page_heading cs-style1 show-on-mobile"
       style={{ backgroundImage: `url(${bgSrc})` }}
     >
       <Div className="container">

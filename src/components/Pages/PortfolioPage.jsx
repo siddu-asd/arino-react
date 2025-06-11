@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { pageTitle } from '../../helper';
 import Cta from '../Cta';
-import PageHeading from '../PageHeading';
 import Div from '../Div';
 import Portfolio from '../Portfolio';
 import SectionHeading from '../SectionHeading';
@@ -96,8 +95,7 @@ const portfolioData = [
 const categoryMenu = [
   { title: 'Web UI/UX', category: 'web_design' },
   { title: 'Branding', category: 'branding_company' },
-  { title: 'Mobile Apps', category: 'mobile_apps' },
-  { title: 'Logo', category: 'logo_design' },
+  { title: 'Creatives', category: 'creatives' },
 ];
 
 export const portfolioItems = portfolioData;
@@ -116,11 +114,7 @@ export default function PortfolioPage() {
 
   return (
     <>
-      <PageHeading
-        title="Our Creation"
-        bgSrc="images/portfolio_hero_bg.jpeg"
-        pageLinkText="Our Creation"
-      />
+      
       <Spacing lg="145" md="80" />
       <Div className="container">
         <Div className="cs-portfolio_1_heading">

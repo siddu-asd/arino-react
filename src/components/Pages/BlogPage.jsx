@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { pageTitle } from '../../helper';
 import Cta from '../Cta';
-import PageHeading from '../PageHeading';
 import Pagination from '../Pagination';
 import PostStyle2 from '../Post/PostStyle2';
 import Div from '../Div';
@@ -50,11 +49,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <PageHeading
-        title="Our Blogs"
-        bgSrc="/images/blog_hero_bg.jpeg"
-        pageLinkText="Blogs"
-      />
+     
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row">

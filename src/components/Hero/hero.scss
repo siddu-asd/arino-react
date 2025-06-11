@@ -682,7 +682,7 @@
     padding-bottom: 260px;
     display: flex;
     align-items: center;
-    min-height: 680px;
+    max-height: 680px;
     .cs-hero_info {
       flex-direction: column-reverse;
       align-items: flex-start;

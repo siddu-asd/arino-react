@@ -2,7 +2,6 @@ import { Icon } from '@iconify/react';
 import { useEffect, useState } from 'react';
 import { pageTitle } from '../../helper';
 import Div from '../Div';
-import PageHeading from '../PageHeading';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
 
@@ -85,7 +84,6 @@ export default function CareerPage() {
 
   return (
     <>
-      <PageHeading title="Get On Board" bgSrc="/images/contact_hero_bg.jpeg" pageLinkText="Careers" />
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row flex-wrap flex-md-nowrap d-flex gap-5">

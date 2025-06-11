@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { pageTitle } from '../../helper';
 import Cta from '../Cta';
-import PageHeading from '../PageHeading';
 import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
@@ -18,11 +17,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Start Page Heading Section */}
-      <PageHeading
-        title="Explore Our Space"
-        bgSrc="images/about_hero_bg.jpeg"
-        pageLinkText="EXPLORE OUR SPACE "
-      />
+      
       {/* End Page Heading Section */}
 
       {/* Start About Section */}
@@ -48,7 +43,7 @@ export default function AboutPage() {
           </Div>
           <Div className="col-lg-5 offset-xl-2">
             <img
-              src="/images/3c.png"
+              src="/images/hy.png"
               alt="About"
               className="w-100 cs-radius_15"
             />
@@ -83,7 +78,7 @@ export default function AboutPage() {
             <Div className="cs-image_layer cs-style1">
               <Div className="cs-image_layer_in">
                 <img
-                  src="/images/5e.jpeg"
+                  src="/images/EOS.png"
                   alt="About"
                   className="w-100 cs-radius_15"
                 />
@@ -147,7 +142,7 @@ export default function AboutPage() {
           </Div>
           <Div className="col-lg-5 offset-xl-2">
             <img
-              src="/images/2b.jpeg"
+              src="/images/fr.png"
               alt="About"
               className="w-100 cs-radius_15"
             />

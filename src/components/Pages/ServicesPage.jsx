@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { pageTitle } from '../../helper'
 import Card from '../Card'
 import Cta from '../Cta'
-import PageHeading from '../PageHeading'
 import Div from '../Div'
 import SectionHeading from '../SectionHeading'
 import TestimonialSlider from '../Slider/TestimonialSlider'
@@ -15,11 +14,7 @@ export default function ServicesPage() {
   }, [])
   return (
     <>
-      <PageHeading
-        title='What We Offer'
-        bgSrc='images/service_hero_bg.jpeg'
-        pageLinkText='What We Offer'
-      />
+      
       <Spacing lg='150' md='80' />
       <Div className='cs-shape_wrap_4'>
         <Div className="cs-shape_4"></Div>
@@ -40,7 +35,7 @@ export default function ServicesPage() {
                   <Card
                     // title='Creative Marketing'
                     link='/service/creative-marketing'
-                    src='/images/21q.jpeg'
+                    src='/images/nhj.png'
                     alt='Creative Marketing'
                   />
                   
@@ -51,7 +46,7 @@ export default function ServicesPage() {
                   <Card
                     // title='Branding'
                     link='/service/branding'
-                    src='/images/22w.jpeg'
+                    src='/images/ge.png'
                     alt='Branding'
 
                   />
@@ -61,7 +56,7 @@ export default function ServicesPage() {
                   <Card
                     // title='AI & Technology'
                     link='/service/ai-technology'
-                    src='/images/15o.jpeg'
+                    src='/images/gt.png'
                     alt='AI & Technology'
 
                   />
@@ -78,7 +73,7 @@ export default function ServicesPage() {
                     //     Studio
                     //   </>}
                     link='/service/studio'
-                    src='/images/23e.jpeg'
+                    src='/images/we.png'
                     alt='Studio'
                   />
                   <Spacing lg='0' md='30' />

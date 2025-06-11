@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { pageTitle } from '../../helper';
 import Button from '../Button';
@@ -9,12 +9,14 @@ import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import TestimonialSlider from '../Slider/TestimonialSlider';
 import Spacing from '../Spacing';
+import Portfolio from '../Portfolio';
+import { Icon } from '@iconify/react';
 
 const servicesData = {
   'creative-marketing': {
     title: 'Creative Marketing',
     subtitle: 'Engaging campaigns that captivate and convert.',
-    image: '/images/freepik__the-style-is-candid-image-photography-with-natural__37005.jpeg',
+    image: '/images/Marketing.png',
     description: 'What We Bring Through Creative Marketing ',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts ' },
@@ -23,18 +25,15 @@ const servicesData = {
     ],
     relatedServices: [
       'Marketing Strategy & Planning',
-
       'Digital Marketing & Analysis',
-
       'Content Creation',
-
       'Social Media Marketing'
     ]
   },
   'branding': {
     title: 'Branding',
     subtitle: 'Build a bold and memorable brand identity.',
-    image: '/images/17q.jpeg',
+    image: '/images/ge.png',
     description: 'What We Bring Through Branding',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts' },
@@ -46,15 +45,12 @@ const servicesData = {
       'Brand Identity ',
       'Product & Service Branding ',
       'Personal Branding  ',
-
-
-
     ]
   },
   'ai-technology': {
     title: 'AI & Technology',
     subtitle: 'Empowering businesses with smart tech solutions.',
-    image: '/images/18r.jpeg',
+    image: '/images/AI.png',
     description: 'What We Bring Through AI & Technology ',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts' },
@@ -87,6 +83,86 @@ const servicesData = {
   }
 };
 
+const portfolioData = [
+  {
+    title: 'Logo Design',
+    subtitle: 'See Details',
+    src: '/images/logo mockup jpeg.jpg',
+    category: 'logo_design',
+    location: 'United Kingdom',
+    software: 'Adobe Illustrator',
+    date: '14-Aug-2022',
+    client: 'Andreo Bowla',
+  },
+  {
+    title: 'OAK Hospitals',
+    subtitle: 'See Details',
+    src: '/images/banner mock up 1.png',
+    category: 'web_design',
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+  {
+    title: '2',
+    subtitle: 'See Details',
+    src: '/images/standee mockup 3 png.png',
+    category: 'web_design',
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+  {
+    title: '2',
+    subtitle: 'See Details',
+    src: '/images/flyer mockup 2.png',
+    category: 'web_design',
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+  {
+    title: '6',
+    subtitle: 'See Details',
+    src: '/images/logo mockup 2.png',
+    category: 'web_design',
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+  {
+    title: 'Social Media NAZARA',
+    subtitle: 'See Details',
+    src: '/images/SOCIAL MEDIA MOCKUP.jpg',
+    category: 'branding_company',
+    location: 'United Kingdom',
+    software: 'Adobe Illustrator',
+    date: '14-Aug-2022',
+    client: 'Andreo Bowla',
+  },
+  {
+    title: 'Dr. Nagarjuna website',
+    subtitle: 'See Details',
+    src: '/images/website mockup 1 png.png',
+    category: 'web_design',
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+];
+
+const categoryMenu = [
+  { title: 'Web UI/UX', category: 'web_design' },
+  { title: 'Branding', category: 'branding_company' },
+  { title: 'Mobile Apps', category: 'mobile_apps' },
+  { title: 'Logo', category: 'logo_design' },
+];
+
 export default function ServiceDetailsPage() {
   pageTitle('Service Details');
   const { serviceDetailsId } = useParams();
@@ -96,6 +172,19 @@ export default function ServiceDetailsPage() {
   }, []);
 
   const service = servicesData[serviceDetailsId];
+
+  // Remove state for portfolio filter
+  // const [active, setActive] = useState('all');
+  const [itemShow, setItemShow] = useState(7);
+
+  // Determine portfolio heading based on service
+  const portfolioHeadings = {
+    'creative-marketing': 'Creative Marketing Portfolio',
+    'branding': 'Branding Portfolio',
+    'ai-technology': 'AI & Technology Portfolio',
+    'studio': 'Visual Storytelling Portfolio',
+  };
+  const portfolioHeading = portfolioHeadings[serviceDetailsId] || 'Our Portfolio';
 
   if (!service) {
     return (
@@ -108,12 +197,7 @@ export default function ServiceDetailsPage() {
   }
 
   return (
-    <>
-      <PageHeading
-        title={service.title}
-        bgSrc="/images/service_hero_bg.jpeg"
-        pageLinkText={serviceDetailsId}
-      />
+    <Div style={{ paddingTop: '40px', paddingBottom: '40px' }}>
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
@@ -164,37 +248,67 @@ export default function ServiceDetailsPage() {
           </Div>
         </Div>
       </Div>
+      {/* Portfolio image grid section START (now for all service types) */}
+      <Spacing lg="120" md="50" />
+      <Div className="container">
+        <SectionHeading
+          title={portfolioHeading}
+          subtitle=""
+          variant="cs-style1 text-center"
+        />
+        <Spacing lg="50" md="25" />
+        <Div className="row">
+          {portfolioData.slice(0, itemShow).map((item, index) => (
+            <Div
+              className={index === 3 || index === 6 ? 'col-lg-8' : 'col-lg-4'}
+              key={index}
+            >
+              <Portfolio
+                title={item.title}
+                subtitle={item.subtitle}
+                href="#"
+                src={item.src}
+                variant="cs-style1 cs-type1"
+              />
+              <Spacing lg="25" md="25" />
+            </Div>
+          ))}
+        </Div>
+        <Div className="text-center">
+          {portfolioData.length <= itemShow ? (
+            ''
+          ) : (
+            <>
+              <Spacing lg="65" md="40" />
+              <span
+                className="cs-text_btn"
+                onClick={() => setItemShow(itemShow + 3)}
+              >
+                <span>Load More</span>
+                <Icon icon="bi:arrow-right" />
+              </span>
+            </>
+          )}
+        </Div>
+      </Div>
+      {/* Portfolio image grid section END */}
       <Spacing lg="150" md="80" />
       <TestimonialSlider />
       <Spacing lg="145" md="80" />
       <Div className="container cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>
         <Div className="cs-shape_4"></Div>
-        {/* <Div className="container">
-          <Div className="row">
-            <Div className="col-xl-5 col-lg-6">
-              <SectionHeading
-                title="Some pre questions and answers"
-                subtitle="FAQ’s"
-              />
-              <Spacing lg="90" md="45" />
-            </Div>
-            <Div className="col-lg-6 offset-xl-1">
-              <Accordion />
-            </Div>
-          </Div>
-        </Div> */}
       </Div>
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Cta
-          title="Have an idea? <br /> We’ve got you!  
-     Let’s talk over a cup of coffee... "
+          title="Have an idea? <br /> We've got you!  
+     Let's talk over a cup of coffee... "
           btnText="YES I'M IN!"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
         />
       </Div>
-    </>
+    </Div>
   );
 }

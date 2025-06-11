@@ -2,7 +2,6 @@ import { Icon } from '@iconify/react';
 import React, { useEffect, useState } from 'react';
 import { pageTitle } from '../../helper';
 import Div from '../Div';
-import PageHeading from '../PageHeading';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
 import ContactInfoWidget from '../Widget/ContactInfoWidget';
@@ -67,11 +66,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <PageHeading
-        title="Reach Us"
-        bgSrc="/images/contact_hero_bg.jpeg"
-        pageLinkText="Reach Us"
-      />
+     
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row">

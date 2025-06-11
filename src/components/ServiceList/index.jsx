@@ -9,31 +9,31 @@ const serviceData = [
     title: "Let’s Set Things in Motion",
     subtitle:
       "Once you hop on board, we dive straight into a fun brainstorming session. This is where we get to know you, your business dreams, and what keeps you up at night.",
-    imgUrl: "/images/service_7.jpeg", // optional: add an image or leave it blank
+    imgUrl: "/images/Artboard 1.jpg", // optional: add an image or leave it blank
   },
   {
     title: "The Deep-Dive Discovery",
     subtitle:
       "We roll up our sleeves and start digging. What’s your brand missing? Where’s the hidden potential? We jot down every essential detail, big or small, to make sure nothing slips through the cracks.",
-    imgUrl: "/images/service_8.jpeg",
+    imgUrl: "/images/Artboard 2.png",
   },
   {
     title: "Brand Explorers at Work",
     subtitle:
       "Now it’s time for us to play detective. We study your brand inside and out, stalk your competitors— in a friendly way of course — and scan the market for opportunities others might miss.",
-    imgUrl: "/images/service_9.jpeg",
+    imgUrl: "/images/Artboard 3.png",
   },
   {
     title: "Strategy in Action",
     subtitle:
       "Armed with insights and a clear roadmap, we get to work. Whether it’s crafting killer campaigns, creating scroll-stopping content, or launching your next big thing, we put our strategies into play.",
-    imgUrl: "/images/service_10.jpeg",
+    imgUrl: "/images/Artboard 4.png",
   },
   {
     title: "Watch Your Brand Rise",
     subtitle:
       "Sit back or join the ride as your brand transforms. We keep you in the loop, celebrate every win, and tweak things as we go to make sure you’re always moving up.",
-    imgUrl: "/images/service_7.jpeg",
+    imgUrl: "/images/Artboard 5.png",
   },
 ];
 

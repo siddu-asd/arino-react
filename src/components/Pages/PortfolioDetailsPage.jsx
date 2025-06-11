@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { pageTitle } from '../../helper';
 import Cta from '../Cta';
-import PageHeading from '../PageHeading';
 import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
@@ -32,11 +31,7 @@ export default function PortfolioDetailsPage() {
 
   return (
     <>
-      <PageHeading
-        title="Portfolio Details"
-        bgSrc="/images/service_hero_bg.jpeg"
-        pageLinkText={portfolio.title}
-      />
+     
       <Spacing lg="150" md="80" />
       <Div className="container">
         <img
