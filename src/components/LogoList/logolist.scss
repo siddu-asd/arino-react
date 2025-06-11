@@ -21,6 +21,7 @@
     object-fit: contain;
     filter: grayscale(0.8);
     transition: filter 0.3s ease;
+    margin: 20px;
 
     &:hover {
       filter: none;
