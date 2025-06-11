@@ -4,6 +4,7 @@ import { pageTitle } from '../../helper';
 import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
+import PageHeading from '../PageHeading';
 
 const positionOptions = {
   Development: ['Full Stack Developer', 'Mobile App Developer', 'Web Developer', 'Software Engineer', 'DevOps Engineer', 'QA Engineer', 'Site Reliability Engineer (SRE)', 'Technical Lead'],
@@ -84,6 +85,13 @@ export default function CareerPage() {
 
   return (
     <>
+      <div className="responsive-page-heading">
+        <PageHeading
+          title=" Careers"
+          bgSrc="/images/blog_hero_bg.jpeg"
+          pageLinkText="Careers"
+        />
+      </div>
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row flex-wrap flex-md-nowrap d-flex gap-5">
@@ -92,7 +100,7 @@ export default function CareerPage() {
             <Div className="p-6" style={{ color: 'white' }}>
               <h4 className="cs-primary_color mb-3" style={{ fontSize: '45px' }}>Rows we are Looking ?</h4>
               <p style={{ fontSize: '16px' }}>
-                At 100x, we’re building with purpose and passion. Join a culture where ideas thrive and your impact is real.
+                At 100x, we're building with purpose and passion. Join a culture where ideas thrive and your impact is real.
               </p>
               <Spacing lg="20" md="20" />
              <div style={{ fontSize: '16px' }}>
