@@ -4,7 +4,6 @@ import Cta from '../Cta';
 import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
-
 import ServiceList from '../ServiceList';
 
 export default function AboutPage() {

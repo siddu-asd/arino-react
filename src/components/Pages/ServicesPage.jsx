@@ -56,7 +56,7 @@ export default function ServicesPage() {
                   <Card
                     // title='AI & Technology'
                     link='/service/ai-technology'
-                    src='/images/gt.png'
+                    src='/images/AI.png'
                     alt='AI & Technology'
 
                   />

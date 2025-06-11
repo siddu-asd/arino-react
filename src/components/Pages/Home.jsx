@@ -167,7 +167,7 @@ export default function Home() {
                   <Card
                     // title='Creative Marketing'
                     link='/service/creative-marketing'
-                    src='/images/21q.jpeg'
+                    src='/images/nhj.png'
                     alt='Creative Marketing'
 
                   />
@@ -178,7 +178,7 @@ export default function Home() {
                   <Card
                     // title='Branding'
                     link='/service/branding'
-                    src='/images/22w.jpeg'
+                    src='/images/ge.png'
                     alt='Branding'
 
                   />
@@ -188,7 +188,7 @@ export default function Home() {
                   <Card
                     // title='AI & Technology'
                     link='/service/ai-technology'
-                    src='/images/15o.jpeg'
+                    src='/images/AI.png'
                     alt='AI & Technology'
 
                   />
@@ -205,7 +205,7 @@ export default function Home() {
                     //     Studio
                     //   </>}
                     link='/service/studio'
-                    src='/images/23e.jpeg'
+                    src='/images/we.png'
                     alt='Studio'
                   />
                   <Spacing lg='0' md='30' />

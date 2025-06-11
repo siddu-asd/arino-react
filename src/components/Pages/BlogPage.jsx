@@ -6,7 +6,6 @@ import PostStyle2 from '../Post/PostStyle2';
 import Div from '../Div';
 import Sidebar from '../Sidebar.jsx';
 import Spacing from '../Spacing';
-
 export const postData = [
   {
     id: "marketing-trends-2025",
@@ -30,7 +29,7 @@ export const postData = [
   },
   {
     id: "ai-transforming-marketing",
-    thumb: "images/How-AI-is-Transforming-Marketing-.jpg",
+    thumb: "images/gt.png",
     title: "How AI is Transforming Marketing: Beyond Buzzwords to Real Growth",
     subtitle: "Artificial intelligence is revolutionizing marketing by shifting from reactive to predictive strategies, enabling personalization and real growth...",
     date: "2025-05-28",
