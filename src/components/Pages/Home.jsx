@@ -169,9 +169,7 @@ export default function Home() {
                     link='/service/creative-marketing'
                     src='/images/nhj.png'
                     alt='Creative Marketing'
-
                   />
-                  <Spacing lg='0' md='30' />
                 </Div>
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
@@ -180,9 +178,7 @@ export default function Home() {
                     link='/service/branding'
                     src='/images/ge.png'
                     alt='Branding'
-
                   />
-                  <Spacing lg='0' md='30' />
                 </Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
@@ -190,9 +186,7 @@ export default function Home() {
                     link='/service/ai-technology'
                     src='/images/dm.png'
                     alt='AI & Technology'
-
                   />
-                  <Spacing lg='0' md='30' />
                 </Div>
 
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
@@ -208,7 +202,6 @@ export default function Home() {
                     src='/images/we.png'
                     alt='Studio'
                   />
-                  <Spacing lg='0' md='30' />
                 </Div>
               </Div>
             </Div>

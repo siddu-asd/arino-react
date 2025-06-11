@@ -20,7 +20,7 @@ export const postData = [
   },
   {
     id: "adaptive-brand-strategies",
-    thumb: "images/Building-Adaptive-Brand-Strategies.jpg",
+    thumb: "images/Marketing.png",
     title: "The Death of Traditional Marketing: Building Adaptive Brand Strategies",
     subtitle: "Traditional marketing is fading as consumer expectations evolve. Embracing AI, personalization, and immersive tech is essential to keep up...",
     date: "2025-05-28",
@@ -30,7 +30,7 @@ export const postData = [
   },
   {
     id: "ai-transforming-marketing",
-    thumb: "images/gt.png",
+    thumb: "images/AI.png",
     title: "How AI is Transforming Marketing: Beyond Buzzwords to Real Growth",
     subtitle: "Artificial intelligence is revolutionizing marketing by shifting from reactive to predictive strategies, enabling personalization and real growth...",
     date: "2025-05-28",

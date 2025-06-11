@@ -50,7 +50,7 @@ const servicesData = {
   'ai-technology': {
     title: 'AI & Technology',
     subtitle: 'Empowering businesses with smart tech solutions.',
-    image: '/images/AI.png',
+    image: '/images/gt.png',
     description: 'What We Bring Through AI & Technology ',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts' },

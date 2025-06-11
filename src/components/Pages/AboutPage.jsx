@@ -16,13 +16,11 @@ export default function AboutPage() {
 
   return (
     <>
-    <div className="responsive-page-heading">
-      <PageHeading
+     <PageHeading
         title=" About Us"
         bgSrc="/images/blog_hero_bg.jpeg"
         pageLinkText="About Us"
-      />
-    </div>
+      /> 
       {/* Start Page Heading Section */}
       
       {/* End Page Heading Section */}
@@ -38,10 +36,10 @@ export default function AboutPage() {
             >
               <Spacing lg="30" md="20" />
               <p className="cs-m0">
-                Our journey began with a simple belief: brands deserve more than ordinary solutions. That's why we operate like a crew on a space station—always scanning the horizon, ready to respond to the next big signal from Earth. 
+                Our journey began with a simple belief: brands deserve more than ordinary solutions. That’s why we operate like a crew on a space station—always scanning the horizon, ready to respond to the next big signal from Earth. 
                <br /><br /> For us, every project is a mission, every brief a new world to explore. <br /> <br /> 
-                Our team is made up of storytellers and tech-whisperers who believe that marketing isn't just about reaching audiences—it's about making an impact that's truly out of this world.  
-              <br /> <br />  With Raising 100x, you're not just launching a campaign; you're embarking on a journey where imagination has no limits and results are lightyears ahead.
+                Our team is made up of storytellers and tech-whisperers who believe that marketing isn’t just about reaching audiences—it’s about making an impact that’s truly out of this world.  
+              <br /> <br />  With Raising 100x, you’re not just launching a campaign; you’re embarking on a journey where imagination has no limits and results are lightyears ahead.
               </p>
               <Spacing lg="30" md="30" />
               <Div className="cs-separator cs-accent_bg"></Div>
@@ -100,7 +98,7 @@ export default function AboutPage() {
             >
               <Spacing lg="30" md="20" />
               <p>
-                We believe brands shouldn't just grow—they should multiply, surprise, and spark conversations. Our philosophy? Stay endlessly curious, break the "rules" that don't serve you, and never settle for less.
+                We believe brands shouldn’t just grow—they should multiply, surprise, and spark conversations. Our philosophy? Stay endlessly curious, break the “rules” that don't serve you, and never settle for less.
               </p>
 
               <p>
@@ -135,11 +133,11 @@ export default function AboutPage() {
               <Spacing lg="30" md="20" />
              <p>
                 
-                We're obsessed with mixing human imagination and AI wizardry to find that spot where ideas go from "nice" to "no one's ever seen this before."
+                We’re obsessed with mixing human imagination and AI wizardry to find that spot where ideas go from “nice” to “no one’s ever seen this before.”
               </p>
 
               <p>
-                For us, every project is a playground, every brief is an invitation to experiment, and every client is a co-conspirator in making something unforgettable. If you're ready to ditch the ordinary and chase the 100x, you're in the right space.
+                For us, every project is a playground, every brief is an invitation to experiment, and every client is a co-conspirator in making something unforgettable. If you’re ready to ditch the ordinary and chase the 100x, you’re in the right space.
               </p>
 
               <Spacing lg="30" md="30" />
@@ -190,8 +188,8 @@ export default function AboutPage() {
       
             <Div className="container">
               <Cta
-                title="Have an idea? <br /> We've got you!  
-      Let's talk over a cup of coffee... "
+                title="Have an idea? <br /> We’ve got you!  
+      Let’s talk over a cup of coffee... "
                 btnText="YES I'M IN!"
                 btnLink="/contact"
                 bgSrc="/images/cta_bg.jpeg"
