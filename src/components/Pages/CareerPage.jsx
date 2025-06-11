@@ -85,6 +85,13 @@ export default function CareerPage() {
 
   return (
     <>
+      <div className="responsive-page-heading">
+        <PageHeading
+          title=" Careers"
+          bgSrc="/images/blog_hero_bg.jpeg"
+          pageLinkText="Careers"
+        />
+      </div>
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row flex-wrap flex-md-nowrap d-flex gap-5">
@@ -93,7 +100,7 @@ export default function CareerPage() {
             <Div className="p-6" style={{ color: 'white' }}>
               <h4 className="cs-primary_color mb-3" style={{ fontSize: '45px' }}>Rows we are Looking ?</h4>
               <p style={{ fontSize: '16px' }}>
-                At 100x, we’re building with purpose and passion. Join a culture where ideas thrive and your impact is real.
+                At 100x, we're building with purpose and passion. Join a culture where ideas thrive and your impact is real.
               </p>
               <Spacing lg="20" md="20" />
              <div style={{ fontSize: '16px' }}>
@@ -133,108 +140,83 @@ export default function CareerPage() {
             </Div>
           </Div>
 
-    {/* RIGHT: Application Form */}
-    <Div className="col-lg-6">
-      <Div
-        style={{
-          background: 'rgba(255, 255, 255, 0.05)',
-          backdropFilter: 'blur(10px)',
-          borderRadius: '20px',
-          padding: '40px',
-          boxShadow: '0 8px 20px rgba(0,0,0,0.2)',
-          color: 'white',
-        }}
-      >
-        <SectionHeading
-          title="Apply Now"
-          subtitle="Take your career to the next level with us"
-        />
-        <Spacing lg="40" md="30" />
+          {/* Right: Form */}
+          <Div className="col-lg-8" style={{ margin: '0 auto', maxWidth: '700px', padding:'10px' }}>
 
-        <form onSubmit={handleSubmit} className="row cs-career-form" encType="multipart/form-data">
-          {/* Fields (same as your current implementation) */}
-          {/* Category */}
-          <Div className="col-md-6 mb-4">
-            <label className="cs-primary_color">Skill Category *</label>
-            <select className="cs-form_field" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} required>
-              <option value="">Choose...</option>
-              {Object.keys(positionOptions).map(category => (
-                <option key={category} value={category}>{category}</option>
-              ))}
-            </select>
-          </Div>
-
-          {/* Position */}
-          <Div className="col-md-6 mb-4">
-            <label className="cs-primary_color">Role You’re Applying For *</label>
-            <select className="cs-form_field" value={selectedPosition} onChange={(e) => setSelectedPosition(e.target.value)} required disabled={!selectedCategory}>
-              <option value="">Select Position</option>
-              {positions.map((pos) => (
-                <option key={pos} value={pos}>{pos}</option>
-              ))}
-            </select>
-          </Div>
-
-          {/* Email */}
-          <Div className="col-md-6 mb-4">
-            <label className="cs-primary_color">Email Address *</label>
-            <input
-              type="email"
-              className="cs-form_field"
-              placeholder="you@domain.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
+           <SectionHeading
+                title="Let's embark on a journey together.
+                Are you in? "
+                subtitle="Always hunting for creative individuals "
             />
-          </Div>
 
-          {/* Phone */}
-          <Div className="col-md-6 mb-4">
-            <label className="cs-primary_color">Phone Number *</label>
-            <input
-              type="tel"
-              className="cs-form_field"
-              placeholder="10-digit mobile"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value.replace(/\D/g, ''))}
-              maxLength={10}
-              pattern="\d{10}"
-              required
-            />
-          </Div>
+            <Spacing lg="55" md="30" />
+            <form onSubmit={handleSubmit} className="row cs-career-form" encType="multipart/form-data">
+              <Div className="col-sm-6">
+                <label className="cs-primary_color">
+                  Your skill set falls into which category?<span className="required-star">*</span>
+                </label>
+                <select className="cs-form_field" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} required>
+                  <option value="">Select Category</option>
+                  {Object.keys(positionOptions).map((category) => (
+                    <option key={category} value={category}>{category}</option>
+                  ))}
+                </select>
+                <Spacing lg="20" md="20" />
+              </Div>
 
-          {/* Resume Upload */}
-          <Div className="col-12 mb-4">
-            <label className="cs-primary_color">Upload Resume (PDF only) *</label>
-            <input
-              type="file"
-              className="cs-form_field"
-              id="resumeInput"
-              accept="application/pdf"
-              onChange={(e) => setResume(e.target.files[0])}
-              required
-            />
-          </Div>
+              <Div className="col-sm-6">
+                <label className="cs-primary_color">
+                  What role would you play? <span className="required-star">*</span>
+                </label>
+                <select className="cs-form_field" value={selectedPosition} onChange={(e) => setSelectedPosition(e.target.value)} required disabled={!selectedCategory}>
+                  <option value="">Select Position</option>
+                  {positions.map((pos) => (
+                    <option key={pos} value={pos}>{pos}</option>
+                  ))}
+                </select>
+                <Spacing lg="20" md="20" />
+              </Div>
 
-          {/* Submit */}
-          <Div className="col-12">
-            <button type="submit" className="cs-btn cs-style1" disabled={loading}>
-              <span>{loading ? 'Submitting...' : 'Submit Application'}</span>
-              <Icon icon="bi:arrow-right" />
-            </button>
-            {message && (
-              <p style={{ marginTop: '15px', color: message.includes('success') ? 'limegreen' : 'tomato' }}>
-                {message}
-              </p>
-            )}
+              <Div className="col-sm-6">
+                <label className="cs-primary_color">
+                  Email coordinates <span className="required-star">*</span>
+                </label>
+                <input type="email" className="cs-form_field" value={email} onChange={(e) => setEmail(e.target.value)} pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address" required />
+                <Spacing lg="20" md="20" />
+              </Div>
+
+              <Div className="col-sm-6">
+                <label className="cs-primary_color">
+                  Where can we connect for a call? <span className="required-star">*</span>
+                </label>
+                <input type="tel" className="cs-form_field" value={phone} onChange={(e) => setPhone(e.target.value.replace(/\D/g, ''))} maxLength={10} pattern="\d{10}" title="Please enter a valid 10-digit mobile number" required />
+                <Spacing lg="20" md="20" />
+              </Div>
+
+              <Div className="col-sm-12">
+                <label className="cs-primary_color">
+                  Your resume/profile (PDF only) <span className="required-star">*</span>
+                </label>
+                <input id="resumeInput" type="file" className="cs-form_field" accept="application/pdf" onChange={(e) => setResume(e.target.files[0])} required />
+                <Spacing lg="25" md="25" />
+              </Div>
+
+              <Div className="col-sm-12">
+                <button type="submit" className="cs-btn cs-style1" disabled={loading}>
+                  <span>{loading ? 'Submitting...' : 'Join 100x'}</span>
+                  <Icon icon="bi:arrow-right" />
+                </button>
+                {message && (
+                  <p style={{ marginTop: '15px', color: message.includes('success') ? 'green' : 'red' }}>
+                    {message}
+                  </p>
+                )}
+              </Div>
+            </form>
           </Div>
-        </form>
+        </Div>
       </Div>
-    </Div>
-  </Div>
-</Div>
-<Spacing lg="100" md="60" />
-</>
-
+      <Spacing lg="150" md="80" />
+    </>
   );
 }
