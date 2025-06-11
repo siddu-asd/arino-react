@@ -82,6 +82,9 @@
     span {
       color: $accent;
     }
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: heroFadeInLeft 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
   }
   .cs-hero_subtitle {
     font-size: 18px;
@@ -486,6 +489,16 @@
   }
   100% {
     clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes heroFadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 @media screen and (max-width: 1920px) {
