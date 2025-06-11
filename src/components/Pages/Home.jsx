@@ -188,7 +188,7 @@ export default function Home() {
                   <Card
                     // title='AI & Technology'
                     link='/service/ai-technology'
-                    src='/images/AI.png'
+                    src='/images/dm.png'
                     alt='AI & Technology'
 
                   />

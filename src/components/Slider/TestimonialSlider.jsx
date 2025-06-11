@@ -8,34 +8,37 @@ const testimonialData = [
   {
     testimonialThumb: '/images/testimonial_1.jpeg',
     testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
+     ' We wanted one unique logo and packaging for our brand. Communication from their end was quick and transparent. ',
+    avatarName: 'Fayakun',
     ratings: '4',
   },
   {
     testimonialThumb: '/images/testimonial_2.jpeg',
     testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
+      'From marketing, managing operations to creating promotional materials, Ibrahim has been with us since the start. We have known him for years, and his efforts are worth appreciating. ',
+    avatarName: 'Indo US Hospitals',
     ratings: '5',
   },
   {
-    testimonialThumb: '/images/testimonial_3.jpeg',
+    testimonialThumb: '/images/dr.n.jpg',
     testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
+      'I needed personal branding to be done for me, and I am extremely happy with the website created by the team. Managing my patients became convenient and easy through it. ',
+    avatarName: 'Nagarjuna ',
     ratings: '4.5',
   },
   {
     testimonialThumb: '/images/testimonial_1.jpeg',
     testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
-    ratings: '3.5',
+      'We were clear with our vision to start an interior designing company and Raising 100x came up with a beautiful logo, website, business cards and social media creatives too. I was very impressed with the quality of work done. ',
+    avatarName: 'Nazara Interiors',
+    ratings: '4.5',
+  },
+  {
+    testimonialThumb: '/images/testimonial_1.jpeg',
+    testimonialText:
+      'My requirements for logo creation could not have been fulfilled anywhere other than Raising 100x. The way I imagined the logo to be, the team created it just like that.  ',
+    avatarName: 'Oak Hospitals',
+    ratings: '4.5',
   },
 ];
 

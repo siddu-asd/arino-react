@@ -6,6 +6,8 @@ import Div from '../Div'
 import SectionHeading from '../SectionHeading'
 import TestimonialSlider from '../Slider/TestimonialSlider'
 import Spacing from '../Spacing'
+import PageHeading from '../PageHeading'
+
 
 export default function ServicesPage() {
   pageTitle('Service');
@@ -14,7 +16,13 @@ export default function ServicesPage() {
   }, [])
   return (
     <>
-      
+      <div className="responsive-page-heading">
+        <PageHeading
+          title="What We Offer"
+          bgSrc="/images/blog_hero_bg.jpeg"
+          pageLinkText="Services"
+        />
+      </div>
       <Spacing lg='150' md='80' />
       <Div className='cs-shape_wrap_4'>
         <Div className="cs-shape_4"></Div>
@@ -56,7 +64,7 @@ export default function ServicesPage() {
                   <Card
                     // title='AI & Technology'
                     link='/service/ai-technology'
-                    src='/images/AI.png'
+                    src='/images/dm.png'
                     alt='AI & Technology'
 
                   />
@@ -119,8 +127,8 @@ export default function ServicesPage() {
 
       <Div className="container">
         <Cta
-          title="Have an idea? <br /> We’ve got you!  
-      Let’s talk over a cup of coffee... "
+          title="Have an idea? <br /> We've got you!  
+      Let's talk over a cup of coffee... "
           btnText="YES I'M IN!"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"

@@ -7,7 +7,7 @@ import Div from '../Div';
 import Portfolio from '../Portfolio';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
-
+import PageHeading from '../PageHeading';
 const portfolioData = [
   
   {
@@ -114,7 +114,13 @@ export default function PortfolioPage() {
 
   return (
     <>
-      
+      <div className="responsive-page-heading">
+        <PageHeading
+          title="Our Creations"
+          bgSrc="/images/blog_hero_bg.jpeg"
+          pageLinkText="Creations"
+        />
+      </div>
       <Spacing lg="145" md="80" />
       <Div className="container">
         <Div className="cs-portfolio_1_heading">
@@ -184,8 +190,8 @@ export default function PortfolioPage() {
 
       <Div className="container">
         <Cta
-          title="Have an idea? <br /> We’ve got you!  
-     Let’s talk over a cup of coffee... "
+          title="Have an idea? <br /> We've got you!  
+     Let's talk over a cup of coffee... "
           btnText="YES I'M IN!"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"

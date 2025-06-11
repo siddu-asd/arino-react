@@ -6,12 +6,13 @@ import PostStyle2 from '../Post/PostStyle2';
 import Div from '../Div';
 import Sidebar from '../Sidebar.jsx';
 import Spacing from '../Spacing';
+import PageHeading from '../PageHeading';
 export const postData = [
   {
     id: "marketing-trends-2025",
     thumb: "images/Marketing-in-2025-The-Trends-Youre-Not-Ready-For.jpg",
-    title: "Marketing Trends 2025: The Trends You’re Not Ready For",
-    subtitle: "Imagine a world where your marketing doesn’t just speak—it connects directly with your customers. Explore AI-driven personalization, attention-grabbing videos, and more...",
+    title: "Marketing Trends 2025: The Trends You're Not Ready For",
+    subtitle: "Imagine a world where your marketing doesn't just speak—it connects directly with your customers. Explore AI-driven personalization, attention-grabbing videos, and more...",
     date: "2025-05-28",
     category: "Marketing Trends",
     categoryHref: "/blog",
@@ -48,7 +49,13 @@ export default function BlogPage() {
 
   return (
     <>
-     
+     <div className="responsive-page-heading">
+       <PageHeading
+         title="Our Blogs"
+         bgSrc="/images/blog_hero_bg.jpeg"
+         pageLinkText="Blogs"
+       />
+     </div>
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row">
@@ -79,7 +86,7 @@ export default function BlogPage() {
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Cta
-          title="Have an idea? <br /> We’ve got you! Let’s talk over a cup of coffee..."
+          title="Have an idea? <br /> We've got you! Let's talk over a cup of coffee..."
           btnText="YES I'M IN!"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
