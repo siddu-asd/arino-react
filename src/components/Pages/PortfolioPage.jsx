@@ -96,7 +96,7 @@ const portfolioData = [
   },
   {
     title: 'Creative Social',
-    src: '/images/Cm3.jpeg',
+    src: '/images/nazaracm.jpg',
     category: 'creatives',
     location: 'Delhi',
     software: 'Illustrator',

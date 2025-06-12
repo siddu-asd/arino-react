@@ -98,7 +98,7 @@ const portfolioDataByService = {
     {
       title: 'Website Mockup',
       subtitle: 'See Details',
-      src: '/images/Cm3.jpeg',
+      src: '/images/nazaracm.jpg',
       category: 'marketing',
       location: 'London',
       software: 'Photoshop',
