@@ -113,7 +113,7 @@ export default function Home() {
   return (
     <>
       <Hero
-        title={`We don’t just do<br />
+        title={`We don't just do<br />
  <span id="wonder-text">WONDERS</span>
  <br />
   we make your brand<br />
@@ -128,7 +128,7 @@ export default function Home() {
       />
 
       {/* <Hero
-        title="We don’t just work <br />wonders<br />we make your brand<br />wonderful"
+        title="We don't just work <br />wonders<br />we make your brand<br />wonderful"
 
         btnText="Get a Quote"
         btnLink="/contact"
@@ -250,7 +250,7 @@ export default function Home() {
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
-          videoSrc="https://www.youtube.com/watch?v=VcaAVWtP48A"
+          videoSrc="/video/raising 100x studio.mp4"
           bgUrl="/images/video_bg.jpeg"
         />
       </Div>
@@ -304,8 +304,8 @@ export default function Home() {
 
       <Div className="container">
         <Cta
-          title="Have an idea? <br /> We’ve got you!  
-Let’s talk over a cup of coffee... "
+          title="Have an idea? <br /> We've got you!  
+Let's talk over a cup of coffee... "
           btnText="YES I'M IN!"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"

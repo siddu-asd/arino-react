@@ -4,7 +4,6 @@ import { pageTitle } from '../../helper';
 import Button from '../Button';
 import Cta from '../Cta';
 import IconBox from '../IconBox';
-import PageHeading from '../PageHeading';
 import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import TestimonialSlider from '../Slider/TestimonialSlider';
@@ -16,7 +15,7 @@ const servicesData = {
   'creative-marketing': {
     title: 'Creative Marketing',
     subtitle: 'Engaging campaigns that captivate and convert.',
-    image: '/images/Marketing.png',
+    image: '/images/mj.png',
     description: 'What We Bring Through Creative Marketing ',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts ' },
@@ -83,78 +82,137 @@ const servicesData = {
   }
 };
 
-const portfolioData = [
-  {
-    title: 'Logo Design',
-    subtitle: 'See Details',
-    src: '/images/logo mockup jpeg.jpg',
-    category: 'logo_design',
-    location: 'United Kingdom',
-    software: 'Adobe Illustrator',
-    date: '14-Aug-2022',
-    client: 'Andreo Bowla',
-  },
-  {
-    title: 'OAK Hospitals',
-    subtitle: 'See Details',
-    src: '/images/banner mock up 1.png',
-    category: 'web_design',
-    location: 'Hyderabad',
-    software: 'React Project',
-    date: '31-March-2025',
-    client: 'Dr. Nagarjuna',
-  },
-  {
-    title: '2',
-    subtitle: 'See Details',
-    src: '/images/standee mockup 3 png.png',
-    category: 'web_design',
-    location: 'Hyderabad',
-    software: 'React Project',
-    date: '31-March-2025',
-    client: 'Dr. Nagarjuna',
-  },
-  {
-    title: '2',
-    subtitle: 'See Details',
-    src: '/images/flyer mockup 2.png',
-    category: 'web_design',
-    location: 'Hyderabad',
-    software: 'React Project',
-    date: '31-March-2025',
-    client: 'Dr. Nagarjuna',
-  },
-  {
-    title: '6',
-    subtitle: 'See Details',
-    src: '/images/logo mockup 2.png',
-    category: 'web_design',
-    location: 'Hyderabad',
-    software: 'React Project',
-    date: '31-March-2025',
-    client: 'Dr. Nagarjuna',
-  },
-  {
-    title: 'Social Media NAZARA',
-    subtitle: 'See Details',
-    src: '/images/SOCIAL MEDIA MOCKUP.jpg',
-    category: 'branding_company',
-    location: 'United Kingdom',
-    software: 'Adobe Illustrator',
-    date: '14-Aug-2022',
-    client: 'Andreo Bowla',
-  },
-  {
-    title: 'Dr. Nagarjuna website',
-    subtitle: 'See Details',
-    src: '/images/website mockup 1 png.png',
-    category: 'web_design',
-    location: 'Hyderabad',
-    software: 'React Project',
-    date: '31-March-2025',
-    client: 'Dr. Nagarjuna',
-  },
-];
+// New: Portfolio data mapped by service type
+const portfolioDataByService = {
+  'creative-marketing': [
+    {
+      title: 'Web UI/UX Design',
+      subtitle: 'See Details',
+      src: '/images/socialMedia.jpg',
+      category: 'marketing',
+      location: 'New York',
+      software: 'Figma',
+      date: '10-Jan-2023',
+      client: 'Client A',
+    },
+    {
+      title: 'Website Mockup',
+      subtitle: 'See Details',
+      src: '/images/Cm3.jpeg',
+      category: 'marketing',
+      location: 'London',
+      software: 'Photoshop',
+      date: '22-Feb-2023',
+      client: 'Client B',
+    },
+    {
+      title: 'AA Branding',
+      subtitle: 'See Details',
+      src: '/images/CM.jpg',
+      category: 'marketing',
+      location: 'Madrid',
+      software: 'Illustrator',
+      date: '05-May-2023',
+      client: 'Client E',
+    },
+  ],
+  'branding': [
+    {
+      title: 'Social Media Campaign',
+      subtitle: 'See Details',
+      src: '/images/branding1.png',
+      category: 'branding',
+      location: 'London',
+      software: 'Photoshop',
+      date: '12-Jun-2023',
+      client: 'Client F',
+    },
+    {
+      title: 'Social Media Campaign 2',
+      subtitle: 'See Details',
+      src: '/images/branding2.jpg',
+      category: 'branding',
+      location: 'Berlin',
+      software: 'Illustrator',
+      date: '18-Jul-2023',
+      client: 'Client G',
+    },
+    {
+      title: 'AA Branding',
+      subtitle: 'See Details',
+      src: '/images/branding4.jpg',
+      category: 'branding',
+      location: 'Madrid',
+      software: 'Illustrator',
+      date: '10-Sep-2023',
+      client: 'Client J',
+    },
+  ],
+  'ai-technology': [
+    {
+      title: 'AI Robot',
+      subtitle: 'See Details',
+      src: '/images/white-humanoid-robot-with-metallic-blue-accents-looking-directly-from-standing-front-abstract-digital-circle-that-displays-letters-ai.jpg',
+      category: 'ai',
+      location: 'San Francisco',
+      software: 'TensorFlow',
+      date: '05-May-2023',
+      client: 'Client K',
+    },
+    {
+      title: 'AI Workspace',
+      subtitle: 'See Details',
+      src: '/images/uiux.png',
+      category: 'ai',
+      location: 'Tokyo',
+      software: 'PyTorch',
+      date: '18-Jun-2023',
+      client: 'Client L',
+    },
+    {
+      title: 'AI Technology',
+      subtitle: 'See Details',
+      src: '/images/bb2.jpg',
+      category: 'ai',
+      location: 'Paris',
+      software: 'Scikit-learn',
+      date: '10-Sep-2023',
+      client: 'Client O',
+    },
+  ],
+  'studio': [
+    {
+      title: 'Professional Photo Studio',
+      subtitle: 'See Details',
+      src: '/images/studio1.jpg',
+      category: 'studio',
+      location: 'Mumbai',
+      software: 'Premiere Pro',
+      date: '12-Jul-2023',
+      client: 'Client P',
+    },
+    {
+      title: 'Pizza Website',
+      subtitle: 'See Details',
+      src: '/images/studio2.jpg',
+      category: 'studio',
+      location: 'Sydney',
+      software: 'Final Cut',
+      date: '25-Aug-2023',
+      client: 'Client Q',
+    },
+    {
+      title: 'AA Studio',
+      subtitle: 'See Details',
+      src: '/images/studio3.jpg',
+      category: 'studio',
+      location: 'Paris',
+      software: 'Illustrator',
+      date: '18-Sep-2023',
+      client: 'Client T',
+    },
+  ],
+};
 
 const categoryMenu = [
   { title: 'Web UI/UX', category: 'web_design' },
@@ -185,6 +243,8 @@ export default function ServiceDetailsPage() {
     'studio': 'Visual Storytelling Portfolio',
   };
   const portfolioHeading = portfolioHeadings[serviceDetailsId] || 'Our Portfolio';
+
+  const portfolioData = portfolioDataByService[serviceDetailsId] || [];
 
   if (!service) {
     return (
@@ -258,21 +318,27 @@ export default function ServiceDetailsPage() {
         />
         <Spacing lg="50" md="25" />
         <Div className="row">
-          {portfolioData.slice(0, itemShow).map((item, index) => (
-            <Div
-              className={index === 3 || index === 6 ? 'col-lg-8' : 'col-lg-4'}
-              key={index}
-            >
-              <Portfolio
-                title={item.title}
-                subtitle={item.subtitle}
-                href="#"
-                src={item.src}
-                variant="cs-style1 cs-type1"
-              />
-              <Spacing lg="25" md="25" />
+          {portfolioData.length === 0 ? (
+            <Div className="col-12 text-center">
+              <p>No portfolio items available for this service.</p>
             </Div>
-          ))}
+          ) : (
+            portfolioData.slice(0, itemShow).map((item, index) => (
+              <Div
+                className={index === 3 || index === 6 ? 'col-lg-8' : 'col-lg-4'}
+                key={index}
+              >
+                <Portfolio
+                  title={item.title}
+                  subtitle={item.subtitle}
+                  href="#"
+                  src={item.src}
+                  variant="cs-style1 cs-type1"
+                />
+                <Spacing lg="25" md="25" />
+              </Div>
+            ))
+          )}
         </Div>
         <Div className="text-center">
           {portfolioData.length <= itemShow ? (

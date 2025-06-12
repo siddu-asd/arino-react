@@ -5,6 +5,7 @@ import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
 import ContactInfoWidget from '../Widget/ContactInfoWidget';
+import PageHeading from '../PageHeading';
 
 export default function ContactPage() {
   pageTitle('Contact Us');
@@ -66,7 +67,13 @@ export default function ContactPage() {
 
   return (
     <>
-     
+      <div className="responsive-page-heading">
+        <PageHeading
+          title="Contact Us"
+          bgSrc="/images/blog_hero_bg.jpeg"
+          pageLinkText="Contact Us"
+        />
+      </div>
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row">
@@ -82,7 +89,7 @@ export default function ContactPage() {
           <Div className="col-lg-6">
             <form className="row" onSubmit={handleSubmit}>
               <Div className="col-sm-6">
-                <label className="cs-primary_color">What’s the name behind the big idea?</label>
+                <label className="cs-primary_color">What's the name behind the big idea?</label>
                 <input
                   type="text"
                   className="cs-form_field"
@@ -117,7 +124,7 @@ export default function ContactPage() {
                 <Spacing lg="20" md="20" />
               </Div>
               <Div className="col-sm-6">
-                <label className="cs-primary_color">Let’s connect, where should we ring?</label>
+                <label className="cs-primary_color">Let's connect, where should we ring?</label>
                 <input
                   type="text"
                   className="cs-form_field"

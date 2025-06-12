@@ -9,87 +9,110 @@ import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
 import PageHeading from '../PageHeading';
 const portfolioData = [
+  // Web UI/UX
+  {
+    title: 'UI/UX Project',
+    subtitle: 'See Details',
+    src: '/images/uiux.png',
+    category: 'web_design',
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+  {
+    title: 'BB Web Design',
+    subtitle: 'See Details',
+    src: '/images/webuiux.jpg',
+    category: 'web_design',
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+  {
+    title: 'Studio Web',
+    subtitle: 'See Details',
+    src: '/images/ls.jpg',
+    category: 'web_design',
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
+  {
+    title: 'UI/UX Project',
+    subtitle: 'See Details',
+    src: '/images/pizza.jpg',
+    category: 'web_design',
+    location: 'Hyderabad',
+    software: 'React Project',
+    date: '31-March-2025',
+    client: 'Dr. Nagarjuna',
+  },
   
+  // Branding
   {
-    title: 'Logo Design',
+    title: 'AA Logo',
     subtitle: 'See Details',
-    src: '/images/logo mockup jpeg.jpg',
+    src: '/images/branding4.jpg',
     category: 'logo_design',
-
     location: 'United Kingdom',
     software: 'Adobe Illustrator',
     date: '14-Aug-2022',
     client: 'Andreo Bowla',
   },
   {
-    title: 'OAK Hospitals',
+    title: 'Branding 1',
     subtitle: 'See Details',
-    src: '/images/banner mock up 1.png',
-    category: 'web_design',
-
-    location: 'Hyderabad',
-    software: 'React Project',
-    date: '31-March-2025',
-    client: 'Dr. Nagarjuna',
-  },
-  {
-    title: '2',
-    subtitle: 'See Details',
-    src: '/images/standee mockup 3 png.png',
-    category: 'web_design',
-
-    location: 'Hyderabad',
-    software: 'React Project',
-    date: '31-March-2025',
-    client: 'Dr. Nagarjuna',
-  },
-   {
-    title: '2',
-    subtitle: 'See Details',
-    src: '/images/flyer mockup 2.png',
-    category: 'web_design',
-
-    location: 'Hyderabad',
-    software: 'React Project',
-    date: '31-March-2025',
-    client: 'Dr. Nagarjuna',
-  },
-   {
-    title: '6',
-    subtitle: 'See Details',
-    src: '/images/logo mockup 2.png',
-    category: 'web_design',
-
-    location: 'Hyderabad',
-    software: 'React Project',
-    date: '31-March-2025',
-    client: 'Dr. Nagarjuna',
-  },
-
-  {
-    title: 'Social Media NAZARA',
-    subtitle: 'See Details',
-    src: '/images/SOCIAL MEDIA MOCKUP.jpg',
+    src: '/images/branding1.png',
     category: 'branding_company',
-
     location: 'United Kingdom',
     software: 'Adobe Illustrator',
     date: '14-Aug-2022',
     client: 'Andreo Bowla',
   },
   {
-    title: 'Dr. Nagarjuna website',
+    title: 'Branding 2',
     subtitle: 'See Details',
-    src: '/images/website mockup 1 png.png',
-    category: 'web_design',
-
+    src: '/images/branding2.jpg',
+    category: 'branding_company',
     location: 'Hyderabad',
     software: 'React Project',
     date: '31-March-2025',
     client: 'Dr. Nagarjuna',
   },
-
-
+  // Creatives
+  {
+    title: 'Creative Poster',
+    subtitle: 'See Details',
+    src: '/images/CM.jpg',
+    category: 'creatives',
+    location: 'Mumbai',
+    software: 'Photoshop',
+    date: '10-Jan-2023',
+    client: 'Client X',
+  },
+  {
+    title: 'Creative Social',
+    subtitle: 'See Details',
+    src: '/images/socialMedia.jpg',
+    category: 'creatives',
+    location: 'Delhi',
+    software: 'Illustrator',
+    date: '22-Feb-2023',
+    client: 'Client Y',
+  },
+  {
+    title: 'Creative Social',
+    subtitle: 'See Details',
+    src: '/images/Cm3.jpeg',
+    category: 'creatives',
+    location: 'Delhi',
+    software: 'Illustrator',
+    date: '22-Feb-2023',
+    client: 'Client Y',
+  },
 ];
 
 const categoryMenu = [
@@ -155,7 +178,7 @@ export default function PortfolioPage() {
                     : ''
                 }`}
               key={index}
-              onClick={() => navigate(`/portfolio/${slugify(item.title)}`)}
+             
               style={{ cursor: 'pointer' }}
             >
               <Portfolio
