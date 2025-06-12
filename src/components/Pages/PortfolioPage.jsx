@@ -12,7 +12,6 @@ const portfolioData = [
   // Web UI/UX
   {
     title: 'UI/UX Project',
-    subtitle: 'See Details',
     src: '/images/uiux.png',
     category: 'web_design',
     location: 'Hyderabad',
@@ -22,7 +21,6 @@ const portfolioData = [
   },
   {
     title: 'BB Web Design',
-    subtitle: 'See Details',
     src: '/images/webuiux.jpg',
     category: 'web_design',
     location: 'Hyderabad',
@@ -32,7 +30,6 @@ const portfolioData = [
   },
   {
     title: 'Studio Web',
-    subtitle: 'See Details',
     src: '/images/ls.jpg',
     category: 'web_design',
     location: 'Hyderabad',
@@ -42,7 +39,6 @@ const portfolioData = [
   },
   {
     title: 'UI/UX Project',
-    subtitle: 'See Details',
     src: '/images/pizza.jpg',
     category: 'web_design',
     location: 'Hyderabad',
@@ -54,7 +50,6 @@ const portfolioData = [
   // Branding
   {
     title: 'AA Logo',
-    subtitle: 'See Details',
     src: '/images/branding4.jpg',
     category: 'logo_design',
     location: 'United Kingdom',
@@ -64,7 +59,6 @@ const portfolioData = [
   },
   {
     title: 'Branding 1',
-    subtitle: 'See Details',
     src: '/images/branding1.png',
     category: 'branding_company',
     location: 'United Kingdom',
@@ -74,7 +68,6 @@ const portfolioData = [
   },
   {
     title: 'Branding 2',
-    subtitle: 'See Details',
     src: '/images/branding2.jpg',
     category: 'branding_company',
     location: 'Hyderabad',
@@ -85,7 +78,6 @@ const portfolioData = [
   // Creatives
   {
     title: 'Creative Poster',
-    subtitle: 'See Details',
     src: '/images/CM.jpg',
     category: 'creatives',
     location: 'Mumbai',
@@ -95,7 +87,6 @@ const portfolioData = [
   },
   {
     title: 'Creative Social',
-    subtitle: 'See Details',
     src: '/images/socialMedia.jpg',
     category: 'creatives',
     location: 'Delhi',
@@ -105,7 +96,6 @@ const portfolioData = [
   },
   {
     title: 'Creative Social',
-    subtitle: 'See Details',
     src: '/images/Cm3.jpeg',
     category: 'creatives',
     location: 'Delhi',
