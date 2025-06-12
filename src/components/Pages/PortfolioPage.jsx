@@ -85,6 +85,15 @@ const portfolioData = [
     date: '10-Jan-2023',
     client: 'Client X',
   },
+    {
+    title: 'Creative Social',
+    src: '/images/nazaracm.jpg',
+    category: 'creatives',
+    location: 'Delhi',
+    software: 'Illustrator',
+    date: '22-Feb-2023',
+    client: 'Client Y',
+  },
   {
     title: 'Creative Social',
     src: '/images/socialMedia.jpg',
@@ -94,15 +103,7 @@ const portfolioData = [
     date: '22-Feb-2023',
     client: 'Client Y',
   },
-  {
-    title: 'Creative Social',
-    src: '/images/nazaracm.jpg',
-    category: 'creatives',
-    location: 'Delhi',
-    software: 'Illustrator',
-    date: '22-Feb-2023',
-    client: 'Client Y',
-  },
+ 
 ];
 
 const categoryMenu = [
