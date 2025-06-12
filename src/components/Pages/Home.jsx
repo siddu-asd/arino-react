@@ -46,8 +46,7 @@ const portfolioData = [
   // },
   {
     title: '2',
-    subtitle: 'See Details',
-    src: '/images/standee mockup 3 png.png',
+  src: '/images/branding1.png',
     category: 'web_design',
 
     location: 'Hyderabad',
@@ -57,8 +56,7 @@ const portfolioData = [
   },
    {
     title: '2',
-    subtitle: 'See Details',
-    src: '/images/flyer mockup 2.png',
+     src: '/images/nazaracm.jpg',
     category: 'web_design',
 
     location: 'Hyderabad',
@@ -68,8 +66,7 @@ const portfolioData = [
   },
    {
     title: '6',
-    subtitle: 'See Details',
-    src: '/images/logo mockup 2.png',
+    src: '/images/logo mockup 2.png', src: '/images/white-humanoid-robot-with-metallic-blue-accents-looking-directly-from-standing-front-abstract-digital-circle-that-displays-letters-ai.jpg',
     category: 'web_design',
 
     location: 'Hyderabad',
@@ -80,8 +77,7 @@ const portfolioData = [
 
   {
     title: 'Social Media NAZARA',
-    subtitle: 'See Details',
-    src: '/images/SOCIAL MEDIA MOCKUP.jpg',
+   src: '/images/studio1.jpg',
     category: 'branding_company',
 
     location: 'United Kingdom',
@@ -91,8 +87,7 @@ const portfolioData = [
   },
   {
     title: 'Dr. Nagarjuna website',
-    subtitle: 'See Details',
-    src: '/images/website mockup 1 png.png',
+     src: '/images/socialMedia.jpg',
     category: 'web_design',
 
     location: 'Hyderabad',
