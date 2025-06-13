@@ -88,7 +88,6 @@ const portfolioDataByService = {
   'creative-marketing': [
     {
       title: 'UI/UX Interface ',
-      subtitle: 'See Details',
       src: '/images/socialMedia.jpg',
       category: 'marketing',
       location: 'New York',
@@ -98,7 +97,6 @@ const portfolioDataByService = {
     },
     {
       title: 'Website Mockup',
-      subtitle: 'See Details',
       src: '/images/nazaracm.jpg',
       category: 'marketing',
       location: 'London',
@@ -108,7 +106,6 @@ const portfolioDataByService = {
     },
     {
       title: 'AA Branding',
-      subtitle: 'See Details',
       src: '/images/CM.jpg',
       category: 'marketing',
       location: 'Madrid',
@@ -120,7 +117,6 @@ const portfolioDataByService = {
   'branding': [
     {
       title: 'Social Media Campaign',
-      subtitle: 'See Details',
       src: '/images/branding1.png',
       category: 'branding',
       location: 'London',
@@ -130,7 +126,6 @@ const portfolioDataByService = {
     },
     {
       title: 'Social Media Campaign 2',
-      subtitle: 'See Details',
       src: '/images/branding2.jpg',
       category: 'branding',
       location: 'Berlin',
@@ -140,7 +135,6 @@ const portfolioDataByService = {
     },
     {
       title: 'AA Branding',
-      subtitle: 'See Details',
       src: '/images/branding4.jpg',
       category: 'branding',
       location: 'Madrid',
@@ -152,7 +146,6 @@ const portfolioDataByService = {
   'ai-technology': [
     {
       title: 'AI Robot',
-      subtitle: 'See Details',
       src: '/images/white-humanoid-robot-with-metallic-blue-accents-looking-directly-from-standing-front-abstract-digital-circle-that-displays-letters-ai.jpg',
       category: 'ai',
       location: 'San Francisco',
@@ -162,7 +155,6 @@ const portfolioDataByService = {
     },
     {
       title: 'AI Workspace',
-      subtitle: 'See Details',
       src: '/images/uiux.png',
       category: 'ai',
       location: 'Tokyo',
@@ -172,7 +164,6 @@ const portfolioDataByService = {
     },
     {
       title: 'AI Technology',
-      subtitle: 'See Details',
       src: '/images/bb2.jpg',
       category: 'ai',
       location: 'Paris',
@@ -184,7 +175,6 @@ const portfolioDataByService = {
   'studio': [
     {
       title: 'Professional Photo Studio',
-      subtitle: 'See Details',
       src: '/images/studio1.jpg',
       category: 'studio',
       location: 'Mumbai',
@@ -194,7 +184,6 @@ const portfolioDataByService = {
     },
     {
       title: 'Pizza Website',
-      subtitle: 'See Details',
       src: '/images/studio2.jpg',
       category: 'studio',
       location: 'Sydney',
@@ -204,7 +193,6 @@ const portfolioDataByService = {
     },
     {
       title: 'AA Studio',
-      subtitle: 'See Details',
       src: '/images/studio3.jpg',
       category: 'studio',
       location: 'Paris',

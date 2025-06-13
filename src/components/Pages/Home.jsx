@@ -24,7 +24,6 @@ const portfolioData = [
   
   {
     title: 'Logo Design',
-    subtitle: 'See Details',
     src: '/images/logo mockup jpeg.jpg',
     category: 'logo_design',
 
@@ -45,8 +44,8 @@ const portfolioData = [
   //   client: 'Dr. Nagarjuna',
   // },
   {
-    title: '2',
-  src: '/images/branding1.png',
+  title: 'Marketing Materials',
+    src: '/images/branding1.png',
     category: 'web_design',
 
     location: 'Hyderabad',
@@ -55,8 +54,8 @@ const portfolioData = [
     client: 'Dr. Nagarjuna',
   },
    {
-    title: '2',
-     src: '/images/nazaracm.jpg',
+     title: 'Out-of-home Advertising',
+    src: '/images/nazaracm.jpg',
     category: 'web_design',
 
     location: 'Hyderabad',
@@ -65,9 +64,8 @@ const portfolioData = [
     client: 'Dr. Nagarjuna',
   },
    {
-    title: '6',
-    src: '/images/logo mockup 2.png', src: '/images/white-humanoid-robot-with-metallic-blue-accents-looking-directly-from-standing-front-abstract-digital-circle-that-displays-letters-ai.jpg',
-    category: 'web_design',
+    title: 'Studio Designing Interface',
+    src: '/images/ls.jpg',
 
     location: 'Hyderabad',
     software: 'React Project',
@@ -76,9 +74,9 @@ const portfolioData = [
   },
 
   {
-    title: 'Social Media NAZARA',
-   src: '/images/studio1.jpg',
-    category: 'branding_company',
+       title: 'Professional Photo Studio',
+      src: '/images/studio1.jpg',
+      category: 'branding_company',
 
     location: 'United Kingdom',
     software: 'Adobe Illustrator',
@@ -86,8 +84,8 @@ const portfolioData = [
     client: 'Andreo Bowla',
   },
   {
-    title: 'Dr. Nagarjuna website',
-     src: '/images/socialMedia.jpg',
+     title: 'UI/UX Interface ',
+      src: '/images/socialMedia.jpg',
     category: 'web_design',
 
     location: 'Hyderabad',
@@ -242,10 +240,10 @@ export default function Home() {
           paddingTop: '50px',
           paddingBottom: '30px'
         }}>
-          {/* <VideoModal
-            videoSrc="/video/Raising100x.MP4"
+          <VideoModal
+            videoSrc="/video/raising100xvideo.MP4"
             bgUrl="/images/video_bg.jpeg"
-          /> */}
+          />
         </Div>
       </Div>
 

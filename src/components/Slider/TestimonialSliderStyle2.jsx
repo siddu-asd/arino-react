@@ -6,15 +6,7 @@ import Div from '../Div';
 import Spacing from '../Spacing';
 const testimonialData = [
   {
-    testimonialThumb: '/images/testimonial_1.jpeg',
-    testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
-    ratings: '4',
-  },
-  {
-    testimonialThumb: '/images/testimonial_2.jpeg',
+    testimonialThumb: '/images/CLIENT.png',
     testimonialText:
       'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
     avatarName: 'Ahon Monsery',
@@ -22,15 +14,23 @@ const testimonialData = [
     ratings: '5',
   },
   {
-    testimonialThumb: '/images/testimonial_3.jpeg',
+   testimonialThumb: '/images/CLIENT.png',
     testimonialText:
       'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
     avatarName: 'Ahon Monsery',
     avatarDesignation: 'CEO AT TECH',
-    ratings: '4.5',
+    ratings: '5',
   },
   {
-    testimonialThumb: '/images/testimonial_1.jpeg',
+   testimonialThumb: '/images/CLIENT.png',
+    testimonialText:
+      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
+    avatarName: 'Ahon Monsery',
+    avatarDesignation: 'CEO AT TECH',
+    ratings: '5',
+  },
+  {
+   testimonialThumb: '/images/CLIENT.png',
     testimonialText:
       'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
     avatarName: 'Ahon Monsery',
