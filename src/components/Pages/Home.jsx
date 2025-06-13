@@ -242,10 +242,10 @@ export default function Home() {
           paddingTop: '50px',
           paddingBottom: '30px'
         }}>
-          <VideoModal
+          {/* <VideoModal
             videoSrc="/video/Raising100x.MP4"
             bgUrl="/images/video_bg.jpeg"
-          />
+          /> */}
         </Div>
       </Div>
 
