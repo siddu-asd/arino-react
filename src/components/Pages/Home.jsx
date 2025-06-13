@@ -234,7 +234,7 @@ export default function Home() {
         <Spacing lg="70" md="70" />
         <Div className="cs-video_wrap" style={{ 
           position: 'relative', 
-          zIndex: 999, 
+          zIndex: 2, 
           maxWidth: '90%', 
           margin: '80px auto 0',
           paddingTop: '50px',
