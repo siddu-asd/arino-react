@@ -10,6 +10,7 @@ import TestimonialSlider from '../Slider/TestimonialSlider';
 import Spacing from '../Spacing';
 import Portfolio from '../Portfolio';
 import { Icon } from '@iconify/react';
+import PageHeading from '../PageHeading';
 
 const servicesData = {
   'creative-marketing': {
@@ -257,6 +258,14 @@ export default function ServiceDetailsPage() {
   }
 
   return (
+    <>
+    <Div className="d-block d-lg-none">
+      <PageHeading
+        title="What We Offer"
+        bgSrc="/images/blog_hero_bg.jpeg"
+        pageLinkText="What We Offer"
+      />
+    </Div>
     <Div style={{ paddingTop: '40px', paddingBottom: '40px' }}>
       <Spacing lg="145" md="80" />
       <Div className="container">
@@ -376,5 +385,6 @@ export default function ServiceDetailsPage() {
         />
       </Div>
     </Div>
+    </>
   );
 }

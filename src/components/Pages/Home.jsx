@@ -158,26 +158,23 @@ export default function Home() {
             <Div className='col-xl-8'>
               <Div className='row'>
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
+                <Div className='col-lg-3 col-sm-6 mb-4 mb-sm-4'>
                   <Card
-                    // title='Creative Marketing'
                     link='/service/creative-marketing'
                     src='/images/nhj.png'
                     alt='Creative Marketing'
                   />
                 </Div>
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
+                <Div className='col-lg-3 col-sm-6 mb-4 mb-sm-4'>
                   <Card
-                    // title='Branding'
                     link='/service/branding'
                     src='/images/ge.png'
                     alt='Branding'
                   />
                 </Div>
-                <Div className='col-lg-3 col-sm-6'>
+                <Div className='col-lg-3 col-sm-6 mb-4 mb-sm-4'>
                   <Card
-                    // title='AI & Technology'
                     link='/service/ai-technology'
                     src='/images/dm.png'
                     alt='AI & Technology'
@@ -185,14 +182,8 @@ export default function Home() {
                 </Div>
 
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
+                <Div className='col-lg-3 col-sm-6 mb-4 mb-sm-4'>
                   <Card
-                    // title={
-                    //   <>
-                    //     Visual<br />
-                    //     Story-Telling<br />
-                    //     Studio
-                    //   </>}
                     link='/service/studio'
                     src='/images/we.png'
                     alt='Studio'
@@ -241,13 +232,21 @@ export default function Home() {
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
           Ideas That Refuse To Be Confined And< br /> Creativity That Spills Beyond Every Boundary
-
         </h2>
         <Spacing lg="70" md="70" />
-        <VideoModal
-          videoSrc="/video/raising 100x studio.mp4"
-          bgUrl="/images/video_bg.jpeg"
-        />
+        <Div className="cs-video_wrap" style={{ 
+          position: 'relative', 
+          zIndex: 999, 
+          maxWidth: '90%', 
+          margin: '80px auto 0',
+          paddingTop: '50px',
+          paddingBottom: '30px'
+        }}>
+          <VideoModal
+            videoSrc="/video/Raising100x.MP4"
+            bgUrl="/images/video_bg.jpeg"
+          />
+        </Div>
       </Div>
 
       <Spacing lg="145" md="80" />

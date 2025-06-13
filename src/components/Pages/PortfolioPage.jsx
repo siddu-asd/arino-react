@@ -117,7 +117,7 @@ export const portfolioItems = portfolioData;
 export default function PortfolioPage() {
   pageTitle('Portfolio');
   const [active, setActive] = useState('all');
-  const [itemShow, setItemShow] = useState(7);
+  const [itemShow, setItemShow] = useState(portfolioData.length);
   const navigate = useNavigate();
 
   const slugify = (text) => text.toLowerCase().replace(/\s+/g, '-');
@@ -169,7 +169,6 @@ export default function PortfolioPage() {
                     : ''
                 }`}
               key={index}
-             
               style={{ cursor: 'pointer' }}
             >
               <Portfolio
