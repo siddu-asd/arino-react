@@ -11,7 +11,7 @@ import PageHeading from '../PageHeading';
 const portfolioData = [
   // Web UI/UX
   {
-    title: 'UI/UX Project',
+    title: 'UI/UX Interface',
     src: '/images/uiux.png',
     category: 'web_design',
     location: 'Hyderabad',
@@ -20,7 +20,7 @@ const portfolioData = [
     client: 'Dr. Nagarjuna',
   },
   {
-    title: 'BB Web Design',
+    title: 'Web Designing',
     src: '/images/webuiux.jpg',
     category: 'web_design',
     location: 'Hyderabad',
@@ -29,16 +29,16 @@ const portfolioData = [
     client: 'Dr. Nagarjuna',
   },
   {
-    title: 'Studio Web',
+    title: 'Studio Designing Interface ',
     src: '/images/ls.jpg',
-    category: 'web_design',
+    category: 'Studio Designing Interface ',
     location: 'Hyderabad',
     software: 'React Project',
     date: '31-March-2025',
     client: 'Dr. Nagarjuna',
   },
   {
-    title: 'UI/UX Project',
+    title: 'Website Designing for Cafe',
     src: '/images/pizza.jpg',
     category: 'web_design',
     location: 'Hyderabad',
@@ -49,7 +49,7 @@ const portfolioData = [
   
   // Branding
   {
-    title: 'AA Logo',
+    title: 'Branding ',
     src: '/images/branding4.jpg',
     category: 'logo_design',
     location: 'United Kingdom',
@@ -58,7 +58,7 @@ const portfolioData = [
     client: 'Andreo Bowla',
   },
   {
-    title: 'Branding 1',
+    title: 'Marketing Materials ',
     src: '/images/branding1.png',
     category: 'branding_company',
     location: 'United Kingdom',
@@ -67,7 +67,7 @@ const portfolioData = [
     client: 'Andreo Bowla',
   },
   {
-    title: 'Branding 2',
+    title: 'Branding & Promotional Posters',
     src: '/images/branding2.jpg',
     category: 'branding_company',
     location: 'Hyderabad',
@@ -77,7 +77,7 @@ const portfolioData = [
   },
   // Creatives
   {
-    title: 'Creative Poster',
+    title: 'Social Media Creatives ',
     src: '/images/CM.jpg',
     category: 'creatives',
     location: 'Mumbai',
@@ -86,7 +86,7 @@ const portfolioData = [
     client: 'Client X',
   },
     {
-    title: 'Creative Social',
+    title: 'Out-of-home Advertising ',
     src: '/images/nazaracm.jpg',
     category: 'creatives',
     location: 'Delhi',
@@ -95,7 +95,7 @@ const portfolioData = [
     client: 'Client Y',
   },
   {
-    title: 'Creative Social',
+    title: 'Personalized Social Media Designing ',
     src: '/images/socialMedia.jpg',
     category: 'creatives',
     location: 'Delhi',

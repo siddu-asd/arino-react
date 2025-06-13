@@ -30,15 +30,15 @@
         height: 16px;
         border-radius: 50%;
         background: #fff;
-        border: 2px solid #ff4a17;
+        border: 2px solid #ec2626;
         transition: background 0.3s, border 0.3s, transform 0.3s;
         &::before {
           display: none;
         }
       }
       &.slick-active button {
-        background: #ff4a17;
-        border-color: #ff4a17;
+        background: #cf2020;
+        border-color: #b92323;
         transform: scale(1.25);
         box-shadow: 0 0 8px 2px #ff4a17aa;
         animation: dotPulse 0.7s;

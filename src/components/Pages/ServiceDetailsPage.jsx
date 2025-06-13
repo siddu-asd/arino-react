@@ -86,7 +86,7 @@ const servicesData = {
 const portfolioDataByService = {
   'creative-marketing': [
     {
-      title: 'Web UI/UX Design',
+      title: 'UI/UX Interface ',
       subtitle: 'See Details',
       src: '/images/socialMedia.jpg',
       category: 'marketing',
