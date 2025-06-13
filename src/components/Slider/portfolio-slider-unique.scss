@@ -29,18 +29,18 @@
         width: 16px;
         height: 16px;
         border-radius: 50%;
-        background: #fff;
-        border: 2px solid #ec2626;
+        background: #131212;
+        border: 2px solid #9e0404;
         transition: background 0.3s, border 0.3s, transform 0.3s;
         &::before {
           display: none;
         }
       }
       &.slick-active button {
-        background: #cf2020;
+        background: #6e0303;
         border-color: #b92323;
         transform: scale(1.25);
-        box-shadow: 0 0 8px 2px #ff4a17aa;
+        box-shadow: 0 0 8px 2px #770208aa;
         animation: dotPulse 0.7s;
       }
     }
@@ -48,7 +48,7 @@
 }
 
 @keyframes dotPulse {
-  0% { box-shadow: 0 0 0 0 #ff4a17aa; }
+  0% { box-shadow: 0 0 0 0 #860707aa; }
   70% { box-shadow: 0 0 8px 6px #ff4a1700; }
-  100% { box-shadow: 0 0 0 0 #ff4a17aa; }
+  100% { box-shadow: 0 0 0 0 #690404aa; }
 } 

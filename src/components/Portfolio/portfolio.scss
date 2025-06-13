@@ -90,24 +90,24 @@
     position: relative;
     z-index: 2;
   }
-  .cs-portfolio_subtitle {
-    display: inline-block;
-    position: relative;
-    z-index: 2;
-    padding-right: 30px;
-    color: $secondary;
-    &::after {
-      content: '';
-      height: 1px;
-      width: 20px;
-      background-color: currentColor;
-      border-radius: 3px;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      margin-top: 2px;
-    }
-  }
+  // .cs-portfolio_subtitle {
+  //   display: inline-block;
+  //   position: relative;
+  //   z-index: 2;
+  //   padding-right: 30px;
+  //   color: $secondary;
+  //   &::after {
+  //     content: '';
+  //     height: 1px;
+  //     width: 20px;
+  //     background-color: currentColor;
+  //     border-radius: 3px;
+  //     position: absolute;
+  //     right: 0;
+  //     top: 50%;
+  //     margin-top: 2px;
+  //   }
+  // }
   &.cs-type1 {
     height: 465px;
     .cs-portfolio_info_bg {

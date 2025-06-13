@@ -29,9 +29,9 @@ const portfolioData = [
     client: 'Dr. Nagarjuna',
   },
   {
-    title: 'Studio Designing Interface ',
+    title: 'Studio Designing Interface',
     src: '/images/ls.jpg',
-    category: 'Studio Designing Interface ',
+    category: 'Studio Designing Interface',
     location: 'Hyderabad',
     software: 'React Project',
     date: '31-March-2025',
@@ -49,7 +49,7 @@ const portfolioData = [
   
   // Branding
   {
-    title: 'Branding ',
+    title: 'Branding',
     src: '/images/branding4.jpg',
     category: 'logo_design',
     location: 'United Kingdom',
@@ -58,7 +58,7 @@ const portfolioData = [
     client: 'Andreo Bowla',
   },
   {
-    title: 'Marketing Materials ',
+    title: 'Marketing Materials',
     src: '/images/branding1.png',
     category: 'branding_company',
     location: 'United Kingdom',
@@ -77,7 +77,7 @@ const portfolioData = [
   },
   // Creatives
   {
-    title: 'Social Media Creatives ',
+    title: 'Social Media Creatives',
     src: '/images/CM.jpg',
     category: 'creatives',
     location: 'Mumbai',
@@ -86,7 +86,7 @@ const portfolioData = [
     client: 'Client X',
   },
     {
-    title: 'Out-of-home Advertising ',
+    title: 'Out-of-home Advertising',
     src: '/images/nazaracm.jpg',
     category: 'creatives',
     location: 'Delhi',
@@ -95,7 +95,7 @@ const portfolioData = [
     client: 'Client Y',
   },
   {
-    title: 'Personalized Social Media Designing ',
+    title: 'Personalized Social Media Designing',
     src: '/images/socialMedia.jpg',
     category: 'creatives',
     location: 'Delhi',
