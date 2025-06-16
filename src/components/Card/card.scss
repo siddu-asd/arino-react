@@ -90,25 +90,25 @@
 }
 @media screen and (max-width: 767px) {
   .cs-card {
-    padding: 10px;
-    transform: scale(0.95);
+    padding: 6px;
+    transform: scale(0.92); /* reduced from 0.95 */
     transition: transform 0.3s ease;
   }
 
   .cs-card img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 8px;
     object-fit: cover;
   }
 
   .cs-card-title {
-    font-size: 14px !important;
+    font-size: 12px !important; /* reduced font size */
     text-align: center;
-    margin-top: 10px;
+    margin-top: 6px;
   }
 
   .cs-card + .cs-card {
-    margin-top: 15px;
+    margin-top: 12px;
   }
 }
