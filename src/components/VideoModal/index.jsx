@@ -25,7 +25,7 @@ export default function VideoModal({ videoSrc, bgUrl, variant }) {
           <span />
         </span>
       </Div>
-      <Div className={toggle ? 'cs-video_popup active' : 'cs-video_popup'}>
+      <Div className={toggle ? 'cs-video_popup active' : 'cs-video_popup'} >
         <Div className="cs-video_popup_overlay" />
         <Div className="cs-video_popup_content">
           <Div className="cs-video_popup_layer" />
@@ -40,7 +40,7 @@ export default function VideoModal({ videoSrc, bgUrl, variant }) {
                 top: '18px',
                 right: '18px',
                 zIndex: 20,
-                background: 'rgba(0,0,0,0.7)',
+                background: 'rgba(0, 0, 0, 0)',
                 border: 'none',
                 borderRadius: '50%',
                 width: '40px',
@@ -52,6 +52,7 @@ export default function VideoModal({ videoSrc, bgUrl, variant }) {
                 color: '#fff',
                 boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
                 transition: 'background 0.2s',
+                marginTop:'84px',
               }}
             >
               <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +60,7 @@ export default function VideoModal({ videoSrc, bgUrl, variant }) {
                 <line x1="17" y1="5" x2="5" y2="17" stroke="white" strokeWidth="2" strokeLinecap="round"/>
               </svg>
             </button>
-            <Div className="cs-video_popup_align" style={{marginTop: '32px', padding: 0, background: 'black'}}>
+            <Div className="cs-video_popup_align" style={{marginTop: '32px', padding: 0, background: 'black', }}>
               <Div className="embed-responsive embed-responsive-16by9" style={{background: 'black', border: 'none', boxShadow: 'none'}}>
                 {isLocalVideo ? (
                   <video
@@ -68,7 +69,7 @@ export default function VideoModal({ videoSrc, bgUrl, variant }) {
                     controls
                     autoPlay
                     muted
-                    style={{ width: '100%', height: '100%', background: 'black', border: 'none', boxShadow: 'none', display: 'block' }}
+                    style={{ width: '100%', height: '100%', background: 'black', border: 'none', boxShadow: 'none', display: 'block', }}
                   >
                     Your browser does not support the video tag.
                   </video>

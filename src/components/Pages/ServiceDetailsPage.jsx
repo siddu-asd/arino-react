@@ -373,7 +373,7 @@ export default function ServiceDetailsPage() {
       </h2>
 
       <a
-        href="/downloads/branding-guide.pdf"
+        href="/downloads/DEMO.pdf"
         download
         className="branding-download-btn"
       >
