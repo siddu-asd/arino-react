@@ -227,7 +227,7 @@ export default function Home() {
       </Div> */}
 
       <Spacing lg="20" md="70" />
-      <Div className="container">
+      <Div className="container" style={{position:'relative',zIndex:2}}>
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
           Ideas That Refuse To Be Confined And< br /> Creativity That Spills Beyond Every Boundary
         </h2>
@@ -258,10 +258,10 @@ export default function Home() {
         <Spacing lg="85" md="45" />
         <TeamSlider />
       </Div> */}
-      <Spacing lg="150" md="80" />
-
-      <TestimonialSlider />
-
+      
+      <Div className="container" style={{position:'relative',zIndex:1}}>    
+          <TestimonialSlider />
+          </Div>
       <Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>
