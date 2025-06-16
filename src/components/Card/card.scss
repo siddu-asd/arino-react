@@ -88,3 +88,27 @@
     width: 100%;
   }
 }
+@media screen and (max-width: 767px) {
+  .cs-card {
+    padding: 10px;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+  }
+
+  .cs-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .cs-card-title {
+    font-size: 14px !important;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .cs-card + .cs-card {
+    margin-top: 15px;
+  }
+}
