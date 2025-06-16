@@ -26,10 +26,17 @@ export default function VideoModal({ videoSrc, bgUrl, variant }) {
         </span>
       </Div>
       <Div className={toggle ? 'cs-video_popup active' : 'cs-video_popup'}>
-        <Div className="cs-video_popup_overlay" />
-        <Div className="cs-video_popup_content">
+        <Div className="cs-video_popup_overlay" style={{ zIndex: 999 }} />
+        <Div className="cs-video_popup_content" style={{ zIndex: 1000 }}>
           <Div className="cs-video_popup_layer" />
-          <Div className="cs-video_popup_container" style={{position: 'relative', background: 'black', boxShadow: 'none', border: 'none', paddingTop: '32px'}}>
+          <Div className="cs-video_popup_container" style={{
+            position: 'relative', 
+            background: 'black', 
+            boxShadow: 'none', 
+            border: 'none', 
+            paddingTop: '32px',
+            zIndex: 1001
+          }}>
             {/* Modern Close Button, floating top-right, outside video */}
             <button
               className="cs-video_modal_close_btn"
