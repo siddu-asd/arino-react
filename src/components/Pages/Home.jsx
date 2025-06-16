@@ -238,7 +238,8 @@ export default function Home() {
           maxWidth: '90%', 
           margin: '80px auto 0',
           paddingTop: '50px',
-          paddingBottom: '30px'
+          paddingBottom: '30px',
+          overflow: 'hidden' 
         }}>
           <VideoModal
             videoSrc="/video/raising100xvideo.MP4"

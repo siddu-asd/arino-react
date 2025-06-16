@@ -54,7 +54,6 @@
     margin-top: 30px;
   }
 }
-
 .cs-social_btns.cs-style1 {
   display: flex;
   flex-wrap: wrap;
@@ -66,9 +65,19 @@
     border: 2px solid $white;
     margin: 7px;
     color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      fill: $white;
+      transition: 0.3s ease;
+    }
+
     &:hover {
       border-color: $accent;
       transform: scale(1.08);
+
       svg {
         fill: $accent;
       }
@@ -157,11 +166,18 @@
       padding: 5px 80px 5px 15px;
     }
   }
+   .cs-footer_item {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 991px) {
   .cs-widget_title {
     margin-bottom: 20px;
+    text-align: center;
 }
+ .cs-footer_item {
+    text-align: center;
+  }
 .cs-text_widget img + p {
   margin-top: 20px;
 }
@@ -178,11 +194,37 @@
 }
 }
 @media screen and (max-width: 767px) {
-  .cs-bottom_footer {
-    flex-direction: column;
+  /* Center all content in footer columns */
+  .cs-footer_item {
     text-align: center;
+  }
+.cs-social_btns.cs-style1 {
     justify-content: center;
+  }
+  /* Center the "Services" heading */
+  .cs-footer_item .cs-widget_title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: red;
+  }
+
+  /* Center service links in the menu */
+  .cs-footer_item .cs-menu_widget {
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
+
+  .cs-footer_item .cs-menu_widget li {
+    justify-content: center;
+  }
+
+  /* Optional: center copyright links too */
+  .cs-bottom_footer_right .cs-menu_widget.cs-style2 {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
 }
-@media screen and (max-width: 767px) {}
+

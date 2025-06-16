@@ -6,6 +6,7 @@ import Newsletter from '../Widget/Newsletter';
 import SocialWidget from '../Widget/SocialWidget';
 import TextWidget from '../Widget/TextWidget';
 import './footer.scss';
+
 const copyrightLinks = [
   {
     title: 'Terms of Use',
@@ -49,19 +50,27 @@ export default function Footer({ copyrightText, logoSrc, logoAlt, text }) {
                   logoAlt="Logo"
                   text="Bringing a revolutionary change in the field of branding, marketing, tech and AI "
                 />
+                
+                {/* Follow Us Heading */}
+                <h5 className="cs-widget_title">Follow Us</h5>
+                
+                {/* Social Media Icons */}
                 <SocialWidget />
               </Div>
             </Div>
+
             <Div className="col-lg-3 col-sm-6">
               <Div className="cs-footer_item">
                 <MenuWidget menuItems={serviceMenu} menuHeading="Services" />
               </Div>
             </Div>
+
             <Div className="col-lg-3 col-sm-6">
               <Div className="cs-footer_item">
                 <ContactInfoWidget title="Contact Us" />
               </Div>
             </Div>
+
             <Div className="col-lg-3 col-sm-6">
               <Div className="cs-footer_item">
                 <Newsletter
@@ -74,6 +83,7 @@ export default function Footer({ copyrightText, logoSrc, logoAlt, text }) {
           </Div>
         </Div>
       </Div>
+
       <Div className="container">
         <Div className="cs-bottom_footer">
           <Div className="cs-bottom_footer_left">
