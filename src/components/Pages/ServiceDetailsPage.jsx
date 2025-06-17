@@ -355,101 +355,30 @@ export default function ServiceDetailsPage() {
           </Div>
         </Div>
 
-      {serviceDetailsId === 'branding' && (
-  <>
-    <Spacing lg="40" md="30" />
-    <Div className="text-center">
-      <h2
-        className="cs-mb_20"
-        style={{
-          fontSize: '48px',
-          paddingTop: '50px',
-          fontWeight: '600',
-          lineHeight: '1.3',
-          paddingBottom: '25px',
-        }}
-      >
-        A Guide to Help You Stand Out
-      </h2>
+        {serviceDetailsId === 'branding' && (
+          <>
+            <Spacing lg="60" md="40" />
+            <Div className="container">
+              <Div className="row">
+                {[1, 2, 3].map((index) => (
+                  <Div className="col-lg-4" key={index}>
+                    <Div className="hover-image-container">
+                      <img 
+                        src={`/images/branding${index}.jpg`} 
+                        alt={`Branding Image ${index}`} 
+                        className="hover-image"
+                      />
+               
+                    </Div>
+                    <Spacing lg="25" md="25" />
+                  </Div>
+                ))}
+              </Div>
+            </Div>
 
-      <a
-        href="/downloads/DEMO.pdf"
-        download
-        className="branding-download-btn"
-      >
-        <Icon
-          icon="mdi:download"
-          style={{ marginRight: '10px', fontSize: '20px' }}
-        />
-        Download
-      </a>
-    </Div>
-    <Spacing lg="60" md="40" />
-
-    {/* Inline CSS for the custom button */}
-    <style>
-      {`
-        .branding-download-btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          padding: 14px 32px;
-          font-size: 18px;
-          font-weight: 600;
-          color: #fff;
-          background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 0, 0, 0.58));
-          border: none;
-          border-radius: 50px;
-          text-decoration: none;
-          cursor: pointer;
-          transition: all 0.3s ease-in-out;
-          box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
-          position: relative;
-          overflow: hidden;
-        }
-
-        .branding-download-btn::before {
-          content: "";
-          position: absolute;
-          top: 0; left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(to right, red, black);
-          opacity: 0;
-          z-index: -1;
-          transition: opacity 0.4s ease-in-out;
-        }
-
-        .branding-download-btn:hover::before {
-          opacity: 1;
-        }
-
-        .branding-download-btn:hover {
-          transform: scale(1.08);
-        color:black;
-        }
-
-        .branding-download-btn:active {
-          transform: scale(0.95);
-        }
-
-        .branding-download-btn .iconify {
-          animation: bounce 1.8s infinite;
-        }
-
-        @keyframes bounce {
-          0%, 100% {
-            transform: translateY(0);
-          }
-
-          50% {
-            transform: translateY(-4px);
-          }
-        }
-      `}
-    </style>
-  </>
-)}
+           
+          </>
+        )}
 
         <Spacing lg="150" md="80" />
         <TestimonialSlider />
@@ -472,3 +401,4 @@ export default function ServiceDetailsPage() {
     </>
   );
 }
+

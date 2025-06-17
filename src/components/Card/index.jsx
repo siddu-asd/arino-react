@@ -9,9 +9,9 @@ export default function Card({ title, link, src, alt }) {
       <>
         <img src={src} alt={alt} />
         
-        {/* Overlay with centered text */}
+        
         <Div className="cs-card_overlay">
-          <Div className="cs-overlay_text">{alt}</Div>
+          {/* <Div className="cs-overlay_text">{alt}</Div> */}
         </Div>
 
         {/* Title */}

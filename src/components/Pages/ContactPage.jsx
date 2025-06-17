@@ -85,7 +85,12 @@ export default function ContactPage() {
     }
   };
 
-  const queryOptions = ['Partnership', 'Support', 'Feedback', 'Hiring Inquiry', 'General Question', 'Technical Issue', 'Billing', 'Product Demo'];
+  const queryOptions = [
+    'Partnership', 'Support', 'Feedback', 'Account Management', 
+    'Hiring', 'General', 'Technical', 
+    'Billing', 'Product Demo', 'Consultation', 
+    'Training', 'Integration', 'Custom Dev'
+  ];
 
   // Updated styles
   const styles = {
@@ -108,14 +113,21 @@ export default function ContactPage() {
       padding: '20px',
       marginTop: '5px',
       zIndex: 10,
+      transform: 'scale(0.95)',
+      opacity: 0,
+      visibility: 'hidden',
+      transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
       '@media (max-width: 768px)': {
-        width: '100%',
-        left: '0',
-        right: '0',
+        width: '65%',
+        alignItems: 'center',
+        justifyContent: 'center',
+        left: '50%',
+        right: 'auto',
+        transform: 'translateX(-50%) scale(0.95)',
         position: 'fixed',
         top: '50%',
         left: '50%',
-        transform: 'translate(-50%, -50%)',
+        transform: 'translate(-50%, -50%) scale(0.95)',
         maxHeight: '80vh',
         overflowY: 'auto',
         margin: '0',
@@ -123,6 +135,14 @@ export default function ContactPage() {
         display: 'flex',
         flexDirection: 'column',
         paddingBottom: '80px',
+      }
+    },
+    overlayVisible: {
+      transform: 'scale(1)',
+      opacity: 1,
+      visibility: 'visible',
+      '@media (max-width: 768px)': {
+        transform: 'translate(-50%, -50%) scale(1)',
       }
     },
     optionsGrid: {
@@ -144,28 +164,45 @@ export default function ContactPage() {
       background: 'rgba(255, 255, 255, 0.1)',
       border: '1px solid rgba(255, 255, 255, 0.2)',
       borderRadius: '8px',
-      textAlign: 'left',
+      textAlign: 'center',
       cursor: 'pointer',
       fontSize: '14px',
-      transition: 'all 0.3s ease',
+      transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
       display: 'flex',
       alignItems: 'center',
+      justifyContent: 'center',
       gap: '8px',
       color: '#fff',
+      whiteSpace: 'nowrap',
+      minWidth: 'fit-content',
+      width: 'auto',
+      transform: 'scale(1)',
       '@media (max-width: 768px)': {
-        padding: '15px',
-        fontSize: '16px',
+        padding: '12px',
+        fontSize: '14px',
+      },
+      '&:hover': {
+        transform: 'scale(1.05)',
+        background: 'rgba(255, 255, 255, 0.15)',
+        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
       }
     },
     optionButtonSelected: {
-      background: 'rgba(0, 123, 255, 0.3)',
-      border: '1px solid rgba(0, 123, 255, 0.5)',
+      background: 'rgba(255, 0, 0, 0.3)',
+      border: '1px solid rgba(255, 0, 0, 0.5)',
       color: '#fff',
+      transform: 'scale(1.05)',
+      boxShadow: '0 4px 12px rgba(255, 0, 0, 0.2)',
+      transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+      '&:hover': {
+        transform: 'scale(1.08)',
+        background: 'rgba(255, 0, 0, 0.4)',
+      }
     },
     confirmButton: {
-      width: '100%',
+      width: '65%',
       padding: '12px',
-      background: 'rgba(0, 123, 255, 0.8)',
+      background: 'rgba(172, 25, 25, 0.8)',
       color: '#fff',
       border: 'none',
       borderRadius: '8px',
@@ -173,24 +210,23 @@ export default function ContactPage() {
       fontSize: '16px',
       fontWeight: '500',
       transition: 'all 0.3s ease',
-      '@media (max-width: 768px)': {
-        padding: '12px 20px',
-        fontSize: '16px',
-        borderRadius: '12px',
-        background: 'rgba(0, 123, 255, 0.95)',
-        backdropFilter: 'blur(10px)',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
-        position: 'fixed',
-        bottom: '20px',
-        left: '50%',
-        transform: 'translateX(-50%)',
-        width: '65%',
-        maxWidth: '250px',
-      }
+      // margin: '0 auto',
+      display: 'block'
     },
-    confirmButtonHover: {
-      background: 'rgba(0, 86, 179, 0.9)',
+    confirmButtonMobile: {
+      padding: '12px 20px',
+      fontSize: '16px',
+      borderRadius: '12px',
+      background: 'rgba(146, 13, 13, 0.95)',
+      backdropFilter: 'blur(10px)',
+      border: '1px solid rgba(255, 255, 255, 0.1)',
+      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
+      position: 'fixed',
+      bottom: '20px',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      width: '65%',
+      // maxWidth: '250px'
     },
   };
 
@@ -261,9 +297,20 @@ export default function ContactPage() {
                   onFocus={() => setShowQueryOptions(true)}
                   readOnly
                   required
+                  style={{
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      transform: 'scale(1.02)',
+                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
+                    }
+                  }}
                 />
                 {showQueryOptions && (
-                  <div style={styles.overlay}>
+                  <div style={{
+                    ...styles.overlay,
+                    ...(showQueryOptions ? styles.overlayVisible : {})
+                  }}>
                     <div style={styles.optionsGrid}>
                       {queryOptions.map((option) => (
                         <button
@@ -284,7 +331,10 @@ export default function ContactPage() {
                     </div>
                     <button
                       type="button"
-                      style={styles.confirmButton}
+                      style={{
+                        ...styles.confirmButton,
+                        '@media (max-width: 768px)': styles.confirmButtonMobile
+                      }}
                       onClick={confirmQueries}
                     >
                       Confirm Selection

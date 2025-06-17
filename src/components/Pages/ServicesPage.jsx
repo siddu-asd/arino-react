@@ -41,49 +41,121 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    // title='Creative Marketing'
                     link='/service/creative-marketing'
                     src='/images/nhj.png'
                     alt='Creative Marketing'
                   />
-                  
+                  <div className="text-center mt-3">
+                    <a href="/service/creative-marketing" className="cs-btn cs-style1" style={{
+                      width: '100%',
+                      padding: '12px 20px',
+                      display: 'inline-block',
+                      backgroundColor: 'transparent',
+                      color: '#fff',
+                      borderRadius: '12px',
+                      transition: 'all 0.3s ease',
+                      textDecoration: 'none',
+                      fontWeight: '500',
+                      boxShadow: '0 2px 5px rgba(78, 4, 4, 0.83)',
+                      border: '2px solid rgba(36, 19, 19, 0.28)',
+                      '&:hover': {
+                        background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
+                        border: 'none'
+                      }
+                    }}>
+                      <span>Creative Marketing</span>
+                    </a>
+                  </div>
                   <Spacing lg='0' md='30' />
                 </Div>
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    // title='Branding'
                     link='/service/branding'
                     src='/images/ge.png'
                     alt='Branding'
-
                   />
+                  <div className="text-center mt-3">
+                    <a href="/service/branding" className="cs-btn cs-style1" style={{
+                      width: '100%',
+                      padding: '12px 25px',
+                      display: 'inline-block',
+                      backgroundColor: 'transparent',
+                      color: '#fff',
+                      borderRadius: '12px',
+                      transition: 'all 0.3s ease',
+                      textDecoration: 'none',
+                      fontWeight: '500',
+                      boxShadow: '0 2px 5px rgba(78, 4, 4, 0.83)',
+                      border: '2px solid rgba(36, 19, 19, 0.28)',
+                      '&:hover': {
+                        background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
+                        border: 'none'
+                      }
+                    }}>
+                      <span>Branding</span>
+                    </a>
+                  </div>
                   <Spacing lg='0' md='30' />
                 </Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    // title='AI & Technology'
                     link='/service/ai-technology'
                     src='/images/dm.png'
                     alt='AI & Technology'
-
                   />
+                  <div className="text-center mt-3">
+                    <a href="/service/ai-technology" className="cs-btn cs-style1" style={{
+                      width: '100%',
+                      padding: '12px 25px',
+                      display: 'inline-block',
+                      backgroundColor: 'transparent',
+                      color: '#fff',
+                      borderRadius: '12px',
+                      transition: 'all 0.3s ease',
+                      textDecoration: 'none',
+                      fontWeight: '500',
+                      boxShadow: '0 2px 5px rgba(78, 4, 4, 0.83)',
+                      border: '2px solid rgba(36, 19, 19, 0.28)',
+                      '&:hover': {
+                        background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
+                        border: 'none'
+                      }
+                    }}>
+                      <span>AI & Technology</span>
+                    </a>
+                  </div>
                   <Spacing lg='0' md='30' />
                 </Div>
 
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    // title={
-                    //   <>
-                    //     Visual<br />
-                    //     Story-Telling<br />
-                    //     Studio
-                    //   </>}
                     link='/service/studio'
                     src='/images/we.png'
                     alt='Studio'
                   />
+                  <div className="text-center mt-3">
+                    <a href="/service/studio" className="cs-btn cs-style1" style={{
+                      width: '100%',
+                      padding: '12px 25px',
+                      display: 'inline-block',
+                      backgroundColor: 'transparent',
+                      color: '#fff',
+                      borderRadius: '12px',
+                      transition: 'all 0.3s ease',
+                      textDecoration: 'none',
+                      fontWeight: '500',
+                      boxShadow: '0 2px 5px rgba(78, 4, 4, 0.83)',
+                      border: '2px solid rgba(36, 19, 19, 0.28)',
+                      '&:hover': {
+                        background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
+                        border: 'none'
+                      }
+                    }}>
+                      <span>Studio</span>
+                    </a>
+                  </div>
                   <Spacing lg='0' md='30' />
                 </Div>
                

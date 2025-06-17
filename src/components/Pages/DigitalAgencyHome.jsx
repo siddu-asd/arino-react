@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Hero4 from '../Hero/Hero4';
 import { pageTitle } from '../../helper';
 import Div from '../Div';
-import FunFact2 from '../FunFact/FunFact2';
 import Spacing from '../Spacing';
 import SectionHeading from '../SectionHeading';
 import MovingText2 from '../MovingText/MovingText2';

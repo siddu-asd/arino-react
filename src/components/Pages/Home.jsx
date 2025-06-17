@@ -161,16 +161,16 @@ export default function Home() {
                   <div className="text-center mt-3">
                     <a href="/service/creative-marketing" className="cs-btn cs-style1" style={{
                       width: '100%',
-                      padding: '12px 25px',
+                      padding: '12px 20px',
                       display: 'inline-block',
                       backgroundColor: 'transparent',
                       color: '#fff',
-                      borderRadius: '5px',
+                      borderRadius: '12px',
                       transition: 'all 0.3s ease',
                       textDecoration: 'none',
                       fontWeight: '500',
-                      boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
-                      border: '1px solid #1d1d1d',
+                      boxShadow: '0 2px 5px rgba(78, 4, 4, 0.83)',
+                      border: '2px solid rgba(36, 19, 19, 0.28)',
                       '&:hover': {
                         background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
                         border: 'none'
@@ -199,16 +199,16 @@ export default function Home() {
                       display: 'inline-block',
                       backgroundColor: 'transparent',
                       color: '#fff',
-                      borderRadius: '5px',
+                      borderRadius: '12px',
                       transition: 'all 0.3s ease',
                       textDecoration: 'none',
                       fontWeight: '500',
-                      boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
-                      border: '1px solid #1d1d1d',
+                     boxShadow: '0 2px 5px rgba(78, 4, 4, 0.83)',
+                      border: '2px solid rgba(36, 19, 19, 0.28)',
                       '&:hover': {
-                        background: 'linear-gradient(45deg,rgb(255, 255, 255),rgb(196, 27, 27))',
+                        background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
                         border: 'none'
-                      } 
+                      }
                     }}>
                       <span>Branding</span>
                     </a>
@@ -232,12 +232,12 @@ export default function Home() {
                       display: 'inline-block',
                       backgroundColor: 'transparent',
                       color: '#fff',
-                      borderRadius: '5px',
+                      borderRadius: '12px',
                       transition: 'all 0.3s ease',
                       textDecoration: 'none',
                       fontWeight: '500',
-                      boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
-                      border: '1px solid #1d1d1d',
+                      boxShadow: '0 2px 5px rgba(78, 4, 4, 0.83)',
+                      border: '2px solid rgba(36, 19, 19, 0.28)',
                       '&:hover': {
                         background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
                         border: 'none'
@@ -267,17 +267,19 @@ export default function Home() {
                       display: 'inline-block',
                       backgroundColor: 'transparent',
                       color: '#fff',
-                      borderRadius: '5px',
+                      borderRadius: '12px',
                       transition: 'all 0.3s ease',
                       textDecoration: 'none',
                       fontWeight: '500',
-                      boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
-                      border: '1px solid #1d1d1d',
+                      boxShadow: '0 2px 5px rgba(78, 4, 4, 0.83)',
+                      border: '2px solid rgba(36, 19, 19, 0.28)',
                       '&:hover': {
                         background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
                         border: 'none'
                       }
-                    }}>
+                    }}
+                  
+                    >
                       <span>Studio</span>
                     </a>
                   </div>
