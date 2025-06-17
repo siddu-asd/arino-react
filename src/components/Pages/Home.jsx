@@ -206,9 +206,9 @@ export default function Home() {
                       boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
                       border: '1px solid #1d1d1d',
                       '&:hover': {
-                        background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
+                        background: 'linear-gradient(45deg,rgb(255, 255, 255),rgb(196, 27, 27))',
                         border: 'none'
-                      }
+                      } 
                     }}>
                       <span>Branding</span>
                     </a>
