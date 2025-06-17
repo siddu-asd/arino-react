@@ -8,7 +8,7 @@ import ServiceList from '../ServiceList';
 import PageHeading from '../PageHeading';
 
 export default function AboutPage() {
-  pageTitle('About');
+  pageTitle('Explore Our Space | Raising 100x');
 
   useEffect(() => {
     window.scrollTo(0, 0);
