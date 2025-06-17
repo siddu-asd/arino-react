@@ -7,7 +7,7 @@ export default function ContactInfoWidget({ withIcon, title }) {
       <ul className="cs-menu_widget cs-style1 cs-mp0">
         <li>
           {withIcon ? <span className='cs-accent_color'><Icon icon="material-symbols:add-call-rounded" /></span> : ''}
-          +91 73373 20100
+          <a href="tel:+917337320100">+91 73373 20100</a>
         </li>
         <li>
           {withIcon ? <span className='cs-accent_color'><Icon icon="mdi:envelope" /></span> : ''}
@@ -15,7 +15,7 @@ export default function ContactInfoWidget({ withIcon, title }) {
         </li>
         <li>
           {withIcon ? <span className='cs-accent_color'><Icon icon="mdi:map-marker" /></span> : ''}
-      Hyderabad   500008
+          Hyderabad  
         </li>
       </ul>
     </>

@@ -86,41 +86,14 @@ export default function ServicesPage() {
                   />
                   <Spacing lg='0' md='30' />
                 </Div>
-                {/* <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    title='Consultancy'
-                    link='/service/consultancy'
-                    src='/images/service_5.jpeg'
-                    alt='Service'
-                  />
-                  <Spacing lg='0' md='30'/>
-                </Div> */}
-                {/* <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    title='Creative Design'
-                    link='/service/creative-design'
-                    src='/images/service_6.jpeg'
-                    alt='Service'
-                  />
-                  <Spacing lg='0' md='30'/>
-                </Div> */}
+               
               </Div>
             </Div>
           </Div>
         </Div>
       </Div>
       <Spacing lg='150' md='80' />
-      {/* <Div className="container">
-        <SectionHeading
-          title='Providing best <br/>pricing for client'
-          subtitle='Pricing & Packaging'
-        />
-        <Spacing lg='85' md='40' />
-        <PricingTableList />
-      </Div> */}
+    
       <Spacing lg='125' md='55' />
       <TestimonialSlider />
       <Spacing lg='150' md='80' />

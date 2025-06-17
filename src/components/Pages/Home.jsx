@@ -120,16 +120,7 @@ export default function Home() {
         bgImageUrl="/images/hero_bg.jpeg"
       />
 
-      {/* <Hero
-        title="We don't just work <br />wonders<br />we make your brand<br />wonderful"
-
-        btnText="Get a Quote"
-        btnLink="/contact"
-        scrollDownId="#service"
-        socialLinksHeading="Follow Us"
-        heroSocialLinks={heroSocialLinks}
-        bgImageUrl="/images/hero_bg.jpeg"
-      /> */}
+  
 
       <div className="container">
         <FunFact
@@ -161,7 +152,33 @@ export default function Home() {
                     link='/service/creative-marketing'
                     src='/images/nhj.png'
                     alt='Creative Marketing'
+                    style={{
+                      '&:hover .cs-card_title': {
+                        opacity: 0
+                      }
+                    }}
                   />
+                  <div className="text-center mt-3">
+                    <a href="/service/creative-marketing" className="cs-btn cs-style1" style={{
+                      width: '100%',
+                      padding: '12px 25px',
+                      display: 'inline-block',
+                      backgroundColor: 'transparent',
+                      color: '#fff',
+                      borderRadius: '5px',
+                      transition: 'all 0.3s ease',
+                      textDecoration: 'none',
+                      fontWeight: '500',
+                      boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+                      border: '1px solid #1d1d1d',
+                      '&:hover': {
+                        background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
+                        border: 'none'
+                      }
+                    }}>
+                      <span>Creative Marketing</span>
+                    </a>
+                  </div>
                 </Div>
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6 mb-4 mb-sm-4'>
@@ -169,14 +186,66 @@ export default function Home() {
                     link='/service/branding'
                     src='/images/ge.png'
                     alt='Branding'
+                    style={{
+                      '&:hover .cs-card_title': {
+                        opacity: 0
+                      }
+                    }}
                   />
+                  <div className="text-center mt-3">
+                    <a href="/service/branding" className="cs-btn cs-style1" style={{
+                      width: '100%',
+                      padding: '12px 25px',
+                      display: 'inline-block',
+                      backgroundColor: 'transparent',
+                      color: '#fff',
+                      borderRadius: '5px',
+                      transition: 'all 0.3s ease',
+                      textDecoration: 'none',
+                      fontWeight: '500',
+                      boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+                      border: '1px solid #1d1d1d',
+                      '&:hover': {
+                        background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
+                        border: 'none'
+                      }
+                    }}>
+                      <span>Branding</span>
+                    </a>
+                  </div>
                 </Div>
                 <Div className='col-lg-3 col-sm-6 mb-4 mb-sm-4'>
                   <Card
                     link='/service/ai-technology'
                     src='/images/dm.png'
                     alt='AI & Technology'
+                    style={{
+                      '&:hover .cs-card_title': {
+                        opacity: 0
+                      }
+                    }}
                   />
+                  <div className="text-center mt-3">
+                    <a href="/service/ai-technology" className="cs-btn cs-style1" style={{
+                      width: '100%',
+                      padding: '12px 25px',
+                      display: 'inline-block',
+                      backgroundColor: 'transparent',
+                      color: '#fff',
+                      borderRadius: '5px',
+                      transition: 'all 0.3s ease',
+                      textDecoration: 'none',
+                      fontWeight: '500',
+                      boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+                      border: '1px solid #1d1d1d',
+                      '&:hover': {
+                        background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
+                        border: 'none'
+                      }
+                    }}>
+                      <span>AI & Technology</span>
+                    </a>
+                  </div>
                 </Div>
 
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
@@ -185,7 +254,33 @@ export default function Home() {
                     link='/service/studio'
                     src='/images/we.png'
                     alt='Studio'
+                    style={{
+                      '&:hover .cs-card_title': {
+                        opacity: 0
+                      }
+                    }}
                   />
+                  <div className="text-center mt-3">
+                    <a href="/service/studio" className="cs-btn cs-style1" style={{
+                      width: '100%',
+                      padding: '12px 25px',
+                      display: 'inline-block',
+                      backgroundColor: 'transparent',
+                      color: '#fff',
+                      borderRadius: '5px',
+                      transition: 'all 0.3s ease',
+                      textDecoration: 'none',
+                      fontWeight: '500',
+                      boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+                      border: '1px solid #1d1d1d',
+                      '&:hover': {
+                        background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
+                        border: 'none'
+                      }
+                    }}>
+                      <span>Studio</span>
+                    </a>
+                  </div>
                 </Div>
               </Div>
             </Div>
@@ -207,25 +302,7 @@ export default function Home() {
       </Div>
 
       <Spacing lg="150" md="80" />
-      {/* <Div className="cs-shape_wrap_2">
-        <Div className="cs-shape_2"><Div /></Div>
-        <Div className="container">
-          <Div className="row">
-            <Div className="col-xl-4">
-              <SectionHeading
-                title="We get multiple awards"
-                subtitle="Our Awards"
-                variant="cs-style1"
-              />
-              <Spacing lg="90" md="45" />
-            </Div>
-            <Div className="col-xl-7 offset-xl-1">
-              <TimelineSlider />
-            </Div>
-          </Div>
-        </Div>
-      </Div> */}
-
+    
       <Spacing lg="20" md="70" />
       <Div className="container" style={{position:'relative',zIndex:2}}>
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
@@ -237,8 +314,6 @@ export default function Home() {
           zIndex: 2, 
           maxWidth: '90%', 
           margin: '80px auto 0',
-          paddingTop: '50px',
-          paddingBottom: '30px',
           overflow: 'hidden' 
         }}>
           <VideoModal

@@ -100,13 +100,13 @@ export default function MarketingAgencyHome() {
 
       {/* Start FunFact Section */}
       <Spacing lg="150" md="80" />
-      <Div className="container">
+      {/* <Div className="container">
         <FunFact2
           data={funfaceData}
           variant="cs-no_shadow"
           bgUrl="/images/funfact_shape_bg.svg"
         />
-      </Div>
+      </Div> */}
       {/* End FunFact Section */}
 
       {/* Start Pricing Section */}

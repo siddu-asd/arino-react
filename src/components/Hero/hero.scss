@@ -696,6 +696,7 @@
     display: flex;
     align-items: center;
     max-height: 680px;
+    background-position: center top !important;
     .cs-hero_info {
       flex-direction: column-reverse;
       align-items: flex-start;
@@ -746,11 +747,23 @@
 }
 @media screen and (max-width: 575px) {
   .cs-hero.cs-style1 {
+    padding-top: 40px;
+    padding-bottom: 200px;
+    background-position: center top !important;
     .cs-hero_title {
       font-size: 42px;
       br {
         display: none;
       }
+    }
+    .cs-hero_info {
+      align-items: center;
+      text-align: center;
+    }
+    .cs-hero_subtitle {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   .cs-hero.cs-style2 {
@@ -763,6 +776,7 @@
     .cs-hero_tab_item .cs-hero_tab_img {
       width: 100%;
       opacity: 0.8;
+      background-position: top center ;
     }
   }
   .cs-hero.cs-style3 {

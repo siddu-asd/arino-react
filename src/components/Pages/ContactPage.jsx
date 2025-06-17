@@ -23,6 +23,8 @@ export default function ContactPage() {
   });
 
   const [successMessage, setSuccessMessage] = useState('');
+  const [showQueryOptions, setShowQueryOptions] = useState(false);
+  const [selectedQueries, setSelectedQueries] = useState([]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,6 +32,24 @@ export default function ContactPage() {
       ...prev,
       [name]: value,
     }));
+  };
+
+  const toggleQueryOption = (option) => {
+    setSelectedQueries(prev => {
+      if (prev.includes(option)) {
+        return prev.filter(item => item !== option);
+      } else {
+        return [...prev, option];
+      }
+    });
+  };
+
+  const confirmQueries = () => {
+    setFormData(prev => ({
+      ...prev,
+      query: selectedQueries.join(', ')
+    }));
+    setShowQueryOptions(false);
   };
 
   const handleSubmit = async (e) => {
@@ -50,7 +70,7 @@ export default function ContactPage() {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      JSON.parse(text); // Ensure the response is valid JSON
+      JSON.parse(text); // Ensure it's valid JSON
       setSuccessMessage('✅ Message sent successfully!');
       setFormData({
         name: '',
@@ -63,6 +83,115 @@ export default function ContactPage() {
       console.error('Error sending message:', error);
       setSuccessMessage('❌ Something went wrong. Please try again later.');
     }
+  };
+
+  const queryOptions = ['Partnership', 'Support', 'Feedback', 'Hiring Inquiry', 'General Question', 'Technical Issue', 'Billing', 'Product Demo'];
+
+  // Updated styles
+  const styles = {
+    queryWrapper: {
+      position: 'relative',
+      '@media (max-width: 768px)': {
+        width: '100%',
+      }
+    },
+    overlay: {
+      position: 'absolute',
+      top: '100%',
+      left: '0',
+      width: '150%',
+      backgroundColor: 'rgba(0, 0, 0, 0.85)',
+      backdropFilter: 'blur(10px)',
+      border: '1px solid rgba(255, 255, 255, 0.1)',
+      borderRadius: '12px',
+      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
+      padding: '20px',
+      marginTop: '5px',
+      zIndex: 10,
+      '@media (max-width: 768px)': {
+        width: '100%',
+        left: '0',
+        right: '0',
+        position: 'fixed',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        maxHeight: '80vh',
+        overflowY: 'auto',
+        margin: '0',
+        borderRadius: '16px',
+        display: 'flex',
+        flexDirection: 'column',
+        paddingBottom: '80px',
+      }
+    },
+    optionsGrid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(3, 1fr)',
+      gap: '15px',
+      marginBottom: '20px',
+      '@media (max-width: 768px)': {
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        gap: '10px',
+        marginBottom: '10px',
+      },
+      '@media (max-width: 480px)': {
+        gridTemplateColumns: '1fr',
+      }
+    },
+    optionButton: {
+      padding: '12px 16px',
+      background: 'rgba(255, 255, 255, 0.1)',
+      border: '1px solid rgba(255, 255, 255, 0.2)',
+      borderRadius: '8px',
+      textAlign: 'left',
+      cursor: 'pointer',
+      fontSize: '14px',
+      transition: 'all 0.3s ease',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '8px',
+      color: '#fff',
+      '@media (max-width: 768px)': {
+        padding: '15px',
+        fontSize: '16px',
+      }
+    },
+    optionButtonSelected: {
+      background: 'rgba(0, 123, 255, 0.3)',
+      border: '1px solid rgba(0, 123, 255, 0.5)',
+      color: '#fff',
+    },
+    confirmButton: {
+      width: '100%',
+      padding: '12px',
+      background: 'rgba(0, 123, 255, 0.8)',
+      color: '#fff',
+      border: 'none',
+      borderRadius: '8px',
+      cursor: 'pointer',
+      fontSize: '16px',
+      fontWeight: '500',
+      transition: 'all 0.3s ease',
+      '@media (max-width: 768px)': {
+        padding: '12px 20px',
+        fontSize: '16px',
+        borderRadius: '12px',
+        background: 'rgba(0, 123, 255, 0.95)',
+        backdropFilter: 'blur(10px)',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
+        position: 'fixed',
+        bottom: '20px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        width: '65%',
+        maxWidth: '250px',
+      }
+    },
+    confirmButtonHover: {
+      background: 'rgba(0, 86, 179, 0.9)',
+    },
   };
 
   return (
@@ -112,19 +241,68 @@ export default function ContactPage() {
                 />
                 <Spacing lg="20" md="20" />
               </Div>
-              <Div className="col-sm-6">
-                <label className="cs-primary_color">What can we help you with?</label>
+
+              {/* Updated Query Field with Overlay Dropdown */}
+              <Div className="col-sm-6" style={styles.queryWrapper}>
+                <label className="cs-primary_color" style={{ 
+                  fontSize: '16px', 
+                  fontWeight: '500',
+                  marginBottom: '10px',
+                  display: 'block',
+                  height: '24px',
+                  lineHeight: '24px'
+                }}>What can we help you with?</label>
                 <input
                   type="text"
                   className="cs-form_field"
                   name="query"
                   value={formData.query}
                   onChange={handleChange}
+                  onFocus={() => setShowQueryOptions(true)}
+                  readOnly
+                  required
                 />
+                {showQueryOptions && (
+                  <div style={styles.overlay}>
+                    <div style={styles.optionsGrid}>
+                      {queryOptions.map((option) => (
+                        <button
+                          key={option}
+                          type="button"
+                          style={{
+                            ...styles.optionButton,
+                            ...(selectedQueries.includes(option) ? styles.optionButtonSelected : {})
+                          }}
+                          onClick={() => toggleQueryOption(option)}
+                        >
+                          {selectedQueries.includes(option) && (
+                            <Icon icon="mdi:check" style={{ fontSize: '18px' }} />
+                          )}
+                          {option}
+                        </button>
+                      ))}
+                    </div>
+                    <button
+                      type="button"
+                      style={styles.confirmButton}
+                      onClick={confirmQueries}
+                    >
+                      Confirm Selection
+                    </button>
+                  </div>
+                )}
                 <Spacing lg="20" md="20" />
               </Div>
+
               <Div className="col-sm-6">
-                <label className="cs-primary_color">Let's connect, where should we ring?</label>
+                <label className="cs-primary_color" style={{ 
+                  fontSize: '16px', 
+                  fontWeight: '500',
+                  marginBottom: '10px',
+                  display: 'block',
+                  height: '24px',
+                  lineHeight: '24px'
+                }}>Let's connect, where should we ring?</label>
                 <input
                   type="text"
                   className="cs-form_field"
@@ -181,4 +359,3 @@ export default function ContactPage() {
     </>
   );
 }
-  

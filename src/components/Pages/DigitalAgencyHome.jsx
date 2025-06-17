@@ -159,11 +159,11 @@ export default function DigitalAgencyHome() {
 
       {/* Start Funfact Section */}
       <Div className="container">
-        <FunFact2
+        {/* <FunFact2
           data={funfaceData}
           variant="cs-type1"
           bgUrl="/images/funfact_shape_bg.svg"
-        />
+        /> */}
       </Div>
       {/* End Funfact Section */}
 
