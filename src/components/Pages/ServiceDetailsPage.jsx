@@ -11,6 +11,8 @@ import Spacing from '../Spacing';
 import Portfolio from '../Portfolio';
 import { Icon } from '@iconify/react';
 import PageHeading from '../PageHeading';
+import { Link } from 'react-router-dom';
+import '../Portfolio/portfolio.scss';
 
 const servicesData = {
   'creative-marketing': {
@@ -327,7 +329,7 @@ export default function ServiceDetailsPage() {
                 >
                   <Portfolio
                     title={item.title}
-                    subtitle={item.subtitle}
+                    subtitle={`${item.location} • ${item.software}`}
                     href="#"
                     src={item.src}
                     variant="cs-style1 cs-type1"
@@ -360,23 +362,84 @@ export default function ServiceDetailsPage() {
             <Spacing lg="60" md="40" />
             <Div className="container">
               <Div className="row">
-                {[1, 2, 3].map((index) => (
+                {[
+                  {
+                    image: "/images/branding1.jpg",
+                    pdf: "/downloads/Raising100x.pdf",
+                    title: "Latest Branding"
+                  },
+                  {
+                    image: "/images/branding2.jpg",
+                    pdf: "/downloads/brandingDemo1.pdf",
+                    title: "Branding"
+                  },
+                  {
+                    image: "/images/branding3.jpg",
+                     pdf: "/downloads/brandingDemo2.pdf",
+                    title: "Branding Design"
+                  },
+                  {
+                    image: "/images/branding2.jpg",
+                    pdf: "/downloads/brandingDemo1.pdf",
+                    title: "Branding"
+                  },
+                  {
+                    image: "/images/branding2.jpg",
+                    pdf: "/downloads/brandingDemo1.pdf",
+                    title: "Branding"
+                  },
+                  {
+                    image: "/images/branding2.jpg",
+                    pdf: "/downloads/brandingDemo1.pdf",
+                    title: "Branding"
+                  },
+                ].map((item, index) => (
                   <Div className="col-lg-4" key={index}>
-                    <Div className="hover-image-container">
-                      <img 
-                        src={`/images/branding${index}.jpg`} 
-                        alt={`Branding Image ${index}`} 
-                        className="hover-image"
+                    <Link
+                      to="#"
+                      className="cs-portfolio cs-bg cs-style1 branding-portfolio"
+                    >
+                      <Div className="cs-portfolio_hover" />
+                      <Div
+                        className="cs-portfolio_bg cs-bg"
+                        style={{ 
+                          backgroundImage: `url("${item.image}")`,
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center',
+                          transition: 'transform 0.3s ease'
+                        }}
                       />
-               
-                    </Div>
+                      <Div className="cs-portfolio_info">
+                        <Div className="cs-portfolio_info_bg cs-accent_bg" />
+                        <h2 className="cs-portfolio_title">{item.title}</h2>
+                        <Div className="cs-portfolio_actions">
+                          <a 
+                            href={item.pdf}
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="cs-portfolio_action-btn preview-btn"
+                            onClick={(e) => e.stopPropagation()}
+                        
+                          >
+                            <Icon icon="mdi:eye" />
+                          </a>
+                          <a 
+                            href={item.pdf}
+                            download
+                            className="cs-portfolio_action-btn download-btn"
+                            onClick={(e) => e.stopPropagation()}
+                          
+                          >
+                            <Icon icon="mdi:download" />
+                          </a>
+                        </Div>
+                      </Div>
+                    </Link>
                     <Spacing lg="25" md="25" />
                   </Div>
                 ))}
               </Div>
             </Div>
-
-           
           </>
         )}
 

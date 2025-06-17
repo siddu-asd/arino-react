@@ -9,6 +9,180 @@
     margin-bottom: 15px;
   }
 }
+.cs-portfolio {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 15px;
+  height: 400px;
+  
+  &:hover {
+    .cs-portfolio_bg {
+      transform: scale(1.1);
+    }
+    
+    .cs-portfolio_info {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .cs-portfolio_hover {
+      opacity: 0.9;
+    }
+  }
+}
+.cs-portfolio_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+.cs-portfolio_hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.cs-portfolio_info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+  text-align: left;
+}
+.cs-portfolio_info_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+.cs-portfolio_title {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 0 15px;
+  position: relative;
+  z-index: 1;
+}
+.cs-portfolio_subtitle {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+.cs-portfolio_actions {
+  display: flex;
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+  padding-top: 10px;
+}
+.cs-portfolio_action-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+
+    &::after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+.preview-btn {
+  &:hover {
+    background: rgba(0, 123, 255, 0.3);
+  }
+}
+.download-btn {
+  &:hover {
+    background: rgba(40, 167, 69, 0.3);
+  }
+}
+.cs-plus {
+  display: none;
+}
+.cs-portfolio:not(.branding-portfolio) .cs-plus {
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    transform: translate(-50%, -50%);
+  }
+  
+  &:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+.cs-portfolio:not(.branding-portfolio):hover .cs-plus {
+  opacity: 1;
+}
 .cs-portfolio.cs-style1 {
   border-radius: 15px;
   overflow: hidden;

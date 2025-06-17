@@ -13,7 +13,12 @@ export default function Portfolio({ href, src, title, subtitle, variant }) {
         <Div className="cs-portfolio_hover" />
         <Div
           className="cs-portfolio_bg cs-bg"
-          style={{ backgroundImage: `url("${src}")` }}
+          style={{ 
+            backgroundImage: `url("${src}")`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            transition: 'transform 0.3s ease'
+          }}
         />
         <Div className="cs-portfolio_info">
           <Div className="cs-portfolio_info_bg cs-accent_bg" />
