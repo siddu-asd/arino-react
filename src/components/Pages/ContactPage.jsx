@@ -104,7 +104,7 @@ export default function ContactPage() {
       position: 'absolute',
       top: '100%',
       left: '0',
-      width: '150%',
+      width: '180%',
       backgroundColor: 'rgba(0, 0, 0, 0.85)',
       backdropFilter: 'blur(10px)',
       border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -160,7 +160,7 @@ export default function ContactPage() {
       }
     },
     optionButton: {
-      padding: '12px 16px',
+      padding: '10px 12px',
       background: 'rgba(255, 255, 255, 0.1)',
       border: '1px solid rgba(255, 255, 255, 0.2)',
       borderRadius: '8px',
