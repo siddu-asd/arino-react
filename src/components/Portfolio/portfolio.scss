@@ -187,7 +187,7 @@
   border-radius: 15px;
   overflow: hidden;
   position: relative;
-  height: 500px;
+  height: 320px;
   display: block;
   position: relative;
   .cs-portfolio_hover {
@@ -439,6 +439,116 @@
 .cs-page_navigation > * {
   display: flex;
 }
+
+// Mobile-specific styles for portfolio
+@media screen and (max-width: 768px) {
+  .cs-portfolio {
+    // Show info on mobile when active
+    &.mobile-active {
+      .cs-portfolio_info {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      
+      .cs-portfolio_hover {
+        opacity: 0.9 !important;
+      }
+      
+      .cs-portfolio_bg {
+        transform: scale(1.05);
+      }
+    }
+    
+    // Improve touch targets
+    .cs-portfolio_action-btn {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      min-height: 44px;
+      
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    
+    // Better spacing for mobile
+    .cs-portfolio_actions {
+      gap: 12px;
+      padding-top: 15px;
+    }
+    
+    // Adjust info positioning for mobile
+    .cs-portfolio_info {
+      padding: 20px;
+      border-radius: 10px;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      width: auto;
+      height: auto;
+    }
+    
+    .cs-portfolio_title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  // Special handling for branding portfolio on mobile
+  .branding-portfolio {
+    &.mobile-active {
+      .cs-portfolio_info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        border-radius: 0 0 15px 15px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.8);
+      }
+      
+      .cs-portfolio_info_bg {
+        border-radius: 0 0 15px 15px;
+      }
+    }
+  }
+}
+
+// Touch device optimizations
+@media (hover: none) and (pointer: coarse) {
+  .cs-portfolio {
+    // Remove hover effects on touch devices
+    &:hover {
+      .cs-portfolio_bg {
+        transform: none;
+      }
+      
+      .cs-portfolio_info {
+        opacity: 0;
+        visibility: hidden;
+      }
+      
+      .cs-portfolio_hover {
+        opacity: 0;
+      }
+    }
+    
+    // Show info only when active
+    &.mobile-active {
+      .cs-portfolio_info {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      
+      .cs-portfolio_hover {
+        opacity: 0.9 !important;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1540px) {
   .cs-portfolio.cs-style1 {
     height: 450px;
@@ -536,6 +646,33 @@
     margin: 0px 0 0 -20px;
     font-size: 32px;
   }
+  
+  // Additional mobile optimizations
+  .cs-portfolio {
+    .cs-portfolio_info {
+      padding: 15px;
+    }
+    
+    .cs-portfolio_title {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    
+    .cs-portfolio_actions {
+      gap: 8px;
+      padding-top: 10px;
+    }
+    
+    .cs-portfolio_action-btn {
+      width: 40px;
+      height: 40px;
+      
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
 }
 .cs_portfolio_grid_2 {
   display: grid;
@@ -551,3 +688,42 @@
     border-radius: 0;
   }
 }
+
+// @media screen and (max-width: 575px) {
+//   .cs-portfolio_info {
+//     position: static !important;  // Avoid overlap or collapsing
+//     height: auto !important;
+//     width: 100%;
+//     padding: 15px 10px !important;
+//     display: block !important;
+//     background-color: #fff; // optional for contrast
+//     border-radius: 0;
+//   }
+
+//   .cs-portfolio_actions {
+//     margin-top: 10px;
+//     display: flex;
+//     gap: 10px;
+//   }
+
+//   .cs-portfolio_title {
+//     font-size: 18px !important;
+//     margin-bottom: 10px;
+//   }
+
+//   .cs-portfolio_bg img {
+//     max-width: 100%;
+//     height: auto;
+//     object-fit: contain;
+//   }
+// }
+// .cs-portfolio_action-btn {
+//   padding: 8px 12px;
+//   font-size: 18px;
+//   border-radius: 6px;
+//   background: rgba(0, 0, 0, 0.05);
+//   transition: background 0.3s ease;
+//   &:hover {
+//     background: rgba(0, 0, 0, 0.15);
+//   }
+// }

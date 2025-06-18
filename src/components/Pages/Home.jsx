@@ -21,7 +21,7 @@ const heroSocialLinks = [
 
 
 const portfolioData = [
-  
+
   {
     title: 'Logo Design',
     src: '/images/logo mockup jpeg.jpg',
@@ -44,7 +44,7 @@ const portfolioData = [
   //   client: 'Dr. Nagarjuna',
   // },
   {
-  title: 'Marketing Materials',
+    title: 'Marketing Materials',
     src: '/images/branding1.png',
     category: 'web_design',
 
@@ -53,8 +53,8 @@ const portfolioData = [
     date: '31-March-2025',
     client: 'Dr. Nagarjuna',
   },
-   {
-     title: 'Out-of-home Advertising',
+  {
+    title: 'Out-of-home Advertising',
     src: '/images/nazaracm.jpg',
     category: 'web_design',
 
@@ -63,7 +63,7 @@ const portfolioData = [
     date: '31-March-2025',
     client: 'Dr. Nagarjuna',
   },
-   {
+  {
     title: 'Studio Designing Interface',
     src: '/images/ls.jpg',
 
@@ -74,9 +74,9 @@ const portfolioData = [
   },
 
   {
-       title: 'Professional Photo Studio',
-      src: '/images/studio1.jpg',
-      category: 'branding_company',
+    title: 'Professional Photo Studio',
+    src: '/images/studio1.jpg',
+    category: 'branding_company',
 
     location: 'United Kingdom',
     software: 'Adobe Illustrator',
@@ -84,8 +84,8 @@ const portfolioData = [
     client: 'Andreo Bowla',
   },
   {
-     title: 'UI/UX Interface ',
-      src: '/images/socialMedia.jpg',
+    title: 'UI/UX Interface ',
+    src: '/images/socialMedia.jpg',
     category: 'web_design',
 
     location: 'Hyderabad',
@@ -120,7 +120,7 @@ export default function Home() {
         bgImageUrl="/images/hero_bg.jpeg"
       />
 
-  
+
 
       <div className="container">
         <FunFact
@@ -176,7 +176,7 @@ export default function Home() {
                         border: 'none'
                       }
                     }}>
-                      <span>Creative Marketing</span>
+                      <span>See More</span>
                     </a>
                   </div>
                 </Div>
@@ -203,14 +203,14 @@ export default function Home() {
                       transition: 'all 0.3s ease',
                       textDecoration: 'none',
                       fontWeight: '500',
-                     boxShadow: '0 2px 5px rgba(78, 4, 4, 0.83)',
+                      boxShadow: '0 2px 5px rgba(78, 4, 4, 0.83)',
                       border: '2px solid rgba(36, 19, 19, 0.28)',
                       '&:hover': {
                         background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
                         border: 'none'
                       }
                     }}>
-                      <span>Branding</span>
+                      <span>See More</span>
                     </a>
                   </div>
                 </Div>
@@ -243,7 +243,7 @@ export default function Home() {
                         border: 'none'
                       }
                     }}>
-                      <span>AI & Technology</span>
+                      <span>See More</span>
                     </a>
                   </div>
                 </Div>
@@ -278,9 +278,9 @@ export default function Home() {
                         border: 'none'
                       }
                     }}
-                  
+
                     >
-                      <span>Studio</span>
+                      <span>See More</span>
                     </a>
                   </div>
                 </Div>
@@ -304,19 +304,19 @@ export default function Home() {
       </Div>
 
       <Spacing lg="150" md="80" />
-    
+
       <Spacing lg="20" md="70" />
-      <Div className="container" style={{position:'relative',zIndex:2}}>
+      <Div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
           Ideas That Refuse To Be Confined And< br /> Creativity That Spills Beyond Every Boundary
         </h2>
         <Spacing lg="70" md="70" />
-        <Div className="cs-video_wrap" style={{ 
-          position: 'relative', 
-          zIndex: 2, 
-          maxWidth: '90%', 
+        <Div className="cs-video_wrap" style={{
+          position: 'relative',
+          zIndex: 2,
+          maxWidth: '90%',
           margin: '80px auto 0',
-          overflow: 'hidden' 
+          overflow: 'hidden'
         }}>
           <VideoModal
             videoSrc="/video/raising100xvideo.MP4"
@@ -335,10 +335,10 @@ export default function Home() {
         <Spacing lg="85" md="45" />
         <TeamSlider />
       </Div> */}
-      
-      <Div className="container" style={{position:'relative',zIndex:1}}>    
-          <TestimonialSlider />
-          </Div>
+
+      <Div className="container" style={{ position: 'relative', zIndex: 1 }}>
+        <TestimonialSlider />
+      </Div>
       <Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>

@@ -215,9 +215,21 @@ const categoryMenu = [
 export default function ServiceDetailsPage() {
   pageTitle('Service Details');
   const { serviceDetailsId } = useParams();
+  const [isMobile, setIsMobile] = useState(false);
+  const [activePortfolioIndex, setActivePortfolioIndex] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Check if device is mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   const service = servicesData[serviceDetailsId];
@@ -232,6 +244,12 @@ export default function ServiceDetailsPage() {
 
   const portfolioHeading = portfolioHeadings[serviceDetailsId] || 'Our Portfolio';
   const portfolioData = portfolioDataByService[serviceDetailsId] || [];
+
+  const handlePortfolioClick = (index) => {
+    if (isMobile) {
+      setActivePortfolioIndex(activePortfolioIndex === index ? null : index);
+    }
+  };
 
   if (!service) {
     return (
@@ -359,7 +377,13 @@ export default function ServiceDetailsPage() {
 
         {serviceDetailsId === 'branding' && (
           <>
-            <Spacing lg="60" md="40" />
+            <Spacing lg="100" md="70" />
+             <SectionHeading
+            title="OUR BRANDING SAMPLES"
+            subtitle=""
+            variant="cs-style1 text-center"
+          />
+           <Spacing lg="90" md="45" />
             <Div className="container">
               <Div className="row">
                 {[
@@ -379,8 +403,8 @@ export default function ServiceDetailsPage() {
                     title: "Branding Design"
                   },
                   {
-                    image: "/images/c4.jpg",
-                    pdf: "/downloads/brandingDemo4.pdf",
+                    image: "/images/raising100x.jpg",
+                    pdf: "/downloads/Raising100x.pdf",
                     title: "Branding"
                   },
                   {
@@ -397,18 +421,35 @@ export default function ServiceDetailsPage() {
                   <Div className="col-lg-4" key={index}>
                     <Link
                       to="#"
-                      className="cs-portfolio cs-bg cs-style1 branding-portfolio"
+                      className={`cs-portfolio cs-bg cs-style1 branding-portfolio ${isMobile && activePortfolioIndex === index ? 'mobile-active' : ''}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handlePortfolioClick(index);
+                      }}
                     >
                       <Div className="cs-portfolio_hover" />
                       <Div
-                        className="cs-portfolio_bg cs-bg"
-                        style={{ 
-                          backgroundImage: `url("${item.image}")`,
-                          backgroundSize: 'cover',
-                          backgroundPosition: 'center',
-                          transition: 'transform 0.3s ease'
-                        }}
-                      />
+                      className="cs-portfolio_bg cs-bg"
+                  style={{
+                  height: '260px',
+                  width: '100%',
+                  overflow: 'hidden',
+                  display: 'flex',
+                 alignItems: 'center',
+                  justifyContent: 'center',
+                  paddingTop: '10px'
+                  }}
+                  >
+                 <img
+                   src={item.image}
+                    alt={item.title}
+                   style={{
+                  maxWidth: '100%',
+                  maxHeight: '100%',
+                objectFit: 'contain'
+                }}
+                 />
+              </Div>
                       <Div className="cs-portfolio_info">
                         <Div className="cs-portfolio_info_bg cs-accent_bg" />
                         <h2 className="cs-portfolio_title">{item.title}</h2>
@@ -435,7 +476,7 @@ export default function ServiceDetailsPage() {
                         </Div>
                       </Div>
                     </Link>
-                    <Spacing lg="25" md="25" />
+                    <Spacing lg="4" md="25" />
                   </Div>
                 ))}
               </Div>
@@ -443,7 +484,7 @@ export default function ServiceDetailsPage() {
           </>
         )}
 
-        <Spacing lg="150" md="80" />
+        
         <TestimonialSlider />
         <Spacing lg="145" md="80" />
         <Div className="container cs-shape_wrap_4">
