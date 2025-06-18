@@ -364,34 +364,34 @@ export default function ServiceDetailsPage() {
               <Div className="row">
                 {[
                   {
-                    image: "/images/branding1.jpg",
-                    pdf: "/downloads/Raising100x.pdf",
+                    image: "/images/c1.jpg",
+                    pdf: "/downloads/brandingDemo1.pdf",
                     title: "Latest Branding"
                   },
                   {
-                    image: "/images/branding2.jpg",
-                    pdf: "/downloads/brandingDemo1.pdf",
+                    image: "/images/c2.jpg",
+                    pdf: "/downloads/brandingDemo2.pdf",
                     title: "Branding"
                   },
                   {
-                    image: "/images/branding3.jpg",
-                     pdf: "/downloads/brandingDemo2.pdf",
+                    image: "/images/c3.jpg",
+                     pdf: "/downloads/brandingDemo3.pdf",
                     title: "Branding Design"
                   },
                   {
-                    image: "/images/branding2.jpg",
-                    pdf: "/downloads/brandingDemo1.pdf",
+                    image: "/images/c4.jpg",
+                    pdf: "/downloads/brandingDemo4.pdf",
                     title: "Branding"
                   },
                   {
-                    image: "/images/branding2.jpg",
-                    pdf: "/downloads/brandingDemo1.pdf",
-                    title: "Branding"
+                    image: "/images/c6.jpg",
+                    pdf: "/downloads/brandingDemo6.pdf",
+                    title: "Design"
                   },
                   {
-                    image: "/images/branding2.jpg",
-                    pdf: "/downloads/brandingDemo1.pdf",
-                    title: "Branding"
+                    image: "/images/c8.jpg",
+                    pdf: "/downloads/brandingDemo8.pdf",
+                    title: "Branding Design"
                   },
                 ].map((item, index) => (
                   <Div className="col-lg-4" key={index}>
