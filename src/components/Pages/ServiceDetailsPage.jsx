@@ -215,21 +215,10 @@ const categoryMenu = [
 export default function ServiceDetailsPage() {
   pageTitle('Service Details');
   const { serviceDetailsId } = useParams();
-  const [isMobile, setIsMobile] = useState(false);
-  const [activePortfolioIndex, setActivePortfolioIndex] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    
-    // Check if device is mobile
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   const service = servicesData[serviceDetailsId];
@@ -245,10 +234,13 @@ export default function ServiceDetailsPage() {
   const portfolioHeading = portfolioHeadings[serviceDetailsId] || 'Our Portfolio';
   const portfolioData = portfolioDataByService[serviceDetailsId] || [];
 
-  const handlePortfolioClick = (index) => {
-    if (isMobile) {
-      setActivePortfolioIndex(activePortfolioIndex === index ? null : index);
-    }
+  // Handle hover for mobile devices
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
   };
 
   if (!service) {
@@ -421,11 +413,9 @@ export default function ServiceDetailsPage() {
                   <Div className="col-lg-4" key={index}>
                     <Link
                       to="#"
-                      className={`cs-portfolio cs-bg cs-style1 branding-portfolio ${isMobile && activePortfolioIndex === index ? 'mobile-active' : ''}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handlePortfolioClick(index);
-                      }}
+                      className={`cs-portfolio cs-bg cs-style1 branding-portfolio ${hoveredIndex === index ? 'hovered' : ''}`}
+                      onMouseEnter={() => handleMouseEnter(index)}
+                      onMouseLeave={handleMouseLeave}
                     >
                       <Div className="cs-portfolio_hover" />
                       <Div

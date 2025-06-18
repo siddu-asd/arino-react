@@ -444,19 +444,23 @@
 // Mobile-specific styles for portfolio
 @media screen and (max-width: 768px) {
   .cs-portfolio {
-    // Show info on mobile when active
-    &.mobile-active {
+    // Force hover effects to work on mobile
+    &:hover,
+    &:focus,
+    &:active {
+      .cs-portfolio_bg {
+        transform: scale(1.1);
+      }
+      
       .cs-portfolio_info {
         opacity: 1 !important;
         visibility: visible !important;
+        transform: translateY(0) !important;
+        z-index: 10;
       }
       
       .cs-portfolio_hover {
         opacity: 0.9 !important;
-      }
-      
-      .cs-portfolio_bg {
-        transform: scale(1.05);
       }
     }
     
@@ -488,6 +492,8 @@
       right: 10px;
       width: auto;
       height: auto;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
     }
     
     .cs-portfolio_title {
@@ -498,7 +504,9 @@
   
   // Special handling for branding portfolio on mobile
   .branding-portfolio {
-    &.mobile-active {
+    &:hover,
+    &:focus,
+    &:active {
       .cs-portfolio_info {
         position: absolute;
         bottom: 0;
@@ -508,6 +516,8 @@
         border-radius: 0 0 15px 15px;
         padding: 20px;
         background: rgba(0, 0, 0, 0.8);
+        transform: translateY(0) !important;
+        z-index: 10;
       }
       
       .cs-portfolio_info_bg {
@@ -517,35 +527,67 @@
   }
 }
 
-// Touch device optimizations
+// Force hover effects on touch devices
 @media (hover: none) and (pointer: coarse) {
   .cs-portfolio {
-    // Remove hover effects on touch devices
-    &:hover {
+    // Override touch device behavior to enable hover
+    &:hover,
+    &:focus,
+    &:active,
+    &.hovered {
       .cs-portfolio_bg {
-        transform: none;
+        transform: scale(1.1) !important;
       }
       
-      .cs-portfolio_info {
-        opacity: 0;
-        visibility: hidden;
-      }
-      
-      .cs-portfolio_hover {
-        opacity: 0;
-      }
-    }
-    
-    // Show info only when active
-    &.mobile-active {
       .cs-portfolio_info {
         opacity: 1 !important;
         visibility: visible !important;
+        transform: translateY(0) !important;
+        z-index: 10 !important;
       }
       
       .cs-portfolio_hover {
         opacity: 0.9 !important;
       }
+    }
+  }
+}
+
+// Additional styles for the hovered class on mobile
+@media screen and (max-width: 768px) {
+  .cs-portfolio.hovered {
+    .cs-portfolio_bg {
+      transform: scale(1.1) !important;
+    }
+    
+    .cs-portfolio_info {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
+      z-index: 10 !important;
+    }
+    
+    .cs-portfolio_hover {
+      opacity: 0.9 !important;
+    }
+  }
+  
+  .branding-portfolio.hovered {
+    .cs-portfolio_info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      border-radius: 0 0 15px 15px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      transform: translateY(0) !important;
+      z-index: 10 !important;
+    }
+    
+    .cs-portfolio_info_bg {
+      border-radius: 0 0 15px 15px;
     }
   }
 }
@@ -673,6 +715,34 @@
         height: 18px;
       }
     }
+    
+    // Ensure hover works on mobile
+    &:hover {
+      .cs-portfolio_info {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+        z-index: 10;
+      }
+      
+      .cs-portfolio_hover {
+        opacity: 0.9 !important;
+      }
+    }
+    
+    // Also work on focus for better accessibility
+    &:focus {
+      .cs-portfolio_info {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+        z-index: 10;
+      }
+      
+      .cs-portfolio_hover {
+        opacity: 0.9 !important;
+      }
+    }
   }
 }
 .cs_portfolio_grid_2 {
@@ -728,3 +798,5 @@
 //     background: rgba(0, 0, 0, 0.15);
 //   }
 // }
+
+
