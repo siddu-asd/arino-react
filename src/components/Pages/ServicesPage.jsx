@@ -63,7 +63,7 @@ export default function ServicesPage() {
                         border: 'none'
                       }
                     }}>
-                      <span>Creative Marketing</span>
+                      <span>Dive Deep</span>
                     </a>
                   </div>
                   <Spacing lg='0' md='30' />
@@ -93,7 +93,7 @@ export default function ServicesPage() {
                         border: 'none'
                       }
                     }}>
-                      <span>Branding</span>
+                      <span>Dive Deep</span>
                     </a>
                   </div>
                   <Spacing lg='0' md='30' />
@@ -122,7 +122,7 @@ export default function ServicesPage() {
                         border: 'none'
                       }
                     }}>
-                      <span>AI & Technology</span>
+                      <span>Dive Deep</span>
                     </a>
                   </div>
                   <Spacing lg='0' md='30' />
@@ -153,7 +153,7 @@ export default function ServicesPage() {
                         border: 'none'
                       }
                     }}>
-                      <span>Studio</span>
+                      <span>Dive Deep</span>
                     </a>
                   </div>
                   <Spacing lg='0' md='30' />

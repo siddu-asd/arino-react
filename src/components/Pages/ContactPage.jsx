@@ -86,8 +86,8 @@ export default function ContactPage() {
   };
 
   const queryOptions = [
-    'Branding ', 'Digital Marketing ', 'Packaging ', 'Account Management', 
-    'Website Development ', 'Content Creation General', 
+    'Branding ', 'Digital Marketing ', 'Packaging ', 
+    'Website Development ', 'Content Creation ', 
     'Social Media Management', 'Logo Designing ', 'AI Chatbot Development', 
     'Product Photoshoot ', 'Ad-film ', 'SEO' ,'Others',
   ];
@@ -355,7 +355,7 @@ export default function ContactPage() {
                       }}
                       onClick={confirmQueries}
                     >
-                      Dive Deep
+                      Confirm 
                     </button>
                   </div>
                 )}

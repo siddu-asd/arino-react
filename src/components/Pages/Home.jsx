@@ -176,7 +176,7 @@ export default function Home() {
                         border: 'none'
                       }
                     }}>
-                      <span>See More</span>
+                      <span>Dive Deep</span>
                     </a>
                   </div>
                 </Div>
@@ -210,7 +210,7 @@ export default function Home() {
                         border: 'none'
                       }
                     }}>
-                      <span>See More</span>
+                      <span>Dive Deep</span>
                     </a>
                   </div>
                 </Div>
@@ -243,7 +243,7 @@ export default function Home() {
                         border: 'none'
                       }
                     }}>
-                      <span>See More</span>
+                      <span>Dive Deep</span>
                     </a>
                   </div>
                 </Div>
@@ -280,7 +280,7 @@ export default function Home() {
                     }}
 
                     >
-                      <span>See More</span>
+                      <span> Dive Deep</span>
                     </a>
                   </div>
                 </Div>
