@@ -174,7 +174,7 @@ export default function AboutPage() {
       <Spacing lg="120" md="50" />
 
       {/* Start Team Section */}
-      <Spacing lg="145" md="80" />
+      {/* <Spacing lg="145" md="80" /> */}
       {/* <Div className="container">
         <SectionHeading
           title="People Who Make It Possible"

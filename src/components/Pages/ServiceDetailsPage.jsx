@@ -456,7 +456,7 @@ export default function ServiceDetailsPage() {
                           </a>
                           <a 
                             href={item.pdf}
-                            download
+                            download 
                             className="cs-portfolio_action-btn download-btn"
                             onClick={(e) => e.stopPropagation()}
                           

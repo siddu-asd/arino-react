@@ -86,10 +86,10 @@ export default function ContactPage() {
   };
 
   const queryOptions = [
-    'Partnership', 'Support', 'Feedback', 'Account Management', 
-    'Hiring', 'General', 'Technical', 
-    'Billing', 'Product Demo', 'Consultation', 
-    'Training', 'Integration', 'Custom Dev'
+    'Branding ', 'Digital Marketing ', 'Packaging ', 'Account Management', 
+    'Website Development ', 'Content Creation General', 
+    'Social Media Management', 'Logo Designing ', 'AI Chatbot Development', 
+    'Product Photoshoot ', 'Ad-film ', 'SEO' ,'Others',
   ];
 
   // Updated styles
@@ -104,7 +104,7 @@ export default function ContactPage() {
       position: 'absolute',
       top: '100%',
       left: '0',
-      width: '180%',
+      width: '220%',
       backgroundColor: 'rgba(0, 0, 0, 0.85)',
       backdropFilter: 'blur(10px)',
       border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -232,6 +232,21 @@ export default function ContactPage() {
 
   return (
     <>
+      {/* Overlay for query options */}
+      {showQueryOptions && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            background: 'rgba(0,0,0,0.35)',
+            zIndex: 9,
+          }}
+          onClick={() => setShowQueryOptions(false)}
+        />
+      )}
       <div className="responsive-page-heading">
         <PageHeading
           title="Contact Us"
@@ -307,10 +322,13 @@ export default function ContactPage() {
                   }}
                 />
                 {showQueryOptions && (
-                  <div style={{
-                    ...styles.overlay,
-                    ...(showQueryOptions ? styles.overlayVisible : {})
-                  }}>
+                  <div
+                    style={{
+                      ...styles.overlay,
+                      ...(showQueryOptions ? styles.overlayVisible : {})
+                    }}
+                    onClick={e => e.stopPropagation()} // Prevent overlay click from closing when clicking inside
+                  >
                     <div style={styles.optionsGrid}>
                       {queryOptions.map((option) => (
                         <button
@@ -337,7 +355,7 @@ export default function ContactPage() {
                       }}
                       onClick={confirmQueries}
                     >
-                      Confirm Selection
+                      Dive Deep
                     </button>
                   </div>
                 )}
