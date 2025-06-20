@@ -230,6 +230,50 @@ export default function ContactPage() {
     },
   };
 
+  // Mobile-specific CSS for query options overlay
+  const mobileQueryOptionsCSS = `
+@media (max-width: 768px) {
+  .query-options-overlay {
+    width: 96vw !important;
+    max-width: 99vw !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+    position: fixed !important;
+    top: 50% !important;
+    margin: 0 !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding-bottom: 24px !important;
+    max-height: 95vh !important;
+    overflow-y: auto !important;
+    z-index: 1001 !important;
+  }
+  .query-options-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    margin-bottom: 10px !important;
+    width: 100% !important;
+  }
+  .query-option-btn {
+    font-size: 13px !important;
+    padding: 12px 18px !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    display: block !important;
+  }
+}
+`;
+
   return (
     <>
       {/* Overlay for query options */}
@@ -315,6 +359,9 @@ export default function ContactPage() {
                   style={{
                     cursor: 'pointer',
                     transition: 'all 0.3s ease',
+                    overflowX: 'auto',
+                    whiteSpace: 'nowrap',
+                    maxWidth: '100%',
                     '&:hover': {
                       transform: 'scale(1.02)',
                       boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
@@ -322,42 +369,47 @@ export default function ContactPage() {
                   }}
                 />
                 {showQueryOptions && (
-                  <div
-                    style={{
-                      ...styles.overlay,
-                      ...(showQueryOptions ? styles.overlayVisible : {})
-                    }}
-                    onClick={e => e.stopPropagation()} // Prevent overlay click from closing when clicking inside
-                  >
-                    <div style={styles.optionsGrid}>
-                      {queryOptions.map((option) => (
-                        <button
-                          key={option}
-                          type="button"
-                          style={{
-                            ...styles.optionButton,
-                            ...(selectedQueries.includes(option) ? styles.optionButtonSelected : {})
-                          }}
-                          onClick={() => toggleQueryOption(option)}
-                        >
-                          {selectedQueries.includes(option) && (
-                            <Icon icon="mdi:check" style={{ fontSize: '18px' }} />
-                          )}
-                          {option}
-                        </button>
-                      ))}
-                    </div>
-                    <button
-                      type="button"
+                  <>
+                    <style>{mobileQueryOptionsCSS}</style>
+                    <div
+                      className="query-options-overlay"
                       style={{
-                        ...styles.confirmButton,
-                        '@media (max-width: 768px)': styles.confirmButtonMobile
+                        ...styles.overlay,
+                        ...(showQueryOptions ? styles.overlayVisible : {})
                       }}
-                      onClick={confirmQueries}
+                      onClick={e => e.stopPropagation()} // Prevent overlay click from closing when clicking inside
                     >
-                      Confirm 
-                    </button>
-                  </div>
+                      <div className="query-options-grid" style={styles.optionsGrid}>
+                        {queryOptions.map((option) => (
+                          <button
+                            key={option}
+                            type="button"
+                            className="query-option-btn"
+                            style={{
+                              ...styles.optionButton,
+                              ...(selectedQueries.includes(option) ? styles.optionButtonSelected : {})
+                            }}
+                            onClick={() => toggleQueryOption(option)}
+                          >
+                            {selectedQueries.includes(option) && (
+                              <Icon icon="mdi:check" style={{ fontSize: '16px' }} />
+                            )}
+                            {option}
+                          </button>
+                        ))}
+                      </div>
+                      <button
+                        type="button"
+                        style={{
+                          ...styles.confirmButton,
+                          '@media (max-width: 768px)': styles.confirmButtonMobile
+                        }}
+                        onClick={confirmQueries}
+                      >
+                        Confirm
+                      </button>
+                    </div>
+                  </>
                 )}
                 <Spacing lg="20" md="20" />
               </Div>

@@ -21,10 +21,21 @@
   list-style: none;
   li {
     display: flex;
+    align-items: center;
+    font-size: 15px;
+    padding: 8px 0;
     span {
       font-size: 24px;
       flex: none;
       width: 35px;
+    }
+    a,
+    span {
+      font-size: 15px;
+      font-weight: 500;
+      color: inherit;
+      text-decoration: none;
+      display: inline-block;
     }
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -198,7 +209,7 @@
   .cs-footer_item {
     text-align: center;
   }
-.cs-social_btns.cs-style1 {
+  .cs-social_btns.cs-style1 {
     justify-content: center;
   }
   /* Center the "Services" heading */
@@ -218,6 +229,16 @@
 
   .cs-footer_item .cs-menu_widget li {
     justify-content: center;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 16px;
+  }
+  .cs-footer_item .cs-menu_widget li a,
+  .cs-footer_item .cs-menu_widget li span {
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
   }
 
   /* Optional: center copyright links too */

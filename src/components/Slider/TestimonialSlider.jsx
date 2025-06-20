@@ -44,7 +44,7 @@ export default function TestimonialSlider() {
   return (
     <>
       {/* Add spacing between previous section and testimonials */}
-      <div style={{ height: '100px', }} />
+      <div style={{ height: '40px', }} />
 
       <Div
         className="cs-gradient_bg_1 cs-shape_wrap_3 cs-parallax"
