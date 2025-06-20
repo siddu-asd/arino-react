@@ -20,7 +20,7 @@ export default function ServicesPage() {
         <PageHeading
           title="What We Offer"
           bgSrc="/images/blog_hero_bg.jpeg"
-          pageLinkText="Services"
+          pageLinkText="What We Offe"
         />
       </div>
       <Spacing lg='150' md='80' />

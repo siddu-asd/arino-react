@@ -19,9 +19,9 @@ export default function AboutPage() {
      {/* Show PageHeading only on mobile view */}
      <div className="responsive-page-heading">
       <PageHeading
-        title=" About Us"
+        title=" Explore Our Space"
         bgSrc="/images/blog_hero_bg.jpeg"
-        pageLinkText="About Us"
+        pageLinkText="Explore Our Space"
       />
      </div>
       {/* Start Page Heading Section */}

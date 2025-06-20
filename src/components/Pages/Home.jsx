@@ -307,7 +307,7 @@ export default function Home() {
 
       <Spacing lg="20" md="70" />
       <Div className="container" style={{ position: 'relative', zIndex: 2 }}>
-        <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
+        <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4" style={{paddingTop: '50px'}}>
           Ideas That Refuse To Be Confined And< br /> Creativity That Spills Beyond Every Boundary
         </h2>
         <Spacing lg="70" md="70" />

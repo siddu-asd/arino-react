@@ -9,18 +9,30 @@ import DropDown from './DropDown';
 
 export default function Header({ variant }) {
   const [isSticky, setIsSticky] = useState(false);
-  const [sideHeaderToggle, setSideHeaderToggle] = useState(false);
-  const [mobileToggle, setMobileToggle] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showMobileSubMenu, setShowMobileSubMenu] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 0) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
+      setIsSticky(window.scrollY > 0);
     });
   }, []);
+
+  // Menu items
+  const menuItems = [
+    { to: '/', label: 'Home' },
+    { to: '/about', label: 'EXPLORE OUR SPACE' },
+    { to: '/service', label: 'What We Offer' },
+    { to: '/portfolio', label: 'Our Creation' },
+    { to: '/blog', label: 'Our Blogs' },
+    {
+      label: "Let's Connect",
+      submenu: [
+        { to: '/contact', label: 'Reach Us' },
+        { to: '/career', label: 'Join Us' }
+      ]
+    }
+  ];
 
   return (
     <>
@@ -37,132 +49,127 @@ export default function Header({ variant }) {
                 </Link>
               </Div>
               <Div className="cs-main_header_center">
-                <Div className="cs-nav cs-primary_font cs-medium">
-                  <ul
-                    className="cs-nav_list"
-                    style={{ display: `${mobileToggle ? 'block' : 'none'}` }}
-                  >
+                {/* Desktop Menu */}
+                <div className="cs-nav cs-primary_font cs-medium">
+                  <ul className="cs-nav_list">
                     <li>
-                      <NavLink to="/" onClick={() => setMobileToggle(false)}>
-                        Home
-                      </NavLink>
+                      <NavLink to="/">Home</NavLink>
                     </li>
                     <li>
-                      <NavLink to="/about" onClick={() => setMobileToggle(false)}>
-                        EXPLORE OUR SPACE
-                      </NavLink>
+                      <NavLink to="/about">EXPLORE OUR SPACE</NavLink>
                     </li>
                     <li>
-                      <NavLink to="/service" onClick={() => setMobileToggle(false)}>
-                        What We Offer
-                      </NavLink>
+                      <NavLink to="/service">What We Offer</NavLink>
                     </li>
-
-                    {/* Updated Portfolio with Dropdown */}
-                    <li >
-                      <NavLink to="/portfolio" onClick={() => setMobileToggle(false)}>
-                        Our Creation
-                      </NavLink>
-                   
-                    </li>
-
                     <li>
-                      <NavLink to="/blog" onClick={() => setMobileToggle(false)}>
-                        Our Blogs
-                      </NavLink>
+                      <NavLink to="/portfolio">Our Creation</NavLink>
                     </li>
-
-                    {/* Contact Dropdown */}
+                    <li>
+                      <NavLink to="/blog">Our Blogs</NavLink>
+                    </li>
                     <li className="menu-item-has-children">
-                      <NavLink to="/contact" onClick={() => setMobileToggle(false)}>
-                        Let's Connect
-                      </NavLink>
+                      <NavLink to="/contact">Let's Connect</NavLink>
                       <DropDown>
                         <ul>
                           <li>
-                            <Link to="/contact" onClick={() => setMobileToggle(false)}>
-                              Reach Us
-                            </Link>
+                            <Link to="/contact">Reach Us</Link>
                           </li>
-                          {/* <li>
-                            <Link to="/faq" onClick={() => setMobileToggle(false)}>
-                              FAQ
-                            </Link>
-                          </li> */}
                           <li>
-                            <Link to="/career" onClick={() => setMobileToggle(false)}>
-                              Join Us
-                            </Link>
+                            <Link to="/career">Join Us</Link>
                           </li>
                         </ul>
                       </DropDown>
                     </li>
                   </ul>
-
-                  {/* Mobile Menu Toggle */}
-                  <span
-                    className={
-                      mobileToggle
-                        ? 'cs-munu_toggle cs-toggle_active'
-                        : 'cs-munu_toggle'
-                    }
-                    onClick={() => setMobileToggle(!mobileToggle)}
-                  >
-                    <span></span>
-                  </span>
-                </Div>
+                </div>
+                {/* Hamburger for mobile */}
+                <span
+                  className="cs-munu_toggle"
+                  onClick={() => setMobileMenuOpen(true)}
+                >
+                  <span></span>
+                </span>
               </Div>
-
-              {/* <Div className="cs-main_header_right">
-                <Div className="cs-toolbox">
-                  <span
-                    className="cs-icon_btn"
-                    onClick={() => setSideHeaderToggle(!sideHeaderToggle)}
-                  >
-                    <span className="cs-icon_btn_in">
-                      <span />
-                      <span />
-                      <span />
-                      <span />
-                    </span>
-                  </span>
-                </Div>
-              </Div> */}
             </Div>
           </Div>
         </Div>
       </header>
 
-      {/* Side Header */}
-      <Div className={sideHeaderToggle ? 'cs-side_header active' : 'cs-side_header'}>
-        <button className="cs-close" onClick={() => setSideHeaderToggle(!sideHeaderToggle)} />
-        <Div className="cs-side_header_overlay" onClick={() => setSideHeaderToggle(!sideHeaderToggle)} />
-        <Div className="cs-side_header_in">
-          <Div className="cs-side_header_shape" />
-          <Link className="cs-site_branding" to="/">
+      {/* Fullscreen Mobile Menu Overlay */}
+      <div className={`fullscreen-mobile-menu${mobileMenuOpen ? ' open' : ''}`}>
+        <div className="menu-header">
+          <Link className="menu-logo" to="/" onClick={() => setMobileMenuOpen(false)}>
             <img src="/images/LOGO.png" alt="Logo" />
           </Link>
-          <Div className="cs-side_header_box">
-            <h2 className="cs-side_header_heading">
-              Reach the creative force to make it happen
-              .
-            </h2>
-          </Div>
-          <Div className="cs-side_header_box">
-            <ContactInfoWidget title="Contact Us" withIcon />
-          </Div>
-          <Div className="cs-side_header_box">
-            <Newsletter
-              title="Subscribe"
-              subtitle="Bringing a revolutionary change in the field of branding, marketing, tech and AI ."
-              placeholder="example@gmail.com"
-            />
-          </Div>
-          <Div className="cs-side_header_box">
-            <SocialWidget />
-          </Div>
-        </Div>
-      </Div>
+          <button className="menu-close" onClick={() => setMobileMenuOpen(false)}>&times;</button>
+        </div>
+        <ul className="menu-list">
+          {menuItems.map((item, idx) =>
+            !item.submenu ? (
+              <li key={idx}>
+                <NavLink to={item.to} onClick={() => setMobileMenuOpen(false)}>
+                  {item.label}
+                </NavLink>
+              </li>
+            ) : (
+              <li key={idx} className="mobile-submenu-parent">
+                <button
+                  className="mobile-submenu-toggle"
+                  onClick={() => setShowMobileSubMenu((v) => !v)}
+                  aria-expanded={showMobileSubMenu}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    color: '#fff',
+                    fontSize: '1.2rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    width: '100%',
+                    textAlign: 'center',
+                    marginBottom: showMobileSubMenu ? 0 : 18
+                  }}
+                >
+                  {item.label}
+                  <span style={{
+                    display: 'inline-block',
+                    marginLeft: 8,
+                    transform: showMobileSubMenu ? 'rotate(90deg)' : 'rotate(0deg)',
+                    transition: 'transform 0.2s'
+                  }}>▶</span>
+                </button>
+                {showMobileSubMenu && (
+                  <ul className="mobile-submenu-list" style={{ marginTop: 8 }}>
+                    {item.submenu.map((sub, subIdx) => (
+                      <li key={subIdx}>
+                        <NavLink
+                          to={sub.to}
+                          onClick={() => setMobileMenuOpen(false)}
+                          style={{
+                            color: '#fff',
+                            fontSize: '1.1rem',
+                            fontWeight: 500,
+                            padding: '8px 0',
+                            display: 'block'
+                          }}
+                        >
+                          {sub.label}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            )
+          )}
+        </ul>
+        <div className="menu-bottom-info">
+          <div style={{fontWeight:600, fontSize:'1.1rem', marginBottom: '6px'}}>Contact Us</div>
+          <div>Hyderabad, Telangana, India</div>
+          <div style={{fontSize:'0.95rem', marginTop:'4px'}}>hi@raising100x.com</div>
+        </div>
+      </div>
+      {/* Blur background when menu is open */}
+      {mobileMenuOpen && <div className="menu-blur-bg"></div>}
     </>
   );
 }
