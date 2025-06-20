@@ -300,7 +300,7 @@ export default function BlogDetailsPage() {
             {/* Start Details Post Content */}
             <Div className="cs-post cs-style2">
               <Div className="cs-post_thumb cs-radius_15">
-                <img src={post?.image || '/images/default.jpeg'} alt="Post" className="w-100 cs-radius_15" />
+                <img src={post?.image || '/images/default.jpeg'} alt="Post" className="w-100 cs-radius_15" loading="lazy" />
               </Div>
               <Div className="cs-post_info">
                 <Div className="cs-post_meta cs-style1 cs-ternary_color cs-semi_bold cs-primary_font">

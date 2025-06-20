@@ -7,7 +7,7 @@ export default function Card({ title, link, src, alt }) {
   return (
     <Link to={link} className="cs-card cs-style1">
       <>
-        <img src={src} alt={alt} />
+        <img src={src} alt={alt} loading="lazy" />
         
         
         <Div className="cs-card_overlay">

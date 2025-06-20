@@ -265,7 +265,7 @@ export default function ServiceDetailsPage() {
 
       <Div style={{ paddingTop: '40px', paddingBottom: '40px' }}>
         <Spacing lg="145" md="80" />
-        <Div className="container">
+        <Div className="container" style={{marginTop: '100px'}}>
           <SectionHeading
             title="Our Design Adventure Begins With"
             subtitle={service.title}
@@ -291,7 +291,7 @@ export default function ServiceDetailsPage() {
           <Div className="row align-items-center">
             <Div className="col-xl-5 col-lg-6">
               <Div className="cs-radius_15 cs-shine_hover_1">
-                <img src={service.image} alt={service.title} className="cs-radius_15 w-100" />
+                <img src={service.image} alt={service.title} className="cs-radius_15 w-100" loading="lazy" />
               </Div>
               <Spacing lg="0" md="40" />
             </Div>
@@ -438,6 +438,7 @@ export default function ServiceDetailsPage() {
                   maxHeight: '100%',
                 objectFit: 'contain'
                 }}
+                 loading="lazy"
                  />
               </Div>
                       <Div className="cs-portfolio_info">

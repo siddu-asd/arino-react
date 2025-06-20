@@ -7,6 +7,7 @@ import SectionHeading from '../SectionHeading'
 import TestimonialSlider from '../Slider/TestimonialSlider'
 import Spacing from '../Spacing'
 import PageHeading from '../PageHeading'
+import { Icon } from '@iconify/react'
 
 
 export default function ServicesPage() {
@@ -40,89 +41,104 @@ export default function ServicesPage() {
               <Div className='row'>
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    link='/service/creative-marketing'
-                    src='/images/nhj.png'
-                    alt='Creative Marketing'
-                  />
-                  <div className="text-center mt-3">
-                    <a href="/service/creative-marketing" className="cs-btn cs-style1" style={{
-                      width: '100%',
-                      padding: '12px 20px',
-                      display: 'inline-block',
-                      backgroundColor: 'transparent',
-                      color: '#fff',
-                      borderRadius: '12px',
-                      transition: 'all 0.3s ease',
-                      textDecoration: 'none',
-                      fontWeight: '500',
-                      boxShadow: '0 2px 5px rgba(78, 4, 4, 0.83)',
-                      border: '2px solid rgba(36, 19, 19, 0.28)',
-                      '&:hover': {
-                        background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
-                        border: 'none'
-                      }
-                    }}>
-                      <span>Dive Deep</span>
+                  <div style={{position: 'relative'}}>
+                    <Card
+                      link='/service/creative-marketing'
+                      src='/images/nhj.png'
+                      alt='Creative Marketing'
+                    />
+                    <a
+                      href='/service/creative-marketing'
+                      className='service-down-arrow-btn'
+                      style={{
+                        position: 'absolute',
+                        left: '50%',
+                        bottom: '12px',
+                        transform: 'translateX(-50%)',
+                        borderRadius: '50%',
+                        width: '34px',
+                        height: '34px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        border: 'none',
+                        zIndex: 2,
+                        transition: 'box-shadow 0.3s, background 0.3s',
+                        fontSize: '1.5rem',
+                        color: '#b30a0a',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      <Icon icon='mdi:chevron-down' />
                     </a>
                   </div>
                   <Spacing lg='0' md='30' />
                 </Div>
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    link='/service/branding'
-                    src='/images/ge.png'
-                    alt='Branding'
-                  />
-                  <div className="text-center mt-3">
-                    <a href="/service/branding" className="cs-btn cs-style1" style={{
-                      width: '100%',
-                      padding: '12px 25px',
-                      display: 'inline-block',
-                      backgroundColor: 'transparent',
-                      color: '#fff',
-                      borderRadius: '12px',
-                      transition: 'all 0.3s ease',
-                      textDecoration: 'none',
-                      fontWeight: '500',
-                      boxShadow: '0 2px 5px rgba(78, 4, 4, 0.83)',
-                      border: '2px solid rgba(36, 19, 19, 0.28)',
-                      '&:hover': {
-                        background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
-                        border: 'none'
-                      }
-                    }}>
-                      <span>Dive Deep</span>
+                  <div style={{position: 'relative'}}>
+                    <Card
+                      link='/service/branding'
+                      src='/images/ge.png'
+                      alt='Branding'
+                    />
+                    <a
+                      href='/service/branding'
+                      className='service-down-arrow-btn'
+                      style={{
+                        position: 'absolute',
+                        left: '50%',
+                        bottom: '12px',
+                        transform: 'translateX(-50%)',
+                        borderRadius: '50%',
+                        width: '34px',
+                        height: '34px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        border: 'none',
+                        zIndex: 2,
+                        transition: 'box-shadow 0.3s, background 0.3s',
+                        fontSize: '1.5rem',
+                        color: '#b30a0a',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      <Icon icon='mdi:chevron-down' />
                     </a>
                   </div>
                   <Spacing lg='0' md='30' />
                 </Div>
                 <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    link='/service/ai-technology'
-                    src='/images/dm.png'
-                    alt='AI & Technology'
-                  />
-                  <div className="text-center mt-3">
-                    <a href="/service/ai-technology" className="cs-btn cs-style1" style={{
-                      width: '100%',
-                      padding: '12px 25px',
-                      display: 'inline-block',
-                      backgroundColor: 'transparent',
-                      color: '#fff',
-                      borderRadius: '12px',
-                      transition: 'all 0.3s ease',
-                      textDecoration: 'none',
-                      fontWeight: '500',
-                      boxShadow: '0 2px 5px rgba(78, 4, 4, 0.83)',
-                      border: '2px solid rgba(36, 19, 19, 0.28)',
-                      '&:hover': {
-                        background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
-                        border: 'none'
-                      }
-                    }}>
-                      <span>Dive Deep</span>
+                  <div style={{position: 'relative'}}>
+                    <Card
+                      link='/service/ai-technology'
+                      src='/images/dm.png'
+                      alt='AI & Technology'
+                    />
+                    <a
+                      href='/service/ai-technology'
+                      className='service-down-arrow-btn'
+                      style={{
+                        position: 'absolute',
+                        left: '50%',
+                        bottom: '12px',
+                        transform: 'translateX(-50%)',
+                        borderRadius: '50%',
+                        width: '34px',
+                        height: '34px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        border: 'none',
+                        zIndex: 2,
+                        transition: 'box-shadow 0.3s, background 0.3s',
+                        fontSize: '1.5rem',
+                        color: '#b30a0a',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      <Icon icon='mdi:chevron-down' />
                     </a>
                   </div>
                   <Spacing lg='0' md='30' />
@@ -130,30 +146,35 @@ export default function ServicesPage() {
 
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    link='/service/studio'
-                    src='/images/we.png'
-                    alt='Studio'
-                  />
-                  <div className="text-center mt-3">
-                    <a href="/service/studio" className="cs-btn cs-style1" style={{
-                      width: '100%',
-                      padding: '12px 25px',
-                      display: 'inline-block',
-                      backgroundColor: 'transparent',
-                      color: '#fff',
-                      borderRadius: '12px',
-                      transition: 'all 0.3s ease',
-                      textDecoration: 'none',
-                      fontWeight: '500',
-                      boxShadow: '0 2px 5px rgba(78, 4, 4, 0.83)',
-                      border: '2px solid rgba(36, 19, 19, 0.28)',
-                      '&:hover': {
-                        background: 'linear-gradient(45deg, #ff0000, #1d1d1d)',
-                        border: 'none'
-                      }
-                    }}>
-                      <span>Dive Deep</span>
+                  <div style={{position: 'relative'}}>
+                    <Card
+                      link='/service/studio'
+                      src='/images/we.png'
+                      alt='Studio'
+                    />
+                    <a
+                      href='/service/studio'
+                      className='service-down-arrow-btn'
+                      style={{
+                        position: 'absolute',
+                        left: '50%',
+                        bottom: '12px',
+                        transform: 'translateX(-50%)',
+                        borderRadius: '50%',
+                        width: '34px',
+                        height: '34px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        border: 'none',
+                        zIndex: 2,
+                        transition: 'box-shadow 0.3s, background 0.3s',
+                        fontSize: '1.5rem',
+                        color: '#b30a0a',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      <Icon icon='mdi:chevron-down' />
                     </a>
                   </div>
                   <Spacing lg='0' md='30' />
@@ -179,6 +200,24 @@ export default function ServicesPage() {
           bgSrc="/images/cta_bg.jpeg"
         />
       </Div>
+      <style>{`
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+.service-down-arrow-btn {
+  background: rgba(238, 225, 225, 0.64) !important;
+  backdrop-filter: blur(4px) !important;
+  animation: bounceDown 0.9s infinite;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.service-down-arrow-btn:hover {
+  background: rgb(201, 17, 17) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 24px rgba(179,10,10,0.18) !important;
+  animation-play-state: paused !important;
+}
+`}</style>
     </>
   )
 }

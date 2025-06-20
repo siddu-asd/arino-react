@@ -11,7 +11,7 @@ export default function IconBoxStyle2({
   return (
     <div className="cs-iconbox cs-style4">
       <div className="cs-iconbox_icon">
-        <img src={iconUrl} alt="Icon" />
+        <img src={iconUrl} alt="Icon" loading="lazy" />
       </div>
       <h2 className="cs-iconbox_title">
         <Link to={btnLink}>{title}</Link>

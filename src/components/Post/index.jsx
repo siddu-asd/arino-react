@@ -7,7 +7,7 @@ export default function Post({url, src, alt, date, title}) {
   return (
     <Div className="cs-post cs-style1">
       <Link to={url} className="cs-post_thumb">
-        <img src={src} alt={alt} />
+        <img src={src} alt={alt} loading="lazy" />
         <Div className="cs-post_overlay" />
       </Link>
       <Div className="cs-post_info">

@@ -8,7 +8,7 @@ export default function PostStyle2({thumb, title, subtitle, date, category, cate
   return (
     <Div className="cs-post cs-style2">
       <Link to={href} className="cs-post_thumb cs-radius_15">
-        <img src={thumb} alt="Post" className="w-100 cs-radius_15" />
+        <img src={thumb} alt="Post" className="w-100 cs-radius_15" loading="lazy" />
       </Link>
       <Div className="cs-post_info">
         <Div className="cs-post_meta cs-style1 cs-ternary_color cs-semi_bold cs-primary_font">

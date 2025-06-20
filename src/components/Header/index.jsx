@@ -170,6 +170,41 @@ export default function Header({ variant }) {
       </div>
       {/* Blur background when menu is open */}
       {mobileMenuOpen && <div className="menu-blur-bg"></div>}
+      <style>{`
+      .fullscreen-mobile-menu {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(100%);
+        transition: opacity 0.4s cubic-bezier(.4,2,.6,1), transform 0.4s cubic-bezier(.4,2,.6,1);
+        animation: slideOutMenu 0.4s forwards;
+      }
+      .fullscreen-mobile-menu.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0);
+        animation: slideInMenu 0.4s forwards;
+      }
+      @keyframes slideInMenu {
+        0% {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes slideOutMenu {
+        0% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+      }
+      `}</style>
     </>
   );
 }

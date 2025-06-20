@@ -85,7 +85,7 @@ export default function ArchitectureAgencyHome() {
                 This is the main factor that sets us apart from our competition
                 and allows us to deliver a specialist business consultancy
                 service. Our team applies its wide-ranging experience to
-                determining. Through our years of experience, we’ve also learned
+                determining. Through our years of experience, we've also learned
                 that while each channel.
               </p>
               <Spacing lg="30" md="30" />
@@ -106,6 +106,7 @@ export default function ArchitectureAgencyHome() {
               src="/images/about_img_7.jpeg"
               alt="About"
               className="w-100 cs-radius_15"
+              loading="lazy"
             />
             <Spacing lg="25" md="25" />
           </Div>
@@ -114,6 +115,7 @@ export default function ArchitectureAgencyHome() {
               src="/images/about_img_8.jpeg"
               alt="About"
               className="w-100 cs-radius_15"
+              loading="lazy"
             />
             <Spacing lg="25" md="25" />
           </Div>

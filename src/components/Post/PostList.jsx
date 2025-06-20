@@ -61,7 +61,7 @@ export default function PostList() {
               <div className="cs-post_meta">
                 <div className="cs-post_avatar">
                   <div className="cs-post_avatar_img">
-                    <img src={item.authorImg} alt="Avatar" />
+                    <img src={item.authorImg} alt="Avatar" loading="lazy" />
                   </div>
                   <div className="cs-post_avatar_info">
                     <h4>{item.authorName}</h4>

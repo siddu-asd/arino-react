@@ -8,7 +8,7 @@ export default function Team({memberImage, memberName, memberDesignation, member
   return (
     <Div className="cs-team cs-style1">
         <Div className="cs-member_thumb">
-          <img src={memberImage} alt={memberName} />
+          <img src={memberImage} alt={memberName} loading="lazy" />
           <Div className="cs-member_overlay" />
         </Div>
         <Div className="cs-member_info">
