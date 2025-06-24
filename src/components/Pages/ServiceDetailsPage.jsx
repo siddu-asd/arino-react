@@ -358,32 +358,32 @@ export default function ServiceDetailsPage() {
                   {
                     image: "/images/c1.jpg",
                     pdf: "/downloads/brandingDemo1.pdf",
-                    title: "Latest Branding"
+                    title: " Branding-1"
                   },
                   {
                     image: "/images/c2.jpg",
                     pdf: "/downloads/brandingDemo2.pdf",
-                    title: "Branding"
+                    title: "Branding-2"
                   },
                   {
                     image: "/images/c3.jpg",
                      pdf: "/downloads/brandingDemo3.pdf",
-                    title: "Branding Design"
+                    title: "Branding-3"
                   },
                   {
                     image: "/images/raising100x.jpg",
                     pdf: "/downloads/Raising100x.pdf",
-                    title: "Branding"
+                    title: "Branding-4"
                   },
                   {
                     image: "/images/c6.jpg",
                     pdf: "/downloads/brandingDemo6.pdf",
-                    title: "Design"
+                    title: "Branding-5"
                   },
                   {
                     image: "/images/c8.jpg",
                     pdf: "/downloads/brandingDemo8.pdf",
-                    title: "Branding Design"
+                    title: "Branding - 6"
                   },
                 ].map((item, index) => (
                   <Div className="col-lg-4" key={index}>
