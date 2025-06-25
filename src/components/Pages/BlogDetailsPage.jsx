@@ -11,7 +11,7 @@ import Spacing from '../Spacing'
 const postData = [
   {
     id: "marketing-trends-2025",
-    image: "/images/Marketing-in-2025-The-Trends-Youre-Not-Ready-For.jpg",
+    image: "images/Marketing-in-2025-The-Trends-Youre-Not-Ready-For.jpg",
     title: "Marketing Trends 2025: The Trends You're Not Ready For",
     category: "Marketing Trends",
     date: "2025-05-28",
@@ -89,7 +89,7 @@ Because in 2025, the only thing faster than tech is how quickly your audience mo
   },
   {
     id: "adaptive-brand-strategies",
-    image: "/images/Building-Adaptive-Brand-Strategies.jpg",
+    image:'images/Marketing.png',
     title: "The Death of Traditional Marketing: Building Adaptive Brand Strategies",
     category: "Digital Marketing",
     date: "2025-05-28",
@@ -134,7 +134,7 @@ Because in 2025, the only thing faster than tech is how quickly your audience mo
   },
   {
     id: "ai-transforming-marketing",
-    image: "/images/How-AI-is-Transforming-Marketing-.jpg",
+    image: "images/AI.png",
     title: "How AI is Transforming Marketing: Beyond Buzzwords to Real Growth",
     category: "AI Marketing",
     date: "2025-05-28",

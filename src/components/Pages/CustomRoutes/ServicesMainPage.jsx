@@ -1,32 +1,25 @@
-import React, { useEffect, useRef } from 'react'
-import { pageTitle } from '../../helper'
-import Card from '../Card'
-import Cta from '../Cta'
-import Div from '../Div'
-import SectionHeading from '../SectionHeading'
-import TestimonialSlider from '../Slider/TestimonialSlider'
-import Spacing from '../Spacing'
-import PageHeading from '../PageHeading'
-import { Icon } from '@iconify/react'
+import React, { useEffect } from 'react';
+import { pageTitle } from '../../../helper';
+import Card from '../../Card';
+import Cta from '../../Cta';
+import Div from '../../Div';
+import SectionHeading from '../../SectionHeading';
+import Spacing from '../../Spacing';
+import PageHeading from '../../PageHeading';
+import { Icon } from '@iconify/react';
 
-export default function ServicesPage({ focusService }) {
-  const aiTechRef = useRef(null);
+export default function ServicesMainPage() {
+  pageTitle('Services | Raising 100x');
   useEffect(() => {
-    pageTitle('Service');
     window.scrollTo(0, 0);
-    if (focusService === 'ai-technology' && aiTechRef.current) {
-      setTimeout(() => {
-        aiTechRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 300);
-    }
-  }, [focusService]);
+  }, []);
   return (
     <>
       <div className="responsive-page-heading">
         <PageHeading
-          title="What We Offer"
+          title="Services"
           bgSrc="/images/blog_hero_bg.jpeg"
-          pageLinkText="What We Offe"
+          pageLinkText="Services"
         />
       </div>
       <Spacing lg='150' md='80' />
@@ -115,7 +108,7 @@ export default function ServicesPage({ focusService }) {
                   <Spacing lg='0' md='30' />
                 </Div>
                 <Div className='col-lg-3 col-sm-6'>
-                  <div style={{position: 'relative'}} ref={aiTechRef}>
+                  <div style={{position: 'relative'}}>
                     <Card
                       link='/service/ai-technology'
                       src='/images/dm.png'
@@ -184,45 +177,20 @@ export default function ServicesPage({ focusService }) {
                   </div>
                   <Spacing lg='0' md='30' />
                 </Div>
-               
               </Div>
             </Div>
           </Div>
         </Div>
       </Div>
       <Spacing lg='150' md='80' />
-    
-      <Spacing lg='125' md='55' />
-      <TestimonialSlider />
-      <Spacing lg='150' md='80' />
-
       <Div className="container">
         <Cta
-          title="Have an idea? <br /> We've got you!  
-      Let's talk over a cup of coffee... "
+          title="Have an idea? <br /> We've got you!  \nLet's talk over a cup of coffee... "
           btnText="YES I'M IN!"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
         />
       </Div>
-      <style>{`
-@keyframes bounceDown {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(5px); }
-}
-.service-down-arrow-btn {
-  background: rgba(238, 225, 225, 0.64) !important;
-  backdrop-filter: blur(4px) !important;
-  animation: bounceDown 0.9s infinite;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-}
-.service-down-arrow-btn:hover {
-  background: rgb(201, 17, 17) !important;
-  color: #fff !important;
-  box-shadow: 0 8px 24px rgba(179,10,10,0.18) !important;
-  animation-play-state: paused !important;
-}
-`}</style>
     </>
-  )
-}
+  );
+} 

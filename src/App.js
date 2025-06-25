@@ -26,6 +26,47 @@ import CreativeSolutionHome from './components/Pages/CreativeSolutionHome';
 import PersonalPortfolioHome from './components/Pages/PersonalPortfolioHome';
 import VideoShowcaseHome from './components/Pages/VideoShowcaseHome';
 import CareerPage from './components/Pages/CareerPage';
+import OurWorkPage from './components/Pages/CustomRoutes/OurWorkPage';
+import RaisingStartups100xPage from './components/Pages/CustomRoutes/RaisingStartups100xPage';
+import TopDigitalMarketingAgencyInHyderabadPage from './components/Pages/CustomRoutes/TopDigitalMarketingAgencyInHyderabadPage';
+import ServicesMainPage from './components/Pages/CustomRoutes/ServicesMainPage';
+import Hr100xPage from './components/Pages/CustomRoutes/Hr100xPage';
+import CareersMainPage from './components/Pages/CustomRoutes/CareersMainPage';
+import AiAutomationServicePage from './components/Pages/CustomRoutes/AiAutomationServicePage';
+import BlogMainPage from './components/Pages/CustomRoutes/BlogMainPage';
+import TechnologyPage from './components/Pages/CustomRoutes/TechnologyPage';
+import CompanyPage from './components/Pages/CustomRoutes/CompanyPage';
+import AiAutomationPage from './components/Pages/CustomRoutes/AiAutomationPage';
+import CaseStudyIntegratedMarketingHospitalPage from './components/Pages/CustomRoutes/CaseStudyIntegratedMarketingHospitalPage';
+import CaseStudyTransformingJewelleryBrandPage from './components/Pages/CustomRoutes/CaseStudyTransformingJewelleryBrandPage';
+import MarketingInternshipChallengePage from './components/Pages/CustomRoutes/MarketingInternshipChallengePage';
+import OfflineExperientialMarketingPage from './components/Pages/CustomRoutes/OfflineExperientialMarketingPage';
+import PortfolioConsumerProductsPage from './components/Pages/CustomRoutes/PortfolioConsumerProductsPage';
+import PortfolioHoversMotionsPage from './components/Pages/CustomRoutes/PortfolioHoversMotionsPage';
+import CreativeStudioPage from './components/Pages/CustomRoutes/CreativeStudioPage';
+import HowAiIsTransformingMarketingPage from './components/Pages/CustomRoutes/HowAiIsTransformingMarketingPage';
+import HomeRtlPage from './components/Pages/CustomRoutes/HomeRtlPage';
+import CategoryProductDesignPage from './components/Pages/CustomRoutes/CategoryProductDesignPage';
+import Home08Page from './components/Pages/CustomRoutes/Home08Page';
+import DesignInternshipChallengePage from './components/Pages/CustomRoutes/DesignInternshipChallengePage';
+import JobApplyPage from './components/Pages/CustomRoutes/JobApplyPage';
+import CreatingWinningContentMarketingStrategyPage from './components/Pages/CustomRoutes/CreatingWinningContentMarketingStrategyPage';
+import BestFrequencyMarketingEmailsPage from './components/Pages/CustomRoutes/BestFrequencyMarketingEmailsPage';
+import PerfectFromBeginningToEndPage from './components/Pages/CustomRoutes/PerfectFromBeginningToEndPage';
+import TeamJavierMoralesPage from './components/Pages/CustomRoutes/TeamJavierMoralesPage';
+import WhatWeLikeAboutTeamworkPage from './components/Pages/CustomRoutes/WhatWeLikeAboutTeamworkPage';
+import DigitalMarketingStatsImpactPage from './components/Pages/CustomRoutes/DigitalMarketingStatsImpactPage';
+import VideoEditorInternshipChallengePage from './components/Pages/CustomRoutes/VideoEditorInternshipChallengePage';
+import MarketingAutomationLeadGenPage from './components/Pages/CustomRoutes/MarketingAutomationLeadGenPage';
+import TeamMeganOustinPage from './components/Pages/CustomRoutes/TeamMeganOustinPage';
+import IntroducingTecnologiaFortWorthPage from './components/Pages/CustomRoutes/IntroducingTecnologiaFortWorthPage';
+import AdditionalServicesGrowBusinessPage from './components/Pages/CustomRoutes/AdditionalServicesGrowBusinessPage';
+import DeathOfTraditionalMarketingPage from './components/Pages/CustomRoutes/DeathOfTraditionalMarketingPage';
+import TeamMatZalmanPage from './components/Pages/CustomRoutes/TeamMatZalmanPage';
+import MicrosoftTeamsProductivityPage from './components/Pages/CustomRoutes/MicrosoftTeamsProductivityPage';
+import ProductWebApplicationPage from './components/Pages/CustomRoutes/ProductWebApplicationPage';
+import PortfolioPhotoshopDesignPage from './components/Pages/CustomRoutes/PortfolioPhotoshopDesignPage';
+import AdvanceTabPage from './components/Pages/CustomRoutes/AdvanceTabPage';
 
 function App() {
   return (
@@ -61,7 +102,7 @@ function App() {
             path="portfolio/:portfolioDetailsId"
             element={<PortfolioDetailsPage />}
           />
-          <Route path="blog" element={<BlogPage />} />
+          <Route path="blog" element={<BlogMainPage />} />
           <Route path="blog/:blogDetailsId" element={<BlogDetailsPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="team" element={<TeamPage />} />
@@ -71,35 +112,63 @@ function App() {
             element={<CaseStudyDetailsPage />}
           />
           <Route path="faq" element={<FaqPage />} />
+          <Route path="our-work" element={<OurWorkPage />} />
+          <Route path="raisingstatrups100x" element={<RaisingStartups100xPage />} />
+          <Route path="top-digital-marketing-agency-in-hyderabad" element={<TopDigitalMarketingAgencyInHyderabadPage />} />
+          <Route path="services" element={<ServicesMainPage />} />
+          <Route path="hr100x" element={<Hr100xPage />} />
+          <Route path="careers" element={<CareersMainPage />} />
+          <Route path="ai-automation-service" element={<AiAutomationServicePage />} />
+          <Route path="technology" element={<TechnologyPage />} />
+          <Route path="company" element={<CompanyPage />} />
+          <Route path="ai-automation" element={<AiAutomationPage />} />
+          <Route path="case-study-integrated-marketing-for-a-multi-speciality-hospital" element={<CaseStudyIntegratedMarketingHospitalPage />} />
+          <Route path="case-study-transforming-a-jewellery-brands-new-branch-launch" element={<CaseStudyTransformingJewelleryBrandPage />} />
+          <Route path="raisingthebar/marketing-internship-challenge" element={<MarketingInternshipChallengePage />} />
+          <Route path="offline-experiential-marketing" element={<OfflineExperientialMarketingPage />} />
+          <Route path="portfolio/consumer-products" element={<PortfolioConsumerProductsPage />} />
+          <Route path="creative-studio" element={<CreativeStudioPage />} />
+          <Route path="how-ai-is-transforming-marketing" element={<HowAiIsTransformingMarketingPage />} />
+          <Route path="home-rtl" element={<HomeRtlPage />} />
+          <Route path="category/product-design" element={<CategoryProductDesignPage />} />
+          <Route path="home-08" element={<Home08Page />} />
+          <Route path="raisingthebar/design-internship-challenge" element={<DesignInternshipChallengePage />} />
+          <Route path="job-apply" element={<JobApplyPage />} />
+          <Route path="creating-a-winning-content-marketing-strategy" element={<CreatingWinningContentMarketingStrategyPage />} />
+          <Route path="what-is-the-best-frequency-for-sending-marketing-emails" element={<BestFrequencyMarketingEmailsPage />} />
+          <Route path="perfect-from-beginning-to-end-faster-and-more-efficiently" element={<PerfectFromBeginningToEndPage />} />
+          <Route path="team/javier-morales" element={<TeamJavierMoralesPage />} />
+          <Route path="what-we-like-about-teamwork-during-big-projects" element={<WhatWeLikeAboutTeamworkPage />} />
+          <Route path="10-digital-marketing-stats-that-will-impact-your-business" element={<DigitalMarketingStatsImpactPage />} />
+          <Route path="raisingthebar/video-editor-internship-challenge" element={<VideoEditorInternshipChallengePage />} />
+          <Route path="how-does-marketing-automation-help-lead-generation" element={<MarketingAutomationLeadGenPage />} />
+          <Route path="team/megan-oustin" element={<TeamMeganOustinPage />} />
+          <Route path="events__trashed/introducing-tecnologia-fort-worth" element={<IntroducingTecnologiaFortWorthPage />} />
+          <Route path="additional-services-that-will-grow-your-business-for-you" element={<AdditionalServicesGrowBusinessPage />} />
+          <Route path="the-death-of-traditional-marketing-building-adaptive-brand-strategies" element={<DeathOfTraditionalMarketingPage />} />
+          <Route path="team/mat-zalman" element={<TeamMatZalmanPage />} />
+          <Route path="microsoft-teams-the-productivity-swiss-army-knife" element={<MicrosoftTeamsProductivityPage />} />
+          <Route path="product/web-application" element={<ProductWebApplicationPage />} />
+          <Route path="portfolio/photoshop-design" element={<PortfolioPhotoshopDesignPage />} />
+          <Route path="advance-tab" element={<AdvanceTabPage />} />
         </Route>
         <Route path="/" element={<Layout />}>
-  ...
-  <Route path="career" element={<CareerPage />} />
-</Route>
-      
-      
-
-      <Route
-        path="/"
-        element={<Layout headerVariant="cs-site_header_full_width" />}
-      >
-        <Route
-          path="creative-portfolio"
-          element={<CreativePortfolioHome />}
-        />
-        <Route
-          path="showcase-portfolio"
-          element={<ShowcasePortfolioHome />}
-        />
-        <Route
-          path="case-study-showcase"
-          element={<CaseStudyShowcaseHome />}
-        />
-        <Route path="video-showcase" element={<VideoShowcaseHome />} />
-      </Route>
-      <Route path="*" element={<ErrorPage />} />
-    </Routes >
-
+          <Route
+            path="creative-portfolio"
+            element={<CreativePortfolioHome />}
+          />
+          <Route
+            path="showcase-portfolio"
+            element={<ShowcasePortfolioHome />}
+          />
+          <Route
+            path="case-study-showcase"
+            element={<CaseStudyShowcaseHome />}
+          />
+          <Route path="video-showcase" element={<VideoShowcaseHome />} />
+        </Route>
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
     </>
   );
 }
