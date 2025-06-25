@@ -11,7 +11,7 @@ import Spacing from '../Spacing'
 const postData = [
   {
     id: "marketing-trends-2025",
-    image: "images/Marketing-in-2025-The-Trends-Youre-Not-Ready-For.jpg",
+    image: "/images/Marketing-in-2025-The-Trends-Youre-Not-Ready-For.jpg",
     title: "Marketing Trends 2025: The Trends You're Not Ready For",
     category: "Marketing Trends",
     date: "2025-05-28",
@@ -89,7 +89,7 @@ Because in 2025, the only thing faster than tech is how quickly your audience mo
   },
   {
     id: "adaptive-brand-strategies",
-    image:'images/Marketing.png',
+    image:'/images/Marketing.png',
     title: "The Death of Traditional Marketing: Building Adaptive Brand Strategies",
     category: "Digital Marketing",
     date: "2025-05-28",
@@ -111,13 +111,13 @@ Because in 2025, the only thing faster than tech is how quickly your audience mo
       <p>AI is transforming marketing in ways previously unimagined. From predictive analytics to personalized content creation, AI is enabling brands to craft hyper-targeted campaigns. For instance, Netflix uses AI to recommend content based on users' viewing habits. This level of personalization is not just a marketing tactic but an expectation for consumers today. Brands like Sephora have also leveraged AI for virtual try-ons through augmented reality (AR), allowing customers to see how makeup products will look on their skin before purchasing.</p>
       <h3>2. Machine Learning & Predictive Analytics</h3>
       <p>Machine learning allows brands to predict customer behavior and optimize marketing efforts accordingly. Amazon uses predictive analytics to recommend products based on previous purchases, driving a large portion of its sales. Similarly, Tesla uses machine learning to predict potential maintenance issues in its cars, keeping customers engaged and satisfied with their products long after the initial purchase.</p>
-      <h3>3. Augmented Reality (AR) & Virtual Reality (VR)</h3
+      <h3>3. Augmented Reality (AR) & Virtual Reality (VR)</h3>
       <p>AR and VR are bridging the gap between physical and digital experiences. Companies like IKEA are leveraging AR technology in their app to allow customers to visualize how furniture will look in their homes before purchasing. This integration of immersive technology provides customers with a richer, more personalized shopping experience and keeps brands ahead of the curve.</p>
-      <h3>4. Blockchain for Transparency and Trust</h3
+      <h3>4. Blockchain for Transparency and Trust</h3>
       <p>Blockchain is increasingly being explored by brands to enhance transparency and consumer trust, especially in industries plagued by counterfeit goods. Brands like Everledger are using blockchain to track the provenance of diamonds, ensuring that customers are getting authentic, ethically sourced products. This type of technology will be crucial for companies in the coming years as consumers demand more transparency in the brands they choose to support.</p>
       <h2>Future-Proofing Brand Communication</h2>
       <p>The future of brand communication will be defined by adaptability, precision, and humanization. Brands that can navigate these changes successfully will not just survive—they will thrive.</p>
-      <h3>1. Real-Time Personalization</h3
+      <h3>1. Real-Time Personalization</h3>
       <p>Consumers no longer want to be marketed to—they want brands to engage with them in real-time, based on their needs, preferences, and behaviors. Companies like Nike and Starbucks are already using data and mobile apps to provide real-time, personalized offers and experiences. Nike's app, for example, allows users to personalize their shoes and track their fitness, while Starbucks provides personalized rewards and promotions based on purchase history.</p>
       <h3>2. Omnichannel Engagement</h3>
       <p>Brands that create consistent, seamless experiences across all platforms—online and offline—will see higher levels of engagement and loyalty. A perfect example of this is Disney, which integrates its theme parks, mobile apps, online services, and consumer products into a seamless ecosystem that allows customers to interact with the brand across multiple touchpoints.</p>
@@ -134,7 +134,7 @@ Because in 2025, the only thing faster than tech is how quickly your audience mo
   },
   {
     id: "ai-transforming-marketing",
-    image: "images/AI.png",
+    image: "/images/AI.png",
     title: "How AI is Transforming Marketing: Beyond Buzzwords to Real Growth",
     category: "AI Marketing",
     date: "2025-05-28",
@@ -415,10 +415,10 @@ export default function BlogDetailsPage() {
       {/* Start CTA Section */}
       <Div className="container">
         <Cta
-         title='Let’s disscuse make <br />something <i>cool</i> together'
-          btnText='Apply For Meeting'
-          btnLink='/contact'
-          bgSrc='/images/cta_bg.jpeg'
+         title="Let's discuss make <br />something <i>cool</i> together"
+          btnText="Apply For Meeting"
+          btnLink="/contact"
+          bgSrc="/images/cta_bg.jpeg"
         />
       </Div>
       {/* End CTA Section */}

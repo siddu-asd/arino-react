@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { pageTitle } from '../../../helper';
-import ServicesMainPage from './ServicesMainPage';
 
 export default function CreativeStudioPage() {
+  const navigate = useNavigate();
+  
   useEffect(() => {
     pageTitle('Creative Studio | Raising 100x');
-  }, []);
-  return <ServicesMainPage />;
+    navigate('/service/studio');
+  }, [navigate]);
+  
+  return null;
 } 

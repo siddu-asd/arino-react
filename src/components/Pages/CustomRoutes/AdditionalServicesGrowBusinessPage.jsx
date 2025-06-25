@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../../helper';
-import BlogMainPage from './BlogMainPage';
+import { useNavigate } from 'react-router-dom';
 
 export default function AdditionalServicesGrowBusinessPage() {
+  const navigate = useNavigate();
+  
   useEffect(() => {
-    pageTitle('Additional Services That Will Grow Your Business For You | Raising 100x');
-  }, []);
-  return <BlogMainPage />;
+    navigate('/about');
+  }, [navigate]);
+  
+  return null;
 } 

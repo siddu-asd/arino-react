@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../../helper';
-import ServicesMainPage from './ServicesMainPage';
+import { useNavigate } from 'react-router-dom';
 
 export default function CategoryProductDesignPage() {
+  const navigate = useNavigate();
+  
   useEffect(() => {
-    pageTitle('Category Product Design | Raising 100x');
-  }, []);
-  return <ServicesMainPage />;
+    navigate('/blog');
+  }, [navigate]);
+  
+  return null;
 } 

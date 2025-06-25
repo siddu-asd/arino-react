@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../../helper';
-import CreativeSolutionHome from '../CreativeSolutionHome';
+import { useNavigate } from 'react-router-dom';
 
 export default function ProductWebApplicationPage() {
+  const navigate = useNavigate();
+  
   useEffect(() => {
-    pageTitle('Product Web Application | Raising 100x');
-  }, []);
-  return <CreativeSolutionHome />;
+    navigate('/portfolio');
+  }, [navigate]);
+  
+  return null;
 } 

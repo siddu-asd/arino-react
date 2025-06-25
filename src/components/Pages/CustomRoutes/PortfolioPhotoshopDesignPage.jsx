@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../../helper';
-import PortfolioHoversMotionsPage from './PortfolioHoversMotionsPage';
+import { useNavigate } from 'react-router-dom';
 
 export default function PortfolioPhotoshopDesignPage() {
+  const navigate = useNavigate();
+  
   useEffect(() => {
-    pageTitle('Portfolio Photoshop Design | Raising 100x');
-  }, []);
-  return <PortfolioHoversMotionsPage />;
+    navigate('/service/studio');
+  }, [navigate]);
+  
+  return null;
 } 

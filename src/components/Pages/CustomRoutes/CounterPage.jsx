@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function AiAutomationPage() {
+export default function CounterPage() {
   const navigate = useNavigate();
   
   useEffect(() => {
-    navigate('/service/ai-technology');
+    navigate('/career');
   }, [navigate]);
   
   return null;

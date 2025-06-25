@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../../helper';
-import ServicesMainPage from './ServicesMainPage';
+import { useNavigate } from 'react-router-dom';
 
 export default function IntroducingTecnologiaFortWorthPage() {
+  const navigate = useNavigate();
+  
   useEffect(() => {
-    pageTitle('Introducing Tecnologia Fort Worth | Raising 100x');
-  }, []);
-  return <ServicesMainPage />;
+    navigate('/service/ai-technology');
+  }, [navigate]);
+  
+  return null;
 } 

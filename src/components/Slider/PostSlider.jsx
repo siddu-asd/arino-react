@@ -7,15 +7,15 @@ const postData = [
   {
     id: 'marketing-trends-2025',
     url: '/blog/marketing-trends-2025',
-    src: 'images/Marketing-in-2025-The-Trends-Youre-Not-Ready-For.jpg',
+    src: '/images/Marketing-in-2025-The-Trends-Youre-Not-Ready-For.jpg',
     alt: 'Marketing Trends 2025',
     date: '28 May 2025',
-    title: 'Marketing Trends 2025: The Trends You’re Not Ready For',
+    title: 'Marketing Trends 2025: The Trends You\'re Not Ready For',
   },
   {
     id: 'adaptive-brand-strategies',
     url: '/blog/adaptive-brand-strategies',
-    src: 'images/Building-Adaptive-Brand-Strategies.jpg',
+    src: '/images/Marketing.png',
     alt: 'Adaptive Brand Strategies',
     date: '28 May 2025',
     title: 'The Death of Traditional Marketing: Building Adaptive Brand Strategies',
@@ -23,7 +23,7 @@ const postData = [
   {
     id: 'ai-transforming-marketing',
     url: '/blog/ai-transforming-marketing',
-    src: 'images/How-AI-is-Transforming-Marketing-.jpg',
+    src: '/images/AI.png',
     alt: 'AI in Marketing',
     date: '28 May 2025',
     title: 'How AI is Transforming Marketing: Beyond Buzzwords to Real Growth',

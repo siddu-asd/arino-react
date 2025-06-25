@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../../helper';
-import CreativeSolutionHome from '../CreativeSolutionHome';
+import { useNavigate } from 'react-router-dom';
 
 export default function WhatWeLikeAboutTeamworkPage() {
+  const navigate = useNavigate();
+  
   useEffect(() => {
-    pageTitle('What We Like About Teamwork | Raising 100x');
-  }, []);
-  return <CreativeSolutionHome />;
+    navigate('/service/creative-marketing');
+  }, [navigate]);
+  
+  return null;
 } 

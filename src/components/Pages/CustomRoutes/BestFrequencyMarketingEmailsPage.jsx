@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../../helper';
-import BlogMainPage from './BlogMainPage';
+import { useNavigate } from 'react-router-dom';
 
 export default function BestFrequencyMarketingEmailsPage() {
+  const navigate = useNavigate();
+  
   useEffect(() => {
-    pageTitle('What is the Best Frequency for Sending Marketing Emails | Raising 100x');
-  }, []);
-  return <BlogMainPage />;
+    navigate('/service/creative-marketing');
+  }, [navigate]);
+  
+  return null;
 } 

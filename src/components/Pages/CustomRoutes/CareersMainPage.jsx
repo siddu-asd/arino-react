@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { pageTitle } from '../../../helper';
-import CareerPage from '../CareerPage';
+import ContactPage from '../ContactPage';
 
 export default function CareersMainPage() {
   useEffect(() => {
     pageTitle('Careers | Raising 100x');
   }, []);
-  return <CareerPage />;
+  return <ContactPage />;
 } 

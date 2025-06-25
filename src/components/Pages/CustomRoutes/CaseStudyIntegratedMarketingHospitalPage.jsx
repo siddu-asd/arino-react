@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../../helper';
-import ServicesMainPage from './ServicesMainPage';
+import { useNavigate } from 'react-router-dom';
 
 export default function CaseStudyIntegratedMarketingHospitalPage() {
+  const navigate = useNavigate();
+  
   useEffect(() => {
-    pageTitle('Case Study Integrated Marketing for a Multi Speciality Hospital | Raising 100x');
-  }, []);
-  return <ServicesMainPage />;
+    navigate('/service/creative-marketing');
+  }, [navigate]);
+  
+  return null;
 } 

@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
-import { pageTitle } from '../../../helper';
-import ServicesMainPage from './ServicesMainPage';
+import { useNavigate } from 'react-router-dom';
 
-export default function TechnologyPage() {
+export default function AiAutomationServicePage() {
+  const navigate = useNavigate();
+  
   useEffect(() => {
-    pageTitle('Technology | Raising 100x');
-  }, []);
-  return <ServicesMainPage />;
+    navigate('/service/ai-technology');
+  }, [navigate]);
+  
+  return null;
 } 

@@ -67,6 +67,15 @@ import MicrosoftTeamsProductivityPage from './components/Pages/CustomRoutes/Micr
 import ProductWebApplicationPage from './components/Pages/CustomRoutes/ProductWebApplicationPage';
 import PortfolioPhotoshopDesignPage from './components/Pages/CustomRoutes/PortfolioPhotoshopDesignPage';
 import AdvanceTabPage from './components/Pages/CustomRoutes/AdvanceTabPage';
+import PortfolioCustomEcommercePage from './components/Pages/CustomRoutes/PortfolioCustomEcommercePage';
+import CallToActionPage from './components/Pages/CustomRoutes/CallToActionPage';
+import ApplicationPage from './components/Pages/CustomRoutes/ApplicationPage';
+import CounterPage from './components/Pages/CustomRoutes/CounterPage';
+import ProductAppInstallmentPage from './components/Pages/CustomRoutes/ProductAppInstallmentPage';
+import SassLandingPage from './components/Pages/CustomRoutes/SassLandingPage';
+import ProgressbarPage from './components/Pages/CustomRoutes/ProgressbarPage';
+import TestimonialPage from './components/Pages/CustomRoutes/TestimonialPage';
+import Care100xPage from './components/Pages/CustomRoutes/Care100xPage';
 
 function App() {
   return (
@@ -118,6 +127,7 @@ function App() {
           <Route path="services" element={<ServicesMainPage />} />
           <Route path="hr100x" element={<Hr100xPage />} />
           <Route path="careers" element={<CareersMainPage />} />
+          <Route path="career" element={<CareerPage />} />
           <Route path="ai-automation-service" element={<AiAutomationServicePage />} />
           <Route path="technology" element={<TechnologyPage />} />
           <Route path="company" element={<CompanyPage />} />
@@ -151,6 +161,15 @@ function App() {
           <Route path="product/web-application" element={<ProductWebApplicationPage />} />
           <Route path="portfolio/photoshop-design" element={<PortfolioPhotoshopDesignPage />} />
           <Route path="advance-tab" element={<AdvanceTabPage />} />
+          <Route path="portfolio/custom-ecommerce" element={<PortfolioCustomEcommercePage />} />
+          <Route path="call-to-action" element={<CallToActionPage />} />
+          <Route path="application" element={<ApplicationPage />} />
+          <Route path="counter" element={<CounterPage />} />
+          <Route path="product/app-installment" element={<ProductAppInstallmentPage />} />
+          <Route path="sass-landing" element={<SassLandingPage />} />
+          <Route path="progressbar" element={<ProgressbarPage />} />
+          <Route path="testimonial" element={<TestimonialPage />} />
+          <Route path="care100x" element={<Care100xPage />} />
         </Route>
         <Route path="/" element={<Layout />}>
           <Route
