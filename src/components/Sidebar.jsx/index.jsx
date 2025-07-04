@@ -35,7 +35,17 @@ export default function Sidebar() {
     category: "AI Marketing",
     categoryHref: "/blog",
     href: "/blog/ai-transforming-marketing",
-  }
+  },
+  {
+    id: "trends-2025",
+    thumb: "/images/SOCIAL1MEDIA.jpg",
+    title: "The Importance of Storytelling in Branding: Why Every Great Brand Tells a Story ",
+    subtitle: "Discover why storytelling is the secret weapon for unforgettable brands in 2025 and beyond...",
+    date: "2025-07-04",
+    category: "Marketing Trends",
+    categoryHref: "/blog",
+    href: "/blog/trends-2025",
+  },
 ];
 
   return (
