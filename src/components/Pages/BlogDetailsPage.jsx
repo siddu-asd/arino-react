@@ -271,11 +271,11 @@ Because in 2025, the only thing faster than tech is how quickly your audience mo
 <h3> Apple: Design Meets Emotion </h3>
 <p>Apple doesn’t just tell you what their products do—they show you how their products empower creativity and self-expression. From cinematic product videos to keynote addresses, every interaction feels intentional. </p>
 <p>Core story: “We think differently and so can you.” </p>
-
+<img src="/images/blog3.png" alt="Storytelling" />
 <h3>Nike: Everyone’s Inner Athlete</h3>
 <p>Nike's “Just Do It” isn’t about shoes—it's about human resilience. Their campaigns tap into universal struggles: doubt, failure, redemption. </p>
 <p>Core story: “If you have a body, you’re an athlete.” </p>
-
+<img src="/images/blog2.png" alt="Storytelling" />
 <h3>Amazon: Relentless Customer Focus </h3>
 <h3>Dove: Real Beauty </h3>
 <p>Dove challenged decades of airbrushed perfection by showing real, imperfect women embracing beauty on their terms. </p>
@@ -320,7 +320,7 @@ Because in 2025, the only thing faster than tech is how quickly your audience mo
 <p> Hook → Conflict → Solution → Resolution → Call-to-action</p>
 <h3>6.Consistency is Key</h3>
 <p> Align your tone and message across your website, ads, customer support, and packaging. </p>
-
+<img src="/images/blog4.png" alt="Storytelling" />
 <h3>Future of Brand Storytelling (2025–2030) </h3>
 <h3>1.AI-Generated Personalized Stories</h3>
 <p>Tools like ChatGPT and Jasper allow brands to auto-generate personalized brand messages for different audience segments. </p>
