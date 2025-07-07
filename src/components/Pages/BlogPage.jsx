@@ -9,6 +9,16 @@ import Spacing from '../Spacing';
 import PageHeading from '../PageHeading';
 export const postData = [
   {
+    id: "trends-2025",
+    thumb: "/images/SOCIAL1MEDIA.jpg",
+    title: "The Importance of Storytelling in Branding: Why Every Great Brand Tells a Story ",
+    subtitle: "Discover why storytelling is the secret weapon for unforgettable brands in 2025 and beyond...",
+    date: "2025-07-04",
+    category: "Marketing Trends",
+    categoryHref: "/blog",
+    href: "/blog/trends-2025",
+  },
+  {
     id: "marketing-trends-2025",
     thumb: "/images/Marketing-in-2025-The-Trends-Youre-Not-Ready-For.jpg",
     title: "Marketing Trends 2025: The Trends You're Not Ready For",
@@ -38,16 +48,7 @@ export const postData = [
     categoryHref: "/blog",
     href: "/blog/ai-transforming-marketing",
   },
-  {
-    id: "trends-2025",
-    thumb: "/images/SOCIAL1MEDIA.jpg",
-    title: "The Importance of Storytelling in Branding: Why Every Great Brand Tells a Story ",
-    subtitle: "Discover why storytelling is the secret weapon for unforgettable brands in 2025 and beyond...",
-    date: "2025-07-04",
-    category: "Marketing Trends",
-    categoryHref: "/blog",
-    href: "/blog/trends-2025",
-  },
+  
 ];
 
 export default function BlogPage() {
