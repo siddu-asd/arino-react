@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import SocialWidget from '../Widget/SocialWidget';
 import Newsletter from '../Widget/Newsletter';
 import './header.scss';
@@ -11,6 +11,7 @@ export default function Header({ variant }) {
   const [isSticky, setIsSticky] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showMobileSubMenu, setShowMobileSubMenu] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -90,6 +91,7 @@ export default function Header({ variant }) {
                   <span></span>
                 </span>
               </Div>
+              
             </Div>
           </Div>
         </Div>

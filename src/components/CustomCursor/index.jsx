@@ -1,7 +1,9 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import './customcursor.scss';
 
 const CustomCursor = () => {
+  const location = useLocation();
   const cursorSm = React.useRef(null);
   const cursorLg = React.useRef(null);
   const positionRef = React.useRef({
@@ -15,6 +17,7 @@ const CustomCursor = () => {
   });
 
   React.useEffect(() => {
+    if (location.pathname === '/virtualtour') return;
     document.addEventListener('mousemove', event => {
       const { clientX, clientY } = event;
 
@@ -28,9 +31,10 @@ const CustomCursor = () => {
     });
 
     return () => {};
-  }, []);
+  }, [location.pathname]);
 
   React.useEffect(() => {
+    if (location.pathname === '/virtualtour') return;
     const followMouse = () => {
       positionRef.current.key = requestAnimationFrame(followMouse);
       const {
@@ -63,7 +67,10 @@ const CustomCursor = () => {
       cursorLg.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
     };
     followMouse();
-  }, []);
+  }, [location.pathname]);
+
+  if (location.pathname === '/virtualtour') return null;
+
   return (
     <>
       <div className="cs-cursor_lg" ref={cursorLg}></div>

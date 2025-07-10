@@ -76,6 +76,7 @@ import SassLandingPage from './components/Pages/CustomRoutes/SassLandingPage';
 import ProgressbarPage from './components/Pages/CustomRoutes/ProgressbarPage';
 import TestimonialPage from './components/Pages/CustomRoutes/TestimonialPage';
 import Care100xPage from './components/Pages/CustomRoutes/Care100xPage';
+import Virtualtour from './components/Pages/CustomRoutes/Virtualtour';
 
 function App() {
   return (
@@ -170,6 +171,7 @@ function App() {
           <Route path="progressbar" element={<ProgressbarPage />} />
           <Route path="testimonial" element={<TestimonialPage />} />
           <Route path="care100x" element={<Care100xPage />} />
+          <Route path="virtualtour" element={<Virtualtour />} />
         </Route>
         <Route path="/" element={<Layout />}>
           <Route
