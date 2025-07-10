@@ -59,19 +59,18 @@ export default function Footer({ copyrightText, logoSrc, logoAlt, text }) {
               </Div>
             </Div>
 
-            <Div className="col-lg-3 col-sm-6">
-              <Div className="cs-footer_item">
+            {/* Mobile-specific group for Services and Contact Us */}
+            <Div className="cs-footer_mobile-row col-lg-6 col-sm-12">
+              <Div className="cs-footer_item cs-footer_mobile-col">
                 <MenuWidget menuItems={serviceMenu} menuHeading="Services" />
               </Div>
-            </Div>
-
-            <Div className="col-lg-3 col-sm-6">
-              <Div className="cs-footer_item">
+              <Div className="cs-footer_item cs-footer_mobile-col">
                 <ContactInfoWidget title="Contact Us" />
               </Div>
             </Div>
 
-            <Div className="col-lg-3 col-sm-6">
+            {/* Newsletter below the mobile row */}
+            <Div className="col-lg-3 col-sm-6 cs-footer_mobile-newsletter">
               <Div className="cs-footer_item">
                 <Newsletter
                   title="Drop Your Email"

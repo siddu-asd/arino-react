@@ -5,6 +5,7 @@ export default function ContactInfoWidget({ withIcon, title }) {
     <>
       {title && <h2 className="cs-widget_title">{title}</h2>}
 <ul className="cs-menu_widget cs-style1 cs-mp0">
+
   <li>
     {withIcon && (
       <span className="cs-accent_color" style={{ marginRight: '8px' }}>
@@ -41,6 +42,16 @@ export default function ContactInfoWidget({ withIcon, title }) {
     )}
     <span className="cs-accent_color" style={{display: 'inline-block', width: 'auto'}}>
       Hyderabad
+    </span>
+  </li>
+  <li>
+    {withIcon && (
+      <span className="cs-accent_color" style={{ marginRight: '8px' }}>
+        <Icon icon="mdi:map-marker" />
+      </span> 
+    )}
+    <span className="cs-accent_color" style={{display: 'inline-block', width: 'auto'}}>
+      India
     </span>
   </li>
 </ul>

@@ -205,6 +205,36 @@
 }
 }
 @media screen and (max-width: 767px) {
+  /* Hide original columns for Services and Contact Us on mobile if needed */
+  .cs-footer_mobile-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .cs-footer_mobile-col {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 50%;
+    padding: 0 4px;
+  }
+  .cs-footer_mobile-newsletter {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin: 0 auto;
+  }
+  /* Remove margin-bottom from the last item */
+  .cs-footer_mobile-newsletter .cs-footer_item {
+    margin-bottom: 0;
+  }
+  /* Remove extra padding from the mobile row columns */
+  .cs-footer_mobile-col .cs-footer_item {
+    margin-bottom: 0;
+  }
   /* Center all content in footer columns */
   .cs-footer_item {
     text-align: center;
@@ -244,6 +274,21 @@
   /* Optional: center copyright links too */
   .cs-bottom_footer_right .cs-menu_widget.cs-style2 {
     justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  .cs-bottom_footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .cs-copyright {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .cs-bottom_footer_right {
     text-align: center;
     width: 100%;
   }
