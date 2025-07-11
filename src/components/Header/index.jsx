@@ -106,63 +106,30 @@ export default function Header({ variant }) {
           <button className="menu-close" onClick={() => setMobileMenuOpen(false)}>&times;</button>
         </div>
         <ul className="menu-list">
-          {menuItems.map((item, idx) =>
-            !item.submenu ? (
+          {menuItems.map((item, idx) => {
+            // On mobile, replace "Let's Connect" with "Let's Connect" (linking to /contact) and add "Join Us"
+            if (item.label === "Let's Connect") {
+              return [
+                <li key="lets-connect">
+                  <NavLink to="/contact" onClick={() => setMobileMenuOpen(false)}>
+                    Let's Connect
+                  </NavLink>
+                </li>,
+                <li key="join-us">
+                  <NavLink to="/career" onClick={() => setMobileMenuOpen(false)}>
+                    Join Us
+                  </NavLink>
+                </li>
+              ];
+            }
+            return (
               <li key={idx}>
                 <NavLink to={item.to} onClick={() => setMobileMenuOpen(false)}>
                   {item.label}
                 </NavLink>
               </li>
-            ) : (
-              <li key={idx} className="mobile-submenu-parent">
-                <button
-                  className="mobile-submenu-toggle"
-                  onClick={() => setShowMobileSubMenu((v) => !v)}
-                  aria-expanded={showMobileSubMenu}
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    color: '#fff',
-                    fontSize: '1.2rem',
-                    fontWeight: 600,
-                    cursor: 'pointer',
-                    width: '100%',
-                    textAlign: 'center',
-                    marginBottom: showMobileSubMenu ? 0 : 18
-                  }}
-                >
-                  {item.label}
-                  <span style={{
-                    display: 'inline-block',
-                    marginLeft: 8,
-                    transform: showMobileSubMenu ? 'rotate(90deg)' : 'rotate(0deg)',
-                    transition: 'transform 0.2s'
-                  }}>▶</span>
-                </button>
-                {showMobileSubMenu && (
-                  <ul className="mobile-submenu-list" style={{ marginTop: 8 }}>
-                    {item.submenu.map((sub, subIdx) => (
-                      <li key={subIdx}>
-                        <NavLink
-                          to={sub.to}
-                          onClick={() => setMobileMenuOpen(false)}
-                          style={{
-                            color: '#fff',
-                            fontSize: '1.1rem',
-                            fontWeight: 500,
-                            padding: '8px 0',
-                            display: 'block'
-                          }}
-                        >
-                          {sub.label}
-                        </NavLink>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            )
-          )}
+            );
+          })}
         </ul>
         <div className="menu-bottom-info">
           <div style={{fontWeight:600, fontSize:'1.1rem', marginBottom: '6px'}}>Contact Us</div>

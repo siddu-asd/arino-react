@@ -7,7 +7,7 @@ import Spacing from '../Spacing';
 const testimonialData = [
   {
     testimonialThumb: '/images/CLIENT.png',
-    testimonialText: 'We wanted one unique logo and packaging for our brand. Communication from their end was quick and transparent.',
+     testimonialText: 'We wanted one unique logo and packaging for our brand. Communication from their end was quick and transparent. The team at Raising 100x truly listened to our needs, delivered creative solutions, and ensured every detail was perfect.',
     avatarName: 'Fayakun',
     ratings: '5',
   },
@@ -98,7 +98,7 @@ export default function TestimonialSlider() {
             </Div>
           </Div>
         </Div>
-        <Spacing lg="130" md="80" />
+        {/* <Spacing lg="130" md="80" /> */}
       </Div>
     </>
   );

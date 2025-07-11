@@ -6,7 +6,7 @@ import PostStyle2 from '../Post/PostStyle2';
 import Div from '../Div';
 import Sidebar from '../Sidebar.jsx';
 import Spacing from '../Spacing';
-import PageHeading from '../PageHeading';
+// import PageHeading from '../PageHeading';
 export const postData = [
   {
     id: "trends-2025",
@@ -60,13 +60,16 @@ export default function BlogPage() {
 
   return (
     <>
-     <div className="responsive-page-heading">
+     {/* <div className="responsive-page-heading">
        <PageHeading
          title="Our Blogs"
          bgSrc="/images/blog_hero_bg.jpeg"
          pageLinkText="Blogs"
        />
-     </div>
+     </div> */}
+      <div style={{ marginTop: '120px' }}>
+        {/* Adjust marginTop as needed to match your header height */}
+      </div>
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row">

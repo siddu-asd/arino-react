@@ -31,8 +31,8 @@ export default function AboutPage() {
       {/* Start About Section */}
       <Spacing lg="150" md="80" />
       <Div className="container">
-        <Div className="row">
-          <Div className="col-xl-5 col-lg-7">
+        <Div className="row about-section-row">
+          <Div className="col-xl-5 col-lg-7 about-text-col">
             <SectionHeading
               title="EXPLORE OUR SPACE"
               subtitle=""
@@ -49,7 +49,7 @@ export default function AboutPage() {
               <Spacing lg="25" md="40" />
             </SectionHeading>
           </Div>
-          <Div className="col-lg-5 offset-xl-2">
+          <Div className="col-lg-5 offset-xl-2 about-img-col">
             <img
               src="/images/hy.png"
               alt="About"
@@ -57,22 +57,6 @@ export default function AboutPage() {
             />
             <Spacing lg="25" md="25" />
           </Div>
-          {/* <Div className="col-lg-7">
-            <img
-              src="/images/9i.jpeg"
-              alt="About"
-              className="w-100 cs-radius_15"
-            />
-            <Spacing lg="25" md="25" />
-          </Div>
-          <Div className="col-lg-5">
-            <img
-              src="/images/12l.jpeg"
-              alt="About"
-              className="w-100 cs-radius_15"
-            />
-            <Spacing lg="25" md="25" />
-          </Div> */}
         </Div>
       </Div>
       <Spacing lg="75" md="55" />
@@ -81,20 +65,8 @@ export default function AboutPage() {
       {/* Start Why Choose Section */}
       <Spacing lg="100" md="80" />
       <Div className="container">
-        <Div className="row">
-          <Div className="col-xl-5 col-lg-6">
-            <Div className="cs-image_layer cs-style1">
-              <Div className="cs-image_layer_in">
-                <img
-                  src="/images/EOS.png"
-                  alt="About"
-                  className="w-100 cs-radius_15"
-                />
-              </Div>
-            </Div>
-            <Spacing lg="0" md="40" />
-          </Div>
-          <Div className="col-xl-5 offset-xl-1 col-lg-6">
+        <Div className="row about-section-row">
+          <Div className="col-xl-5 offset-xl-1 col-lg-6 about-text-col">
             <SectionHeading
               title="What Fuels Us?"
               subtitle=""
@@ -114,21 +86,31 @@ export default function AboutPage() {
                 <li>Cluttered layouts and copy-paste social media posts</li>
               </ul>
 
-             
-
               <Spacing lg="15" md="15" />
               <Spacing lg="30" md="30" />
               <Div className="cs-separator cs-accent_bg"></Div>
               <Spacing lg="25" md="0" />
             </SectionHeading>
           </Div>
+          <Div className="col-xl-5 col-lg-6 about-img-col">
+            <Div className="cs-image_layer cs-style1">
+              <Div className="cs-image_layer_in">
+                <img
+                  src="/images/EOS.png"
+                  alt="About"
+                  className="w-100 cs-radius_15"
+                />
+              </Div>
+            </Div>
+            <Spacing lg="0" md="40" />
+          </Div>
         </Div>
       </Div>
       {/* End Why Choose Section */}
        <Spacing lg="150" md="80" />
       <Div className="container">
-        <Div className="row">
-          <Div className="col-xl-5 col-lg-7">
+        <Div className="row about-section-row">
+          <Div className="col-xl-5 col-lg-7 about-text-col">
             <SectionHeading
               title="What you get with Raising 100x"
               subtitle=""
@@ -148,7 +130,7 @@ export default function AboutPage() {
               <Spacing lg="25" md="40" />
             </SectionHeading>
           </Div>
-          <Div className="col-lg-5 offset-xl-2">
+          <Div className="col-lg-5 offset-xl-2 about-img-col">
             <img
               src="/images/fr.png"
               alt="About"
@@ -156,7 +138,6 @@ export default function AboutPage() {
             />
         
           </Div>
-         
         </Div>
       </Div>
       <Spacing lg="15" md="55" />

@@ -76,6 +76,13 @@ const scenes = {
   },
 };
 
+const getAutorotateSpeed = () => {
+  if (window.innerWidth <= 768) {
+    return 0.03; // smoother/slower for mobile
+  }
+  return 0.1; // default for desktop
+};
+
 const ViewerComponent = ({ toggleChatBot }) => {
   const [currentScene, setCurrentScene] = useState('ENTRY');
   const viewerRef = useRef(null);
@@ -140,7 +147,7 @@ const ViewerComponent = ({ toggleChatBot }) => {
         'autorotate',
         'fullscreen',
       ],
-      plugins: [MarkersPlugin, [AutorotatePlugin, { autorotateSpeed: 0.1 }]],
+      plugins: [MarkersPlugin, [AutorotatePlugin, { autorotateSpeed: getAutorotateSpeed() }]],
     });
 
     viewerRef.current = viewer;

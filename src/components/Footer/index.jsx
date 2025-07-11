@@ -32,7 +32,7 @@ const serviceMenu = [
     href: '/service/ai-technology',
   },
   {
-    title: 'Visual Storytelling Studio',
+    title: 'Studio',
     href: '/service/studio',
   },
 ];

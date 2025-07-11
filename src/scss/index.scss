@@ -5,3 +5,17 @@
 @import "common/video-modal";
 @import "common/sidebar";
 
+/* AboutPage mobile column order */
+@media (max-width: 767px) {
+  .about-section-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-section-row .about-text-col {
+    order: 1;
+  }
+  .about-section-row .about-img-col {
+    order: 2;
+  }
+}
+

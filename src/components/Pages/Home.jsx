@@ -379,7 +379,7 @@ export default function Home() {
       <Div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <TestimonialSlider />
       </Div>
-      <Spacing lg="150" md="80" />
+      {/* <Spacing lg="80" md="40" /> */}
       <Div className="cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>
         <Div className="cs-shape_4"></Div>

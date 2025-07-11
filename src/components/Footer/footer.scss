@@ -201,7 +201,7 @@
   margin-top: 15px;
 }
 .cs-fooer_main {
-  padding: 60px 0 15px;
+  padding: 30px 0 15px;
 }
 }
 @media screen and (max-width: 767px) {
@@ -254,7 +254,8 @@
   .cs-footer_item .cs-menu_widget {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 26px;
   }
 
   .cs-footer_item .cs-menu_widget li {
