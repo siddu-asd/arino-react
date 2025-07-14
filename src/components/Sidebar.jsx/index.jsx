@@ -6,16 +6,26 @@ import SearchWidget from '../Widget/SearchWidget'
 export default function Sidebar() {
 
   const recentPostData = [
-     {
-    id: "trends-2025",
-    thumb: "/images/SOCIAL1MEDIA.jpg",
-    title: "The Importance of Storytelling in Branding: Why Every Great Brand Tells a Story ",
-    subtitle: "Discover why storytelling is the secret weapon for unforgettable brands in 2025 and beyond...",
-    date: "2025-07-04",
-    category: "Marketing Trends",
-    categoryHref: "/blog",
-    href: "/blog/trends-2025",
-  },
+    {
+      id: "social-media-marketing-2025",
+      thumb: "/images/SOCIAL1MEDIA.jpg",
+      title: "Why Social Media Marketing Is Crucial in Today's Digital World (2025 Guide)",
+      subtitle: "Discover why social media marketing is the secret weapon for unforgettable brands in 2025 and beyond...",
+      date: "2025-07-04",
+      category: "Marketing Trends",
+      categoryHref: "/blog",
+      href: "/blog/social-media-marketing-2025",
+    },
+    {
+      id: "trends-2025",
+      thumb: "/images/STORYTELLING.jpg",
+      title: "The Importance of Storytelling in Branding: Why Every Great Brand Tells a Story ",
+      subtitle: "Discover why storytelling is the secret weapon for unforgettable brands in 2025 and beyond...",
+      date: "2025-07-04",
+      category: "Marketing Trends",
+      categoryHref: "/blog",
+      href: "/blog/trends-2025",
+    },
   {
     id: "marketing-trends-2025",
     thumb: "/images/Marketing-in-2025-The-Trends-Youre-Not-Ready-For.jpg",

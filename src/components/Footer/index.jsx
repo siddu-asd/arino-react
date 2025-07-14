@@ -75,7 +75,7 @@ export default function Footer({ copyrightText, logoSrc, logoAlt, text }) {
                 <Newsletter
                   title="Drop Your Email"
                   subtitle="The Coffee Pot is Brewing And We Are Waiting😊"
-                  placeholder="example@gmail.com"
+                  placeholder="Enter your email....."
                 />
               </Div>
             </Div>

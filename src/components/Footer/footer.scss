@@ -295,3 +295,17 @@
   }
 }
 
+@media (min-width: 992px) {
+  .cs-footer_mobile-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  .cs-footer_mobile-col {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+

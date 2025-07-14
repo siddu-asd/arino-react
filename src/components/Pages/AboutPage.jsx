@@ -29,6 +29,7 @@ export default function AboutPage() {
       {/* End Page Heading Section */}
 
       {/* Start About Section */}
+      <div className="aboutpage-mobile-top-spacer" />
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row about-section-row">
@@ -65,7 +66,7 @@ export default function AboutPage() {
       {/* Start Why Choose Section */}
       <Spacing lg="100" md="80" />
       <Div className="container">
-        <Div className="row about-section-row">
+        <Div className="row about-section-row flex-row-reverse">
           <Div className="col-xl-5 offset-xl-1 col-lg-6 about-text-col">
             <SectionHeading
               title="What Fuels Us?"
@@ -99,6 +100,7 @@ export default function AboutPage() {
                   src="/images/EOS.png"
                   alt="About"
                   className="w-100 cs-radius_15"
+                  style={{ marginLeft: '5px' }}
                 />
               </Div>
             </Div>
@@ -112,7 +114,7 @@ export default function AboutPage() {
         <Div className="row about-section-row">
           <Div className="col-xl-5 col-lg-7 about-text-col">
             <SectionHeading
-              title="What you get with Raising 100x"
+              title={'What you get<br class="mobile-break" />with Raising 100x'}
               subtitle=""
             >
               <Spacing lg="30" md="20" />
@@ -154,20 +156,7 @@ export default function AboutPage() {
       </Div>
       <Spacing lg="120" md="50" />
 
-      {/* Start Team Section */}
-      {/* <Spacing lg="145" md="80" /> */}
-      {/* <Div className="container">
-        <SectionHeading
-          title="People Who Make It Possible"
-          subtitle=""
-          variant="cs-style1"
-        />
-        <Spacing lg="85" md="45" />
-        <TeamSlider />
-      </Div> */}
-      {/* End Team Section */}
-
-      {/* Start CTA Section */}
+     
       <Spacing lg="150" md="80" />
       
             <Div className="container">
@@ -179,7 +168,40 @@ export default function AboutPage() {
                 bgSrc="/images/cta_bg.jpeg"
               />
             </Div>
-      {/* End CTA Section */}
+    
+    <style>{`
+        @media (min-width: 992px) {
+          .about-text-col h2,
+          .about-text-col .cs-section_heading_title {
+            white-space: nowrap;
+            overflow-wrap: normal;
+          }
+        }
+        @media (min-width: 1200px) {
+          .about-section-row > .about-text-col {
+            padding-right: 60px;
+          }
+          .about-section-row > .about-img-col {
+           
+            max-width: 500px;
+          }
+          .about-section-row > .about-img-col img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+          }
+        }
+        @media (min-width: 992px) {
+          .about-text-col .mobile-break {
+            display: none;
+          }
+        }
+        @media (max-width: 991px) {
+          .about-text-col .mobile-break {
+            display: inline;
+          }
+        }
+      `}</style>
     </>
   );
 }

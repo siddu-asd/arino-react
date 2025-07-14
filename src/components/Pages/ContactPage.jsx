@@ -298,6 +298,7 @@ export default function ContactPage() {
           pageLinkText="Contact Us"
         />
       </div>
+      <div className="aboutpage-mobile-top-spacer" />
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row">
@@ -476,6 +477,13 @@ export default function ContactPage() {
         />
       </Div>
       <Spacing lg="50" md="40" />
+      <style>{`
+        @media (max-width: 767px) {
+          .cs-btn.cs-style1 {
+            margin-bottom: 60px !important;
+          }
+        }
+      `}</style>
     </>
   );
 }

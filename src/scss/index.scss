@@ -19,3 +19,18 @@
   }
 }
 
+@media (max-width: 768px) {
+  .responsive-page-heading {
+    display: none !important;
+  }
+  .mobile-section-heading {
+    margin-bottom: 32px !important;
+    display: block;
+  }
+  .aboutpage-mobile-top-spacer {
+    height: 80px;
+    width: 100%;
+    display: block;
+  }
+}
+

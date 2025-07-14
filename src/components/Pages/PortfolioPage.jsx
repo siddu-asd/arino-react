@@ -115,8 +115,15 @@ export default function PortfolioPage() {
           pageLinkText="Creations"
         />
       </div>
+      <div className="aboutpage-mobile-top-spacer" />
       <Spacing lg="145" md="80" />
-      <Div className="container">
+      <style>{`
+        .portfolio-desktop-margin { margin-top: 120px; }
+        @media (max-width: 991px) {
+          .portfolio-desktop-margin { margin-top: 0; }
+        }
+      `}</style>
+      <Div className="container portfolio-desktop-margin">
         <Div className="cs-portfolio_1_heading">
           <SectionHeading title="Unique designs we can craft just for you!  " subtitle="Behold Our Creation " />
           <Div className="cs-filter_menu cs-style1">

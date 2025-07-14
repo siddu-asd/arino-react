@@ -231,6 +231,13 @@ export default function ServiceDetailsPage() {
 
   return (
     <>
+      <style>{`
+        @media (max-width: 991px) {
+          .d-block.d-lg-none {
+            display: none !important;
+          }
+        }
+      `}</style>
       <Div className="d-block d-lg-none">
         <PageHeading
           title="What We Offer"

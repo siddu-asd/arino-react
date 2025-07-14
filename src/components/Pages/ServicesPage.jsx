@@ -29,6 +29,7 @@ export default function ServicesPage({ focusService }) {
           pageLinkText="What We Offe"
         />
       </div>
+      <div className="aboutpage-mobile-top-spacer" />
       <Spacing lg='150' md='80' />
       <Div className='cs-shape_wrap_4'>
         <Div className="cs-shape_4"></Div>
