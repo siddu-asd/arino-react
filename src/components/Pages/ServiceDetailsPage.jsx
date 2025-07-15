@@ -219,6 +219,48 @@ export default function ServiceDetailsPage() {
     setHoveredIndex(null);
   };
 
+  // Section content for each service
+  const whyChooseContent = {
+    'creative-marketing': (
+      <>
+        All the best marketing agencies have some important factors that makes them different from the rest. At Raising 100x, we carve your brand, refine and position it in a way that makes it not a choice, but a preference.<br/><br/>
+        From ideation of campaigns to tracking performance, we’ve got everything covered.<br/><br/>
+        Every top marketing agency in India prioritises creativity, focusses on bringing the best out of your brand. Our creative team upgrade their skillset and knowledge with latest trends and algorithms and draft strategies that are ahead of the league.<br/><br/>
+        As one of the best advertising agencies and top advertising agencies, we blend bold ideas with data-driven insights to craft campaigns that don’t just grab attention—they spark action. Our marketing strategy & planning process is rooted in deep research, competitive analysis, and a relentless pursuit of what makes your brand truly unique.
+      </>
+    ),
+    'branding': (
+      <>
+        Whether you’re launching a new product, refreshing your brand logo, or building your personal brand, our team crafts strategies and visuals that build trust and recognition. We don’t just design logos—we create icons that stand for something bigger.<br/><br/>
+        Branding and packaging are what makes a product distinguish from other. As a leading branding agency, we offer end-to-end branding services that cover everything from brand name & tagline creation to brand identity, business logo design, and packaging.<br/><br/>
+        From color palettes and typography to iconography and tone of voice, every detail is meticulously designed to reflect your brand’s personality and connect with your audience. Our logo designers and branding strategists work hand-in-hand to ensure your brand identity is both timeless and trendsetting.
+      </>
+    ),
+    'ai-technology': (
+      <>
+        AI and Technology services at Raising 100x, harness the power of artificial intelligence to supercharge your brand’s growth. From AI-powered chatbots that deliver instant customer support to workflow automation that streamlines your operations, we make technology work for you.<br/><br/>
+        Need an artificial intelligence website or want to explore in-store AR/VR experiences? Our AI technolgy experts design seamless, innovative solutions that put you miles ahead of the competition. With AI and technology at your fingertips, your brand is ready for tomorrow—today.<br/><br/>
+        With our expert website and app development team, build digital experiences that wow everyone.
+      </>
+    ),
+    'studio': (
+      <>
+        Raising 100x Studio—the creative playground where ideas come alive. Our visual storytelling studio is more than a space; it’s an experience.<br/><br/>
+        From the best podcasts and video podcast production to cinematic ad-films, product photoshoots, and video shooting, we bring your vision to life with flair and precision.<br/><br/>
+        Need a storytelling studio or studio space that inspires? Our team delivers scroll-stopping visuals and audio that make your brand the talk of the town.<br/><br/>
+        Raising 100x is where creative marketing meets AI and technology, branding becomes iconic, and every story finds its stage in our visual storytelling studio. Let’s raise your brand 100x—together.
+      </>
+    ),
+  };
+
+  // Service-specific heading for the why-choose section
+  const whyChooseHeading = {
+    'creative-marketing': 'Why Choose Raising 100x for Creative Marketing?',
+    'branding': 'Why Choose Raising 100x for Branding?',
+    'ai-technology': 'Why Choose Raising 100x for AI & Technology?',
+    'studio': 'Why Choose Raising 100x for Visual Storytelling Studio?',
+  }[serviceDetailsId] || 'Why Choose Raising 100x?';
+
   if (!service) {
     return (
       <Div className="container text-center">
@@ -250,8 +292,8 @@ export default function ServiceDetailsPage() {
         <Spacing lg="145" md="80" />
         <Div className="container" style={{marginTop: '100px'}}>
           <SectionHeading
-            title="Our Design Adventure Begins With"
-            subtitle={service.title}
+            title={service.title}
+            subtitle={service.subtitle}
             variant="cs-style1 text-center"
           />
           <Spacing lg="90" md="45" />
@@ -267,6 +309,7 @@ export default function ServiceDetailsPage() {
               </Div>
             ))}
           </Div>
+        
         </Div>
 
         <Spacing lg="120" md="50" />
@@ -300,8 +343,21 @@ export default function ServiceDetailsPage() {
             </Div>
           </Div>
         </Div>
-
-        <Spacing lg="120" md="50" />
+{/* 
+        <Spacing lg="120" md="50" /> */}
+           {/* New Why Choose section */}
+           {/* This section is now handled within the service details page */}
+                    {/* New Why Choose section, content varies by service */}
+          <Div className="why-choose-section" style={{margin: '0px auto 30px auto', maxWidth: 900, borderRadius: 16, padding: '40px 32px', boxShadow: '0 4px 24px rgba(0,0,0,0.08)', }}>
+            <SectionHeading
+              title={whyChooseHeading}
+              subtitle=""
+              variant="cs-style1 text-center"
+            />
+            <div style={{fontSize: '18px', color: '#fff', lineHeight: 1.6, margin: '32px auto 0 auto', textAlign: '-webkit-auto', maxWidth: 900}}>
+              {whyChooseContent[serviceDetailsId]}
+            </div>
+          </Div>
         <Div className="container">
           <SectionHeading
             title={portfolioHeading}

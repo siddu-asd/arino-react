@@ -66,7 +66,7 @@ export default function AboutPage() {
       {/* Start Why Choose Section */}
       <Spacing lg="100" md="80" />
       <Div className="container">
-        <Div className="row about-section-row flex-row-reverse">
+        <Div className="row about-section-row about-whyfuelsus-row flex-row-reverse">
           <Div className="col-xl-5 offset-xl-1 col-lg-6 about-text-col">
             <SectionHeading
               title="What Fuels Us?"
@@ -171,25 +171,59 @@ export default function AboutPage() {
     
     <style>{`
         @media (min-width: 992px) {
-          .about-text-col h2,
-          .about-text-col .cs-section_heading_title {
-            white-space: nowrap;
-            overflow-wrap: normal;
+          .about-section-row {
+            align-items: center;
           }
-        }
-        @media (min-width: 1200px) {
-          .about-section-row > .about-text-col {
+          /* Default for all sections */
+          .about-text-col {
             padding-right: 60px;
-          }
-          .about-section-row > .about-img-col {
-           
             max-width: 500px;
+            flex: 1 1 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
           }
-          .about-section-row > .about-img-col img {
+          .about-img-col {
+            max-width: 500px;
+            flex: 1 1 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-left: 60px;
+          }
+          /* Remove horizontal gap for the first section only */
+          .about-section-row:first-of-type .about-text-col {
+            padding-right: 16px;
+          }
+          .about-section-row:first-of-type .about-img-col {
+
+            padding-left: 0;
+
+          }
+          .about-img-col img {
             max-width: 100%;
             height: auto;
             display: block;
+            border-radius: 15px;
           }
+          /* Add right margin to the image in the 'What Fuels Us?' section */
+          .about-section-row:nth-of-type(2) .about-img-col {
+            margin-right: 32px;
+          }
+          /* Custom styles for What Fuels Us section only */
+          .about-whyfuelsus-row .about-img-col {
+            padding-left: 0 !important;
+            margin-right: 130px !important;
+          }
+          .about-whyfuelsus-row .about-text-col {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            margin-right: 60px !important;
+          }
+        }
+        @media (min-width: 1200px) {
+          /* No extra rules needed, handled above for 992px+ */
         }
         @media (min-width: 992px) {
           .about-text-col .mobile-break {

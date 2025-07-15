@@ -18,7 +18,7 @@ export default function VideoModal({ videoSrc, bgUrl, variant }) {
         className={`cs-video_block ${
           variant ? variant : 'cs-style1'
         } cs-video_open cs-bg`}
-        style={{ backgroundImage: `url(${bgUrl})` }}
+        style={{ backgroundImage: `url(${bgUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         onClick={handelClick}
       >
         <span className="cs-player_btn cs-accent_color">
@@ -83,6 +83,13 @@ export default function VideoModal({ videoSrc, bgUrl, variant }) {
       <style>{`
         .cs-video_modal_close_btn:hover {
           background: #d90d0d;
+        }
+        @media (max-width: 575px) {
+          .cs-video_block.cs-bg {
+            background-size: cover !important;
+            background-position: center !important;
+            min-height: 250px !important;
+          }
         }
       `}</style>
     </>

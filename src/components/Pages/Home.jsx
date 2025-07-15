@@ -133,7 +133,7 @@ export default function Home() {
   <span id="wonder-text">WONDERFUL</span>`
         }
         btnText="LET'S START"
-        btnLink="/contact"
+        btnLink="/contact"  
         scrollDownId="#service"
         socialLinksHeading="Follow Us"
         heroSocialLinks={heroSocialLinks}
@@ -141,15 +141,13 @@ export default function Home() {
         // bgImageUrl="/images/rotateHero_bg.jpeg"
       />
 
-
-
       <div className="container">
         <FunFact
           variant="cs-type1"
           title="Setting the Bar 100 Times Higher"
-
         />
       </div>
+
 
       <Spacing lg="150" md="80" />
       <Div id="service">
@@ -360,7 +358,7 @@ export default function Home() {
         }}>
           <VideoModal
             videoSrc="/video/raising100xvideo.MP4"
-            bgUrl="/images/video_bg.jpeg"
+            bgUrl="/images/100xbg2.jpg"
           />
         </Div>
       </Div>

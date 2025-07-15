@@ -58,12 +58,18 @@ export default function CareerPage() {
       setLoading(true);
       setMessage('');
 
-      const response = await fetch('https://career-formsheet.onrender.com/submit_application', {
+      const BACKEND_BASE_URL = 'https://career-formsheet.onrender.com';
+      const response = await fetch(`${BACKEND_BASE_URL}/submit_application`, {
         method: 'POST',
         body: formData,
       });
 
-      const result = await response.json();
+      let result;
+      try {
+        result = await response.json();
+      } catch (jsonErr) {
+        result = await response.text();
+      }
 
       if (response.ok) {
         setMessage('You will hear from us soon!');
@@ -74,10 +80,12 @@ export default function CareerPage() {
         setResume(null);
         document.getElementById('resumeInput').value = '';
       } else {
-        setMessage(result?.error || 'Submission failed.');
+        setMessage(result?.error || result || 'Submission failed.');
+        console.error('Submission error:', result);
       }
     } catch (err) {
       setMessage('An error occurred. Please try again.');
+      console.error('Network or JS error:', err);
     } finally {
       setLoading(false);
     }
@@ -92,6 +100,7 @@ export default function CareerPage() {
         pageLinkText="Get On Board"
       />
     </div>
+    <div className="careerpage-desktop-top-spacer" />
     <div className="aboutpage-mobile-top-spacer" />
   <Spacing lg="100" md="60" />
 <Div className="container">
@@ -305,6 +314,14 @@ export default function CareerPage() {
     }
     .improved-career-form {
       max-width: 100%;
+    }
+  }
+  @media (min-width: 992px) {
+    .careerpage-desktop-top-spacer {
+      margin-top: 100px; /* Adjust this value if your header is taller/shorter */
+    }
+    .cs-career-row {
+      flex-direction: row;
     }
   }
 `}</style>

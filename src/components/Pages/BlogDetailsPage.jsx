@@ -14,9 +14,9 @@ const postData = [
     image: "/images/SOCIAL1MEDIA.jpg",
     title: "Why Social Media Marketing Is Crucial in Today's Digital World (2025 Guide)",
     category: "Marketing Trends",
-    date: "2025-07-04",
+    date: "july-2025",
     content: `
-      <h3>Introduction: The Digital Shift That Changed Everything</h3>
+      <h4>Introduction: The Digital Shift That Changed Everything</h4>
       <p>Imagine waking up, scrolling through your phone, and being influenced to try a new skincare product, follow a thought leader, or register for an online course—all before breakfast. This isn't just habit; it's the new buying journey, and it's powered by social media marketing.</p>
       <p>In today's hyper-connected, screen-dominated society, social media is not just where people hang out—it's where they form opinions, discover brands, and make decisions. Whether you're a solopreneur or a Fortune 500 company, mastering social media marketing is not optional—it's mission-critical.</p>
       <p>This article dives deep into why social media marketing is important in today's time, how it's evolved, its real-world impact, and what businesses must do to stay relevant in 2025 and beyond.</p>
@@ -37,12 +37,13 @@ const postData = [
         <tr><td>Average user time: 2.5 hours/day</td><td>People are consuming and engaging with content longer than ever</td></tr>
         <tr><td>72% make buying decisions via social</td><td>From product reviews to influencer tips, social = commerce</td></tr>
       </table>
+      <img src="/images/socialmediablog.png" alt="Brand Awareness" />
       <h3>Top Reasons Why Social Media Marketing is Important Today</h3>
       <h3>📣 1. Builds Brand Awareness Like Nothing Else</h3>
       <p>Social media gives brands the power to reach millions—organically or through paid boosts. A viral post or trending campaign can generate massive visibility, overnight.</p>
       <p>Whether you're launching a new app or raising awareness for a cause, social media accelerates discovery.</p>
       <p>Example: Brands like Blinkit or Zomato in India use witty Twitter threads to build recall with every trending topic.</p>
-      <img src="/images/brand-awareness.jpg" alt="Brand Awareness" />
+      <img src="/images/socialmediablog4.png" alt="Brand Awareness" />
       <h3>💬 2. Facilitates Two-Way Communication</h3>
       <p>Unlike traditional advertising, social media allows for conversations, not monologues.</p>
       <ul>
@@ -80,7 +81,7 @@ const postData = [
         <li>Tap into niche communities</li>
       </ul>
       <p><b>ROI from influencer marketing is projected to be 11x higher than traditional banners.</b></p>
-      <img src="/images/influencer-marketing.jpg" alt="Influencer Marketing" />
+      <img src="/images/socialmediablog2.png" alt="Influencer Marketing" />
       <h3>🌍 7. Builds Community and Advocacy</h3>
       <p>Social media platforms enable brands to build loyal online tribes that:</p>
       <ul>
@@ -107,7 +108,7 @@ const postData = [
         <li>YouTube Product Pins</li>
       </ul>
       <p><b>Social commerce sales are projected to reach $1.6 trillion by 2026.</b></p>
-      <img src="/images/social-commerce.jpg" alt="Social Commerce" />
+      <img src="/images/socialmediablog5.png" alt="Social Commerce" />
       <h3>🤖 10. Leverages AI and Automation</h3>
       <p>With AI tools like:</p>
       <ul>
@@ -161,7 +162,7 @@ const postData = [
         <li>6. Track KPIs Religiously (Engagement, CTR, ROI)</li>
         <li>7. Stay Updated (Algorithm changes happen fast!)</li>
       </ul>
-      <img src="/images/social-strategy.jpg" alt="Social Strategy" />
+      <img src="/images/socialmediablog3.png" alt="Social Strategy" />
       <h3>FAQs About Social Media Marketing</h3>
       <p><b>1. Is social media marketing suitable for small businesses?</b></p>
       <p>Absolutely. In fact, it levels the playing field and helps small businesses punch above their weight.</p>
@@ -187,7 +188,7 @@ const postData = [
     image: "/images/STORYTELLING.jpg",
     title: "The Importance of Storytelling in Branding: Why Every Great Brand Tells a Story ",
     category: "Marketing Trends",
-    date: "2025-07-04",
+    date: "july-2025",
     content: `
       <h3> Introduction: Why Storytelling is the Soul of Branding </h3>
       <p>In a digital world bursting with ads, influencers, and algorithmically curated content, brands that don't tell compelling stories simply get forgotten. In 2025, attention is currency—and storytelling is how you earn it. Whether you're a startup, legacy brand, or D2C challenger, storytelling in branding is no longer optional—it's foundational. </p>
@@ -335,7 +336,7 @@ const postData = [
     image: "/images/Marketing-in-2025-The-Trends-Youre-Not-Ready-For.jpg",
     title: "Marketing Trends 2025: The Trends You're Not Ready For",
     category: "Marketing Trends",
-    date: "2025-07-04",
+    date: "july-2025",
     content: `
       <p>Imagine a world where your marketing doesn't just speak—it connects directly with your customers. In this article, explore how Marketing Trends 2025 are transforming brands with AI-driven personalization, attention-grabbing videos, and more...</p>
       <p><em>"It's not the strongest who survive, nor the most intelligent, but those most adaptable to change." – Charles Darwin</em></p>
@@ -413,7 +414,7 @@ Because in 2025, the only thing faster than tech is how quickly your audience mo
     image:'/images/Marketing.png',
     title: "The Death of Traditional Marketing: Building Adaptive Brand Strategies",
     category: "Digital Marketing",
-    date: "2025-07-04",
+    date: "july-2025",
     content: `
       <p>Traditional marketing is fading as consumer expectations evolve. Embracing AI, personalization, and immersive technologies is essential...</p>
       <h2>Building Adaptive Brand Strategies</h2>
@@ -458,7 +459,7 @@ Because in 2025, the only thing faster than tech is how quickly your audience mo
     image: "/images/AI.png",
     title: "How AI is Transforming Marketing: Beyond Buzzwords to Real Growth",
     category: "AI Marketing",
-    date: "2025-07-04",
+    date: "july-2025",
     content: `
       <p>Artificial intelligence is revolutionizing marketing by shifting from reactive to predictive strategies. Businesses can harness AI to enhance personalization, anticipate customer needs, and create meaningful connections with audiences, driving real growth ....</p>
       <h2>How AI is Transforming Marketing</h2>
@@ -599,20 +600,13 @@ export default function BlogDetailsPage() {
 
   return (
     <>
-      {/* Start Page Heading Section */}
-      <PageHeading
-        title={ post.title}
-        bgSrc='/images/blog_details_hero_bg.jpeg'
-        pageLinkText={params.blogDetailsId}
-      />
-      {/* End Page Heading Section */}
-
       <Spacing lg='150' md='80' />
-      <Div className="container">
+      <Div className="container" style={{ marginTop: '120px' }}>
         <Div className="row">
           <Div className="col-lg-8">
 
             {/* Start Details Post Content */}
+            <Spacing lg='120' md='80' />
             <Div className="cs-post cs-style2">
               <Div className="cs-post_thumb cs-radius_15">
                 <img src={post?.image || '/images/default.jpeg'} alt="Post" className="w-100 cs-radius_15" loading="lazy" />
