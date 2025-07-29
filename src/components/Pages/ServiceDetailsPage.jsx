@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { pageTitle } from '../../helper';
 import Button from '../Button';
 import Cta from '../Cta';
@@ -10,7 +11,6 @@ import TestimonialSlider from '../Slider/TestimonialSlider';
 import Spacing from '../Spacing';
 import Portfolio from '../Portfolio';
 import { Icon } from '@iconify/react';
-import PageHeading from '../PageHeading';
 import { Link } from 'react-router-dom';
 import '../Portfolio/portfolio.scss';
 
@@ -20,6 +20,9 @@ const servicesData = {
     subtitle: 'Engaging campaigns that captivate and convert.',
     image: '/images/mj.png',
     description: 'What We Bring Through Creative Marketing ',
+    // SEO Data
+    seoTitle: 'Creative Marketing Page',
+    seoDescription: 'Creative digital marketing services in Hyderabad. Every best and top advertising agency in Hyderabad is driven by creativity, detailed market research and knowledge of latest trends. Contact us for assistance.',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts ' },
       { icon: '/images/icons/service_icon_2.svg', title: 'PLOT', description: 'We Plot Our Ideas ' },
@@ -37,6 +40,9 @@ const servicesData = {
     subtitle: 'Build a bold and memorable brand identity.',
     image: '/images/ge.png',
     description: 'What We Bring Through Branding',
+    // SEO Data
+    seoTitle: 'Branding Page',
+    seoDescription: 'Expert branding and designing solutions in Hyderabad. Premium branding services like logo designing, product packaging, marketing promotion materials like brochure, pamphlet, flyers etc are artistically made.',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts' },
       { icon: '/images/icons/service_icon_2.svg', title: 'PLOT', description: 'We Plot Our Ideas' },
@@ -54,6 +60,9 @@ const servicesData = {
     subtitle: 'Empowering businesses with smart tech solutions.',
     image: '/images/gt.png',
     description: 'What We Bring Through AI & Technology ',
+    // SEO Data
+    seoTitle: 'AI & Tech page',
+    seoDescription: 'Artificial intelligence and technology services in Hyderabad. Website development, chatbot creation, and integration of artificial intelligence in websites. Contact for artificial intelligence and technology consultation.',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts' },
       { icon: '/images/icons/service_icon_2.svg', title: 'PLOT', description: 'We Plot Our Ideas' },
@@ -71,6 +80,9 @@ const servicesData = {
     subtitle: 'Professional studio production for audio and visuals.',
     image: '/images/19s.jpeg',
     description: 'What We Bring Through Visual Storytelling Studio',
+    // SEO Data
+    seoTitle: 'Visual storytelling studio',
+    seoDescription: 'Studio, podcast and photoshoot services in Hyderabad. Fully equipped studio with latest camera, mic for product photo/ video shoots and podcast shooting in Hyderabad. Contact us for a professional photoshoot today.',
     process: [
       { icon: '/images/icons/service_icon_1.svg', title: 'PICTURE', description: 'We Picture Our Thoughts' },
       { icon: '/images/icons/service_icon_2.svg', title: 'PLOT', description: 'We Plot Our Ideas' },
@@ -189,16 +201,22 @@ const categoryMenu = [
 ];
 
 export default function ServiceDetailsPage() {
-  pageTitle('Service Details');
   const { serviceDetailsId } = useParams();
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [itemShow, setItemShow] = useState(7);
+
+  const service = servicesData[serviceDetailsId];
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const service = servicesData[serviceDetailsId];
-  const [itemShow, setItemShow] = useState(7);
+  // Set page title using your existing helper function
+  useEffect(() => {
+    if (service) {
+      pageTitle(service.seoTitle);
+    }
+  }, [service]);
 
   const portfolioHeadings = {
     'creative-marketing': 'Creative Marketing Portfolio',
@@ -224,31 +242,31 @@ export default function ServiceDetailsPage() {
     'creative-marketing': (
       <>
         All the best marketing agencies have some important factors that makes them different from the rest. At Raising 100x, we carve your brand, refine and position it in a way that makes it not a choice, but a preference.<br/><br/>
-        From ideation of campaigns to tracking performance, we’ve got everything covered.<br/><br/>
+        From ideation of campaigns to tracking performance, we've got everything covered.<br/><br/>
         Every top marketing agency in India prioritises creativity, focusses on bringing the best out of your brand. Our creative team upgrade their skillset and knowledge with latest trends and algorithms and draft strategies that are ahead of the league.<br/><br/>
-        As one of the best advertising agencies and top advertising agencies, we blend bold ideas with data-driven insights to craft campaigns that don’t just grab attention—they spark action. Our marketing strategy & planning process is rooted in deep research, competitive analysis, and a relentless pursuit of what makes your brand truly unique.
+        As one of the best advertising agencies and top advertising agencies, we blend bold ideas with data-driven insights to craft campaigns that don't just grab attention—they spark action. Our marketing strategy & planning process is rooted in deep research, competitive analysis, and a relentless pursuit of what makes your brand truly unique.
       </>
     ),
     'branding': (
       <>
-        Whether you’re launching a new product, refreshing your brand logo, or building your personal brand, our team crafts strategies and visuals that build trust and recognition. We don’t just design logos—we create icons that stand for something bigger.<br/><br/>
+        Whether you're launching a new product, refreshing your brand logo, or building your personal brand, our team crafts strategies and visuals that build trust and recognition. We don't just design logos—we create icons that stand for something bigger.<br/><br/>
         Branding and packaging are what makes a product distinguish from other. As a leading branding agency, we offer end-to-end branding services that cover everything from brand name & tagline creation to brand identity, business logo design, and packaging.<br/><br/>
-        From color palettes and typography to iconography and tone of voice, every detail is meticulously designed to reflect your brand’s personality and connect with your audience. Our logo designers and branding strategists work hand-in-hand to ensure your brand identity is both timeless and trendsetting.
+        From color palettes and typography to iconography and tone of voice, every detail is meticulously designed to reflect your brand's personality and connect with your audience. Our logo designers and branding strategists work hand-in-hand to ensure your brand identity is both timeless and trendsetting.
       </>
     ),
     'ai-technology': (
       <>
-        AI and Technology services at Raising 100x, harness the power of artificial intelligence to supercharge your brand’s growth. From AI-powered chatbots that deliver instant customer support to workflow automation that streamlines your operations, we make technology work for you.<br/><br/>
+        AI and Technology services at Raising 100x, harness the power of artificial intelligence to supercharge your brand's growth. From AI-powered chatbots that deliver instant customer support to workflow automation that streamlines your operations, we make technology work for you.<br/><br/>
         Need an artificial intelligence website or want to explore in-store AR/VR experiences? Our AI technolgy experts design seamless, innovative solutions that put you miles ahead of the competition. With AI and technology at your fingertips, your brand is ready for tomorrow—today.<br/><br/>
         With our expert website and app development team, build digital experiences that wow everyone.
       </>
     ),
     'studio': (
       <>
-        Raising 100x Studio—the creative playground where ideas come alive. Our visual storytelling studio is more than a space; it’s an experience.<br/><br/>
+        Raising 100x Studio—the creative playground where ideas come alive. Our visual storytelling studio is more than a space; it's an experience.<br/><br/>
         From the best podcasts and video podcast production to cinematic ad-films, product photoshoots, and video shooting, we bring your vision to life with flair and precision.<br/><br/>
         Need a storytelling studio or studio space that inspires? Our team delivers scroll-stopping visuals and audio that make your brand the talk of the town.<br/><br/>
-        Raising 100x is where creative marketing meets AI and technology, branding becomes iconic, and every story finds its stage in our visual storytelling studio. Let’s raise your brand 100x—together.
+        Raising 100x is where creative marketing meets AI and technology, branding becomes iconic, and every story finds its stage in our visual storytelling studio. Let's raise your brand 100x—together.
       </>
     ),
   };
@@ -264,6 +282,10 @@ export default function ServiceDetailsPage() {
   if (!service) {
     return (
       <Div className="container text-center">
+        <Helmet>
+          <title>Service not found</title>
+          <meta name="description" content="The requested service page could not be found." />
+        </Helmet>
         <Spacing lg="100" md="50" />
         <h2>Service not found</h2>
         <Spacing lg="100" md="50" />
@@ -273,6 +295,11 @@ export default function ServiceDetailsPage() {
 
   return (
     <>
+      <Helmet>
+        <title>{service.seoTitle}</title>
+        <meta name="description" content={service.seoDescription} />
+      </Helmet>
+    
       <style>{`
         @media (max-width: 991px) {
           .d-block.d-lg-none {
@@ -280,13 +307,13 @@ export default function ServiceDetailsPage() {
           }
         }
       `}</style>
-      <Div className="d-block d-lg-none">
+      {/* <Div className="d-block d-lg-none">
         <PageHeading
           title="What We Offer"
           bgSrc="/images/blog_hero_bg.jpeg"
           pageLinkText="What We Offer"
         />
-      </Div>
+      </Div> */}
 
       <Div style={{ paddingTop: '40px', paddingBottom: '40px' }}>
         <Spacing lg="145" md="80" />
@@ -535,4 +562,3 @@ export default function ServiceDetailsPage() {
     </>
   );
 }
-

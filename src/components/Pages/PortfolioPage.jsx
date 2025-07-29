@@ -1,6 +1,7 @@
 import { Icon } from '@iconify/react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { pageTitle } from '../../helper';
 import Cta from '../Cta';
 import Div from '../Div';
@@ -108,6 +109,14 @@ export default function PortfolioPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Portfolio | Raising 100X Best Marketing Agency in Hyderabad</title>
+        <meta
+          name="description"
+          content="Raising 100x is one of the best marketing and advertising agencies in Hyderabad. Planning campaigns, social media management, website development, we do it all."
+        />
+      </Helmet>
+      
       <div className="responsive-page-heading">
         <PageHeading
           title="Our Creations"

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { Helmet } from 'react-helmet';
 import { pageTitle } from '../../helper'
 import Card from '../Card'
 import Cta from '../Cta'
@@ -6,7 +7,6 @@ import Div from '../Div'
 import SectionHeading from '../SectionHeading'
 import TestimonialSlider from '../Slider/TestimonialSlider'
 import Spacing from '../Spacing'
-import PageHeading from '../PageHeading'
 import { Icon } from '@iconify/react'
 
 export default function ServicesPage({ focusService }) {
@@ -22,13 +22,21 @@ export default function ServicesPage({ focusService }) {
   }, [focusService]);
   return (
     <>
-      <div className="responsive-page-heading">
+    <Helmet>
+            <title>Digital Marketing Services in Hyderabad | Raising 100x </title>
+            <meta
+              name="description"
+              content="Digital marketing services like paid marketing, SEO, social media management, web development etc are offered by top marketing agency in Hyderabad | Raising100x "
+            />
+          </Helmet>
+      <div className="contact-page-top-spacer"></div>
+      {/* <div className="responsive-page-heading">
         <PageHeading
           title="What We Offer"
           bgSrc="/images/blog_hero_bg.jpeg"
           pageLinkText="What We Offe"
         />
-      </div>
+      </div> */}
       <div className="aboutpage-mobile-top-spacer" />
       <Spacing lg='150' md='80' />
       <Div className='cs-shape_wrap_4'>
@@ -223,6 +231,16 @@ export default function ServicesPage({ focusService }) {
   box-shadow: 0 8px 24px rgba(179,10,10,0.18) !important;
   animation-play-state: paused !important;
 }
+   .contact-page-top-spacer {
+    margin-top: 100px;
+  }
+
+  @media (max-width: 768px) {
+    .contact-page-top-spacer {
+      margin-top: 86px;
+    }
+  }
+
 `}</style>
     </>
   )

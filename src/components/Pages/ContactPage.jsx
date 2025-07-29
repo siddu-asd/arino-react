@@ -1,19 +1,20 @@
 import { Icon } from '@iconify/react';
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { pageTitle } from '../../helper';
 import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
 import ContactInfoWidget from '../Widget/ContactInfoWidget';
 import PageHeading from '../PageHeading';
-
+ 
 export default function ContactPage() {
   pageTitle('Contact Us');
-
+ 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
+ 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,11 +22,11 @@ export default function ContactPage() {
     phone: '',
     message: '',
   });
-
+ 
   const [successMessage, setSuccessMessage] = useState('');
   const [showQueryOptions, setShowQueryOptions] = useState(false);
   const [selectedQueries, setSelectedQueries] = useState([]);
-
+ 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -33,7 +34,7 @@ export default function ContactPage() {
       [name]: value,
     }));
   };
-
+ 
   const toggleQueryOption = (option) => {
     setSelectedQueries(prev => {
       if (prev.includes(option)) {
@@ -43,7 +44,7 @@ export default function ContactPage() {
       }
     });
   };
-
+ 
   const confirmQueries = () => {
     setFormData(prev => ({
       ...prev,
@@ -51,25 +52,25 @@ export default function ContactPage() {
     }));
     setShowQueryOptions(false);
   };
-
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://reach-7m5r.onrender.com/submit_message', {
+      const response = await fetch('https://form-backend-4lmq.onrender.com/submit_message', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
-
+ 
       const text = await response.text();
       console.log('Raw response:', text);
-
+ 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-
+ 
       JSON.parse(text); // Ensure it's valid JSON
       setSuccessMessage('✅ Message sent successfully!');
       setFormData({
@@ -84,14 +85,14 @@ export default function ContactPage() {
       setSuccessMessage('❌ Something went wrong. Please try again later.');
     }
   };
-
+ 
   const queryOptions = [
-    'Branding ', 'Digital Marketing ', 'Packaging ', 
-    'Website Development ', 'Content Creation ', 
-    'Social Media Management', 'Logo Designing ', 'AI Chatbot Development', 
+    'Branding ', 'Digital Marketing ', 'Packaging ',
+    'Website Development ', 'Content Creation ',
+    'Social Media Management', 'Logo Designing ', 'AI Chatbot Development',
     'Product Photoshoot ', 'Ad-film ', 'SEO' ,'Others',
   ];
-
+ 
   // Updated styles
   const styles = {
     queryWrapper: {
@@ -229,7 +230,7 @@ export default function ContactPage() {
       // maxWidth: '250px'
     },
   };
-
+ 
   // Mobile-specific CSS for query options overlay
   const mobileQueryOptionsCSS = `
 @media (max-width: 768px) {
@@ -273,9 +274,20 @@ export default function ContactPage() {
   }
 }
 `;
-
+ 
   return (
     <>
+      <Helmet>
+        <title>Contact Us | Raising 100X Best Marketing Agency in Hyderabad</title>
+        <meta
+          name="description"
+          content="Raising 100x is one of the best marketing and advertising agencies in Hyderabad. Planning campaigns, social media management, website development, we do it all."
+        />
+      </Helmet>
+      
+   <div className="contact-page-top-spacer"></div>
+
+
       {/* Overlay for query options */}
       {showQueryOptions && (
         <div
@@ -337,11 +349,11 @@ export default function ContactPage() {
                 />
                 <Spacing lg="20" md="20" />
               </Div>
-
+ 
               {/* Updated Query Field with Overlay Dropdown */}
               <Div className="col-sm-6" style={styles.queryWrapper}>
-                <label className="cs-primary_color" style={{ 
-                  fontSize: '16px', 
+                <label className="cs-primary_color" style={{
+                  fontSize: '16px',
                   fontWeight: '500',
                   marginBottom: '10px',
                   display: 'block',
@@ -414,10 +426,10 @@ export default function ContactPage() {
                 )}
                 <Spacing lg="20" md="20" />
               </Div>
-
+ 
               <Div className="col-sm-6">
-                <label className="cs-primary_color" style={{ 
-                  fontSize: '16px', 
+                <label className="cs-primary_color" style={{
+                  fontSize: '16px',
                   fontWeight: '500',
                   marginBottom: '10px',
                   display: 'block',
@@ -446,7 +458,7 @@ export default function ContactPage() {
                 ></textarea>
                 <Spacing lg="25" md="25" />
               </Div>
-              <Div className="col-sm-12">
+              <Div className="col-sm-12" style={{ paddingBottom: '10px' }}>
                 <button type="submit" className="cs-btn cs-style1">
                   <span>Send Message</span>
                   <Icon icon="bi:arrow-right" />
@@ -478,6 +490,16 @@ export default function ContactPage() {
       </Div>
       <Spacing lg="50" md="40" />
       <style>{`
+      .contact-page-top-spacer {
+    margin-top: 100px;
+  }
+
+  @media (max-width: 768px) {
+    .contact-page-top-spacer {
+      margin-top: 70px;
+    }
+  }
+
         @media (max-width: 767px) {
           .cs-btn.cs-style1 {
             margin-bottom: 60px !important;
@@ -487,3 +509,6 @@ export default function ContactPage() {
     </>
   );
 }
+ 
+ 
+

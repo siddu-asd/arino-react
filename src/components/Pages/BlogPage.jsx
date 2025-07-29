@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { pageTitle } from '../../helper';
 import Cta from '../Cta';
 import Pagination from '../Pagination';
@@ -69,6 +70,14 @@ export default function BlogPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Blogs | Raising 100X - Best Marketing Agency in Hyderabad</title>
+        <meta
+          name="description"
+          content="Raising 100x is one of the best marketing and advertising agencies in Hyderabad. Planning campaigns, social media management, website development, we do it all."
+        />
+      </Helmet>
+      
      {/* <div className="responsive-page-heading">
        <PageHeading
          title="Our Blogs"

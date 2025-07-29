@@ -1,11 +1,12 @@
+ 
 import { Icon } from '@iconify/react';
 import { useEffect, useState } from 'react';
 import { pageTitle } from '../../helper';
 import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
-import PageHeading from '../PageHeading';
-
+import { Helmet } from 'react-helmet';
+ 
 const positionOptions = {
   Development: ['Full Stack Developer', 'Mobile App Developer', 'Web Developer', 'Software Engineer', 'DevOps Engineer', 'QA Engineer', 'Site Reliability Engineer (SRE)', 'Technical Lead'],
   Design: ['UI/UX Designer', 'Product Designer', 'Graphic Designer', 'Visual Designer', 'Interaction Designer', 'Design Lead'],
@@ -17,10 +18,10 @@ const positionOptions = {
   Marketing: ['Digital Marketing Executive', 'SEO Specialist', 'Content Marketing Manager', 'Social Media Manager', 'Marketing Strategist', 'Email Marketing Specialist', 'Growth Hacker', 'Performance Marketing Manager', 'Campaign Manager', 'Brand Manager', 'Creative Director', 'Marketing Designer', 'Visual Branding Specialist'],
   Content: ['Content Writer', 'Copywriter', 'Technical Writer', 'Content Strategist', 'Editor'],
 };
-
+ 
 export default function CareerPage() {
   pageTitle('Careers');
-
+ 
   const [selectedCategory, setSelectedCategory] = useState('');
   const [positions, setPositions] = useState([]);
   const [selectedPosition, setSelectedPosition] = useState('');
@@ -29,48 +30,48 @@ export default function CareerPage() {
   const [resume, setResume] = useState(null);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
-
+ 
   useEffect(() => {
     setPositions(positionOptions[selectedCategory] || []);
     setSelectedPosition('');
   }, [selectedCategory]);
-
+ 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+ 
     if (!resume || resume.type !== 'application/pdf') {
       setMessage('Please upload a valid PDF resume.');
       return;
     }
-
+ 
     const formData = new FormData();
     formData.append('category', selectedCategory);
     formData.append('position', selectedPosition);
     formData.append('email', email);
     formData.append('phone', phone);
     formData.append('resume', resume);
-
+ 
     try {
       setLoading(true);
       setMessage('');
-
-      const BACKEND_BASE_URL = 'https://career-formsheet.onrender.com';
+ 
+      const BACKEND_BASE_URL = 'https://form-backend-4lmq.onrender.com';
       const response = await fetch(`${BACKEND_BASE_URL}/submit_application`, {
         method: 'POST',
         body: formData,
       });
-
+ 
       let result;
       try {
         result = await response.json();
       } catch (jsonErr) {
         result = await response.text();
       }
-
+ 
       if (response.ok) {
         setMessage('You will hear from us soon!');
         setSelectedCategory('');
@@ -90,16 +91,26 @@ export default function CareerPage() {
       setLoading(false);
     }
   };
-
+ 
   return (
     <>
-    <div className="responsive-page-heading">
+    <Helmet>
+        <title>Digital Marketing Jobs in Hyderabad | Career  </title>
+        <meta
+          name="description"
+          content="Begin your career at Raising100x or join us as an experienced professional. You are one step away from your dream job as a creative professional."
+        />
+      </Helmet>
+    <div style={{ marginTop: '50px' }}>
+        {/* Adjust marginTop as needed to match your header height */}
+      </div>
+    {/* <div className="responsive-page-heading">
       <PageHeading
         title=" Get On Board"
         bgSrc="/images/blog_hero_bg.jpeg"
         pageLinkText="Get On Board"
       />
-    </div>
+    </div> */}
     <div className="careerpage-desktop-top-spacer" />
     <div className="aboutpage-mobile-top-spacer" />
   <Spacing lg="100" md="60" />
@@ -128,18 +139,18 @@ export default function CareerPage() {
   <h4 style={{ fontSize: '20px', marginBottom: '10px', color: 'red' }}>Video Editor</h4>
   <p style={{ margin: '0 0 5px', fontWeight: 'bold' }}>Experience:</p>
   <p style={{ marginBottom: '10px' }}>More than 2 years</p>
-
+ 
   <p style={{ margin: '0 0 5px', fontWeight: 'bold' }}>Skill Set:</p>
   <ul style={{ paddingLeft: '20px', marginBottom: '30px' }}>
     <li>Adobe Premiere Pro, After Effects, and other industry-standard editing tools</li>
     <li>Knowledge of basic to advanced motion graphics</li>
     <li>Understanding of video formats, codecs, and social media specs</li>
   </ul>
-
+ 
   <h4 style={{ fontSize: '20px', marginBottom: '10px', color: 'red' }}>Senior Graphic Designer</h4>
   <p style={{ margin: '0 0 5px', fontWeight: 'bold' }}>Experience:</p>
   <p style={{ marginBottom: '10px' }}>More than 2 years</p>
-
+ 
   <p style={{ margin: '0 0 5px', fontWeight: 'bold' }}>Skill Set:</p>
   <ul style={{ paddingLeft: '20px' }}>
     <li>Adobe Creative Suite (Photoshop, Illustrator, Figma)</li>
@@ -148,7 +159,7 @@ export default function CareerPage() {
 </Div>
       </Div>
     </Div>
-
+ 
     {/* RIGHT: Application Form */}
     <Div className="col-lg-6 cs-career-col">
       <Div
@@ -164,12 +175,12 @@ export default function CareerPage() {
         }}
       >
         <SectionHeading
-          title="Let's embark on a journey together. 
+          title="Let's embark on a journey together.
             Are you in? "
           subtitle="Always hunting for creative individuals "
         />
         <Spacing lg="40" md="30" />
-
+ 
         <form onSubmit={handleSubmit} className="row cs-career-form improved-career-form" encType="multipart/form-data">
           {/* Category */}
           <Div className="col-12 mb-3">
@@ -181,7 +192,7 @@ export default function CareerPage() {
               ))}
             </select>
           </Div>
-
+ 
           {/* Position */}
           <Div className="col-12 mb-3">
             <label className="cs-primary_color">What role would you play? *</label>
@@ -192,7 +203,7 @@ export default function CareerPage() {
               ))}
             </select>
           </Div>
-
+ 
           {/* Email */}
           <Div className="col-12 mb-3">
             <label className="cs-primary_color">Email coordinates *</label>
@@ -205,7 +216,7 @@ export default function CareerPage() {
               required
             />
           </Div>
-
+ 
           {/* Phone */}
           <Div className="col-12 mb-3">
             <label className="cs-primary_color">Where can we connect for a call? *</label>
@@ -220,7 +231,7 @@ export default function CareerPage() {
               required
             />
           </Div>
-
+ 
           {/* Resume Upload */}
           <Div className="col-12 mb-3">
             <label className="cs-primary_color">Your resume/profile (PDF only) *</label>
@@ -233,7 +244,7 @@ export default function CareerPage() {
               required
             />
           </Div>
-
+ 
           {/* Submit */}
           <Div className="col-12 text-center mt-3">
             <button type="submit" className="cs-btn cs-style1" disabled={loading} style={{ minWidth: '180px' }}>
@@ -326,6 +337,8 @@ export default function CareerPage() {
   }
 `}</style>
 </>
-
+ 
   );
 }
+ 
+ 
