@@ -21,7 +21,7 @@ export default function HyproPage() {
       <div className="video-hero-section">
         <div className="video-background">
           <video autoPlay muted loop playsInline>
-            <source src="/video/vc.mp4" type="video/mp4" />
+            <source src="/video/vr1.mp4" type="video/mp4" />
           </video>
           <div className="video-overlay"></div>
         </div>
@@ -98,7 +98,7 @@ export default function HyproPage() {
               <div className="solution-video wow fadeInLeft" data-wow-delay="0.6s" data-wow-duration="1s">
                 <div className="video-container">
                   <video id="solution-video" autoPlay muted loop playsInline>
-                    <source src="/video/vc.mp4" type="video/mp4" />
+                    <source src="/video/vr2.mp4" type="video/mp4" />
                   </video>
                   <div className="video-overlay">
                     <div className="play-button">
@@ -335,7 +335,7 @@ export default function HyproPage() {
               <div className="tech-video wow fadeInRight" data-wow-delay="0.8s" data-wow-duration="1s">
                 <div className="video-container">
                   <video id="tech-video" autoPlay muted loop playsInline>
-                    <source src="/video/vc.mp4" type="video/mp4" />
+                    <source src="/video/vr4.mp4" type="video/mp4" />
                   </video>
                   <div className="video-overlay">
                     <div className="play-button">
@@ -544,7 +544,7 @@ export default function HyproPage() {
               <div className="tech-video wow fadeInRight" data-wow-delay="0.8s" data-wow-duration="1s">
                 <div className="video-container">
                   <video id="tech-video" autoPlay muted loop playsInline>
-                    <source src="/video/vc.mp4" type="video/mp4" />
+                    <source src="/video/vr3.mp4" type="video/mp4" />
                   </video>
                   <div className="video-overlay">
                     <div className="play-button">
@@ -608,7 +608,7 @@ export default function HyproPage() {
             <Div className="col-lg-4 col-md-6">
               <div className="protfolio-single-box wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
                 <div className="protfolio-thumb">
-                  <img src="/images/img33.jpg" alt="" />
+                  <img src="/images/img55.jpg" alt="" />
                   <div className="protfolio-images-link">
                     <a href="projects-details.html"><i className="bi bi-play-circle"></i></a>
                   </div>
@@ -837,12 +837,12 @@ export default function HyproPage() {
 
            
                      /* Contact Form Section */
-           .contact-form-section {
-             padding: 100px 0;
-             margin: 100px 0;
-             background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-             position: relative;
-           }
+                       .contact-form-section {
+              padding: 100px 0;
+              margin: 100px 0;
+              background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+              position: relative;
+            }
 
           .contact-form-section::before {
             content: '';
@@ -860,7 +860,6 @@ export default function HyproPage() {
             z-index: 2;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
             padding: 60px 40px;
             max-width: 800px;
             margin: 0 auto;
@@ -945,31 +944,49 @@ export default function HyproPage() {
             position: relative;
           }
 
-          .country-select {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
-            background-position: right 12px center;
-            background-repeat: no-repeat;
-            background-size: 16px 12px;
-            padding-right: 40px;
-            appearance: none;
-            font-size: 14px;
-            line-height: 1.2;
-          }
+                     .country-select {
+             background-image: none;
+             padding-right: 15px;
+             appearance: none;
+             -webkit-appearance: none;
+             -moz-appearance: none;
+             font-size: 14px;
+             line-height: 1.2;
+             cursor: pointer;
+             position: relative;
+             z-index: 10;
+             height: 54px;
+             border: 2px solid #e2e8f0;
+             border-radius: 12px;
+             padding: 0 15px;
+             background-color: #f9fafb;
+             color: #333;
+             transition: all 0.3s ease;
+           }
 
           .country-select:focus {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ff0000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+            outline: none;
+            border-color: #333;
+            box-shadow: 0 0 0 4px rgba(51, 51, 51, 0.1);
+            background-color: white;
+            transform: translateY(-2px);
           }
 
-          .country-select option {
-            font-size: 14px;
-            padding: 8px;
-            line-height: 1.2;
-          }
+                     .country-select option {
+             font-size: 14px;
+             padding: 8px;
+             line-height: 1.2;
+             background: white;
+             color: #333;
+             border: none;
+             outline: none;
+           }
 
-          .country-select,
-          .country-select option {
-            font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Android Emoji", "EmojiSymbols", "EmojiOne Mozilla", "Twemoji Mozilla", "Segoe UI Symbol", Arial, sans-serif;
-          }
+           .country-select,
+           .country-select option {
+             font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Android Emoji", "EmojiSymbols", "EmojiOne Mozilla", "Twemoji Mozilla", "Segoe UI Symbol", Arial, sans-serif;
+           }
 
           .submit-btn {
             width: 100%;
@@ -1057,13 +1074,48 @@ export default function HyproPage() {
               margin: 0;
             }
             
-            .country-selector {
-              order: 2;
-            }
-            
-            .phone-input {
-              order: 1;
-            }
+                         .country-selector {
+               order: 2;
+             }
+             
+             .phone-input {
+               order: 1;
+             }
+             
+                           .country-select {
+                background-image: none;
+                padding-right: 15px;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                font-size: 14px;
+                line-height: 1.2;
+                cursor: pointer;
+                position: relative;
+                z-index: 10;
+                height: 50px;
+                padding: 15px;
+                width: 100%;
+                box-sizing: border-box;
+                line-height: 20px;
+                color: #333;
+                vertical-align: middle;
+                display: block;
+                border: 2px solid #e2e8f0;
+                border-radius: 12px;
+                background-color: #f9fafb;
+                transition: all 0.3s ease;
+              }
+             
+             .country-select option {
+               font-size: 14px;
+               padding: 8px;
+               line-height: 1.2;
+               background: white;
+               color: #333;
+               border: none;
+               outline: none;
+             }
             
             .form-control {
               height: 50px;
@@ -1186,11 +1238,46 @@ export default function HyproPage() {
               background: #f9fafb;
             }
             
-            .phone-group {
-              gap: 6px;
-              width: 100%;
-              max-width: none;
-            }
+                         .phone-group {
+               gap: 6px;
+               width: 100%;
+               max-width: none;
+             }
+             
+                           .country-select {
+                background-image: none;
+                padding-right: 12px;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                font-size: 14px;
+                line-height: 1.2;
+                cursor: pointer;
+                position: relative;
+                z-index: 10;
+                height: 48px;
+                padding: 12px;
+                width: 100%;
+                box-sizing: border-box;
+                line-height: 24px;
+                color: #333;
+                vertical-align: middle;
+                display: block;
+                border: 2px solid #e2e8f0;
+                border-radius: 12px;
+                background-color: #f9fafb;
+                transition: all 0.3s ease;
+              }
+             
+             .country-select option {
+               font-size: 14px;
+               padding: 8px;
+               line-height: 1.2;
+               background: white;
+               color: #333;
+               border: none;
+               outline: none;
+             }
             
             .submit-btn {
               padding: 12px 18px;
@@ -1971,23 +2058,23 @@ export default function HyproPage() {
             }
           }
 
-          /* Contact Form Section */
-          .contact-form-section {
-            padding: 100px 0;
-            background: #f8f9fa;
-            position: relative;
-          }
+                     /* Contact Form Section */
+           .contact-form-section {
+             padding: 100px 0;
+             background: #000000;
+             position: relative;
+           }
 
-          .contact-form-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-            z-index: 1;
-          }
+           .contact-form-section::before {
+             content: '';
+             position: absolute;
+             top: 0;
+             left: 0;
+             right: 0;
+             bottom: 0;
+             background: #000000;
+             z-index: 1;
+           }
 
           .contact-form-section .container {
             position: relative;
@@ -2189,7 +2276,12 @@ export default function HyproPage() {
           }
 
           .country-select:focus {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ff0000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+            background-image: none;
+            outline: none;
+            border-color: #333;
+            box-shadow: 0 0 0 4px rgba(51, 51, 51, 0.1);
+            background-color: white;
+            transform: translateY(-2px);
           }
 
           .country-select option {

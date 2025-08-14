@@ -29,20 +29,20 @@ export default function OurProductsPage() {
         />
         <Spacing lg="90" md="45"/>
         
-        {/* Hypro Product */}
+        {/* NexelVR Product */}
         <Div className="row align-items-center mb-5">
           <Div className="col-lg-6">
             <Card className="cs-card_style1">
               <Div className="cs-card_info">
-                <h2 className="cs-card_title">Hypro</h2>
+                <h2 className="cs-card_title">NexelVR</h2>
                 <p className="cs-card_subtitle">
                   Our flagship product designed to streamline business operations 
                   and enhance productivity through cutting-edge technology solutions. 
-                  Built with the latest innovations, Hypro delivers exceptional performance 
+                  Built with the latest innovations, NexelVR delivers exceptional performance 
                   and reliability for forward-thinking organizations.
                 </p>
                 <Div className="cs-card_btn_wrap">
-                  <Link to="/products/hypro" className="cs-btn cs-style1">
+                  <Link to="/products/nexelvr" className="cs-btn cs-style1">
                     <span>Learn More</span>
                     <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967L13.7574 0.696699C13.4645 0.403806 12.9896 0.403806 12.6967 0.696699C12.4038 0.989593 12.4038 1.46447 12.6967 1.75736L16.9393 6L12.6967 10.2426C12.4038 10.5355 12.4038 11.0104 12.6967 11.3033C12.9896 11.5962 13.4645 11.5962 13.7574 11.3033L18.5303 6.53033ZM0 6.75H18V5.25H0V6.75Z" fill="currentColor"/>
@@ -53,7 +53,7 @@ export default function OurProductsPage() {
             </Card>
           </Div>
           <Div className="col-lg-6">
-            <img src="/images/ai.jpg" alt="Hypro Product" className="w-100 rounded" style={{maxHeight: '400px', objectFit: 'cover'}} />
+            <img src="/images/ai.jpg" alt="NexelVR Product" className="w-100 rounded" style={{maxHeight: '400px', objectFit: 'cover'}} />
           </Div>
         </Div>
         

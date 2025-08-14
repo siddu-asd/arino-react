@@ -176,7 +176,7 @@ function App() {
           <Route path="care100x" element={<Care100xPage />} />
           <Route path="virtualtour" element={<Virtualtour />} />
           <Route path="products" element={<HyproPage />} />
-          <Route path="products/hypro" element={<HyproPage />} />
+          <Route path="products/nexelvr" element={<HyproPage />} />
           <Route path="products/nisaa" element={<NisaaPage />} />
         </Route>
         <Route path="/" element={<Layout />}>

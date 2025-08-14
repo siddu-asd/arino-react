@@ -24,7 +24,7 @@ export default function Header({ variant }) {
     {
       label: 'Our Products',
       submenu: [
-        { to: '/products/hypro', label: 'Hypro' },
+        { to: '/products/nexelvr', label: 'NexelVR' },
         { to: '/products/nisaa', label: 'Nisaa' }
       ]
     },
@@ -75,7 +75,7 @@ export default function Header({ variant }) {
                       <DropDown>
                         <ul>
                           <li>
-                            <Link to="/products/hypro">NexelVR</Link>
+                            <Link to="/products/nexelvr">NexelVR</Link>
                           </li>
                           <li>
                             <Link to="/products/nisaa">Nisaa</Link>
@@ -144,9 +144,9 @@ export default function Header({ variant }) {
                       Our Products
                     </NavLink>
                   </li>,
-                  <li key="hypro">
-                    <NavLink to="/products/hypro" onClick={() => setMobileMenuOpen(false)}>
-                      Hypro
+                  <li key="nexelvr">
+                    <NavLink to="/products/nexelvr" onClick={() => setMobileMenuOpen(false)}>
+                      NexelVR
                     </NavLink>
                   </li>,
                   <li key="nisaa">
