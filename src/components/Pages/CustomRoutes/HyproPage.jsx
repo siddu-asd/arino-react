@@ -658,114 +658,164 @@ export default function HyproPage() {
       </div>
 
       {/* Contact Form Section */}
-      <form
-        onSubmit={async (e) => {
-          e.preventDefault();
+      <div className="contact-form-section" id="contact-form">
+        <Div className="container">
+          <Div className="row justify-content-center">
+            <Div className="col-lg-8 col-md-10">
+              <div className="contact-form-wrapper">
+                <div className="contact-form-header text-center">
+                  <h3>Get In Touch</h3>
+                  <p>Ready to transform your projects with immersive 3D experiences? Let's discuss your requirements.</p>
+                </div>
+                
+                <form
+                  className="contact-form"
+                  onSubmit={async (e) => {
+                    e.preventDefault();
 
-          const formData = {
-            name: e.target.name.value,
-            email: e.target.email.value,
-            country_code: e.target.country_code.value,
-            phone: e.target.phone.value,
-            profession: e.target.profession.value,
-            company_name: e.target.company_name.value,
-            interested_products: e.target.interested_products.value,
-            project_type: e.target.project_type.value,
-            project_stage: e.target.project_stage.value,
-            request_type: e.target.request_type.value,
-            message: e.target.message.value,
-          };
+                    const formData = {
+                      name: e.target.name.value,
+                      email: e.target.email.value,
+                      country_code: e.target.country_code.value,
+                      phone: e.target.phone.value,
+                      profession: e.target.profession.value,
+                      company_name: e.target.company_name.value,
+                      interested_products: e.target.interested_products.value,
+                      project_type: e.target.project_type.value,
+                      project_stage: e.target.project_stage.value,
+                      request_type: e.target.request_type.value,
+                      message: e.target.message.value,
+                    };
 
-          try {
-            const res = await fetch("http://localhost:5000/submit", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(formData),
-            });
+                    try {
+                      const res = await fetch("http://localhost:5000/submit", {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(formData),
+                      });
 
-            const data = await res.json();
-            if (res.ok) {
-              alert("Form submitted successfully!");
-              e.target.reset();
-            } else {
-              alert(data.error || "Submission failed");
-            }
-          } catch (err) {
-            alert("Error submitting form: " + err.message);
-          }
-        }}
-      >
-        <div className="form-group">
-          <input type="text" name="name" className="form-control" placeholder="Name" />
-        </div>
-        <div className="form-group">
-          <input type="email" name="email" className="form-control" placeholder="Enter Email Address" />
-        </div>
-        <div className="form-group phone-group">
-          <div className="country-selector">
-            <select name="country_code" className="form-control country-select" id="country-select">
-              <option value="+971">🇦🇪 UAE (+971)</option>
-              <option value="+1">🇺🇸 USA (+1)</option>
-              <option value="+44">🇬🇧 UK (+44)</option>
-              <option value="+91">🇮🇳 India (+91)</option>
-              {/* ... */}
-            </select>
-          </div>
-          <div className="phone-input">
-            <input type="text" name="phone" className="form-control" id="phone-number" placeholder="Enter phone number" />
-          </div>
-        </div>
-        <div className="form-group">
-          <select name="profession" className="form-control">
-            <option>Profession</option>
-            <option>Real Estate Developer</option>
-            <option>Architect</option>
-            <option>Property Manager</option>
-          </select>
-        </div>
-        <div className="form-group">
-          <input type="text" name="company_name" className="form-control" placeholder="Company Name" />
-        </div>
-        <div className="form-group">
-          <select name="interested_products" className="form-control">
-            <option>Interested Products</option>
-            <option>Weblite</option>
-            <option>Metaverse</option>
-            <option>Sales Tool</option>
-            <option>VR Solutions</option>
-          </select>
-        </div>
-        <div className="form-group">
-          <select name="project_type" className="form-control">
-            <option>Type of Project working on</option>
-            <option>Residential</option>
-            <option>Commercial</option>
-            <option>Industrial</option>
-          </select>
-        </div>
-        <div className="form-group">
-          <select name="project_stage" className="form-control">
-            <option>Current stage of project</option>
-            <option>Planning</option>
-            <option>Development</option>
-            <option>Marketing</option>
-          </select>
-        </div>
-        <div className="form-group">
-          <select name="request_type" className="form-control">
-            <option>What would you like to receive from us?</option>
-            <option>Demo</option>
-            <option>Pricing</option>
-            <option>Consultation</option>
-          </select>
-        </div>
-        <div className="form-group">
-          <textarea name="message" className="form-control" rows="4" placeholder="Tell us more"></textarea>
-        </div>
-        <button type="submit" className="submit-btn">Submit</button>
-      </form>
+                      const data = await res.json();
+                      if (res.ok) {
+                        alert("Form submitted successfully!");
+                        e.target.reset();
+                      } else {
+                        alert(data.error || "Submission failed");
+                      }
+                    } catch (err) {
+                      alert("Error submitting form: " + err.message);
+                    }
+                  }}
+                >
+                  <div className="form-row">
+                    <div className="form-group">
+                      <input type="text" name="name" className="form-control" placeholder="Name" required />
+                    </div>
+                    <div className="form-group">
+                      <input type="email" name="email" className="form-control" placeholder="Enter Email Address" required />
+                    </div>
+                  </div>
+                  
+                  <div className="form-group phone-group">
+                    <div className="country-selector">
+                      <select name="country_code" className="form-control country-select" id="country-select">
+                        <option value="+971">🇦🇪 UAE (+971)</option>
+                        <option value="+1">🇺🇸 USA (+1)</option>
+                        <option value="+44">🇬🇧 UK (+44)</option>
+                        <option value="+91">🇮🇳 India (+91)</option>
+                        <option value="+966">🇸🇦 Saudi Arabia (+966)</option>
+                        <option value="+974">🇶🇦 Qatar (+974)</option>
+                        <option value="+973">🇧🇭 Bahrain (+973)</option>
+                        <option value="+965">🇰🇼 Kuwait (+965)</option>
+                        <option value="+968">🇴🇲 Oman (+968)</option>
+                      </select>
+                    </div>
+                    <div className="phone-input">
+                      <input type="text" name="phone" className="form-control" id="phone-number" placeholder="Enter phone number" required />
+                    </div>
+                  </div>
+                  
+                  <div className="form-row">
+                    <div className="form-group">
+                      <select name="profession" className="form-control" required>
+                        <option value="">Profession</option>
+                        <option value="Real Estate Developer">Real Estate Developer</option>
+                        <option value="Architect">Architect</option>
+                        <option value="Property Manager">Property Manager</option>
+                        <option value="Interior Designer">Interior Designer</option>
+                        <option value="Construction Manager">Construction Manager</option>
+                        <option value="Investor">Investor</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                    <div className="form-group">
+                      <input type="text" name="company_name" className="form-control" placeholder="Company Name" required />
+                    </div>
+                  </div>
+                  
+                  <div className="form-row">
+                    <div className="form-group">
+                      <select name="interested_products" className="form-control" required>
+                        <option value="">Interested Products</option>
+                        <option value="Weblite">Weblite</option>
+                        <option value="Metaverse">Metaverse</option>
+                        <option value="Sales Tool">Sales Tool</option>
+                        <option value="VR Solutions">VR Solutions</option>
+                        <option value="AR Solutions">AR Solutions</option>
+                        <option value="Digital Twin">Digital Twin</option>
+                        <option value="Gaming Solutions">Gaming Solutions</option>
+                      </select>
+                    </div>
+                    <div className="form-group">
+                      <select name="project_type" className="form-control" required>
+                        <option value="">Type of Project working on</option>
+                        <option value="Residential">Residential</option>
+                        <option value="Commercial">Commercial</option>
+                        <option value="Industrial">Industrial</option>
+                        <option value="Mixed Use">Mixed Use</option>
+                        <option value="Infrastructure">Infrastructure</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                  <div className="form-row">
+                    <div className="form-group">
+                      <select name="project_stage" className="form-control" required>
+                        <option value="">Current stage of project</option>
+                        <option value="Planning">Planning</option>
+                        <option value="Development">Development</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Completed">Completed</option>
+                      </select>
+                    </div>
+                    <div className="form-group">
+                      <select name="request_type" className="form-control" required>
+                        <option value="">What would you like to receive from us?</option>
+                        <option value="Demo">Demo</option>
+                        <option value="Pricing">Pricing</option>
+                        <option value="Consultation">Consultation</option>
+                        <option value="Custom Solution">Custom Solution</option>
+                        <option value="Partnership">Partnership</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                  <div className="form-group">
+                    <textarea name="message" className="form-control" rows="4" placeholder="Tell us more about your project requirements..." required></textarea>
+                  </div>
+                  
+                  <button type="submit" className="submit-btn">
+                    <span>Submit Request</span>
+                    <i className="bi bi-arrow-right"></i>
+                  </button>
+                </form>
+              </div>
+            </Div>
+          </Div>
+        </Div>
+      </div>
 
       {/* Newsletter Section */}
       <div className="newsletter-section">
@@ -792,93 +842,252 @@ export default function HyproPage() {
       <style>{`
 
            
-           /* Form Wrapper */
-.contact-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Vertically center on desktop */
-  padding: 20px; /* Space for mobile edges */
-  box-sizing: border-box;
-}
+                     /* Contact Form Section */
+           .contact-form-section {
+             padding: 100px 0;
+             margin: 100px 0;
+             background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+             position: relative;
+           }
 
-/* Actual Form Styling */
-.contact-form form {
-  background: #fff;
-  padding: 25px 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  width: 100%;
-  max-width: 420px; /* Keeps it narrow and elegant */
-}
+          .contact-form-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(0,0,0,0.02)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.5;
+          }
 
-/* Title */
-.contact-form h3 {
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 25px;
-  color: #1e293b;
-}
+          .contact-form-wrapper {
+            position: relative;
+            z-index: 2;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            padding: 60px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+          }
 
-/* Form Groups */
-.contact-form .form-group {
-  margin-bottom: 15px;
-}
+          .contact-form-header {
+            margin-bottom: 40px;
+          }
 
-/* Inputs, Selects, and Textareas */
-.contact-form .form-control {
-  height: 45px;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 0 12px;
-  font-size: 14px;
-  background: #f9fafb;
-  transition: all 0.25s ease;
-}
+          .contact-form-header h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
 
-.contact-form .form-control:focus {
-  background: #fff;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
-  outline: none;
-}
+          .contact-form-header p {
+            font-size: 1.1rem;
+            color: #666;
+            margin: 0;
+            line-height: 1.6;
+          }
 
-/* Textarea */
-.contact-form textarea.form-control {
-  min-height: 100px;
-  padding-top: 10px;
-}
+          .contact-form {
+            width: 100%;
+            margin:100px;
+          }
 
-/* Submit Button */
-.contact-form .submit-btn {
-  width: 100%;
-  height: 45px;
-  background: linear-gradient(90deg, #3b82f6, #2563eb);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
+          .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+          }
 
-.contact-form .submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.25);
-}
+          .form-group {
+            margin-bottom: 20px;
+          }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .contact-form {
-    min-height: auto; /* No forced vertical centering on small screens */
-    padding: 30px 15px;
-  }
-  .contact-form form {
-    max-width: 100%;
-  }
-}
+          .form-control {
+            width: 100%;
+            height: 54px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 0 15px;
+            font-size: 1rem;
+            background: #f9fafb;
+            transition: all 0.3s ease;
+            color: #333;
+          }
+
+          .form-control:focus {
+            outline: none;
+            border-color: #ff0000;
+            box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.1);
+            background: white;
+            transform: translateY(-2px);
+          }
+
+          .form-control::placeholder {
+            color: #999;
+            font-weight: 400;
+          }
+
+          textarea.form-control {
+            min-height: 120px;
+            padding-top: 15px;
+            resize: vertical;
+          }
+
+          .phone-group {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 15px;
+          }
+
+          .country-selector {
+            position: relative;
+          }
+
+          .country-select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 12px center;
+            background-repeat: no-repeat;
+            background-size: 16px 12px;
+            padding-right: 40px;
+            appearance: none;
+            font-size: 14px;
+            line-height: 1.2;
+          }
+
+          .country-select:focus {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ff0000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+          }
+
+          .country-select option {
+            font-size: 14px;
+            padding: 8px;
+            line-height: 1.2;
+          }
+
+          .country-select,
+          .country-select option {
+            font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Android Emoji", "EmojiSymbols", "EmojiOne Mozilla", "Twemoji Mozilla", "Segoe UI Symbol", Arial, sans-serif;
+          }
+
+          .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+            color: white;
+            border: none;
+            padding: 16px 30px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+          }
+
+          .submit-btn:hover {
+            background: linear-gradient(135deg, #cc0000 0%, #990000 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 0, 0, 0.3);
+          }
+
+          .submit-btn i {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+          }
+
+          .submit-btn:hover i {
+            transform: translateX(5px);
+          }
+
+                     /* Responsive Design for Contact Form */
+           @media (max-width: 768px) {
+             .contact-form-section {
+               padding: 60px 0;
+             }
+            
+            .contact-form-wrapper {
+              padding: 40px 25px;
+              margin: 0 15px;
+            }
+            
+            .contact-form-header h3 {
+              font-size: 2rem;
+            }
+            
+            .contact-form-header p {
+              font-size: 1rem;
+            }
+            
+            .form-row {
+              grid-template-columns: 1fr;
+              gap: 15px;
+            }
+            
+            .phone-group {
+              grid-template-columns: 1fr;
+            }
+            
+            .country-selector {
+              order: 2;
+            }
+            
+            .phone-input {
+              order: 1;
+            }
+            
+            .form-control {
+              height: 45px;
+              font-size: 0.95rem;
+            }
+            
+            .submit-btn {
+              padding: 14px 25px;
+              font-size: 1rem;
+            }
+          }
+
+          @media (max-width: 576px) {
+            .contact-form-section {
+              padding: 40px 0;
+            }
+            
+            .contact-form-wrapper {
+              padding: 30px 20px;
+              margin: 0 10px;
+            }
+            
+            .contact-form-header h3 {
+              font-size: 1.8rem;
+            }
+            
+            .form-control {
+              height: 42px;
+              font-size: 0.9rem;
+            }
+            
+            textarea.form-control {
+              min-height: 100px;
+            }
+            
+            .submit-btn {
+              padding: 12px 20px;
+              font-size: 0.95rem;
+            }
+          }
 
         /* Video Hero Section */
         .video-hero-section {
