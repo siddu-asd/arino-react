@@ -2321,7 +2321,7 @@ export default function HyproPage() {
 
           /* Newsletter Section */
           .newsletter-section {
-            background: linear-gradient(135deg, #040404 0%, #232222 100%);
+            background: linear-gradient(135deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 100%);
             padding: 80px 0;
             color: white;
           }
@@ -2330,12 +2330,12 @@ export default function HyproPage() {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 20px;
-            color: white;
+            color: black;
           }
 
           .newsletter-content p {
             font-size: 1.1rem;
-            color: rgba(255,255,255,0.9);
+            color: rgba(0, 0, 0, 0.9);
             margin-bottom: 40px;
           }
 
