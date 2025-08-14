@@ -19,12 +19,12 @@ export default function HyproPage() {
       {/* Video Hero Section */}
       <div className="video-hero-section">
         <div className="video-background">
-                     <video autoPlay muted loop playsInline>
-             <source src="/video/vc.mp4" type="video/mp4" />
-           </video>
+          <video autoPlay muted loop playsInline>
+            <source src="/video/vc.mp4" type="video/mp4" />
+          </video>
           <div className="video-overlay"></div>
         </div>
-        
+
         <div className="hero-content">
           <div className="hero-text-content hero-text-left">
             <div className="hero-main-title">
@@ -47,42 +47,42 @@ export default function HyproPage() {
             <Div className="col-lg-12">
               <div className="section-title text-center wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
                 <div className="section-main-title">
-                  <h2>Transform how Industries Showcase Properties<br/>with our all-in-one Immersive Tools</h2>
+                  <h2>Transform how Industries Showcase Properties<br />with our all-in-one Immersive Tools</h2>
                 </div>
               </div>
             </Div>
           </Div>
-          
+
           {/* Solution Buttons */}
           <Div className="row">
             <Div className="col-lg-12">
               <div className="solution-buttons text-center wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-                <button 
-                  className={`solution-btn ${activeSolution === 'weblite' ? 'active' : ''}`} 
+                <button
+                  className={`solution-btn ${activeSolution === 'weblite' ? 'active' : ''}`}
                   onClick={() => setActiveSolution('weblite')}
                 >
                   Weblite
                 </button>
-                <button 
-                  className={`solution-btn ${activeSolution === 'metaverse' ? 'active' : ''}`} 
+                <button
+                  className={`solution-btn ${activeSolution === 'metaverse' ? 'active' : ''}`}
                   onClick={() => setActiveSolution('metaverse')}
                 >
                   Metaverse
                 </button>
-                <button 
-                  className={`solution-btn ${activeSolution === 'sales-tool' ? 'active' : ''}`} 
+                <button
+                  className={`solution-btn ${activeSolution === 'sales-tool' ? 'active' : ''}`}
                   onClick={() => setActiveSolution('sales-tool')}
                 >
                   Sales Tool
                 </button>
-                <button 
-                  className={`solution-btn ${activeSolution === 'vr-solutions' ? 'active' : ''}`} 
+                <button
+                  className={`solution-btn ${activeSolution === 'vr-solutions' ? 'active' : ''}`}
                   onClick={() => setActiveSolution('vr-solutions')}
                 >
                   VR Solutions
                 </button>
-                <button 
-                  className={`solution-btn ${activeSolution === 'ar-solutions' ? 'active' : ''}`} 
+                <button
+                  className={`solution-btn ${activeSolution === 'ar-solutions' ? 'active' : ''}`}
                   onClick={() => setActiveSolution('ar-solutions')}
                 >
                   AR Solutions
@@ -90,7 +90,7 @@ export default function HyproPage() {
               </div>
             </Div>
           </Div>
-          
+
           {/* Content Container */}
           <Div className="row align-items-center">
             <Div className="col-lg-6 col-md-12">
@@ -124,7 +124,7 @@ export default function HyproPage() {
                   </div>
                   <a href="#" className="know-more-btn">Know More</a>
                 </div>
-                
+
                 <div className={`solution-info ${activeSolution === 'metaverse' ? '' : 'd-none'}`} id="metaverse-content">
                   <h3>Real-time Interactive Models</h3>
                   <p>Explore properties through immersive 3D experiences with real-time interactive models and virtual walkthroughs.</p>
@@ -140,7 +140,7 @@ export default function HyproPage() {
                   </div>
                   <a href="#" className="know-more-btn">Know More</a>
                 </div>
-                
+
                 <div className={`solution-info ${activeSolution === 'sales-tool' ? '' : 'd-none'}`} id="sales-tool-content">
                   <h3>Remote Property Showcasing</h3>
                   <p>Remotely showcase properties in 3D with built-in voice/video calls for enhanced client engagement.</p>
@@ -156,7 +156,7 @@ export default function HyproPage() {
                   </div>
                   <a href="#" className="know-more-btn">Know More</a>
                 </div>
-                
+
                 <div className={`solution-info ${activeSolution === 'vr-solutions' ? '' : 'd-none'}`} id="vr-solutions-content">
                   <h3>Virtual Reality Experiences</h3>
                   <p>Explore properties through immersive VR walkthroughs with realistic 3D environments and interactive elements.</p>
@@ -172,7 +172,7 @@ export default function HyproPage() {
                   </div>
                   <a href="#" className="know-more-btn">Know More</a>
                 </div>
-                
+
                 <div className={`solution-info ${activeSolution === 'ar-solutions' ? '' : 'd-none'}`} id="ar-solutions-content">
                   <h3>Augmented Reality Solutions</h3>
                   <p>Visualize projects with AR for faster decision making and enhanced spatial understanding.</p>
@@ -201,42 +201,42 @@ export default function HyproPage() {
             <Div className="col-lg-12">
               <div className="section-title text-center wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
                 <div className="section-main-title">
-                  <h2>Experience Multiple Projects within One Room<br/>at once through Immersive Tech</h2>
+                  <h2>Experience Multiple Projects within One Room<br />at once through Immersive Tech</h2>
                 </div>
               </div>
             </Div>
           </Div>
-          
+
           {/* Technology Buttons */}
           <Div className="row">
             <Div className="col-lg-12">
               <div className="tech-buttons text-center wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-                <button 
-                  className={`tech-btn ${activeTech === 'holographic' ? 'active' : ''}`} 
+                <button
+                  className={`tech-btn ${activeTech === 'holographic' ? 'active' : ''}`}
                   onClick={() => setActiveTech('holographic')}
                 >
                   Holographic Display
                 </button>
-                <button 
-                  className={`tech-btn ${activeTech === 'touchscreen' ? 'active' : ''}`} 
+                <button
+                  className={`tech-btn ${activeTech === 'touchscreen' ? 'active' : ''}`}
                   onClick={() => setActiveTech('touchscreen')}
                 >
                   Touchscreen
                 </button>
-                <button 
-                  className={`tech-btn ${activeTech === 'immersive-stations' ? 'active' : ''}`} 
+                <button
+                  className={`tech-btn ${activeTech === 'immersive-stations' ? 'active' : ''}`}
                   onClick={() => setActiveTech('immersive-stations')}
                 >
                   Immersive Stations
                 </button>
-                <button 
-                  className={`tech-btn ${activeTech === 'projection-mapping' ? 'active' : ''}`} 
+                <button
+                  className={`tech-btn ${activeTech === 'projection-mapping' ? 'active' : ''}`}
                   onClick={() => setActiveTech('projection-mapping')}
                 >
                   Projection Mapping
                 </button>
-                <button 
-                  className={`tech-btn ${activeTech === 'immersive-led' ? 'active' : ''}`} 
+                <button
+                  className={`tech-btn ${activeTech === 'immersive-led' ? 'active' : ''}`}
                   onClick={() => setActiveTech('immersive-led')}
                 >
                   Immersive LED Room
@@ -244,7 +244,7 @@ export default function HyproPage() {
               </div>
             </Div>
           </Div>
-          
+
           {/* Content Container */}
           <Div className="row align-items-center">
             <Div className="col-lg-6 col-md-12">
@@ -264,7 +264,7 @@ export default function HyproPage() {
                   </div>
                   <a href="#" className="know-more-btn">Know More</a>
                 </div>
-                
+
                 <div className={`tech-info ${activeTech === 'touchscreen' ? '' : 'd-none'}`} id="touchscreen-content">
                   <h3>Interactive Touch Displays</h3>
                   <p>Multi-touch interactive displays for collaborative project exploration and real-time data visualization.</p>
@@ -280,7 +280,7 @@ export default function HyproPage() {
                   </div>
                   <a href="#" className="know-more-btn">Know More</a>
                 </div>
-                
+
                 <div className={`tech-info ${activeTech === 'immersive-stations' ? '' : 'd-none'}`} id="immersive-stations-content">
                   <h3>Immersive Workstations</h3>
                   <p>Dedicated immersive stations for detailed project analysis and virtual walkthroughs.</p>
@@ -296,7 +296,7 @@ export default function HyproPage() {
                   </div>
                   <a href="#" className="know-more-btn">Know More</a>
                 </div>
-                
+
                 <div className={`tech-info ${activeTech === 'projection-mapping' ? '' : 'd-none'}`} id="projection-mapping-content">
                   <h3>3D Projection Mapping</h3>
                   <p>Advanced projection mapping technology for immersive spatial visualization and interactive experiences.</p>
@@ -312,7 +312,7 @@ export default function HyproPage() {
                   </div>
                   <a href="#" className="know-more-btn">Know More</a>
                 </div>
-                
+
                 <div className={`tech-info ${activeTech === 'immersive-led' ? '' : 'd-none'}`} id="immersive-led-content">
                   <h3>LED Immersive Rooms</h3>
                   <p>Full LED immersive rooms for complete project visualization and collaborative decision making.</p>
@@ -355,12 +355,12 @@ export default function HyproPage() {
             <Div className="col-lg-12">
               <div className="section-title text-center wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
                 <div className="section-main-title">
-                  <h2>High-Quality, Interactive and Life-like<br/>Cities built for Smart Planning</h2>
+                  <h2>High-Quality, Interactive and Life-like<br />Cities built for Smart Planning</h2>
                 </div>
               </div>
             </Div>
           </Div>
-          
+
           {/* City Images */}
           <Div className="row">
             <Div className="col-lg-4 col-md-4">
@@ -369,7 +369,7 @@ export default function HyproPage() {
                   <img src="/images/int1.png" alt="Dubai" />
                   <div className="city-overlay">
                     <div className="city-name">
-                      <h3>Nazara</h3>
+
                     </div>
                   </div>
                 </div>
@@ -381,7 +381,7 @@ export default function HyproPage() {
                   <img src="/images/int2.png" alt="Abu Dhabi" />
                   <div className="city-overlay">
                     <div className="city-name">
-                      <h3>Nazara</h3>
+
                     </div>
                   </div>
                 </div>
@@ -393,7 +393,7 @@ export default function HyproPage() {
                   <img src="/images/int3.png" alt="Riyadh" />
                   <div className="city-overlay">
                     <div className="city-name">
-                      <h3>Nazara</h3>
+
                     </div>
                   </div>
                 </div>
@@ -415,37 +415,37 @@ export default function HyproPage() {
               </div>
             </Div>
           </Div>
-          
+
           {/* Technology Buttons */}
           <Div className="row">
             <Div className="col-lg-12">
               <div className="tech-buttons text-center wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-                <button 
-                  className={`twin-btn ${activeTwin === 'smart-city' ? 'active' : ''}`} 
+                <button
+                  className={`twin-btn ${activeTwin === 'smart-city' ? 'active' : ''}`}
                   onClick={() => setActiveTwin('smart-city')}
                 >
                   Smart City
                 </button>
-                <button 
-                  className={`twin-btn ${activeTwin === 'smart-buildings' ? 'active' : ''}`} 
+                <button
+                  className={`twin-btn ${activeTwin === 'smart-buildings' ? 'active' : ''}`}
                   onClick={() => setActiveTwin('smart-buildings')}
                 >
                   Smart Buildings
                 </button>
-                <button 
-                  className={`twin-btn ${activeTwin === 'smart-house' ? 'active' : ''}`} 
+                <button
+                  className={`twin-btn ${activeTwin === 'smart-house' ? 'active' : ''}`}
                   onClick={() => setActiveTwin('smart-house')}
                 >
                   Smart House
                 </button>
-                <button 
-                  className={`twin-btn ${activeTwin === 'smart-port' ? 'active' : ''}`} 
+                <button
+                  className={`twin-btn ${activeTwin === 'smart-port' ? 'active' : ''}`}
                   onClick={() => setActiveTwin('smart-port')}
                 >
                   Smart Port
                 </button>
-                <button 
-                  className={`twin-btn ${activeTwin === 'smart-airport' ? 'active' : ''}`} 
+                <button
+                  className={`twin-btn ${activeTwin === 'smart-airport' ? 'active' : ''}`}
                   onClick={() => setActiveTwin('smart-airport')}
                 >
                   Smart Airport
@@ -453,7 +453,7 @@ export default function HyproPage() {
               </div>
             </Div>
           </Div>
-          
+
           {/* Content Container */}
           <Div className="row align-items-center">
             <Div className="col-lg-6 col-md-12">
@@ -473,7 +473,7 @@ export default function HyproPage() {
                   </div>
                   <a href="#" className="know-more-btn">Know More</a>
                 </div>
-                
+
                 <div className={`twin-info ${activeTwin === 'smart-buildings' ? '' : 'd-none'}`} id="smart-buildings-content">
                   <h3>Smart Building Management</h3>
                   <p>Intelligent building systems with real-time monitoring and automated energy management for optimal efficiency.</p>
@@ -489,7 +489,7 @@ export default function HyproPage() {
                   </div>
                   <a href="#" className="know-more-btn">Know More</a>
                 </div>
-                
+
                 <div className={`twin-info ${activeTwin === 'smart-house' ? '' : 'd-none'}`} id="smart-house-content">
                   <h3>Smart Home Automation</h3>
                   <p>Connected home systems with intelligent automation for comfort, security, and energy efficiency.</p>
@@ -505,7 +505,7 @@ export default function HyproPage() {
                   </div>
                   <a href="#" className="know-more-btn">Know More</a>
                 </div>
-                
+
                 <div className={`twin-info ${activeTwin === 'smart-port' ? '' : 'd-none'}`} id="smart-port-content">
                   <h3>Smart Port Operations</h3>
                   <p>Digital twin solutions for port management with real-time vessel tracking and cargo optimization.</p>
@@ -521,7 +521,7 @@ export default function HyproPage() {
                   </div>
                   <a href="#" className="know-more-btn">Know More</a>
                 </div>
-                
+
                 <div className={`twin-info ${activeTwin === 'smart-airport' ? '' : 'd-none'}`} id="smart-airport-content">
                   <h3>Smart Airport Management</h3>
                   <p>Intelligent airport systems with passenger flow optimization and operational efficiency monitoring.</p>
@@ -577,7 +577,7 @@ export default function HyproPage() {
               <div className="protfolio-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
                 <div className="protfolio-thumb">
                   <img src="/images/int1.png" alt="" />
-                  <img src="/images/int2.png" alt="" />
+                  <img src="/images/int3.png" alt="" />
                   <img src="/images/int3.png" alt="" />
                   <div className="protfolio-images-link">
                     <a href="projects-details.html"><i className="bi bi-play-circle"></i></a>
@@ -622,7 +622,7 @@ export default function HyproPage() {
               </div>
             </Div>
           </Div>
-          <Div className="row mt-5">
+          {/* <Div className="row mt-5">
             <Div className="col-lg-12">
               <div className="gaming-stats text-center wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
                 <Div className="row">
@@ -653,153 +653,119 @@ export default function HyproPage() {
                 </Div>
               </div>
             </Div>
-          </Div>
+          </Div> */}
         </Div>
       </div>
 
       {/* Contact Form Section */}
-      <div className="contact-form-section" id="contact-form">
-        <Div className="container">
-          <Div className="row align-items-center">
-            {/* Left Side - Dark Background Content */}
-            <Div className="col-lg-6 col-md-12">
-              <div className="contact-content">
-                <div className="contact-main-title">
-                  <h2>Redefine Your Approach to Real Estate Exploration</h2>
-                </div>
-                <div className="contact-features">
-                  <Div className="row">
-                    <Div className="col-lg-6 col-md-6">
-                      <div className="feature-item">
-                        <div className="feature-icon">
-                          <i className="bi bi-building"></i>
-                        </div>
-                        <div className="feature-text">
-                          <h4>Immersive Exploration</h4>
-                        </div>
-                      </div>
-                    </Div>
-                    <Div className="col-lg-6 col-md-6">
-                      <div className="feature-item">
-                        <div className="feature-icon">
-                          <i className="bi bi-cpu"></i>
-                        </div>
-                        <div className="feature-text">
-                          <h4>Digital Twins</h4>
-                        </div>
-                      </div>
-                    </Div>
-                    <Div className="col-lg-6 col-md-6">
-                      <div className="feature-item">
-                        <div className="feature-icon">
-                          <i className="bi bi-controller"></i>
-                        </div>
-                        <div className="feature-text">
-                          <h4>Gaming Solutions</h4>
-                        </div>
-                      </div>
-                    </Div>
-                    <Div className="col-lg-6 col-md-6">
-                      <div className="feature-item">
-                        <div className="feature-icon">
-                          <i className="bi bi-box"></i>
-                        </div>
-                        <div className="feature-text">
-                          <h4>Walkthroughs & Renders</h4>
-                        </div>
-                      </div>
-                    </Div>
-                  </Div>
-                </div>
-              </div>
-            </Div>
-            
-            {/* Right Side - White Background Contact Form */}
-            <Div className="col-lg-6 col-md-12">
-              <div className="contact-form-container">
-                <div className="contact-form">
-                  <h3>Contact Us</h3>
-                  <form>
-                    <div className="form-group">
-                      <input type="text" className="form-control" placeholder="Name" />
-                    </div>
-                    <div className="form-group">
-                      <input type="email" className="form-control" placeholder="Enter Email Address" />
-                    </div>
-                    <div className="form-group phone-group">
-                      <div className="country-selector">
-                        <select className="form-control country-select" id="country-select">
-                          <option value="+971" data-flag="🇦🇪">🇦🇪 UAE (+971)</option>
-                          <option value="+1" data-flag="🇺🇸">🇺🇸 USA (+1)</option>
-                          <option value="+44" data-flag="🇬🇧">🇬🇧 UK (+44)</option>
-                          <option value="+91" data-flag="🇮🇳">🇮🇳 India (+91)</option>
-                          <option value="+86" data-flag="🇨🇳">🇨🇳 China (+86)</option>
-                          <option value="+81" data-flag="🇯🇵">🇯🇵 Japan (+81)</option>
-                          <option value="+49" data-flag="🇩🇪">🇩🇪 Germany (+49)</option>
-                          <option value="+33" data-flag="🇫🇷">🇫🇷 France (+33)</option>
-                          <option value="+39" data-flag="🇮🇹">🇮🇹 Italy (+39)</option>
-                          <option value="+34" data-flag="🇪🇸">🇪🇸 Spain (+34)</option>
-                        </select>
-                      </div>
-                      <div className="phone-input">
-                        <input type="text" className="form-control" id="phone-number" placeholder="Enter phone number" />
-                      </div>
-                    </div>
-                    <div className="form-group">
-                      <select className="form-control">
-                        <option>Profession</option>
-                        <option>Real Estate Developer</option>
-                        <option>Architect</option>
-                        <option>Property Manager</option>
-                      </select>
-                    </div>
-                    <div className="form-group">
-                      <input type="text" className="form-control" placeholder="Company Name" />
-                    </div>
-                    <div className="form-group">
-                      <select className="form-control">
-                        <option>Interested Products</option>
-                        <option>Weblite</option>
-                        <option>Metaverse</option>
-                        <option>Sales Tool</option>
-                        <option>VR Solutions</option>
-                      </select>
-                    </div>
-                    <div className="form-group">
-                      <select className="form-control">
-                        <option>Type of Project working on</option>
-                        <option>Residential</option>
-                        <option>Commercial</option>
-                        <option>Industrial</option>
-                      </select>
-                    </div>
-                    <div className="form-group">
-                      <select className="form-control">
-                        <option>Current stage of project</option>
-                        <option>Planning</option>
-                        <option>Development</option>
-                        <option>Marketing</option>
-                      </select>
-                    </div>
-                    <div className="form-group">
-                      <select className="form-control">
-                        <option>What would you like to receive from us?</option>
-                        <option>Demo</option>
-                        <option>Pricing</option>
-                        <option>Consultation</option>
-                      </select>
-                    </div>
-                    <div className="form-group">
-                      <textarea className="form-control" rows="4" placeholder="Tell us more"></textarea>
-                    </div>
-                    <button type="submit" className="submit-btn">Submit</button>
-                  </form>
-                </div>
-              </div>
-            </Div>
-          </Div>
-        </Div>
-      </div>
+      <form
+        onSubmit={async (e) => {
+          e.preventDefault();
+
+          const formData = {
+            name: e.target.name.value,
+            email: e.target.email.value,
+            country_code: e.target.country_code.value,
+            phone: e.target.phone.value,
+            profession: e.target.profession.value,
+            company_name: e.target.company_name.value,
+            interested_products: e.target.interested_products.value,
+            project_type: e.target.project_type.value,
+            project_stage: e.target.project_stage.value,
+            request_type: e.target.request_type.value,
+            message: e.target.message.value,
+          };
+
+          try {
+            const res = await fetch("http://localhost:5000/submit", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(formData),
+            });
+
+            const data = await res.json();
+            if (res.ok) {
+              alert("Form submitted successfully!");
+              e.target.reset();
+            } else {
+              alert(data.error || "Submission failed");
+            }
+          } catch (err) {
+            alert("Error submitting form: " + err.message);
+          }
+        }}
+      >
+        <div className="form-group">
+          <input type="text" name="name" className="form-control" placeholder="Name" />
+        </div>
+        <div className="form-group">
+          <input type="email" name="email" className="form-control" placeholder="Enter Email Address" />
+        </div>
+        <div className="form-group phone-group">
+          <div className="country-selector">
+            <select name="country_code" className="form-control country-select" id="country-select">
+              <option value="+971">🇦🇪 UAE (+971)</option>
+              <option value="+1">🇺🇸 USA (+1)</option>
+              <option value="+44">🇬🇧 UK (+44)</option>
+              <option value="+91">🇮🇳 India (+91)</option>
+              {/* ... */}
+            </select>
+          </div>
+          <div className="phone-input">
+            <input type="text" name="phone" className="form-control" id="phone-number" placeholder="Enter phone number" />
+          </div>
+        </div>
+        <div className="form-group">
+          <select name="profession" className="form-control">
+            <option>Profession</option>
+            <option>Real Estate Developer</option>
+            <option>Architect</option>
+            <option>Property Manager</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <input type="text" name="company_name" className="form-control" placeholder="Company Name" />
+        </div>
+        <div className="form-group">
+          <select name="interested_products" className="form-control">
+            <option>Interested Products</option>
+            <option>Weblite</option>
+            <option>Metaverse</option>
+            <option>Sales Tool</option>
+            <option>VR Solutions</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <select name="project_type" className="form-control">
+            <option>Type of Project working on</option>
+            <option>Residential</option>
+            <option>Commercial</option>
+            <option>Industrial</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <select name="project_stage" className="form-control">
+            <option>Current stage of project</option>
+            <option>Planning</option>
+            <option>Development</option>
+            <option>Marketing</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <select name="request_type" className="form-control">
+            <option>What would you like to receive from us?</option>
+            <option>Demo</option>
+            <option>Pricing</option>
+            <option>Consultation</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <textarea name="message" className="form-control" rows="4" placeholder="Tell us more"></textarea>
+        </div>
+        <button type="submit" className="submit-btn">Submit</button>
+      </form>
 
       {/* Newsletter Section */}
       <div className="newsletter-section">
@@ -824,6 +790,96 @@ export default function HyproPage() {
       </div>
 
       <style>{`
+
+           
+           /* Form Wrapper */
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Vertically center on desktop */
+  padding: 20px; /* Space for mobile edges */
+  box-sizing: border-box;
+}
+
+/* Actual Form Styling */
+.contact-form form {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px; /* Keeps it narrow and elegant */
+}
+
+/* Title */
+.contact-form h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+/* Form Groups */
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+/* Inputs, Selects, and Textareas */
+.contact-form .form-control {
+  height: 45px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 14px;
+  background: #f9fafb;
+  transition: all 0.25s ease;
+}
+
+.contact-form .form-control:focus {
+  background: #fff;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  outline: none;
+}
+
+/* Textarea */
+.contact-form textarea.form-control {
+  min-height: 100px;
+  padding-top: 10px;
+}
+
+/* Submit Button */
+.contact-form .submit-btn {
+  width: 100%;
+  height: 45px;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.contact-form .submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-form {
+    min-height: auto; /* No forced vertical centering on small screens */
+    padding: 30px 15px;
+  }
+  .contact-form form {
+    max-width: 100%;
+  }
+}
+
         /* Video Hero Section */
         .video-hero-section {
           position: relative;
@@ -1061,6 +1117,7 @@ export default function HyproPage() {
           transition: all 0.3s ease;
           z-index: 2;
         }
+          
 
         .play-button:hover {
           background: linear-gradient(135deg, #cc0000 0%, #990000 100%);
@@ -1135,7 +1192,7 @@ export default function HyproPage() {
 
         .solution-stats .stat-item h4 {
           color: #ff0000;
-          font-size: 2.5rem;
+          font-size: 1.5rem;
           font-weight: 800;
           margin-bottom: 8px;
           text-shadow: 0 2px 4px rgba(255, 0, 0, 0.1);
@@ -1318,6 +1375,7 @@ export default function HyproPage() {
            gap: 40px;
            margin-bottom: 40px;
            flex-wrap: wrap;
+               justify-content: space-around;
          }
 
          .tech-stats .stat-item, .twin-stats .stat-item {
@@ -1341,7 +1399,7 @@ export default function HyproPage() {
 
          .tech-stats .stat-item h4, .twin-stats .stat-item h4 {
            color: #ff0000;
-           font-size: 2.5rem;
+           font-size: 1.5rem;
            font-weight: 800;
            margin-bottom: 8px;
            text-shadow: 0 2px 4px rgba(255, 0, 0, 0.1);
@@ -1409,15 +1467,15 @@ export default function HyproPage() {
            background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%);
          }
 
-         .city-name h3 {
-           color: #ffffff;
-           font-size: 2.5rem;
-           font-weight: 700;
-           margin: 0;
-           text-align: center;
-           text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-           transition: all 0.4s ease;
-         }
+        //  .city-name h3 {
+        //    color: #ffffff;
+        //    font-size: 2.5rem;
+        //    font-weight: 700;
+        //    margin: 0;
+        //    text-align: center;
+        //    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        //    transition: all 0.4s ease;
+        //  }
 
          .city-image:hover .city-name h3 {
            transform: scale(1.1);
@@ -2024,6 +2082,7 @@ export default function HyproPage() {
               font-size: 1rem;
             }
           }
+            
         `}</style>
     </>
   );
