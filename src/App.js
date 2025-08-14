@@ -175,7 +175,7 @@ function App() {
           <Route path="testimonial" element={<TestimonialPage />} />
           <Route path="care100x" element={<Care100xPage />} />
           <Route path="virtualtour" element={<Virtualtour />} />
-          <Route path="products" element={<OurProductsPage />} />
+          <Route path="products" element={<HyproPage />} />
           <Route path="products/hypro" element={<HyproPage />} />
           <Route path="products/nisaa" element={<NisaaPage />} />
         </Route>

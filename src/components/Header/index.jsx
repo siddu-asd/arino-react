@@ -75,7 +75,7 @@ export default function Header({ variant }) {
                       <DropDown>
                         <ul>
                           <li>
-                            <Link to="/products/hypro">Hypro</Link>
+                            <Link to="/products/NexelVR">Hypro</Link>
                           </li>
                           <li>
                             <Link to="/products/nisaa">Nisaa</Link>
