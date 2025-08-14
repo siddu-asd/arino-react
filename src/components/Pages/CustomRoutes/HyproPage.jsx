@@ -366,7 +366,7 @@ export default function HyproPage() {
             <Div className="col-lg-4 col-md-4">
               <div className="city-item wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
                 <div className="city-image">
-                  <img src="/images/int1.png" alt="Dubai" />
+                  <img src="/images/img1.jpg" alt="Dubai" />
                   <div className="city-overlay">
                     <div className="city-name">
 
@@ -378,7 +378,7 @@ export default function HyproPage() {
             <Div className="col-lg-4 col-md-4">
               <div className="city-item wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
                 <div className="city-image">
-                  <img src="/images/int2.png" alt="Abu Dhabi" />
+                  <img src="/images/img2.jpg" alt="Abu Dhabi" />
                   <div className="city-overlay">
                     <div className="city-name">
 
@@ -390,7 +390,7 @@ export default function HyproPage() {
             <Div className="col-lg-4 col-md-4">
               <div className="city-item wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
                 <div className="city-image">
-                  <img src="/images/int3.png" alt="Riyadh" />
+                  <img src="/images/img3.jpg" alt="Riyadh" />
                   <div className="city-overlay">
                     <div className="city-name">
 
@@ -576,9 +576,8 @@ export default function HyproPage() {
             <Div className="col-lg-6 col-md-6">
               <div className="protfolio-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
                 <div className="protfolio-thumb">
-                  <img src="/images/int1.png" alt="" />
-                  <img src="/images/int3.png" alt="" />
-                  <img src="/images/int3.png" alt="" />
+                  <img src="/images/img44.jpg" alt="" />
+                
                   <div className="protfolio-images-link">
                     <a href="projects-details.html"><i className="bi bi-play-circle"></i></a>
                   </div>
@@ -588,9 +587,7 @@ export default function HyproPage() {
             <Div className="col-lg-6 col-md-6">
               <div className="protfolio-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
                 <div className="protfolio-thumb">
-                  <img src="/images/int2.png" alt="" />
-                  <img src="/images/int3.png" alt="" />
-                  <img src="/images/int4.png" alt="" />
+                  <img src="/images/img11.jpeg" alt="" />
                   <div className="protfolio-images-link">
                     <a href="projects-details.html"><i className="bi bi-play-circle"></i></a>
                   </div>
@@ -600,9 +597,7 @@ export default function HyproPage() {
             <Div className="col-lg-8 col-md-12">
               <div className="protfolio-single-box wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
                 <div className="protfolio-thumb">
-                  <img src="/images/int3.png" alt="" />
-                  <img src="/images/int4.png" alt="" />
-                  <img src="/images/int1.png" alt="" />
+                  <img src="/images/img22.jpeg" alt="" />
                   <div className="protfolio-images-link">
                     <a href="projects-details.html"><i className="bi bi-play-circle"></i></a>
                   </div>
@@ -612,9 +607,7 @@ export default function HyproPage() {
             <Div className="col-lg-4 col-md-6">
               <div className="protfolio-single-box wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
                 <div className="protfolio-thumb">
-                  <img src="/images/int4.png" alt="" />
-                  <img src="/images/int1.png" alt="" />
-                  <img src="/images/int2.png" alt="" />
+                  <img src="/images/img33.jpg" alt="" />
                   <div className="protfolio-images-link">
                     <a href="projects-details.html"><i className="bi bi-play-circle"></i></a>
                   </div>
@@ -1016,29 +1009,51 @@ export default function HyproPage() {
                      /* Responsive Design for Contact Form */
            @media (max-width: 768px) {
              .contact-form-section {
-               padding: 60px 0;
+               padding: 20px 0;
+               margin: 0;
+             }
+             
+             .contact-form {
+               margin: 0 !important;
              }
             
             .contact-form-wrapper {
-              padding: 40px 25px;
-              margin: 0 15px;
+              padding: 25px 15px;
+              margin: 0 8px;
+              border-radius: 12px;
+              max-width: 100%;
             }
             
             .contact-form-header h3 {
-              font-size: 2rem;
+              font-size: 1.6rem;
+              margin-bottom: 8px;
             }
             
             .contact-form-header p {
-              font-size: 1rem;
+              font-size: 0.9rem;
+              line-height: 1.4;
+              margin-bottom: 20px;
             }
             
             .form-row {
               grid-template-columns: 1fr;
-              gap: 15px;
+              gap: 12px;
+              margin-bottom: 12px;
+            }
+            
+            .form-group {
+              margin-bottom: 12px;
+              width: 100%;
+              max-width: none;
+              display: block;
             }
             
             .phone-group {
               grid-template-columns: 1fr;
+              gap: 8px;
+              width: 100%;
+              max-width: none;
+              margin: 0;
             }
             
             .country-selector {
@@ -1050,42 +1065,149 @@ export default function HyproPage() {
             }
             
             .form-control {
-              height: 45px;
-              font-size: 0.95rem;
+              height: 50px;
+              font-size: 16px;
+              padding: 15px;
+              width: 100%;
+              box-sizing: border-box;
+              line-height: 20px;
+              color: #333;
+              vertical-align: middle;
+              display: block;
+              border: 2px solid #e2e8f0;
+              border-radius: 12px;
+              background: #f9fafb;
+            }
+            
+            textarea.form-control {
+              min-height: 100px;
+              padding: 15px;
+              line-height: 24px;
+              color: #333;
+              vertical-align: top;
+              resize: vertical;
+              border: 2px solid #e2e8f0;
+              border-radius: 12px;
+              background: #f9fafb;
             }
             
             .submit-btn {
-              padding: 14px 25px;
+              padding: 14px 20px;
               font-size: 1rem;
+              width: 100%;
+              max-width: none;
+              margin: 15px auto 0;
+            }
+            
+            .form-control::placeholder {
+              color: #999 !important;
+              opacity: 1 !important;
+              font-size: 16px !important;
+              line-height: 20px !important;
+              font-weight: 400 !important;
+            }
+            
+            .form-control:focus::placeholder {
+              color: #ccc !important;
+            }
+            
+            .form-control:focus {
+              outline: none;
+              border-color: #ff0000;
+              box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.1);
+              background: white;
             }
           }
 
           @media (max-width: 576px) {
             .contact-form-section {
-              padding: 40px 0;
+              padding: 15px 0;
+              margin: 0;
+            }
+            
+            .contact-form {
+              margin: 0 !important;
             }
             
             .contact-form-wrapper {
-              padding: 30px 20px;
-              margin: 0 10px;
+              padding: 20px 12px;
+              margin: 0 5px;
+              border-radius: 10px;
+              max-width: 100%;
             }
             
             .contact-form-header h3 {
-              font-size: 1.8rem;
+              font-size: 1.4rem;
+              margin-bottom: 6px;
+            }
+            
+            .contact-form-header p {
+              font-size: 0.85rem;
+              line-height: 1.3;
+              margin-bottom: 15px;
+            }
+            
+            .form-row {
+              gap: 10px;
+              margin-bottom: 10px;
+            }
+            
+            .form-group {
+              margin-bottom: 10px;
+              width: 100%;
+              max-width: none;
             }
             
             .form-control {
-              height: 42px;
-              font-size: 0.9rem;
+              height: 48px;
+              font-size: 16px;
+              padding: 12px;
+              width: 100%;
+              box-sizing: border-box;
+              line-height: 24px;
+              color: #333;
+              vertical-align: middle;
+              display: block;
+              border: 2px solid #e2e8f0;
+              border-radius: 12px;
+              background: #f9fafb;
             }
             
             textarea.form-control {
-              min-height: 100px;
+              min-height: 90px;
+              padding: 12px;
+              line-height: 20px;
+              color: #333;
+              vertical-align: top;
+              resize: vertical;
+              border: 2px solid #e2e8f0;
+              border-radius: 12px;
+              background: #f9fafb;
+            }
+            
+            .phone-group {
+              gap: 6px;
+              width: 100%;
+              max-width: none;
             }
             
             .submit-btn {
-              padding: 12px 20px;
-              font-size: 0.95rem;
+              padding: 12px 18px;
+              font-size: 0.9rem;
+              margin: 12px auto 0;
+              width: 100%;
+            }
+            
+            .form-control::placeholder {
+              color: #999 !important;
+              opacity: 1 !important;
+              font-size: 16px !important;
+              line-height: 20px !important;
+              font-weight: 400 !important;
+            }
+            
+            .form-control:focus::placeholder {
+              color: #ccc;
             }
           }
 
