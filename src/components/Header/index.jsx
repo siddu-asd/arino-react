@@ -1,17 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import SocialWidget from '../Widget/SocialWidget';
-import Newsletter from '../Widget/Newsletter';
+import { Link, NavLink } from 'react-router-dom';
 import './header.scss';
-import ContactInfoWidget from '../Widget/ContactInfoWidget';
 import Div from '../Div';
 import DropDown from './DropDown';
 
 export default function Header({ variant }) {
   const [isSticky, setIsSticky] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [showMobileSubMenu, setShowMobileSubMenu] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -26,6 +21,13 @@ export default function Header({ variant }) {
     { to: '/service', label: 'What We Offer' },
     { to: '/portfolio', label: 'Our Creation' },
     { to: '/blog', label: 'Our Blogs' },
+    {
+      label: 'Our Products',
+      submenu: [
+        { to: '/products/hypro', label: 'Hypro' },
+        { to: '/products/nisaa', label: 'Nisaa' }
+      ]
+    },
     {
       label: "Let's Connect",
       submenu: [
@@ -69,6 +71,19 @@ export default function Header({ variant }) {
                       <NavLink to="/blog">Our Blogs</NavLink>
                     </li>
                     <li className="menu-item-has-children">
+                      <NavLink to="/products">Our Products</NavLink>
+                      <DropDown>
+                        <ul>
+                          <li>
+                            <Link to="/products/hypro">Hypro</Link>
+                          </li>
+                          <li>
+                            <Link to="/products/nisaa">Nisaa</Link>
+                          </li>
+                        </ul>
+                      </DropDown>
+                    </li>
+                    <li className="menu-item-has-children">
                       <NavLink to="/contact">Let's Connect</NavLink>
                       <DropDown>
                         <ul>
@@ -107,20 +122,40 @@ export default function Header({ variant }) {
         </div>
         <ul className="menu-list">
           {menuItems.map((item, idx) => {
-            // On mobile, replace "Let's Connect" with "Let's Connect" (linking to /contact) and add "Join Us"
-            if (item.label === "Let's Connect") {
-              return [
-                <li key="lets-connect">
-                  <NavLink to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                    Let's Connect
-                  </NavLink>
-                </li>,
-                <li key="join-us">
-                  <NavLink to="/career" onClick={() => setMobileMenuOpen(false)}>
-                    Join Us
-                  </NavLink>
-                </li>
-              ];
+            // Handle menu items with submenus
+            if (item.submenu) {
+              if (item.label === "Let's Connect") {
+                return [
+                  <li key="lets-connect">
+                    <NavLink to="/contact" onClick={() => setMobileMenuOpen(false)}>
+                      Let's Connect
+                    </NavLink>
+                  </li>,
+                  <li key="join-us">
+                    <NavLink to="/career" onClick={() => setMobileMenuOpen(false)}>
+                      Join Us
+                    </NavLink>
+                  </li>
+                ];
+              } else if (item.label === "Our Products") {
+                return [
+                  <li key="our-products">
+                    <NavLink to="/products" onClick={() => setMobileMenuOpen(false)}>
+                      Our Products
+                    </NavLink>
+                  </li>,
+                  <li key="hypro">
+                    <NavLink to="/products/hypro" onClick={() => setMobileMenuOpen(false)}>
+                      Hypro
+                    </NavLink>
+                  </li>,
+                  <li key="nisaa">
+                    <NavLink to="/products/nisaa" onClick={() => setMobileMenuOpen(false)}>
+                      Nisaa
+                    </NavLink>
+                  </li>
+                ];
+              }
             }
             return (
               <li key={idx}>

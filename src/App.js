@@ -77,6 +77,9 @@ import ProgressbarPage from './components/Pages/CustomRoutes/ProgressbarPage';
 import TestimonialPage from './components/Pages/CustomRoutes/TestimonialPage';
 import Care100xPage from './components/Pages/CustomRoutes/Care100xPage';
 import Virtualtour from './components/Pages/CustomRoutes/Virtualtour';
+import HyproPage from './components/Pages/CustomRoutes/HyproPage';
+import NisaaPage from './components/Pages/CustomRoutes/NisaaPage';
+import OurProductsPage from './components/Pages/CustomRoutes/OurProductsPage';
 
 function App() {
   return (
@@ -172,6 +175,9 @@ function App() {
           <Route path="testimonial" element={<TestimonialPage />} />
           <Route path="care100x" element={<Care100xPage />} />
           <Route path="virtualtour" element={<Virtualtour />} />
+          <Route path="products" element={<OurProductsPage />} />
+          <Route path="products/hypro" element={<HyproPage />} />
+          <Route path="products/nisaa" element={<NisaaPage />} />
         </Route>
         <Route path="/" element={<Layout />}>
           <Route

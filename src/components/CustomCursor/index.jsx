@@ -18,19 +18,29 @@ const CustomCursor = () => {
 
   React.useEffect(() => {
     if (location.pathname === '/virtualtour') return;
-    document.addEventListener('mousemove', event => {
+    
+    const handleMouseMove = (event) => {
       const { clientX, clientY } = event;
 
       const mouseX = clientX;
       const mouseY = clientY;
 
-      positionRef.current.mouseX = mouseX - cursorSm.current.clientWidth / 2;
-      positionRef.current.mouseY = mouseY - cursorSm.current.clientHeight / 2;
-      positionRef.current.mouseX = mouseX - cursorLg.current.clientWidth / 2;
-      positionRef.current.mouseY = mouseY - cursorLg.current.clientHeight / 2;
-    });
+      if (cursorSm.current && cursorLg.current) {
+        positionRef.current.mouseX = mouseX - cursorSm.current.clientWidth / 2;
+        positionRef.current.mouseY = mouseY - cursorSm.current.clientHeight / 2;
+        positionRef.current.mouseX = mouseX - cursorLg.current.clientWidth / 2;
+        positionRef.current.mouseY = mouseY - cursorLg.current.clientHeight / 2;
+      }
+    };
 
-    return () => {};
+    document.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      if (positionRef.current.key !== -1) {
+        cancelAnimationFrame(positionRef.current.key);
+      }
+    };
   }, [location.pathname]);
 
   React.useEffect(() => {
@@ -63,8 +73,12 @@ const CustomCursor = () => {
           positionRef.current.destinationY += distanceY;
         }
       }
-      cursorSm.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
-      cursorLg.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
+      if (cursorSm.current) {
+        cursorSm.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
+      }
+      if (cursorLg.current) {
+        cursorLg.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
+      }
     };
     followMouse();
   }, [location.pathname]);
