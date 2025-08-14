@@ -101,9 +101,9 @@ export default function HyproPage() {
                     <source src="/video/vr2.mp4" type="video/mp4" />
                   </video>
                   <div className="video-overlay">
-                    <div className="play-button">
+                    {/* <div className="play-button">
                       <i className="bi bi-play-circle"></i>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -338,9 +338,9 @@ export default function HyproPage() {
                     <source src="/video/vr4.mp4" type="video/mp4" />
                   </video>
                   <div className="video-overlay">
-                    <div className="play-button">
+                    {/* <div className="play-button">
                       <i className="bi bi-play-circle"></i>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -547,9 +547,9 @@ export default function HyproPage() {
                     <source src="/video/vr3.mp4" type="video/mp4" />
                   </video>
                   <div className="video-overlay">
-                    <div className="play-button">
+                    {/* <div className="play-button">
                       <i className="bi bi-play-circle"></i>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
