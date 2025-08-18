@@ -1180,7 +1180,7 @@ export default function HyproPage() {
              background: white;
            }
 
-                       .selected-items {
+              .selected-items {
               display: flex;
               flex-wrap: wrap;
               gap: 8px;
@@ -1193,6 +1193,8 @@ export default function HyproPage() {
            .placeholder {
              color: #999;
              font-style: italic;
+             background: none;
+             padding: 6px 0;
            }
 
            .selected-item {
@@ -1567,7 +1569,7 @@ export default function HyproPage() {
             }
             
             .form-control:focus::placeholder {
-              color: #ccc !important;
+              // color: #ccc !important;
             }
             
             .form-control:focus {
