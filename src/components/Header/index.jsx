@@ -244,6 +244,7 @@ export default function Header({ variant }) {
         border-bottom: none;
         padding: 0;
         list-style: none;
+        text-align: center;
       }
       
       .mobile-dropdown-menu li a {
@@ -253,6 +254,8 @@ export default function Header({ variant }) {
         display: block;
         transition: color 0.3s ease;
         text-decoration: none;
+        text-align: center;
+        justify-content: center;
       }
       
       .mobile-dropdown-menu li a:hover {

@@ -7,6 +7,8 @@ export default function HyproPage() {
   const [activeSolution, setActiveSolution] = useState('weblite');
   const [activeTech, setActiveTech] = useState('holographic');
   const [activeTwin, setActiveTwin] = useState('smart-city');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   useEffect(() => {
     // Initialize WOW.js if available
@@ -662,46 +664,54 @@ export default function HyproPage() {
                   <p>Ready to transform your projects with immersive 3D experiences? Let's discuss your requirements.</p>
                 </div>
                 
-                <form
-                  className="contact-form"
-                  onSubmit={async (e) => {
-                    e.preventDefault();
+                                 <form
+                   className="contact-form"
+                   onSubmit={async (e) => {
+                     e.preventDefault();
+                     setIsSubmitting(true);
+                     setSubmitSuccess(false);
 
-                    const formData = {
-                      name: e.target.name.value,
-                      email: e.target.email.value,
-                      country_code: e.target.country_code.value,
-                      phone: e.target.phone.value,
-                      profession: e.target.profession.value,
-                      company_name: e.target.company_name.value,
-                      interested_products: e.target.interested_products.value,
-                      project_type: e.target.project_type.value,
-                      project_stage: e.target.project_stage.value,
-                      request_type: e.target.request_type.value,
-                      message: e.target.message.value,
-                    };
+                     const formData = {
+                       name: e.target.name.value,
+                       email: e.target.email.value,
+                       country_code: e.target.country_code.value,
+                       phone: e.target.phone.value,
+                       profession: e.target.profession.value,
+                       company_name: e.target.company_name.value,
+                       interested_products: e.target.interested_products.value,
+                       project_type: e.target.project_type.value,
+                       project_stage: e.target.project_stage.value,
+                       request_type: e.target.request_type.value,
+                       message: e.target.message.value,
+                     };
 
-          try {
-            const res = await fetch("https://nexelvr-backend-4.onrender.com/submit", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(formData),
-            });
+                     try {
+                       const res = await fetch("https://nexelvr-backend-4.onrender.com/submit", {
+                         method: "POST",
+                         headers: {
+                           "Content-Type": "application/json",
+                         },
+                         body: JSON.stringify(formData),
+                       });
 
-                      const data = await res.json();
-                      if (res.ok) {
-                        alert("Form submitted successfully!");
-                        e.target.reset();
-                      } else {
-                        alert(data.error || "Submission failed");
-                      }
-                    } catch (err) {
-                      alert("Error submitting form: " + err.message);
-                    }
-                  }}
-                >
+                       const data = await res.json();
+                       if (res.ok) {
+                         setSubmitSuccess(true);
+                         e.target.reset();
+                         // Hide success message after 5 seconds
+                         setTimeout(() => {
+                           setSubmitSuccess(false);
+                         }, 5000);
+                       } else {
+                         alert(data.error || "Submission failed");
+                       }
+                     } catch (err) {
+                       alert("Error submitting form: " + err.message);
+                     } finally {
+                       setIsSubmitting(false);
+                     }
+                   }}
+                 >
                   <div className="form-row">
                     <div className="form-group">
                       <input type="text" name="name" className="form-control" placeholder="Name" required />
@@ -800,10 +810,26 @@ export default function HyproPage() {
                     <textarea name="message" className="form-control" rows="4" placeholder="Tell us more about your project requirements..." required></textarea>
                   </div>
                   
-                  <button type="submit" className="submit-btn">
-                    <span>Submit Request</span>
-                    <i className="bi bi-arrow-right"></i>
-                  </button>
+                                     <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                     {isSubmitting ? (
+                       <>
+                         <div className="loading-spinner"></div>
+                         <span>Submitting...</span>
+                       </>
+                     ) : (
+                       <>
+                         <span>Submit Request</span>
+                         <i className="bi bi-arrow-right"></i>
+                       </>
+                     )}
+                   </button>
+                   
+                   {submitSuccess && (
+                     <div className="success-message">
+                       <i className="bi bi-check-circle"></i>
+                       <span>Form submitted successfully!</span>
+                     </div>
+                   )}
                 </form>
               </div>
             </Div>
@@ -1020,9 +1046,79 @@ export default function HyproPage() {
             transition: transform 0.3s ease;
           }
 
-          .submit-btn:hover i {
-            transform: translateX(5px);
-          }
+                     .submit-btn:hover i {
+             transform: translateX(5px);
+           }
+
+           /* Loading and Success States */
+           .submit-btn:disabled {
+             opacity: 0.7;
+             cursor: not-allowed;
+             transform: none;
+           }
+
+           .submit-btn:disabled:hover {
+             transform: none;
+             box-shadow: 0 8px 20px rgba(255, 0, 0, 0.2);
+           }
+
+           .loading-spinner {
+             width: 20px;
+             height: 20px;
+             border: 2px solid rgba(255, 255, 255, 0.3);
+             border-top: 2px solid white;
+             border-radius: 50%;
+             animation: spin 1s linear infinite;
+             margin-right: 10px;
+           }
+
+           @keyframes spin {
+             0% { transform: rotate(0deg); }
+             100% { transform: rotate(360deg); }
+           }
+
+           .success-message {
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             gap: 10px;
+             background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+             color: white;
+             padding: 15px 20px;
+             border-radius: 12px;
+             margin-top: 20px;
+             font-weight: 600;
+             animation: slideInUp 0.5s ease-out;
+             box-shadow: 0 8px 20px rgba(40, 167, 69, 0.3);
+           }
+
+           .success-message i {
+             font-size: 1.2rem;
+             animation: bounce 0.6s ease-out;
+           }
+
+           @keyframes slideInUp {
+             from {
+               opacity: 0;
+               transform: translateY(20px);
+             }
+             to {
+               opacity: 1;
+               transform: translateY(0);
+             }
+           }
+
+           @keyframes bounce {
+             0%, 20%, 50%, 80%, 100% {
+               transform: translateY(0);
+             }
+             40% {
+               transform: translateY(-10px);
+             }
+             60% {
+               transform: translateY(-5px);
+             }
+           }
 
                      /* Responsive Design for Contact Form */
            @media (max-width: 768px) {
@@ -1144,13 +1240,25 @@ export default function HyproPage() {
               background: #f9fafb;
             }
             
-            .submit-btn {
-              padding: 14px 20px;
-              font-size: 1rem;
-              width: 100%;
-              max-width: none;
-              margin: 15px auto 0;
-            }
+                         .submit-btn {
+               padding: 14px 20px;
+               font-size: 1rem;
+               width: 100%;
+               max-width: none;
+               margin: 15px auto 0;
+             }
+             
+             .loading-spinner {
+               width: 18px;
+               height: 18px;
+               margin-right: 8px;
+             }
+             
+             .success-message {
+               padding: 12px 16px;
+               font-size: 0.9rem;
+               margin-top: 15px;
+             }
             
             .form-control::placeholder {
               color: #999 !important;
@@ -1279,12 +1387,24 @@ export default function HyproPage() {
                outline: none;
              }
             
-            .submit-btn {
-              padding: 12px 18px;
-              font-size: 0.9rem;
-              margin: 12px auto 0;
-              width: 100%;
-            }
+                         .submit-btn {
+               padding: 12px 18px;
+               font-size: 0.9rem;
+               margin: 12px auto 0;
+               width: 100%;
+             }
+             
+             .loading-spinner {
+               width: 16px;
+               height: 16px;
+               margin-right: 6px;
+             }
+             
+             .success-message {
+               padding: 10px 14px;
+               font-size: 0.85rem;
+               margin-top: 12px;
+             }
             
             .form-control::placeholder {
               color: #999 !important;
@@ -1696,6 +1816,14 @@ export default function HyproPage() {
             flex-wrap: wrap;
             justify-content: center;
           }
+          
+          .know-more-btn {
+            display: block;
+            width: auto;
+            margin: 0 auto;
+            text-align: center;
+            max-width: 280px;
+          }
         }
 
                  @media (max-width: 576px) {
@@ -1705,6 +1833,12 @@ export default function HyproPage() {
            
            .video-container video {
              height: 300px;
+           }
+           
+           .know-more-btn {
+             padding: 12px 25px;
+             font-size: 14px;
+             max-width: 250px;
            }
          }
 
