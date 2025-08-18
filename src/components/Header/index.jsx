@@ -282,6 +282,117 @@ export default function Header({ variant }) {
           transform: translateX(100%);
         }
       }
+
+      /* Fix for header visibility in 1000px-1200px range */
+      @media screen and (min-width: 1000px) and (max-width: 1199px) {
+        .cs-site_header {
+          display: block !important;
+          visibility: visible !important;
+          opacity: 1 !important;
+          position: fixed !important;
+          top: 0 !important;
+          background-color: #000 !important;
+          z-index: 999 !important;
+          width: 100% !important;
+        }
+        
+        .cs-main_header {
+          display: block !important;
+          visibility: visible !important;
+        }
+        
+        .cs-main_header_in {
+          display: flex !important;
+          visibility: visible !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+          height: 80px !important;
+        }
+        
+        .cs-main_header_left {
+          display: flex !important;
+          visibility: visible !important;
+        }
+        
+        .cs-main_header_center {
+          display: flex !important;
+          visibility: visible !important;
+          position: relative !important;
+        }
+        
+        .cs-munu_toggle {
+          display: inline-block !important;
+          visibility: visible !important;
+          position: absolute !important;
+          right: 0 !important;
+          top: 50% !important;
+          transform: translateY(-50%) !important;
+          color: white !important;
+        }
+        
+        .cs-nav {
+          display: none !important;
+        }
+      }
+
+      /* Additional fix for tablet range */
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        .cs-site_header {
+          display: block !important;
+          visibility: visible !important;
+          opacity: 1 !important;
+          position: fixed !important;
+          top: 0 !important;
+          background-color: #000 !important;
+          z-index: 999 !important;
+          width: 100% !important;
+        }
+        
+        .cs-main_header {
+          display: block !important;
+          visibility: visible !important;
+        }
+        
+        .cs-main_header_in {
+          display: flex !important;
+          visibility: visible !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+          height: 80px !important;
+        }
+        
+        .cs-main_header_left {
+          display: flex !important;
+          visibility: visible !important;
+        }
+        
+        .cs-main_header_center {
+          display: flex !important;
+          visibility: visible !important;
+          position: relative !important;
+        }
+        
+        .cs-munu_toggle {
+          display: inline-block !important;
+          visibility: visible !important;
+          position: absolute !important;
+          right: 0 !important;
+          top: 50% !important;
+          transform: translateY(-50%) !important;
+          color: white !important;
+        }
+        
+        .cs-nav {
+          display: none !important;
+        }
+      }
+
+      /* Ensure header is always visible */
+      .cs-site_header {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
       `}</style>
     </>
   );

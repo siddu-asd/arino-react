@@ -723,6 +723,51 @@
   }
 }
 
+/* Fix for 1000px to 1200px range */
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+  .cs-site_header {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .cs-site_header.cs-style1 {
+    position: fixed !important;
+    top: 0 !important;
+    background-color: #000 !important;
+    z-index: 999 !important;
+  }
+  
+  .cs-main_header {
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  .cs-main_header_in {
+    display: flex !important;
+    visibility: visible !important;
+  }
+  
+  .cs-main_header_left {
+    display: flex !important;
+    visibility: visible !important;
+  }
+  
+  .cs-main_header_center {
+    display: flex !important;
+    visibility: visible !important;
+  }
+  
+  .cs-munu_toggle {
+    display: inline-block !important;
+    visibility: visible !important;
+  }
+  
+  .cs-nav {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .cs-site_header .container {
     max-width: 100%;
@@ -740,6 +785,59 @@
   }
   .cs-munu_toggle {
     display: inline-block !important;
+  }
+}
+
+/* Additional fix for header visibility in tablet range */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .cs-site_header {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .cs-site_header.cs-style1 {
+    position: fixed !important;
+    top: 0 !important;
+    background-color: #000 !important;
+    z-index: 999 !important;
+    width: 100% !important;
+  }
+  
+  .cs-main_header {
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  .cs-main_header_in {
+    display: flex !important;
+    visibility: visible !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  
+  .cs-main_header_left {
+    display: flex !important;
+    visibility: visible !important;
+  }
+  
+  .cs-main_header_center {
+    display: flex !important;
+    visibility: visible !important;
+    position: relative !important;
+  }
+  
+  .cs-munu_toggle {
+    display: inline-block !important;
+    visibility: visible !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  
+  .cs-nav {
+    display: none !important;
   }
 }
 @media screen and (min-width: 992px) {
