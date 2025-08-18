@@ -7,6 +7,7 @@ import DropDown from './DropDown';
 export default function Header({ variant }) {
   const [isSticky, setIsSticky] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -124,7 +125,34 @@ export default function Header({ variant }) {
           {menuItems.map((item, idx) => {
             // Handle menu items with submenus
             if (item.submenu) {
-              if (item.label === "Let's Connect") {
+              if (item.label === "Our Products") {
+                return (
+                  <li key={idx} className="mobile-dropdown-item">
+                    <div 
+                      className="mobile-dropdown-header"
+                      onClick={() => setProductsDropdownOpen(!productsDropdownOpen)}
+                    >
+                      <span>{item.label}</span>
+                      <span className={`dropdown-arrow ${productsDropdownOpen ? 'open' : ''}`}>▼</span>
+                    </div>
+                    <ul className={`mobile-dropdown-menu ${productsDropdownOpen ? 'open' : ''}`}>
+                      {item.submenu.map((subItem, subIdx) => (
+                        <li key={subIdx}>
+                          <NavLink 
+                            to={subItem.to} 
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              setProductsDropdownOpen(false);
+                            }}
+                          >
+                            {subItem.label}
+                          </NavLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              } else if (item.label === "Let's Connect") {
                 return [
                   <li key="lets-connect">
                     <NavLink to="/contact" onClick={() => setMobileMenuOpen(false)}>
@@ -134,24 +162,6 @@ export default function Header({ variant }) {
                   <li key="join-us">
                     <NavLink to="/career" onClick={() => setMobileMenuOpen(false)}>
                       Join Us
-                    </NavLink>
-                  </li>
-                ];
-              } else if (item.label === "Our Products") {
-                return [
-                  <li key="our-products">
-                    <NavLink to="/products" onClick={() => setMobileMenuOpen(false)}>
-                      Our Products
-                    </NavLink>
-                  </li>,
-                  <li key="nexelvr">
-                    <NavLink to="/products/nexelvr" onClick={() => setMobileMenuOpen(false)}>
-                      NexelVR
-                    </NavLink>
-                  </li>,
-                  <li key="nisaa">
-                    <NavLink to="/products/nisaa" onClick={() => setMobileMenuOpen(false)}>
-                      Nisaa
                     </NavLink>
                   </li>
                 ];
@@ -188,6 +198,67 @@ export default function Header({ variant }) {
         transform: translateX(0);
         animation: slideInMenu 0.4s forwards;
       }
+      
+      .mobile-dropdown-item {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+      
+      .mobile-dropdown-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        color: white;
+        font-weight: 600;
+        font-size: 20px;
+        transition: all 0.3s ease;
+      }
+      
+      .mobile-dropdown-header:hover {
+        color: white;
+      }
+      
+      .dropdown-arrow {
+        transition: transform 0.3s ease;
+        font-size: 12px;
+        padding:4px;
+      }
+      
+      .dropdown-arrow.open {
+        transform: rotate(180deg);
+      }
+      
+      .mobile-dropdown-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        margin: 0 -20px;
+        padding: 0 20px;
+      }
+      
+      .mobile-dropdown-menu.open {
+        max-height: 200px;
+      }
+      
+      .mobile-dropdown-menu li {
+        border-bottom: none;
+        padding: 0;
+        list-style: none;
+      }
+      
+      .mobile-dropdown-menu li a {
+        padding: 12px 0;
+        color: rgba(255,255,255,0.8);
+        font-size: 16px;
+        display: block;
+        transition: color 0.3s ease;
+        text-decoration: none;
+      }
+      
+      .mobile-dropdown-menu li a:hover {
+        color: white;
+      }
+      
       @keyframes slideInMenu {
         0% {
           opacity: 0;
