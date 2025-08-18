@@ -9,6 +9,8 @@ export default function HyproPage() {
   const [activeTwin, setActiveTwin] = useState('smart-city');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [selectedProducts, setSelectedProducts] = useState([]);
+  const [showProductDropdown, setShowProductDropdown] = useState(false);
 
   useEffect(() => {
     // Initialize WOW.js if available
@@ -16,6 +18,20 @@ export default function HyproPage() {
       new window.WOW().init();
     }
   }, []);
+
+  useEffect(() => {
+    // Close dropdown when clicking outside
+    const handleClickOutside = (event) => {
+      if (showProductDropdown && !event.target.closest('.custom-select-container')) {
+        setShowProductDropdown(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showProductDropdown]);
 
   return (
     <>
@@ -678,7 +694,7 @@ export default function HyproPage() {
                        phone: e.target.phone.value,
                        profession: e.target.profession.value,
                        company_name: e.target.company_name.value,
-                       interested_products: e.target.interested_products.value,
+                       interested_products: selectedProducts.join(', '),
                        project_type: e.target.project_type.value,
                        project_stage: e.target.project_stage.value,
                        request_type: e.target.request_type.value,
@@ -698,6 +714,8 @@ export default function HyproPage() {
                        if (res.ok) {
                          setSubmitSuccess(true);
                          e.target.reset();
+                         setSelectedProducts([]);
+                         setShowProductDropdown(false);
                          // Hide success message after 5 seconds
                          setTimeout(() => {
                            setSubmitSuccess(false);
@@ -758,19 +776,71 @@ export default function HyproPage() {
                     </div>
                   </div>
                   
+                                     <div className="form-group">
+                     <label className="custom-select-label">Interested Products</label>
+                     <div className="custom-select-container">
+                       <div 
+                         className="custom-select-input"
+                         onClick={() => setShowProductDropdown(!showProductDropdown)}
+                       >
+                         <div className="selected-items">
+                           {selectedProducts.length === 0 ? (
+                             <span className="placeholder">Select interested products...</span>
+                           ) : (
+                             selectedProducts.map((product, index) => (
+                               <span key={index} className="selected-item">
+                                 {product}
+                                 <button
+                                   type="button"
+                                   className="remove-item"
+                                   onClick={(e) => {
+                                     e.stopPropagation();
+                                     setSelectedProducts(selectedProducts.filter((_, i) => i !== index));
+                                   }}
+                                 >
+                                   ×
+                                 </button>
+                               </span>
+                             ))
+                           )}
+                         </div>
+                         <span className={`dropdown-arrow ${showProductDropdown ? 'open' : ''}`}>▼</span>
+                       </div>
+                       
+                       {showProductDropdown && (
+                         <div className="custom-select-dropdown">
+                           {[
+                             'Weblite',
+                             'Metaverse', 
+                             'Sales Tool',
+                             'VR Solutions',
+                             'AR Solutions',
+                             'Digital Twin',
+                             'Gaming Solutions'
+                           ].map((product) => (
+                             <div
+                               key={product}
+                               className={`dropdown-item ${selectedProducts.includes(product) ? 'selected' : ''}`}
+                               onClick={() => {
+                                 if (selectedProducts.includes(product)) {
+                                   setSelectedProducts(selectedProducts.filter(p => p !== product));
+                                 } else {
+                                   setSelectedProducts([...selectedProducts, product]);
+                                 }
+                               }}
+                             >
+                               <span className="checkbox">
+                                 {selectedProducts.includes(product) && <span className="checkmark">✓</span>}
+                               </span>
+                               {product}
+                             </div>
+                           ))}
+                         </div>
+                       )}
+                     </div>
+                   </div>
+                  
                   <div className="form-row">
-                    <div className="form-group">
-                      <select name="interested_products" className="form-control" required>
-                        <option value="">Interested Products</option>
-                        <option value="Weblite">Weblite</option>
-                        <option value="Metaverse">Metaverse</option>
-                        <option value="Sales Tool">Sales Tool</option>
-                        <option value="VR Solutions">VR Solutions</option>
-                        <option value="AR Solutions">AR Solutions</option>
-                        <option value="Digital Twin">Digital Twin</option>
-                        <option value="Gaming Solutions">Gaming Solutions</option>
-                      </select>
-                    </div>
                     <div className="form-group">
                       <select name="project_type" className="form-control" required>
                         <option value="">Type of Project working on</option>
@@ -781,6 +851,27 @@ export default function HyproPage() {
                         <option value="Infrastructure">Infrastructure</option>
                       </select>
                     </div>
+                    <div className="form-group">
+                      <select name="project_stage" className="form-control" required>
+                        <option value="">Current stage of project</option>
+                        <option value="Planning">Planning</option>
+                        <option value="Development">Development</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Completed">Completed</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                  <div className="form-group">
+                    <select name="request_type" className="form-control" required>
+                      <option value="">What would you like to receive from us?</option>
+                      <option value="Demo">Demo</option>
+                      <option value="Pricing">Pricing</option>
+                      <option value="Consultation">Consultation</option>
+                      <option value="Custom Solution">Custom Solution</option>
+                      <option value="Partnership">Partnership</option>
+                    </select>
                   </div>
                   
                   <div className="form-row">
@@ -1046,11 +1137,172 @@ export default function HyproPage() {
             transition: transform 0.3s ease;
           }
 
-                     .submit-btn:hover i {
-             transform: translateX(5px);
+                               .submit-btn:hover i {
+            transform: translateX(5px);
+          }
+
+                     /* Custom Select Styles */
+           .custom-select-label {
+             display: block;
+             font-weight: 600;
+             color: #333;
+             margin-bottom: 15px;
+             font-size: 1rem;
            }
 
-           /* Loading and Success States */
+           .custom-select-container {
+             position: relative;
+             width: 100%;
+           }
+
+                       .custom-select-input {
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+              min-height: 54px;
+              border: 2px solid #e2e8f0;
+              border-radius: 12px;
+              padding: 8px 15px;
+              background: #f9fafb;
+              cursor: pointer;
+              transition: all 0.3s ease;
+              position: relative;
+            }
+
+           .custom-select-input:hover {
+             border-color: #333;
+             background: white;
+           }
+
+           .custom-select-input:focus-within {
+             border-color: #ff0000;
+             box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.1);
+             background: white;
+           }
+
+                       .selected-items {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 8px;
+              flex: 1;
+              min-height: 20px;
+              align-items: flex-start;
+              padding: 4px 0;
+            }
+
+           .placeholder {
+             color: #999;
+             font-style: italic;
+           }
+
+           .selected-item {
+             display: inline-flex;
+             align-items: center;
+             background: #ff0000;
+             color: white;
+             padding: 4px 8px;
+             border-radius: 6px;
+             font-size: 12px;
+             font-weight: 500;
+             gap: 4px;
+           }
+
+           .remove-item {
+             background: none;
+             border: none;
+             color: white;
+             cursor: pointer;
+             font-size: 14px;
+             font-weight: bold;
+             padding: 0;
+             width: 16px;
+             height: 16px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             border-radius: 50%;
+             transition: background-color 0.2s ease;
+           }
+
+           .remove-item:hover {
+             background: rgba(255, 255, 255, 0.2);
+           }
+
+                       .dropdown-arrow {
+              font-size: 12px;
+              color: #666;
+              transition: transform 0.3s ease;
+              margin-left: 10px;
+              flex-shrink: 0;
+              margin-top: 4px;
+            }
+
+           .dropdown-arrow.open {
+             transform: rotate(180deg);
+           }
+
+           .custom-select-dropdown {
+             position: absolute;
+             top: 100%;
+             left: 0;
+             right: 0;
+             background: white;
+             border: 2px solid #e2e8f0;
+             border-top: none;
+             border-radius: 0 0 12px 12px;
+             max-height: 200px;
+             overflow-y: auto;
+             z-index: 1000;
+             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+           }
+
+                       .dropdown-item {
+              display: flex;
+              align-items: center;
+              padding: 12px 15px;
+              cursor: pointer;
+              transition: background-color 0.2s ease;
+              gap: 10px;
+              color: #333;
+              min-height: 48px;
+              user-select: none;
+            }
+
+            .dropdown-item:hover {
+              background: #f9fafb;
+              color: #000000;
+              font-weight: bold;
+            }
+
+            .dropdown-item.selected {
+              background: rgba(255, 0, 0, 0.05);
+              color: #ff0000;
+            }
+
+           .checkbox {
+             width: 18px;
+             height: 18px;
+             border: 2px solid #e2e8f0;
+             border-radius: 3px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             background: white;
+             transition: all 0.2s ease;
+           }
+
+           .dropdown-item.selected .checkbox {
+             border-color: #ff0000;
+             background: #ff0000;
+           }
+
+           .checkmark {
+             color: white;
+             font-size: 12px;
+             font-weight: bold;
+           }
+
+          /* Loading and Success States */
            .submit-btn:disabled {
              opacity: 0.7;
              cursor: not-allowed;
@@ -1170,13 +1422,13 @@ export default function HyproPage() {
               margin: 0;
             }
             
-                         .country-selector {
-               order: 2;
-             }
-             
-             .phone-input {
-               order: 1;
-             }
+                                     .country-selector {
+              order: 1;
+            }
+            
+            .phone-input {
+              order: 2;
+            }
              
                            .country-select {
                 background-image: none;
@@ -1254,11 +1506,57 @@ export default function HyproPage() {
                margin-right: 8px;
              }
              
-             .success-message {
-               padding: 12px 16px;
-               font-size: 0.9rem;
-               margin-top: 15px;
-             }
+                         .success-message {
+              padding: 12px 16px;
+              font-size: 0.9rem;
+              margin-top: 15px;
+            }
+            
+                                       .custom-select-input {
+                min-height: 50px;
+                padding: 0 12px;
+                align-items: flex-start;
+              }
+              
+              .selected-item {
+                font-size: 11px;
+                padding: 3px 6px;
+                margin: 2px 0;
+              }
+              
+              .remove-item {
+                width: 14px;
+                height: 14px;
+                font-size: 12px;
+              }
+              
+              .dropdown-item {
+                padding: 10px 12px;
+                font-size: 14px;
+                color: #333;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+              }
+              
+              .checkbox {
+                width: 16px;
+                height: 16px;
+                flex-shrink: 0;
+              }
+              
+              .selected-items {
+                padding: 2px 0;
+                gap: 6px;
+                align-items: flex-start;
+                min-height: 20px;
+              }
+              
+              .custom-select-dropdown {
+                max-height: 180px;
+                overflow-y: auto;
+              }
             
             .form-control::placeholder {
               color: #999 !important;
@@ -1400,22 +1698,63 @@ export default function HyproPage() {
                margin-right: 6px;
              }
              
-             .success-message {
-               padding: 10px 14px;
-               font-size: 0.85rem;
-               margin-top: 12px;
-             }
+                         .success-message {
+              padding: 10px 14px;
+              font-size: 0.85rem;
+              margin-top: 12px;
+            }
+            
+                                       .custom-select-input {
+                min-height: 48px;
+                padding: 0 10px;
+                align-items: flex-start;
+              }
+              
+              .selected-item {
+                font-size: 10px;
+                padding: 2px 5px;
+                margin: 1px 0;
+              }
+              
+              .remove-item {
+                width: 12px;
+                height: 12px;
+                font-size: 10px;
+              }
+              
+              .dropdown-item {
+                padding: 8px 10px;
+                font-size: 13px;
+                color: #333;
+                min-height: 40px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+              }
+              
+              .checkbox {
+                width: 14px;
+                height: 14px;
+                flex-shrink: 0;
+              }
+              
+              .selected-items {
+                padding: 1px 0;
+                gap: 4px;
+                align-items: flex-start;
+                min-height: 18px;
+              }
+              
+              .custom-select-dropdown {
+                max-height: 160px;
+                overflow-y: auto;
+              }
             
             .form-control::placeholder {
-              color: #999 !important;
               opacity: 1 !important;
               font-size: 16px !important;
               line-height: 20px !important;
               font-weight: 400 !important;
-            }
-            
-            .form-control:focus::placeholder {
-              color: #ccc;
             }
           }
 
