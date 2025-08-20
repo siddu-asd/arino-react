@@ -79,11 +79,14 @@ import Care100xPage from './components/Pages/CustomRoutes/Care100xPage';
 import Virtualtour from './components/Pages/CustomRoutes/Virtualtour';
 import HyproPage from './components/Pages/CustomRoutes/HyproPage';
 import NisaaPage from './components/Pages/CustomRoutes/NisaaPage';
+import WhatsAppButton from './components/whatsapp/WhatsAppButton';
+
 import OurProductsPage from './components/Pages/CustomRoutes/OurProductsPage';
 
 function App() {
   return (
     <>
+    <WhatsAppButton />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

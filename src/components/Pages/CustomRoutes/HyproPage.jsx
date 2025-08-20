@@ -702,7 +702,7 @@ export default function HyproPage() {
                      };
 
                      try {
-                       const res = await fetch("https://nexelvr-backend-4.onrender.com/submit", {
+                       const res = await fetch("http://127.0.0.1:5000/submit", {
                          method: "POST",
                          headers: {
                            "Content-Type": "application/json",
@@ -1927,7 +1927,7 @@ export default function HyproPage() {
           transform: perspective(1000px) rotateY(-5deg);
           transition: all 0.4s ease;
           height: 100%;
-          min-height: 500px;
+         
           flex: 1;
         }
 
@@ -2017,7 +2017,7 @@ export default function HyproPage() {
           backdrop-filter: blur(10px);
           border: 1px solid rgba(255, 255, 255, 0.2);
           height: 100%;
-          min-height: 500px;
+         
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -2237,7 +2237,7 @@ export default function HyproPage() {
            backdrop-filter: blur(10px);
            border: 1px solid rgba(255, 255, 255, 0.2);
            height: 100%;
-           min-height: 500px;
+          
            display: flex;
            flex-direction: column;
            justify-content: center;
