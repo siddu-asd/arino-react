@@ -7,6 +7,16 @@ export default function Sidebar() {
 
   const recentPostData = [
     {
+      id: "ai-marketing-tools-2025",
+      thumb: "/images/newaiblog.jpg",
+      title: "AI in Marketing: Tools And Strategies For Smarter Campaigns in 2025",
+      subtitle: "Artificial Intelligence(AI) has become an integral part of digital marketing. Leading marketers are using AI tools to boost their productivity, streamline their content creation process and drive personalisation across channels...",
+      date: "july-2025",
+      category: "AI Marketing",
+      categoryHref: "/blog",
+      href: "/blog/ai-marketing-tools-2025",
+    },
+    {
       id: "social-media-marketing-2025",
       thumb: "/images/SOCIAL1MEDIA.jpg",
       title: "Why Social Media Marketing Is Crucial in Today's Digital World (2025 Guide)",

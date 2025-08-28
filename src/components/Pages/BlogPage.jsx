@@ -10,6 +10,16 @@ import Spacing from '../Spacing';
 // import PageHeading from '../PageHeading';
 export const postData = [
   {
+    id: "ai-marketing-tools-2025",
+    thumb: "/images/newaiblog.jpg",
+    title: "AI in Marketing: Tools And Strategies For Smarter Campaigns in 2025",
+    subtitle: "Artificial Intelligence(AI) has become an integral part of digital marketing. Leading marketers are using AI tools to boost their productivity, streamline their content creation process and drive personalisation across channels...",
+    date: "july-2025",
+    category: "AI Marketing",
+    categoryHref: "/blog",
+    href: "/blog/ai-marketing-tools-2025",
+  },
+  {
     id: "social-media-marketing-2025",
     thumb: "/images/SOCIAL1MEDIA.jpg",
     title: "Why Social Media Marketing Is Crucial in Today's Digital World (2025 Guide)",  
@@ -85,11 +95,21 @@ export default function BlogPage() {
          pageLinkText="Blogs"
        />
      </div> */}
-      <div style={{ marginTop: '120px' }}>
+      <div style={{ marginTop: '90px' }}>
         {/* Adjust marginTop as needed to match your header height */}
       </div>
       <Spacing lg="150" md="80" />
       <Div className="container">
+        <style>{`
+          @media (min-width: 768px) {
+            .cs-height_150 {
+              height: 60px !important;
+            }
+            .cs-height_lg_80 {
+              height: 30px !important;
+            }
+          }
+        `}</style>
         <Div className="row">
           <Div className="col-lg-8">
             {postData.map((item, index) => (

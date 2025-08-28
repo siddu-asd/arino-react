@@ -24,7 +24,7 @@ const serviceMenu = [
     href: '/service/creative-marketing',
   },
   {
-    title: 'Branding',
+    title: 'Branding',  
     href: '/service/branding',
   },
   {

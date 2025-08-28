@@ -1190,7 +1190,7 @@ export default function HyproPage() {
               padding: 4px 0;
             }
 
-           .placeholder {
+           .placeholder { 
              color: #999;
              font-style: italic;
              background: none;
