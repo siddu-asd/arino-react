@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import LazyImage from '../LazyImage';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -44,11 +45,11 @@ export default function TestSlider() {
   return (
     <div style={{ width: '100%', maxWidth: '1300px', margin: '0 auto' }}>
       <Slider {...settings}>
-        <div><img src="/images/1.png" alt="Partner 1" style={{ maxWidth: '60%', height: 'auto', padding: '5px', margin: '0 auto' }} loading="lazy" /></div>
-        <div><img src="/images/2.png" alt="Partner 2" style={{ maxWidth: '60%', height: 'auto', padding: '5px', margin: '0 auto' }} loading="lazy" /></div>
+        <div><LazyImage src="/images/1.png" alt="Partner 1" style={{ maxWidth: '60%', height: 'auto', padding: '5px', margin: '0 auto' }} loading="lazy" /></div>
+        <div><LazyImage src="/images/2.png" alt="Partner 2" style={{ maxWidth: '60%', height: 'auto', padding: '5px', margin: '0 auto' }} loading="lazy" /></div>
         <div><img src="/images/3.png" alt="Partner 3" style={{ maxWidth: '60%', height: 'auto', padding: '5px', margin: '0 auto' }} loading="lazy" /></div>
         <div><img src="/images/4.png" alt="Partner 4" style={{ maxWidth: '60%', height: 'auto', padding: '5px', margin: '0 auto' }} loading="lazy" /></div>
-        <div><img src="/images/5.png" style={{ maxWidth: '60%', height: 'auto', padding: '5px', margin: '0 auto' }} loading="lazy" /></div>
+        <div><LazyImage src="/images/5.png" alt="Partner 5" style={{ maxWidth: '60%', height: 'auto', padding: '5px', margin: '0 auto' }} loading="lazy" /></div>
         <div><img src="/images/6.png" alt="Partner 6" style={{ maxWidth: '60%', height: 'auto', padding: '5px', margin: '0 auto' }} loading="lazy" /></div>
         <div><img src="/images/7.png" alt="Partner 7" style={{ maxWidth: '60%', height: 'auto', padding: '5px', margin: '0 auto' }} loading="lazy" /></div>
         <div><img src="/images/8.png" alt="Partner 8" style={{ maxWidth: '60%', height: 'auto', padding: '5px', margin: '0 auto' }} loading="lazy" /></div>

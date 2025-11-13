@@ -1,0 +1,65 @@
+<svg width="1600" height="720" viewBox="0 0 1600 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#08080b"/>
+      <stop offset="55%" stop-color="#101015"/>
+      <stop offset="100%" stop-color="#1a0000"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="78%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="#ff1a1a" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ff1a1a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff3b3b"/>
+      <stop offset="100%" stop-color="#cc0000"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="720" fill="url(#bg)"/>
+  <circle cx="1220" cy="120" r="520" fill="url(#glow)"/>
+  <!-- baseline curves -->
+  <g fill="none" stroke="url(#stroke)" opacity=".25">
+    <path d="M0,560 C360,520 720,620 1080,560 C1320,520 1460,560 1600,540"/>
+    <path d="M0,620 C340,600 740,700 1120,640 C1380,600 1480,640 1600,620"/>
+  </g>
+  <!-- medical sheet -->
+  <g transform="translate(980,120)">
+    <rect x="0" y="0" width="360" height="480" rx="28" fill="#121219" stroke="url(#stroke)" stroke-width="3"/>
+    <rect x="40" y="36" width="120" height="120" rx="16" fill="#16161f" stroke="url(#stroke)"/>
+    <g fill="none" stroke="url(#stroke)" stroke-width="10" stroke-linecap="round">
+      <path d="M72,92 h24"/>
+      <path d="M84,80 v24"/>
+    </g>
+    <g fill="none" stroke="#d8d8d8" opacity=".85" stroke-width="10" stroke-linecap="round">
+      <path d="M200,58 h120"/>
+      <path d="M200,96 h80"/>
+    </g>
+    <rect x="40" y="188" width="280" height="20" rx="10" fill="#ff2a2a"/>
+    <rect x="40" y="224" width="220" height="16" rx="8" fill="#c9c9c9" opacity=".9"/>
+    <rect x="40" y="256" width="260" height="16" rx="8" fill="#c9c9c9" opacity=".65"/>
+    <rect x="40" y="288" width="300" height="16" rx="8" fill="#c9c9c9" opacity=".5"/>
+  </g>
+  <!-- monitor card -->
+  <g transform="translate(860,260)">
+    <rect x="0" y="0" width="260" height="200" rx="24" fill="#101018" stroke="url(#stroke)" stroke-width="3"/>
+    <rect x="26" y="30" width="208" height="92" rx="12" fill="#16161f" stroke="url(#stroke)"/>
+    <path d="M42,78 h20 l16,-26 l30,58 l26,-44 h68" fill="none" stroke="url(#stroke)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="208" cy="158" r="16" fill="#1b1b22" stroke="url(#stroke)"/>
+  </g>
+  <!-- vial -->
+  <g transform="translate(1310,420)">
+    <rect x="0" y="0" width="120" height="180" rx="24" fill="#121219" stroke="url(#stroke)" stroke-width="3"/>
+    <rect x="18" y="24" width="84" height="24" rx="8" fill="#1a1a22" stroke="url(#stroke)"/>
+    <rect x="26" y="74" width="68" height="40" rx="10" fill="#ff2a2a" opacity=".9"/>
+    <rect x="26" y="122" width="68" height="28" rx="8" fill="#c9c9c9" opacity=".85"/>
+  </g>
+  <!-- iv bag -->
+  <g transform="translate(1480,180)">
+    <rect x="0" y="0" width="84" height="160" rx="24" fill="#121219" stroke="url(#stroke)" stroke-width="3"/>
+    <rect x="24" y="22" width="36" height="36" rx="8" fill="#16161f" stroke="url(#stroke)"/>
+    <g fill="none" stroke="url(#stroke)" stroke-width="6" stroke-linecap="round">
+      <path d="M38,30 v20"/>
+      <path d="M28,40 h20"/>
+    </g>
+    <path d="M42,160 v40 c0,20 -30,20 -30,38" fill="none" stroke="url(#stroke)" stroke-width="4"/>
+  </g>
+</svg>

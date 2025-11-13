@@ -26,7 +26,8 @@ export default function Header({ variant }) {
       label: 'Our Products',
       submenu: [
         { to: '/products/nexelvr', label: 'NexelVR' },
-        { to: '/products/nisaa', label: 'Nisaa' }
+        { to: '/products/nisaa', label: 'Nisaa' },
+        { to: '/products/meditech', label: 'MediTech' }
       ]
     },
     {
@@ -80,6 +81,9 @@ export default function Header({ variant }) {
                           </li>
                           <li>
                             <Link to="/products/nisaa">Nisaa</Link>
+                          </li>
+                          <li>
+                            <Link to="/products/meditech">MediTech</Link>
                           </li>
                         </ul>
                       </DropDown>

@@ -1,1 +1,8 @@
 node_modules
+
+# Performance optimization files
+build/**/*.gz
+scripts/temp/
+*.log
+webpack-stats.json
+bundle-analyzer-report.html

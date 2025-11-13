@@ -1,13 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Div from '../Div'
+import LazyImage from '../LazyImage'
 import './card.scss'
 
 export default function Card({ title, link, src, alt }) {
   return (
     <Link to={link} className="cs-card cs-style1">
       <>
-        <img src={src} alt={alt} loading="lazy" />
+        <LazyImage 
+          src={src} 
+          alt={alt} 
+          loading="lazy"
+          className="cs-w100"
+        />
         
         
         <Div className="cs-card_overlay">

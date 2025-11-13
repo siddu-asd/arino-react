@@ -3,12 +3,18 @@ import { Icon } from '@iconify/react';
 import './team.scss'
 import { Link } from 'react-router-dom';
 import Div from '../Div';
+import LazyImage from '../LazyImage';
 
 export default function Team({memberImage, memberName, memberDesignation, memberSocial}) {
   return (
     <Div className="cs-team cs-style1">
         <Div className="cs-member_thumb">
-          <img src={memberImage} alt={memberName} loading="lazy" />
+          <LazyImage 
+            src={memberImage} 
+            alt={memberName}
+            className="cs-w100"
+            loading="lazy"
+          />
           <Div className="cs-member_overlay" />
         </Div>
         <Div className="cs-member_info">

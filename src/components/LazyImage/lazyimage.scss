@@ -1,0 +1,116 @@
+// LazyImage styles for smooth transitions and loading states
+
+.lazy-image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.lazy-image {
+  transition: all 0.3s ease-in-out;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.lazy-image.loading {
+  opacity: 0;
+  transform: scale(1.05);
+  filter: blur(2px);
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+  transform: scale(1);
+  filter: none;
+}
+
+.lazy-image.error {
+  opacity: 1;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.lazy-image-blur {
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+// Responsive image optimizations
+.lazy-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+// Animation for image reveal
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.lazy-image.loaded {
+  animation: fadeInScale 0.6s ease-out forwards;
+}
+
+// Performance optimizations
+.lazy-image-container {
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+// Placeholder shimmer effect
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.lazy-image.loading {
+  background: linear-gradient(90deg, #f0f0f0 0px, #e8e8e8 40px, #f0f0f0 80px);
+  background-size: 200px;
+  animation: shimmer 1.5s infinite ease-out;
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  .lazy-image.loading {
+    background: linear-gradient(90deg, #2a2a2a 0px, #3a3a3a 40px, #2a2a2a 80px);
+  }
+  
+  .lazy-image.error {
+    background-color: #2a2a2a;
+    color: #ccc;
+    border-color: #444;
+  }
+}
+
+// Print optimizations
+@media print {
+  .lazy-image-blur,
+  .lazy-image.loading {
+    display: none;
+  }
+  
+  .lazy-image {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}

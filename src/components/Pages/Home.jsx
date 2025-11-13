@@ -134,10 +134,9 @@ export default function Home() {
 }
 `}</style>
       <Hero
-        title={`We don't just do<br />
- <span id="wonder-text">WONDERS</span>
- <br />
-  we make your brand<br />
+    title={`We don't just do<br />
+ <span id="wonder-text">WONDERS</span><br />
+  <span style="white-space:nowrap;color:#fff;">we make your brand</span><br />
   <span id="wonder-text">WONDERFUL</span>`
         }
         btnText="LET'S START"
@@ -494,17 +493,17 @@ export default function Home() {
       `}</style>
     </div>
         <Div className="container">
-          <SectionHeading
+          {/* <SectionHeading
             title="Behold Our Creation"
             subtitle=""
             variant="cs-style1 text-center"
-          />
-          <Spacing lg="90" md="45" />
+          /> */}
+          {/* <Spacing lg="90" md="45" /> */}
         </Div>
-        <PortfolioSlider data={portfolioData} />
+        {/* <PortfolioSlider data={portfolioData} /> */}
       </Div>
  
-      <Spacing lg="150" md="80" />
+      {/* <Spacing lg="150" md="80" /> */}
  
       <Spacing lg="20" md="70" />
       <Div className="container" style={{ position: 'relative', zIndex: 2 }}>
@@ -529,9 +528,10 @@ export default function Home() {
       <Spacing lg="145" md="80" />
      
       <Div className="container" style={{ position: 'relative', zIndex: 1 }}>
+        <Spacing lg="145" md="80" />
         <TestimonialSlider />
       </Div>
-      {/* <Spacing lg="80" md="40" /> */}
+      <Spacing lg="80" md="40" />
       <Div className="cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>
         <Div className="cs-shape_4"></Div>
